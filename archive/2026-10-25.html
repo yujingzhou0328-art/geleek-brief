@@ -1,0 +1,271 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>币圈早报 · 2026-10-25（周日）</title><style>
+:root{
+ --fg:#2b3442;--mut:#525d6b;--line:rgba(255,255,255,.55);--hair:rgba(43,52,66,.10);
+ --acc:#44607b;--acc-bg:rgba(79,109,138,.12);--sage:#4d6656;--warn:#83583a;--warn-bg:rgba(184,140,110,.16);
+ --glass:rgba(255,255,255,.46);--glass-strong:rgba(255,255,255,.62);--glass-fallback:rgba(250,249,246,.94);
+ --shadow:0 8px 32px rgba(60,72,92,.08);--blur:blur(20px) saturate(120%);
+ --bg:#eef0ee;--b1:#b4c6d8;--b2:#bccfba;--b3:#e0c0c2;--b4:#ecdcc4;--side:256px;--r:18px
+}
+@media (prefers-color-scheme:dark){:root{
+ --fg:#dfe4ea;--mut:#9aa5b2;--line:rgba(255,255,255,.10);--hair:rgba(255,255,255,.08);
+ --acc:#9db4cb;--acc-bg:rgba(157,180,203,.14);--sage:#a3b8a8;--warn:#d6b08f;--warn-bg:rgba(214,176,143,.13);
+ --glass:rgba(30,34,42,.48);--glass-strong:rgba(36,40,49,.62);--glass-fallback:rgba(28,31,38,.95);
+ --shadow:0 8px 32px rgba(0,0,0,.28);
+ --bg:#14171c;--b1:#33445a;--b2:#33443a;--b3:#4a363c;--b4:#443d31}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--fg);font:15px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+ background:
+  radial-gradient(closest-side,var(--b1),transparent) -8vw -12vh/62vw 62vw no-repeat,
+  radial-gradient(closest-side,var(--b2),transparent) 62vw 4vh/48vw 48vw no-repeat,
+  radial-gradient(closest-side,var(--b3),transparent) 18vw 58vh/52vw 52vw no-repeat,
+  radial-gradient(closest-side,var(--b4),transparent) 70vw 62vh/50vw 50vw no-repeat,var(--bg);
+ filter:blur(40px)}
+a{color:var(--acc);text-decoration:none;text-underline-offset:3px}a:hover{text-decoration:underline}
+.glass,.side,.card,.stats,.draft,.sched,.tbl,.kolwrap,.view,.yt div,.note{background:var(--glass-fallback)}
+@supports ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){
+ .side,.card,.stats,.draft,.sched,.tbl,.kolwrap,.view,.yt div,.note{background:var(--glass);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur)}
+}
+.side,.card,.stats,.draft,.sched,.tbl,.kolwrap,.view,.yt div{border:1px solid var(--line);box-shadow:var(--shadow)}
+.side{position:fixed;top:16px;left:16px;bottom:16px;width:calc(var(--side) - 32px);padding:32px 22px;border-radius:22px;overflow-y:auto;z-index:10}
+.brand{font-weight:700;font-size:18px;letter-spacing:-.01em}
+.date{color:var(--mut);font-size:13px;margin:4px 0 28px}
+.nav{list-style:none;margin:0;padding:0}
+.nav a{display:block;padding:8px 12px;margin:2px -6px;border-radius:12px;color:var(--mut);font-size:14px;transition:background .2s,color .2s}
+.nav a:hover{color:var(--fg);background:var(--acc-bg);text-decoration:none}
+.nav a.on{color:var(--fg);background:var(--glass-strong);border:1px solid var(--line);font-weight:600;box-shadow:0 2px 10px rgba(60,72,92,.06)}
+.side .foot{margin-top:28px;font-size:12px;color:var(--mut);line-height:1.6}
+main{margin-left:var(--side);padding:48px 56px 120px 40px;max-width:calc(var(--side) + 1120px)}
+section{padding:4px 0 44px;margin-bottom:28px}
+h1{font-size:30px;line-height:1.25;margin:0 0 8px;letter-spacing:-.02em}
+h2{font-size:21px;margin:0 0 4px;letter-spacing:-.01em}
+.sub{color:var(--mut);font-size:13px;margin:0 0 22px}
+.lead{font-size:13px;color:var(--mut);margin-bottom:32px}
+.keys{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.keys li{padding:16px 20px 16px 58px;position:relative;font-size:15.5px;border-radius:var(--r);border:1px solid var(--line);box-shadow:var(--shadow);background:var(--glass-fallback)}
+@supports ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){.keys li{background:var(--glass);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur)}}
+.keys li b.n{position:absolute;left:20px;top:16px;color:var(--sage);font-variant-numeric:tabular-nums}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-radius:var(--r);overflow:hidden;margin:0 0 24px}
+.stat{padding:16px 20px;border-right:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.stat:nth-child(4n){border-right:0}.stat:nth-last-child(-n+4){border-bottom:0}
+.stat .k{font-size:12px;color:var(--mut)}.stat .v{font-size:22px;font-weight:650;font-variant-numeric:tabular-nums;letter-spacing:-.01em}.stat .d{font-size:12px;color:var(--mut)}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card{border-radius:var(--r);padding:20px 22px}
+.card h3{font-size:16px;margin:0 0 10px;line-height:1.45}
+.card ul{margin:0;padding-left:18px}.card li{margin:4px 0}.card li::marker{color:var(--sage)}
+.card .src{margin-top:12px;padding-top:10px;border-top:1px solid var(--hair);font-size:12.5px;color:var(--mut)}
+.note{border:1px solid var(--line);border-left:3px solid var(--warn);padding:12px 16px;border-radius:12px;font-size:13.5px;margin-top:16px}
+.kolwrap{border-radius:var(--r);padding:4px 22px}
+.kol{display:grid;grid-template-columns:200px 1fr;gap:6px 24px;padding:16px 0;border-top:1px solid var(--hair)}
+.kol:first-child{border-top:0}.kol .who{font-weight:600}.kol .who small{display:block;font-weight:400;color:var(--mut);font-size:12.5px}
+.view{border-radius:var(--r);padding:24px 26px}
+.view h2,.view .sub{margin-left:0}
+.view p{margin:0 0 14px;max-width:860px}
+.disc{display:inline-block;margin-top:4px;font-weight:600;color:var(--warn);background:var(--warn-bg);padding:4px 12px;border-radius:99px;font-size:13.5px}
+.sched,.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:14px;border-radius:var(--r);overflow:hidden}
+.sched{margin-bottom:28px}
+.sched th,.sched td,.tbl th,.tbl td{text-align:left;padding:10px 16px;border-bottom:1px solid var(--hair);vertical-align:top}
+.sched tr:last-child td,.tbl tr:last-child td{border-bottom:0}
+.sched th,.tbl th{font-size:12px;color:var(--mut);font-weight:500;background:rgba(255,255,255,.18)}
+.sched td.t{font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap}
+.draft{border-radius:20px;margin-bottom:22px;overflow:hidden}
+.dh{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:14px 22px;border-bottom:1px solid var(--hair);background:rgba(255,255,255,.14)}
+.time{font-weight:700;font-size:17px;font-variant-numeric:tabular-nums}
+.tag{font-size:12px;padding:2px 10px;border-radius:99px;border:1px solid var(--hair);color:var(--mut)}
+.tag.acc{color:var(--acc);border-color:transparent;background:var(--acc-bg)}
+.dt{font-weight:600}
+.flag{font-size:12.5px;padding:3px 10px;border-radius:99px;color:var(--warn);background:var(--warn-bg)}
+.meta{padding:10px 22px;font-size:13px;color:var(--mut);border-bottom:1px solid var(--hair)}
+.pair{display:grid;grid-template-columns:1fr 1fr}
+.pane{padding:16px 22px 18px;display:flex;flex-direction:column;min-width:0}
+.pane+.pane{border-left:1px solid var(--hair)}
+.ph{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.lang{font-size:12px;color:var(--mut);letter-spacing:.06em}
+.txt{white-space:pre-wrap;word-break:break-word;font-size:14.5px;line-height:1.75;flex:1}
+.cp{font:inherit;font-size:13px;cursor:pointer;border:1px solid var(--line);background:var(--glass-strong);color:var(--fg);padding:5px 16px;border-radius:99px;min-width:76px;transition:.2s;box-shadow:0 1px 6px rgba(60,72,92,.06)}
+.cp:hover{color:var(--acc);border-color:var(--acc)}
+.cp.ok{background:var(--sage);border-color:var(--sage);color:#fff}
+.cnt{font-size:11.5px;color:var(--mut);margin-top:8px}
+.act{white-space:nowrap;font-size:12.5px}.act.y{color:var(--sage);font-weight:600}.act.n{color:var(--mut)}
+.yt{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:8px}
+.yt div{padding:14px 18px;border-radius:14px}
+footer{color:var(--mut);font-size:12.5px;margin-top:24px}
+@media (max-width:1100px){main{padding:40px 32px 100px 32px}.cards{grid-template-columns:1fr}}
+@media (max-width:820px){
+ html{scroll-padding-top:72px}.flag{white-space:nowrap}
+ .side{position:sticky;top:8px;left:auto;bottom:auto;width:auto;height:auto;margin:8px;padding:8px 14px;border-radius:16px;display:flex;align-items:center;gap:14px;overflow-x:auto;white-space:nowrap}
+ .date,.side .foot{display:none}.brand{font-size:15px}
+ .nav{display:flex;gap:4px}.nav a{margin:0;padding:6px 10px;font-size:13px}
+ main{margin-left:0;padding:24px 14px 80px}
+ .pair{grid-template-columns:1fr}.pane+.pane{border-left:0;border-top:1px solid var(--hair)}
+ .kol{grid-template-columns:1fr}.yt{grid-template-columns:1fr}
+ .stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat:nth-child(n){border-right:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+ .sched,.tbl{display:block;overflow-x:auto}
+ h1{font-size:24px}
+}
+</style></head><body><aside class="side"><div class="brand">geleek 早报</div><div class="date">2026-10-25 · 周日</div><!--datenav--><style>
+.dn{margin:-14px 0 26px;padding:12px 12px 10px;border-radius:14px;border:1px solid var(--line);background:var(--glass-strong);box-shadow:0 2px 10px rgba(60,72,92,.06);font-size:12.5px}
+.dn .dn-k{color:var(--mut);font-size:11.5px;letter-spacing:.04em;display:flex;justify-content:space-between;align-items:center}
+.dn .dn-cur{font-weight:650;font-size:14px;color:var(--fg);margin:2px 0 8px;font-variant-numeric:tabular-nums;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.dn .dn-badge{font-size:11px;font-weight:500;padding:1px 8px;border-radius:99px;color:var(--sage);background:rgba(77,102,86,.12)}
+.dn .dn-badge:empty{display:none}
+.dn .dn-badge.old{color:var(--warn);background:var(--warn-bg)}
+.dn .dn-row{display:flex;gap:6px;align-items:center;margin-top:6px}
+.dn select{width:100%;font:inherit;font-size:12.5px;color:var(--fg);background:var(--glass);border:1px solid var(--hair);border-radius:10px;padding:5px 6px;cursor:pointer;font-variant-numeric:tabular-nums}
+.dn .dn-a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:4px;height:28px;border-radius:10px;border:1px solid var(--hair);background:var(--glass);color:var(--fg);font-size:12px;line-height:1}
+.dn .dn-a:hover{text-decoration:none;color:var(--acc);border-color:var(--acc)}
+.dn .dn-a.off{opacity:.35;pointer-events:none}
+.dn .dn-all{display:inline-block;margin-top:8px;font-size:12px}
+@media (max-width:820px){.dn{margin:0;padding:4px 8px;display:flex;align-items:center;gap:8px;flex:none}.dn .dn-k,.dn .dn-all,.dn .dn-cur{display:none}.dn select{width:150px}.dn .dn-row{margin:0}.dn .dn-a{flex:none;width:28px}.dn .dn-a span{display:none}}
+</style><div class="dn" id="dn" data-date="2026-10-25" data-root="../" data-pub="1792885035"><div class="dn-k"><span>正在查看</span><span title="快捷键：[ 前一天，] 后一天">⌨ [ ]</span></div><div class="dn-cur">2026-10-25 周日<span class="dn-badge">最新</span></div><select aria-label="选择日期"><option value="2026-10-25" selected>2026-10-25 周日</option></select><div class="dn-row"><a class="dn-a dn-prev off" aria-label="前一天" title="前一天">‹<span> 前一天</span></a><a class="dn-a dn-next off" aria-label="后一天" title="后一天"><span>后一天 </span>›</a></div><a class="dn-all" href="../archive/index.html">全部往期 →</a></div><script>
+(function(){var el=document.getElementById('dn');if(!el)return;var root=el.getAttribute('data-root')||'',cur=el.getAttribute('data-date')||'';
+function href(d){return root+'archive/'+d+'.html'}
+var sel=el.querySelector('select'),pv=el.querySelector('.dn-prev'),nx=el.querySelector('.dn-next'),bd=el.querySelector('.dn-badge');
+sel.addEventListener('change',function(){if(sel.value&&sel.value!==cur)location.href=href(sel.value)});
+fetch(root+'archive/dates.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(m){
+ var ds=(m.dates||m).slice().sort(function(a,b){return a.date<b.date?1:-1});if(!ds.length)return;
+ sel.innerHTML='';var found=false;
+ ds.forEach(function(d){var o=document.createElement('option');o.value=d.date;o.textContent=d.date+' '+(d.weekday||'')+(d.noon?' · 含午间快讯':'');if(d.summary)o.title=d.summary;if(d.date===cur){o.selected=true;found=true}sel.appendChild(o)});
+ if(!found&&cur){var o=document.createElement('option');o.value=cur;o.textContent=cur;o.selected=true;sel.insertBefore(o,sel.firstChild)}
+ var i=-1;ds.forEach(function(d,k){if(d.date===cur)i=k});
+ function set(a,d,lab){if(d){a.href=href(d.date);a.classList.remove('off');a.title=lab+'：'+d.date+(d.summary?'\n'+d.summary:'')}else{a.classList.add('off');a.removeAttribute('href')}}
+ set(pv,i>=0?ds[i+1]:null,'前一天');set(nx,i>0?ds[i-1]:null,'后一天');
+ if(bd){if(i===0){bd.textContent='最新';bd.classList.remove('old')}else if(i>0){bd.textContent='往期';bd.classList.add('old')}}
+}).catch(function(){});
+document.addEventListener('keydown',function(e){if(e.target.closest&&e.target.closest('input,textarea,select'))return;if(e.altKey||e.ctrlKey||e.metaKey)return;
+ if(e.key==='['&&pv.href)location.href=pv.href;if(e.key===']'&&nx.href)location.href=nx.href});
+})();
+</script><!--/datenav--><ul class="nav"><li><a href="#keys">今日要点</a></li><li><a href="#news">重点新闻和数据</a></li><li><a href="#kol">大V观点</a></li><li><a href="#view">我的观点</a></li><li><a href="#drafts">发帖草稿</a></li><li><a href="#replies">互动评论</a></li><li><a href="#follow">追踪账号</a></li></ul><div class="foot">覆盖北京时间 10/24 11:10 – 10/25 07:40（UTC+8）<br>所有草稿均未发布</div></aside><main><section id="keys"><h1>币圈早报 · 2026-10-25（周日）</h1><div class="lead">行情快照：<a href="https://www.coingecko.com/en/coins/hyperliquid" target="_blank" rel="noopener">CoinGecko</a> 与 Hyperliquid 官方 API，北京时间 10/25 07:35 读数。</div><ul class="keys"><li><b class="n">01</b>周末情绪被 Arthur Hayes 清空方向性仓位主导：自述 Maelstrom 已兑现 ETH/ENA/UNI 等利润，等“绿灯”再进场；链上约有 $2,200–2,600 万级抛压被追踪。</li><li><b class="n">02</b>$HYPE 约 $76.5（24h 近乎持平），Hyperliquid 主盘持仓约 $111.8 亿、24h 成交约 $47.9 亿；最大 HYPE 空单 0xf02d 浮盈约 $556 万，Machi 在 HL 上一小时连爆 5 次。</li><li><b class="n">03</b>Glassnode×Fasanara：HL+Lighter 合计约占 BTC 期货日成交 7.5%；但 HL 的 RWA 永续份额从 7 月约 80% 掉到约 26%，中心化所在抢份额——产品强、竞争也硬。</li></ul></section><section id="news"><h2>重点新闻和数据</h2><p class="sub">Hyperliquid 优先 · 每条附原始来源 · 已避开周六早报写过的 $PURR 回购、$HIP-3 速率限制、CME Duffy KYC、Elysium 11/9、原油巨鲸</p><div class="stats"><div class="stat"><div class="k">HYPE</div><div class="v">$76.51</div><div class="d">24h −0.22% · <a href="https://www.coingecko.com/en/coins/hyperliquid" target="_blank" rel="noopener">CoinGecko</a></div></div><div class="stat"><div class="k">BTC</div><div class="v">$80,621</div><div class="d">24h −0.29%</div></div><div class="stat"><div class="k">ETH</div><div class="v">$2,347.9</div><div class="d">24h −1.08%</div></div><div class="stat"><div class="k">ZEC</div><div class="v">$1,206.9</div><div class="d">24h +2.94%</div></div><div class="stat"><div class="k">HL 主盘持仓</div><div class="v">$111.8 亿</div><div class="d">24h 成交 $47.9 亿 · <a href="https://app.hyperliquid.xyz/trade" target="_blank" rel="noopener">交易页</a></div></div><div class="stat"><div class="k">HIP-3 xyz 持仓</div><div class="v">$38.7 亿</div><div class="d">24h 成交 $4.9 亿 · 周末缩量</div></div><div class="stat"><div class="k">HYPE 资金费率</div><div class="v">+0.00125%/h</div><div class="d">持仓约 $16.3 亿 · 接近中性略多</div></div><div class="stat"><div class="k">协议费用 近1日</div><div class="v">$252 万</div><div class="d">7 天 $1,878 万 · <a href="https://defillama.com/protocol/hyperliquid" target="_blank" rel="noopener">DefiLlama</a></div></div></div><div class="cards"><article class="card"><h3>① Arthur Hayes：方向性仓位清仓，等回调再上</h3><ul><li>@CryptoHayes 原话：已清空 Maelstrom 方向性账本，兑现 $ETH、$ENA、$UNI 等利润；认为“要先下去才能上去”，宏观与地缘看起来有点悬，先坐在场边等绿灯（<a href="https://x.com/CryptoHayes/status/2113877751803642092" target="_blank" rel="noopener">原帖</a>，约 3671 赞 / 105 万曝光）。</li><li>@lookonchain 链上清单约 $2,228 万：6,400 ETH（$1,520 万）、1,400 万 ENA（$276 万）、32.3 万 UNI（$224 万）、189 万 ETHFI（$123 万）等（<a href="https://x.com/lookonchain/status/2113876807393083697" target="_blank" rel="noopener">原帖</a>）。</li><li>@EmberCN / @ai_9684xtpa 中文口径合计约 $2,608 万（含 8,000 ETH ≈ $1,900 万），并提醒上次大额抛售山寨是 2025.11–12 BTC 从 10 万回落至 8.5 万期间（<a href="https://x.com/EmberCN/status/2113915752801800312" target="_blank" rel="noopener">余烬</a> · <a href="https://x.com/ai_9684xtpa/status/2113948502472695912" target="_blank" rel="noopener">Ai姨</a>）。数字口径略有差异，发帖请标明来源。</li><li>@WuBlockchain 同步转述其“先跌后涨、场边观望”立场（<a href="https://x.com/WuBlockchain/status/2113885237679964486" target="_blank" rel="noopener">原帖</a>）。</li></ul><div class="src">来源：<a href="https://x.com/CryptoHayes/status/2113877751803642092" target="_blank" rel="noopener">@CryptoHayes</a> · <a href="https://x.com/lookonchain/status/2113876807393083697" target="_blank" rel="noopener">@lookonchain</a> · <a href="https://x.com/EmberCN/status/2113915752801800312" target="_blank" rel="noopener">@EmberCN</a></div></article><article class="card"><h3>② Hyperliquid 链上：最大 HYPE 空单浮盈；Machi 连爆；ETH 大多头承压</h3><ul><li>@lookonchain：HYPE 自高点回撤约 22%；地址 0xf02d 空 715,334 $HYPE（名义约 $5,457 万），浮盈约 $556 万，另赚资金费约 $62 万（<a href="https://x.com/lookonchain/status/2113896859077099902" target="_blank" rel="noopener">原帖</a>）。</li><li>Machi（@machibigbrother）在 Hyperliquid 上一小时内被清算 5 次，账户余额一度只剩约 $5,000（<a href="https://x.com/lookonchain/status/2114016142855720989" target="_blank" rel="noopener">原帖</a>，约 710 赞）。</li><li>另一头：若市场继续下探，持有约 93,184 ETH（约 $2.14 亿）多单的巨鲸清算价约在 $2,256 / $2,227（<a href="https://x.com/lookonchain/status/2114018277538357561" target="_blank" rel="noopener">原帖</a>）。</li></ul><div class="src">来源：<a href="https://x.com/lookonchain/status/2113896859077099902" target="_blank" rel="noopener">HYPE 空单</a> · <a href="https://x.com/lookonchain/status/2114016142855720989" target="_blank" rel="noopener">Machi</a> · <a href="https://x.com/lookonchain/status/2114018277538357561" target="_blank" rel="noopener">ETH 多头</a></div></article><article class="card"><h3>③ 盘面：周日清晨缩量横盘，ZEC 逆势走强</h3><ul><li>CoinGecko（北京时间 07:35）：HYPE $76.51（24h −0.22%），BTC $80,621（−0.29%），ETH $2,347.9（−1.08%），ZEC $1,206.9（+2.94%）。</li><li>Hyperliquid API：主盘总持仓约 $111.8 亿（昨早约 $113.0 亿），24h 成交约 $47.9 亿（昨早周末约 $41 亿，略回升但仍低于工作日）。</li><li>持仓大致：BTC $34.5 亿、ETH $26.1 亿、HYPE $16.3 亿、SOL $5.6 亿、ZEC $5.5 亿。HYPE 资金费率约 +0.00125%/小时，接近中性略偏多。</li><li>xyz（HIP-3）持仓约 $38.7 亿，24h 成交约 $4.9 亿（显著周末缩量）；成交靠前仍是 CL / XYZ100 / SP500 / MRNA / BRENTOIL 等。</li><li>DefiLlama：近 1 日协议费用约 $252 万，7 日约 $1,878 万（<a href="https://defillama.com/protocol/hyperliquid" target="_blank" rel="noopener">DefiLlama</a>）。</li></ul><div class="src">来源：<a href="https://www.coingecko.com/en/coins/hyperliquid" target="_blank" rel="noopener">CoinGecko</a> · Hyperliquid API（北京时间 07:35）· <a href="https://app.hyperliquid.xyz/trade/HYPE" target="_blank" rel="noopener">HYPE 交易页</a></div></article><article class="card"><h3>④ Glassnode×Fasanara：HL 订单簿有厚度，但 RWA 份额被 CEX 蚕食</h3><ul><li>FXStreet 转述 Glassnode 与 Fasanara Digital 联合报告：9/1–9/24 Hyperliquid BTC 永续最优买卖价挂单中位数约 $85.6 万，高于 OKX（$78.6 万）、低于 Binance（$103 万）；但点差约 0.127 bp，约为 Binance 的 10 倍（部分因 HL 以整美元报价）（<a href="https://www.fxstreet.com/cryptocurrencies/news/hyperliquid-strategies-lifts-buyback-to-100m-as-hype-trades-21-off-peak-202610240520" target="_blank" rel="noopener">FXStreet</a> · <a href="https://research.glassnode.com/fasanara-digital-glassnode-q4-2026-institutional-market-perspectives/" target="_blank" rel="noopener">Glassnode 报告页</a>）。</li><li>Hyperliquid + Lighter 合计日均 BTC 期货成交约 $29 亿，约占全市场 7.5%；自 2024 年末不足 1% 升了近十倍。</li><li>HIP-3 传统资产永续成交约相当于 HL 上 BTC 永续的 85%；但 HL 在 RWA 永续的份额从 7 月约 80% 降至约 26%，CEX 合计约 64%（Binance 约 30%、OKX 约 14%）。</li><li>解读：HL 仍是链上衍生品核心，但 TradFi 资产这一块的护城河正在被中心化所追赶——发帖别只吹份额、也要提竞争。</li></ul><div class="src">来源：<a href="https://www.fxstreet.com/cryptocurrencies/news/hyperliquid-strategies-lifts-buyback-to-100m-as-hype-trades-21-off-peak-202610240520" target="_blank" rel="noopener">FXStreet 摘要</a> · <a href="https://research.glassnode.com/fasanara-digital-glassnode-q4-2026-institutional-market-perspectives/" target="_blank" rel="noopener">Glassnode</a></div></article><article class="card"><h3>⑤ 合规叙事：Jeff“盯市场运营方”框架继续被媒体转写</h3><ul><li>CryptoBriefing（10/24）：转述 Hyperliquid 创始人 Jeff Yan 主张美国监管应聚焦可识别的市场运营方，而非区块链本身，以便机构合规接入（<a href="https://cryptobriefing.com/hyperliquid-founder-urges-us-focus-on-market-operators-for-regulatory-access/" target="_blank" rel="noopener">CryptoBriefing</a>）。</li><li>文中引用的预测市场：HYPE 年底到 $100 的 YES 概率约 29%（前一日约 37%）——仅作情绪参考，不是事实预测。</li><li>注意：@chameleon_jeff 近几日无新原创；本条是媒体对他此前立场的再转写，发帖请写清“媒体转述”，并与周六已写的 CME Duffy KYC 评论区分开。</li></ul><div class="src">来源：<a href="https://cryptobriefing.com/hyperliquid-founder-urges-us-focus-on-market-operators-for-regulatory-access/" target="_blank" rel="noopener">CryptoBriefing</a></div></article><article class="card"><h3>⑥ 大盘与 TradFi：ETF 仍无新交易日；富兰克林“股息买币”ETF 临近生效</h3><ul><li>Farside：最新美股交易日仍是 10/23，BTC ETF 合计净流出约 −$1.379 亿（IBIT −$1.103 亿）；10/22 曾单日 −$6.356 亿。页面标注日期为 10/24，周末无新流入数据（<a href="https://farside.co.uk/btc/" target="_blank" rel="noopener">Farside BTC</a>）。</li><li>Franklin Templeton 的 FBEQ / FIBT：约 95% 美股 + 5% 比特币相关，再用股息自动增持 BTC 敞口；招股说明书约 10/27 生效，但尚未开盘交易（<a href="https://etf.net/news/franklin-dividend-bitcoin-etfs-effective-2026-10-23" target="_blank" rel="noopener">ETF.net</a> · <a href="https://bitcoinmagazine.com/news/franklin-templeton-clears-final-hurdle" target="_blank" rel="noopener">Bitcoin Magazine</a>）。</li><li>@WuBlockchain：Keystone 硬件钱包确认官网遭未授权访问后客户物流/订单信息泄露，事件约 10/20 检出（<a href="https://x.com/WuBlockchain/status/2114087340536889689" target="_blank" rel="noopener">原帖</a>）——和行情无关，但对“自托管安全”选题有用。</li></ul><div class="src">来源：见各条内链接</div></article><article class="card"><h3>⑦ ⚠️ Season 2 投票钓鱼：官方仍无公告</h3><ul><li>周六刷屏的“Season 2 投票 / 3,880 万 HYPE”周日清晨检索里已不那么刷屏，但话术仍可能回流。</li><li>@HyperliquidX 最近原创仍是 10/11 社区活动感谢帖，最近转推仍是 10/16 Jeff 上 Odd Lots——没有任何 Season 2 / 投票公告（<a href="https://x.com/HyperliquidX/status/2111097832039977285" target="_blank" rel="noopener">最近帖</a>）。</li><li>社区拆解仍有效：真创世储备量级是约 3.888 亿 HYPE，“3,880 万投票”是借期待包装（<a href="https://x.com/dimix111/status/2113796745821900838" target="_blank" rel="noopener">@dimix111</a>）。别点、别连钱包。</li></ul><div class="src">来源：<a href="https://x.com/HyperliquidX/status/2111097832039977285" target="_blank" rel="noopener">@HyperliquidX</a> · <a href="https://x.com/dimix111/status/2113796745821900838" target="_blank" rel="noopener">@dimix111</a></div></article><article class="card"><h3>⑧ 🎬 YouTube / 播客</h3><ul><li>本次未检索到过去 24 小时内新的 Hyperliquid 专属长视频。</li><li>可继续引用：Glassnode×Fasanara Q4 报告页（<a href="https://research.glassnode.com/fasanara-digital-glassnode-q4-2026-institutional-market-perspectives/" target="_blank" rel="noopener">链接</a>）；Bloomberg Odd Lots / CME Duffy 片段周六已覆盖，不重复展开。</li></ul><div class="src">来源：Glassnode / 既有素材</div></article></div><div class="note">未重复写周六早报已覆盖：$PURR 回购提至 $1 亿、HIP-3 L1 速率限制拟调整、CME Duffy KYC、Elysium 11/9、原油巨鲸、James Wynn 小仓位。</div><div class="note">Hayes 抛售金额：官方推文未给总数；Lookonchain ≈$2,228 万，余烬/Ai姨 ≈$2,608 万（ETH 数量口径不同）。草稿里建议写区间或标明单一来源。</div><div class="note">Farside 周末无新交易日数据；Glassnode RWA 份额数字来自 FXStreet 对报告的转述，发帖可附报告原页。</div><div class="note">CryptoBriefing 对 Jeff 监管框架是二手转述，未见其 24h 内新帖——标注“媒体转述”。</div></section><section id="kol"><h2>大V观点</h2><p class="sub">过去约 24 小时原帖</p><div class="kolwrap"><div class="kol"><div class="who"><a href="https://x.com/CryptoHayes/status/2113877751803642092" target="_blank" rel="noopener">Arthur Hayes</a><small>@CryptoHayes · BitMEX 联合创始人 / Maelstrom</small></div><div>“I dumped it all… we gotta go down to go up… sit on the sidelines and wait for the all clear.” 约 3671 赞、105 万曝光——周末叙事中心。</div></div><div class="kol"><div class="who"><a href="https://x.com/lookonchain/status/2113876807393083697" target="_blank" rel="noopener">Lookonchain</a><small>@lookonchain</small></div><div>量化 Hayes 抛售清单约 $2,228 万；另报最大 HYPE 空单浮盈、Machi 连爆、ETH 大多头清算线。</div></div><div class="kol"><div class="who"><a href="https://x.com/EmberCN/status/2113915752801800312" target="_blank" rel="noopener">余烬 EmberCN</a><small>@EmberCN</small></div><div>中文拆解 Hayes：约 $2,608 万减仓，读作“先卖掉、等跌到位再抄底”。</div></div><div class="kol"><div class="who"><a href="https://x.com/ai_9684xtpa/status/2113948502472695912" target="_blank" rel="noopener">Ai 姨</a><small>@ai_9684xtpa</small></div><div>对照 2025.11–12 那轮 Hayes 大额抛售山寨的背景（BTC 10万→8.5万）。</div></div><div class="kol"><div class="who"><a href="https://x.com/ki_young_ju/status/2113901167264891142" target="_blank" rel="noopener">Ki Young Ju</a><small>@ki_young_ju · CryptoQuant CEO</small></div><div>引用自己前一日“Buy the fear”帖后说：看回复，空头挺亢奋——Good luck。约 507 赞。</div></div><div class="kol"><div class="who"><a href="https://x.com/KoroushAK/status/2113948652960133483" target="_blank" rel="noopener">Koroush AK</a><small>@KoroushAK</small></div><div>教育向：较小止盈目标往往赚更多；1R 常优于硬追 3R。适合新账号发“交易笔记”类引用。</div></div></div></section><section id="view"><div class="view"><h2>我的观点和看法</h2><p class="sub">分析</p><p><b>情绪比价格更吵。</b>BTC/HYPE 周日清晨几乎横盘，但 Hayes 清仓把叙事拉向“防守”。对 geleek 来说，比跟空更有用的是拆：他卖的是方向性山寨敞口，不是宣布永别加密——等待信号本身也是仓位管理。</p><p><b>Hyperliquid 的两条并行线。</b>一边是链上真实成交与手续费回购仍在转；另一边是 RWA 永续份额被 CEX 切走、以及合规话语权仍在 TradFi 大佬嘴里。发帖可以同时写“产品数据”和“竞争/监管”，比单线吹更可信。</p><p><b>截图素材很多，但别堆猎奇。</b>Machi 连爆、大空单浮盈适合当风险教育，不适合当跟单信号。ETH 大多头清算价在 ~$2.23–2.26K，可当盘面观察点，不是喊单。</p><span class="disc">以上为分析，不构成投资建议。</span></div></section><section id="drafts"><h2>发帖草稿 · 10 条</h2><p class="sub">按建议发帖时间排序（北京时间，今天周日）· 中英双语 · 中文每字按 2 字符计</p><table class="sched"><thead><tr><th>时间（北京）</th><th>类型</th><th>主题</th><th>提醒</th></tr></thead><tbody><tr><td class="t"><a href="#d0">08:30</a></td><td>突发快讯</td><td>Hayes 清仓</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d1">09:45</a></td><td>Hyperliquid 巨鲸</td><td>最大 HYPE 空单</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d2">11:00</a></td><td>可截图数据</td><td>HL 周末盘面</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d3">12:30</a></td><td>短分析</td><td>RWA 份额被切</td><td></td></tr><tr><td class="t"><a href="#d4">14:00</a></td><td>风险教育</td><td>Machi 连爆</td><td><span class=flag>需截图</span></td></tr><tr><td class="t"><a href="#d5">15:30</a></td><td>大V引用+看法</td><td>Ki Young Ju 空头亢奋</td><td></td></tr><tr><td class="t"><a href="#d6">17:30</a></td><td>TradFi 交叉</td><td>富兰克林股息买币 ETF</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d7">19:30</a></td><td>轻互动/提问</td><td>你会跟 Hayes 清仓吗</td><td></td></tr><tr><td class="t"><a href="#d8">21:00</a></td><td>长推开头</td><td>周末三件事</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d9">22:30</a></td><td>安全提醒</td><td>Season 2 钓鱼</td><td></td></tr></tbody></table><div class="draft" id="d0"><div class="dh"><span class="time">08:30</span><span class="tag acc">突发快讯</span><span class="dt">Hayes 清仓</span><span class="flag">⚠ 发前更新价格：若引用具体美元金额，发前对照 Lookonchain / EmberCN 最新帖</span></div><div class="meta">开盘第一条，带原帖链接；金额用 Lookonchain 或写区间<br>来源：<a href="https://x.com/CryptoHayes/status/2113877751803642092" target="_blank" rel="noopener">@CryptoHayes</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d0zh">复制</button></div><div class="txt" id="d0zh">⚡️ Arthur Hayes：方向性仓位清了。
+
+原话大意：Maelstrom 已兑现 $ETH / $ENA / $UNI 等利润，觉得要先跌才能再涨，宏观有点悬，先坐场边等绿灯。
+
+链上跟踪显示抛压约 $2,200–2,600 万量级（口径不一，见图）。
+
+NFA/DYOR #crypto $ETH $ENA</div><div class="cnt" id="d0zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d0en">复制</button></div><div class="txt" id="d0en">⚡️ Arthur Hayes: directional book closed.
+
+In his words: took profits on $ETH, $ENA, $UNI and other alts — &quot;gotta go down to go up,&quot; macro looks dicey, sitting on the sidelines for the all-clear.
+
+On-chain trackers put the dump around $22–26M (sources differ slightly).
+
+NFA/DYOR #crypto $ETH $ENA</div><div class="cnt" id="d0en-n"></div></div></div></div><div class="draft" id="d1"><div class="dh"><span class="time">09:45</span><span class="tag acc">Hyperliquid 巨鲸</span><span class="dt">最大 HYPE 空单</span><span class="flag">⚠ 发前更新价格：$HYPE 现价与浮盈数字发前更新</span></div><div class="meta">📷 截图：去 https://x.com/lookonchain/status/2113896859077099902 截图<br>配 Lookonchain 截图；提醒价格已变动<br>来源：<a href="https://x.com/lookonchain/status/2113896859077099902" target="_blank" rel="noopener">@lookonchain</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d1zh">复制</button></div><div class="txt" id="d1zh">📊 $HYPE 自高点约 −22%。
+
+Lookonchain：最大空单地址 0xf02d 空约 71.5 万枚（名义约 $5,457 万），浮盈约 $556 万，另吃资金费约 $62 万。
+
+空头赚的是波动+费率，不是“币没了”。观察用，不跟单。
+
+NFA #Hyperliquid $HYPE</div><div class="cnt" id="d1zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d1en">复制</button></div><div class="txt" id="d1en">📊 $HYPE ~22% off peak.
+
+Lookonchain: largest short 0xf02d is short ~715k $HYPE (~$54.6M notional), ~$5.56M unrealized + ~$620K funding.
+
+That&#x27;s volatility + funding — not &quot;the coin is dead.&quot; Watch, don&#x27;t copy.
+
+NFA #Hyperliquid $HYPE</div><div class="cnt" id="d1en-n"></div></div></div></div><div class="draft" id="d2"><div class="dh"><span class="time">11:00</span><span class="tag acc">可截图数据</span><span class="dt">HL 周末盘面</span><span class="flag">⚠ 发前更新价格：价格、持仓、成交发前重读 API/页面</span></div><div class="meta">📷 截图：CoinGecko HYPE 页 + https://app.hyperliquid.xyz/trade 总览<br>截 CoinGecko + HL 交易页持仓/成交<br>来源：<a href="https://www.coingecko.com/en/coins/hyperliquid" target="_blank" rel="noopener">CoinGecko</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d2zh">复制</button></div><div class="txt" id="d2zh">🖥️ 周日早盘快照（发前请更新）：
+
+$HYPE ≈ $76.5｜BTC ≈ $80.6K｜ETH ≈ $2.35K
+Hyperliquid 主盘持仓 ≈ $112 亿，24h 成交 ≈ $48 亿
+HYPE 资金费率接近 0 略正
+
+周末量能一般，别把横盘当成趋势确认。
+
+数据：CoinGecko + HL API
+NFA #Hyperliquid $HYPE $BTC</div><div class="cnt" id="d2zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d2en">复制</button></div><div class="txt" id="d2en">🖥️ Sunday morning snapshot (refresh before post):
+
+$HYPE ≈ $76.5｜BTC ≈ $80.6K｜ETH ≈ $2.35K
+Hyperliquid main OI ≈ $11.2B, 24h vol ≈ $4.8B
+HYPE funding near flat, slightly positive
+
+Weekend volume is soft — don&#x27;t mistake a chop for a trend.
+
+Sources: CoinGecko + HL API
+NFA #Hyperliquid $HYPE $BTC</div><div class="cnt" id="d2en-n"></div></div></div></div><div class="draft" id="d3"><div class="dh"><span class="time">12:30</span><span class="tag acc">短分析</span><span class="dt">RWA 份额被切</span></div><div class="meta">引用 Glassnode/FXStreet，强调竞争而非唱空<br>来源：<a href="https://www.fxstreet.com/cryptocurrencies/news/hyperliquid-strategies-lifts-buyback-to-100m-as-hype-trades-21-off-peak-202610240520" target="_blank" rel="noopener">FXStreet</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d3zh">复制</button></div><div class="txt" id="d3zh">🧠 一组值得记下的数（Glassnode×Fasanara，经 FXStreet）：
+
+HL+Lighter ≈ 全市场 BTC 期货日成交的 7.5%
+但 HL 的 RWA 永续份额：7 月 ~80% → 现在 ~26%，CEX 合计 ~64%
+
+链上衍生品仍强，TradFi 资产这块护城河在变薄。看 HL，要同时看产品数据和竞争。
+
+NFA #Hyperliquid #RWA</div><div class="cnt" id="d3zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d3en">复制</button></div><div class="txt" id="d3en">🧠 Numbers worth saving (Glassnode×Fasanara via FXStreet):
+
+HL+Lighter ≈ 7.5% of BTC futures daily volume
+But HL’s RWA perp share: ~80% in July → ~26% now; CEXs ~64% combined
+
+On-chain perps still strong — the TradFi-asset moat is getting thinner. Track product AND competition.
+
+NFA #Hyperliquid #RWA</div><div class="cnt" id="d3en-n"></div></div></div></div><div class="draft" id="d4"><div class="dh"><span class="time">14:00</span><span class="tag acc">风险教育</span><span class="dt">Machi 连爆</span></div><div class="meta">📷 截图：Lookonchain 原帖图<br>轻松一点，别嘲讽；导向风控<br>来源：<a href="https://x.com/lookonchain/status/2114016142855720989" target="_blank" rel="noopener">@lookonchain</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d4zh">复制</button></div><div class="txt" id="d4zh">😅 周末风控课：Machi 在 Hyperliquid 上一小时连爆 5 次，账户一度只剩约 $5K。
+
+高杠杆把“还能再扛一下”压缩成几分钟。链上透明是双刃剑——别人的爆仓会变成你的教材。
+
+仓位 &gt; 观点。
+NFA/DYOR #Hyperliquid</div><div class="cnt" id="d4zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d4en">复制</button></div><div class="txt" id="d4en">😅 Weekend risk lesson: Machi got liquidated 5× in one hour on Hyperliquid — account down to ~$5K.
+
+High leverage turns “I can hold a bit more” into minutes. On-chain transparency cuts both ways — someone else’s wipeout can be your textbook.
+
+Sizing &gt; opinions.
+NFA/DYOR #Hyperliquid</div><div class="cnt" id="d4en-n"></div></div></div></div><div class="draft" id="d5"><div class="dh"><span class="time">15:30</span><span class="tag acc">大V引用+看法</span><span class="dt">Ki Young Ju 空头亢奋</span></div><div class="meta">引用他“Buy the fear”系列的后续<br>来源：<a href="https://x.com/ki_young_ju/status/2113901167264891142" target="_blank" rel="noopener">@ki_young_ju</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d5zh">复制</button></div><div class="txt" id="d5zh">💬 CryptoQuant CEO Ki Young Ju 看完评论区：空头挺亢奋——Good luck。
+
+我的看法：情绪极端往往比价格更早说话。但这不是自动抄底信号，还要看 ETF 流向和杠杆有没有真正去干净。
+
+NFA #BTC #crypto</div><div class="cnt" id="d5zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d5en">复制</button></div><div class="txt" id="d5en">💬 CryptoQuant’s Ki Young Ju after reading replies: shorts look euphoric — good luck.
+
+My take: extreme sentiment often speaks before price. Still not an auto buy — watch ETF flows and whether leverage actually flushed.
+
+NFA #BTC #crypto</div><div class="cnt" id="d5en-n"></div></div></div></div><div class="draft" id="d6"><div class="dh"><span class="time">17:30</span><span class="tag acc">TradFi 交叉</span><span class="dt">富兰克林股息买币 ETF</span><span class="flag">⚠ 发前更新价格：确认是否已开盘交易</span></div><div class="meta">选题偏金融科普，适合涨粉<br>来源：<a href="https://etf.net/news/franklin-dividend-bitcoin-etfs-effective-2026-10-23" target="_blank" rel="noopener">ETF.net</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d6zh">复制</button></div><div class="txt" id="d6zh">🏦 Franklin Templeton 的 FBEQ / FIBT：大约 95% 股票 + 5% 比特币相关，再用股息自动加仓 BTC 敞口。招股说明书约 10/27 生效，但尚未开盘。
+
+传统账户里“静静囤币”的管道又多了一条。对加密叙事的意义：需求不一定只来自现货 ETF 净流入。
+
+NFA #Bitcoin #ETF</div><div class="cnt" id="d6zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d6en">复制</button></div><div class="txt" id="d6en">🏦 Franklin Templeton’s FBEQ / FIBT: ~95% equities + 5% bitcoin-related, with dividends auto-routed into more BTC exposure. Prospectuses effective ~Oct 27 — trading not started yet.
+
+Another pipe for “quiet BTC accumulation” inside TradFi wrappers. Demand isn’t only spot-ETF prints.
+
+NFA #Bitcoin #ETF</div><div class="cnt" id="d6en-n"></div></div></div></div><div class="draft" id="d7"><div class="dh"><span class="time">19:30</span><span class="tag acc">轻互动/提问</span><span class="dt">你会跟 Hayes 清仓吗</span></div><div class="meta">配投票更好；语气友好<br>来源：<a href="https://x.com/CryptoHayes/status/2113877751803642092" target="_blank" rel="noopener">@CryptoHayes</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d7zh">复制</button></div><div class="txt" id="d7zh">🤔 想听听大家：
+Hayes 说方向性仓位清了、等绿灯。你会怎么做？
+
+A 跟着降杠杆观望
+B 仓位不动，只收紧止损
+C 当成逆向信号，分批接
+
+评论区聊聊（说明理由更好）
+NFA #crypto</div><div class="cnt" id="d7zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d7en">复制</button></div><div class="txt" id="d7en">🤔 Quick poll:
+Hayes closed the directional book and is waiting for the all-clear. What would you do?
+
+A Cut leverage / sit out
+B Hold size, tighten stops
+C Treat it as contrarian, scale in
+
+Reply with your why
+NFA #crypto</div><div class="cnt" id="d7en-n"></div></div></div></div><div class="draft" id="d8"><div class="dh"><span class="time">21:00</span><span class="tag acc">长推开头</span><span class="dt">周末三件事</span><span class="flag">⚠ 发前更新价格：线程第 2 条更新盘面数字</span></div><div class="meta">可做成线程：1 Hayes 2 HL 竞争 3 风控<br>来源：<a href="https://www.fxstreet.com/cryptocurrencies/news/hyperliquid-strategies-lifts-buyback-to-100m-as-hype-trades-21-off-peak-202610240520" target="_blank" rel="noopener">FXStreet</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d8zh">复制</button></div><div class="txt" id="d8zh">🧵 周日三件值得记下的事：
+
+1) Hayes 清方向性仓位——情绪转向防守
+2) Glassnode：HL 仍厚，但 RWA 份额被 CEX 切
+3) Machi 连爆 / 大空单浮盈——杠杆课又上了一节
+
+价格没大动，叙事动了。展开 👇
+
+#Hyperliquid #crypto $HYPE</div><div class="cnt" id="d8zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d8en">复制</button></div><div class="txt" id="d8en">🧵 Three Sunday notes:
+
+1) Hayes flat on directional risk — tone shifts defensive
+2) Glassnode: HL still deep, but RWA share is leaking to CEXs
+3) Machi’s 5× wipeout / fat HYPE short — another leverage lesson
+
+Price quiet, narrative loud. Thread 👇
+
+#Hyperliquid #crypto $HYPE</div><div class="cnt" id="d8en-n"></div></div></div></div><div class="draft" id="d9"><div class="dh"><span class="time">22:30</span><span class="tag acc">安全提醒</span><span class="dt">Season 2 钓鱼</span></div><div class="meta">收尾安全帖；官方仍无公告<br>来源：<a href="https://x.com/HyperliquidX/status/2111097832039977285" target="_blank" rel="noopener">@HyperliquidX</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d9zh">复制</button></div><div class="txt" id="d9zh">⚠️ 再提醒一次：任何“Hyperliquid Season 2 投票 / 领 3,880 万 $HYPE”都先当假的。
+
+官方 @HyperliquidX 最近原创还是 10/11，没有任何投票公告。别点连接、别连钱包。
+
+#Hyperliquid $HYPE 安全第一</div><div class="cnt" id="d9zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d9en">复制</button></div><div class="txt" id="d9en">⚠️ Reminder: treat any “Hyperliquid Season 2 vote / claim 38.8M $HYPE” as fake until proven otherwise.
+
+@HyperliquidX’s last original post is still Oct 11 — no vote announcement. Don’t click. Don’t connect a wallet.
+
+#Hyperliquid $HYPE stay safe</div><div class="cnt" id="d9en-n"></div></div></div></div></section><section id="replies"><h2>互动评论草稿</h2><p class="sub">打开原帖 → 复制 → 回复</p><div class="draft"><div class="dh"><span class="dt">① <a href="https://x.com/CryptoHayes/status/2113877751803642092" target="_blank" rel="noopener">@CryptoHayes：清空方向性仓位</a></span></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="r0zh">复制</button></div><div class="txt" id="r0zh">“等绿灯”这四个字比清仓本身更重要 👀 仓位管理有时就是承认现在不是开枪的时候。好奇你心里的 all-clear 更看宏观，还是链上杠杆？</div><div class="cnt" id="r0zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="r0en">复制</button></div><div class="txt" id="r0en">“Wait for the all-clear” might matter more than the dump itself 👀 Sometimes sizing is just admitting it’s not time to shoot. Is your all-clear more macro, or on-chain leverage?</div><div class="cnt" id="r0en-n"></div></div></div></div><div class="draft"><div class="dh"><span class="dt">② <a href="https://x.com/lookonchain/status/2114016142855720989" target="_blank" rel="noopener">@lookonchain：Machi 一小时连爆 5 次</a></span></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="r1zh">复制</button></div><div class="txt" id="r1zh">链上透明把爆仓变成公开课 📚 一小时五次，说明加仓节奏比方向判断更致命。谢谢持续盯这些极端样本。</div><div class="cnt" id="r1zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="r1en">复制</button></div><div class="txt" id="r1en">On-chain transparency turns liquidations into open class 📚 Five times in an hour — sizing cadence can kill faster than direction. Thanks for keeping these extreme samples visible.</div><div class="cnt" id="r1en-n"></div></div></div></div><div class="draft"><div class="dh"><span class="dt">③ <a href="https://x.com/lookonchain/status/2113896859077099902" target="_blank" rel="noopener">@lookonchain：最大 HYPE 空单浮盈</a></span></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="r2zh">复制</button></div><div class="txt" id="r2zh">浮盈 + 资金费双吃，提醒大家：永续空单赚的不只是跌幅 🧮 不过拥挤的大空单本身也可能变成燃料——你会盯它的平仓吗？</div><div class="cnt" id="r2zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="r2en">复制</button></div><div class="txt" id="r2en">Unrealized + funding is a reminder: perp shorts aren’t only a bet on the drop 🧮 Crowded whale shorts can also become fuel — do you watch for covers?</div><div class="cnt" id="r2en-n"></div></div></div></div><div class="draft"><div class="dh"><span class="dt">④ <a href="https://x.com/ki_young_ju/status/2113901167264891142" target="_blank" rel="noopener">@ki_young_ju：空头很亢奋</a></span></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="r3zh">复制</button></div><div class="txt" id="r3zh">评论区温度计有时比K线诚实 🌡️ 空头亢奋之后，你更想看哪个确认：ETF 止流出，还是资金费率转负后的挤压？</div><div class="cnt" id="r3zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="r3en">复制</button></div><div class="txt" id="r3en">Reply sections are thermometers too 🌡️ After short euphoria, what confirmation do you want first: ETF outflows slowing, or a squeeze after funding flips?</div><div class="cnt" id="r3en-n"></div></div></div></div></section><section id="follow"><h2>建议追踪的账号</h2><p class="sub">“近期活跃”按本次检索到的发帖时间判断</p><table class="tbl"><thead><tr><th>X 账号</th><th>类型</th><th>为什么值得追踪</th><th>活跃情况</th></tr></thead><tbody><tr><td><a href="https://x.com/HyperliquidX" target="_blank" rel="noopener">@HyperliquidX</a></td><td>官方</td><td>产品上线、持仓纪录等一手公告</td><td class="act n">最近原创 10/11，转推 10/16</td></tr><tr><td><a href="https://x.com/chameleon_jeff" target="_blank" rel="noopener">@chameleon_jeff</a></td><td>创始人 Jeff</td><td>HIP-3 / 合规框架一手思路</td><td class="act n">本次窗口无新原创</td></tr><tr><td><a href="https://x.com/EmberCN" target="_blank" rel="noopener">@EmberCN</a></td><td>中文链上数据</td><td>巨鲸与机构资金路径追踪</td><td class="act y">✓ Hayes 减仓拆解</td></tr><tr><td><a href="https://x.com/ai_9684xtpa" target="_blank" rel="noopener">@ai_9684xtpa</a></td><td>中文链上数据</td><td>巨鲸囤币、借贷做多、换仓播报</td><td class="act y">✓ Hayes 历史对照</td></tr><tr><td><a href="https://x.com/WuBlockchain" target="_blank" rel="noopener">@WuBlockchain</a></td><td>新闻</td><td>亚洲视角监管、ETF、安全快讯</td><td class="act y">✓ Hayes / Keystone</td></tr><tr><td><a href="https://x.com/tier10k" target="_blank" rel="noopener">@tier10k</a></td><td>新闻快讯</td><td>头条快讯源</td><td class="act n">本次窗口未见相关原创</td></tr><tr><td><a href="https://x.com/lookonchain" target="_blank" rel="noopener">@lookonchain</a></td><td>链上数据</td><td>鲸鱼、清算、巨鲸仓位</td><td class="act y">✓ 高频（Hayes/Machi/HYPE）</td></tr><tr><td><a href="https://x.com/coinglass_com" target="_blank" rel="noopener">@coinglass_com</a></td><td>衍生品数据</td><td>清算热力图、订单墙、资金费率</td><td class="act y">✓ 有更新（图表向）</td></tr><tr><td><a href="https://x.com/0xngmi" target="_blank" rel="noopener">@0xngmi</a></td><td>DefiLlama</td><td>DeFi 数据口径讨论</td><td class="act n">本次窗口未见</td></tr><tr><td><a href="https://x.com/CryptoHayes" target="_blank" rel="noopener">@CryptoHayes</a></td><td>KOL</td><td>宏观与仓位框架；今日叙事核心</td><td class="act y">✓ 清仓帖</td></tr><tr><td><a href="https://x.com/cobie" target="_blank" rel="noopener">@cobie</a></td><td>KOL</td><td>老牌行业观察</td><td class="act n">本次窗口未见</td></tr><tr><td><a href="https://x.com/Pentosh1" target="_blank" rel="noopener">@Pentosh1</a></td><td>交易 KOL</td><td>中长线交易观点</td><td class="act n">本次窗口未见</td></tr><tr><td><a href="https://x.com/blknoiz06" target="_blank" rel="noopener">@blknoiz06</a></td><td>交易 KOL</td><td>山寨与 Solana 情绪</td><td class="act n">本次窗口未见原创</td></tr><tr><td><a href="https://x.com/CryptoCred" target="_blank" rel="noopener">@CryptoCred</a></td><td>交易教育</td><td>技术分析与交易心理</td><td class="act n">本次窗口未见</td></tr><tr><td><a href="https://x.com/KoroushAK" target="_blank" rel="noopener">@KoroushAK</a></td><td>交易教育</td><td>止盈目标与数据化交易</td><td class="act y">✓ 小止盈指南</td></tr><tr><td><a href="https://x.com/DefiIgnas" target="_blank" rel="noopener">@DefiIgnas</a></td><td>DeFi 研究</td><td>DeFi 估值与新项目雷达</td><td class="act n">本次窗口未见原创</td></tr><tr><td><a href="https://x.com/ASvanevik" target="_blank" rel="noopener">@ASvanevik</a></td><td>Nansen CEO</td><td>链上数据与 AI 交易工具</td><td class="act n">本次窗口未见原创</td></tr><tr><td><a href="https://x.com/HyperliquidPC" target="_blank" rel="noopener">@HyperliquidPC</a></td><td>政策中心（补充）</td><td>美国合规化一手信息</td><td class="act n">本次未专项检索到新帖</td></tr><tr><td><a href="https://x.com/ki_young_ju" target="_blank" rel="noopener">@ki_young_ju</a></td><td>CryptoQuant CEO（补充）</td><td>链上周期与情绪</td><td class="act y">✓ 空头亢奋评论</td></tr><tr><td><a href="https://x.com/MBxxvv" target="_blank" rel="noopener">@MBxxvv</a></td><td>Hyperliquid 生态（补充）</td><td>HyperEVM / 生态观察</td><td class="act n">本次未逐条核对</td></tr></tbody></table><h2 style="margin-top:48px">YouTube 频道</h2><p class="sub">均已确认频道页存在</p><div class="yt"><div><b><a href="https://research.glassnode.com/fasanara-digital-glassnode-q4-2026-institutional-market-perspectives/" target="_blank" rel="noopener">Glassnode×Fasanara Q4 报告</a></b><br>机构衍生品与 RWA 永续份额数据来源</div><div><b><a href="https://www.youtube.com/@Bankless" target="_blank" rel="noopener">Bankless YouTube</a></b><br>每周 ROLLUP 复盘</div><div><b><a href="https://www.youtube.com/@TheRollupCo" target="_blank" rel="noopener">The Rollup</a></b><br>机构/VC 访谈，含 Hyperliquid 专题</div><div><b><a href="https://www.youtube.com/@bloombergpodcasts" target="_blank" rel="noopener">Bloomberg Podcasts</a></b><br>Odd Lots；上周 CME Duffy 谈 HL 片段仍可引用</div><div><b><a href="https://www.youtube.com/@CryptoJebb" target="_blank" rel="noopener">Crypto Jebb</a></b><br>BTC 日内技术面直播</div><div><b><a href="https://www.youtube.com/@CoinBureau" target="_blank" rel="noopener">Coin Bureau</a></b><br>项目科普与行业深度</div><div><b><a href="https://www.youtube.com/@UnchainedCrypto" target="_blank" rel="noopener">Unchained</a></b><br>加密新闻与政策访谈</div></div><div class="note">过去 24 小时未确认到新的 Hyperliquid 专属长视频；本期以 Glassnode 报告页与 X 原帖为主。</div></section><footer>本页所有草稿均未发布，需本人确认后再发。数据为北京时间 10/25 07:35 快照，价格类内容发前请更新。</footer></main><script>
+function fallbackCopy(t){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.position='fixed';a.style.top='-1000px';document.body.appendChild(a);a.select();a.setSelectionRange(0,t.length);var ok=false;try{ok=document.execCommand('copy')}catch(e){}document.body.removeChild(a);return ok}
+function done(b,ok){var o=b.dataset.label||b.textContent;b.dataset.label=o;b.textContent=ok?'已复制 ✓':'复制失败';b.classList.toggle('ok',ok);clearTimeout(b._t);b._t=setTimeout(function(){b.textContent=o;b.classList.remove('ok')},1600)}
+document.addEventListener('click',function(e){var b=e.target.closest('.cp');if(!b)return;var t=document.getElementById(b.dataset.for).textContent;
+ if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(function(){done(b,true)},function(){done(b,fallbackCopy(t))})}else{done(b,fallbackCopy(t))}});
+// X 加权字数：CJK 计 2，其余计 1（近似）
+document.querySelectorAll('.txt').forEach(function(el){var s=el.textContent,n=0;for(var ch of s){n+=/[\u1100-\uFFFF]/.test(ch)&&!/[\u2000-\u206F\u2190-\u2BFF]/.test(ch)?2:1}var c=document.getElementById(el.id+'-n');if(c)c.textContent='约 '+n+' / 280 字符（X 加权估算，emoji 与链接以输入框为准）'});
+// 导航高亮
+var links=[].slice.call(document.querySelectorAll('.nav a'));var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+en.target.id)})}})},{rootMargin:'-20% 0px -70% 0px'});secs.forEach(function(s){s&&io.observe(s)});
+</script></body></html>
