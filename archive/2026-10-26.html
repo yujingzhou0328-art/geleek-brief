@@ -1,0 +1,304 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>币圈早报 · 2026-10-26（周一）</title><style>
+:root{
+ --fg:#2b3442;--mut:#525d6b;--line:rgba(255,255,255,.55);--hair:rgba(43,52,66,.10);
+ --acc:#44607b;--acc-bg:rgba(79,109,138,.12);--sage:#4d6656;--warn:#83583a;--warn-bg:rgba(184,140,110,.16);
+ --glass:rgba(255,255,255,.46);--glass-strong:rgba(255,255,255,.62);--glass-fallback:rgba(250,249,246,.94);
+ --shadow:0 8px 32px rgba(60,72,92,.08);--blur:blur(20px) saturate(120%);
+ --bg:#eef0ee;--b1:#b4c6d8;--b2:#bccfba;--b3:#e0c0c2;--b4:#ecdcc4;--side:256px;--r:18px
+}
+@media (prefers-color-scheme:dark){:root{
+ --fg:#dfe4ea;--mut:#9aa5b2;--line:rgba(255,255,255,.10);--hair:rgba(255,255,255,.08);
+ --acc:#9db4cb;--acc-bg:rgba(157,180,203,.14);--sage:#a3b8a8;--warn:#d6b08f;--warn-bg:rgba(214,176,143,.13);
+ --glass:rgba(30,34,42,.48);--glass-strong:rgba(36,40,49,.62);--glass-fallback:rgba(28,31,38,.95);
+ --shadow:0 8px 32px rgba(0,0,0,.28);
+ --bg:#14171c;--b1:#33445a;--b2:#33443a;--b3:#4a363c;--b4:#443d31}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--fg);font:15px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+ background:
+  radial-gradient(closest-side,var(--b1),transparent) -8vw -12vh/62vw 62vw no-repeat,
+  radial-gradient(closest-side,var(--b2),transparent) 62vw 4vh/48vw 48vw no-repeat,
+  radial-gradient(closest-side,var(--b3),transparent) 18vw 58vh/52vw 52vw no-repeat,
+  radial-gradient(closest-side,var(--b4),transparent) 70vw 62vh/50vw 50vw no-repeat,var(--bg);
+ filter:blur(40px)}
+a{color:var(--acc);text-decoration:none;text-underline-offset:3px}a:hover{text-decoration:underline}
+.glass,.side,.card,.stats,.draft,.sched,.tbl,.kolwrap,.view,.yt div,.note{background:var(--glass-fallback)}
+@supports ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){
+ .side,.card,.stats,.draft,.sched,.tbl,.kolwrap,.view,.yt div,.note{background:var(--glass);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur)}
+}
+.side,.card,.stats,.draft,.sched,.tbl,.kolwrap,.view,.yt div{border:1px solid var(--line);box-shadow:var(--shadow)}
+.side{position:fixed;top:16px;left:16px;bottom:16px;width:calc(var(--side) - 32px);padding:32px 22px;border-radius:22px;overflow-y:auto;z-index:10}
+.brand{font-weight:700;font-size:18px;letter-spacing:-.01em}
+.date{color:var(--mut);font-size:13px;margin:4px 0 28px}
+.nav{list-style:none;margin:0;padding:0}
+.nav a{display:block;padding:8px 12px;margin:2px -6px;border-radius:12px;color:var(--mut);font-size:14px;transition:background .2s,color .2s}
+.nav a:hover{color:var(--fg);background:var(--acc-bg);text-decoration:none}
+.nav a.on{color:var(--fg);background:var(--glass-strong);border:1px solid var(--line);font-weight:600;box-shadow:0 2px 10px rgba(60,72,92,.06)}
+.side .foot{margin-top:28px;font-size:12px;color:var(--mut);line-height:1.6}
+main{margin-left:var(--side);padding:48px 56px 120px 40px;max-width:calc(var(--side) + 1120px)}
+section{padding:4px 0 44px;margin-bottom:28px}
+h1{font-size:30px;line-height:1.25;margin:0 0 8px;letter-spacing:-.02em}
+h2{font-size:21px;margin:0 0 4px;letter-spacing:-.01em}
+.sub{color:var(--mut);font-size:13px;margin:0 0 22px}
+.lead{font-size:13px;color:var(--mut);margin-bottom:32px}
+.keys{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.keys li{padding:16px 20px 16px 58px;position:relative;font-size:15.5px;border-radius:var(--r);border:1px solid var(--line);box-shadow:var(--shadow);background:var(--glass-fallback)}
+@supports ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){.keys li{background:var(--glass);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur)}}
+.keys li b.n{position:absolute;left:20px;top:16px;color:var(--sage);font-variant-numeric:tabular-nums}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-radius:var(--r);overflow:hidden;margin:0 0 24px}
+.stat{padding:16px 20px;border-right:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.stat:nth-child(4n){border-right:0}.stat:nth-last-child(-n+4){border-bottom:0}
+.stat .k{font-size:12px;color:var(--mut)}.stat .v{font-size:22px;font-weight:650;font-variant-numeric:tabular-nums;letter-spacing:-.01em}.stat .d{font-size:12px;color:var(--mut)}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card{border-radius:var(--r);padding:20px 22px}
+.card h3{font-size:16px;margin:0 0 10px;line-height:1.45}
+.card ul{margin:0;padding-left:18px}.card li{margin:4px 0}.card li::marker{color:var(--sage)}
+.card .src{margin-top:12px;padding-top:10px;border-top:1px solid var(--hair);font-size:12.5px;color:var(--mut)}
+.note{border:1px solid var(--line);border-left:3px solid var(--warn);padding:12px 16px;border-radius:12px;font-size:13.5px;margin-top:16px}
+.kolwrap{border-radius:var(--r);padding:4px 22px}
+.kol{display:grid;grid-template-columns:200px 1fr;gap:6px 24px;padding:16px 0;border-top:1px solid var(--hair)}
+.kol:first-child{border-top:0}.kol .who{font-weight:600}.kol .who small{display:block;font-weight:400;color:var(--mut);font-size:12.5px}
+.view{border-radius:var(--r);padding:24px 26px}
+.view h2,.view .sub{margin-left:0}
+.view p{margin:0 0 14px;max-width:860px}
+.disc{display:inline-block;margin-top:4px;font-weight:600;color:var(--warn);background:var(--warn-bg);padding:4px 12px;border-radius:99px;font-size:13.5px}
+.sched,.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:14px;border-radius:var(--r);overflow:hidden}
+.sched{margin-bottom:28px}
+.sched th,.sched td,.tbl th,.tbl td{text-align:left;padding:10px 16px;border-bottom:1px solid var(--hair);vertical-align:top}
+.sched tr:last-child td,.tbl tr:last-child td{border-bottom:0}
+.sched th,.tbl th{font-size:12px;color:var(--mut);font-weight:500;background:rgba(255,255,255,.18)}
+.sched td.t{font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap}
+.draft{border-radius:20px;margin-bottom:22px;overflow:hidden}
+.dh{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:14px 22px;border-bottom:1px solid var(--hair);background:rgba(255,255,255,.14)}
+.time{font-weight:700;font-size:17px;font-variant-numeric:tabular-nums}
+.tag{font-size:12px;padding:2px 10px;border-radius:99px;border:1px solid var(--hair);color:var(--mut)}
+.tag.acc{color:var(--acc);border-color:transparent;background:var(--acc-bg)}
+.dt{font-weight:600}
+.flag{font-size:12.5px;padding:3px 10px;border-radius:99px;color:var(--warn);background:var(--warn-bg)}
+.meta{padding:10px 22px;font-size:13px;color:var(--mut);border-bottom:1px solid var(--hair)}
+.pair{display:grid;grid-template-columns:1fr 1fr}
+.pane{padding:16px 22px 18px;display:flex;flex-direction:column;min-width:0}
+.pane+.pane{border-left:1px solid var(--hair)}
+.ph{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.lang{font-size:12px;color:var(--mut);letter-spacing:.06em}
+.txt{white-space:pre-wrap;word-break:break-word;font-size:14.5px;line-height:1.75;flex:1}
+.cp{font:inherit;font-size:13px;cursor:pointer;border:1px solid var(--line);background:var(--glass-strong);color:var(--fg);padding:5px 16px;border-radius:99px;min-width:76px;transition:.2s;box-shadow:0 1px 6px rgba(60,72,92,.06)}
+.cp:hover{color:var(--acc);border-color:var(--acc)}
+.cp.ok{background:var(--sage);border-color:var(--sage);color:#fff}
+.cnt{font-size:11.5px;color:var(--mut);margin-top:8px}
+.act{white-space:nowrap;font-size:12.5px}.act.y{color:var(--sage);font-weight:600}.act.n{color:var(--mut)}
+.yt{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:8px}
+.yt div{padding:14px 18px;border-radius:14px}
+footer{color:var(--mut);font-size:12.5px;margin-top:24px}
+@media (max-width:1100px){main{padding:40px 32px 100px 32px}.cards{grid-template-columns:1fr}}
+@media (max-width:820px){
+ html{scroll-padding-top:72px}.flag{white-space:nowrap}
+ .side{position:sticky;top:8px;left:auto;bottom:auto;width:auto;height:auto;margin:8px;padding:8px 14px;border-radius:16px;display:flex;align-items:center;gap:14px;overflow-x:auto;white-space:nowrap}
+ .date,.side .foot{display:none}.brand{font-size:15px}
+ .nav{display:flex;gap:4px}.nav a{margin:0;padding:6px 10px;font-size:13px}
+ main{margin-left:0;padding:24px 14px 80px}
+ .pair{grid-template-columns:1fr}.pane+.pane{border-left:0;border-top:1px solid var(--hair)}
+ .kol{grid-template-columns:1fr}.yt{grid-template-columns:1fr}
+ .stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat:nth-child(n){border-right:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+ .sched,.tbl{display:block;overflow-x:auto}
+ h1{font-size:24px}
+}
+</style></head><body><aside class="side"><div class="brand">geleek 早报</div><div class="date">2026-10-26 · 周一</div><!--datenav--><style>
+.dn{margin:-14px 0 26px;padding:12px 12px 10px;border-radius:14px;border:1px solid var(--line);background:var(--glass-strong);box-shadow:0 2px 10px rgba(60,72,92,.06);font-size:12.5px}
+.dn .dn-k{color:var(--mut);font-size:11.5px;letter-spacing:.04em;display:flex;justify-content:space-between;align-items:center}
+.dn .dn-cur{font-weight:650;font-size:14px;color:var(--fg);margin:2px 0 8px;font-variant-numeric:tabular-nums;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.dn .dn-badge{font-size:11px;font-weight:500;padding:1px 8px;border-radius:99px;color:var(--sage);background:rgba(77,102,86,.12)}
+.dn .dn-badge:empty{display:none}
+.dn .dn-badge.old{color:var(--warn);background:var(--warn-bg)}
+.dn .dn-row{display:flex;gap:6px;align-items:center;margin-top:6px}
+.dn select{width:100%;font:inherit;font-size:12.5px;color:var(--fg);background:var(--glass);border:1px solid var(--hair);border-radius:10px;padding:5px 6px;cursor:pointer;font-variant-numeric:tabular-nums}
+.dn .dn-a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:4px;height:28px;border-radius:10px;border:1px solid var(--hair);background:var(--glass);color:var(--fg);font-size:12px;line-height:1}
+.dn .dn-a:hover{text-decoration:none;color:var(--acc);border-color:var(--acc)}
+.dn .dn-a.off{opacity:.35;pointer-events:none}
+.dn .dn-all{display:inline-block;margin-top:8px;font-size:12px}
+@media (max-width:820px){.dn{margin:0;padding:4px 8px;display:flex;align-items:center;gap:8px;flex:none}.dn .dn-k,.dn .dn-all,.dn .dn-cur{display:none}.dn select{width:150px}.dn .dn-row{margin:0}.dn .dn-a{flex:none;width:28px}.dn .dn-a span{display:none}}
+</style><div class="dn" id="dn" data-date="2026-10-26" data-root="../" data-pub="1792971400"><div class="dn-k"><span>正在查看</span><span title="快捷键：[ 前一天，] 后一天">⌨ [ ]</span></div><div class="dn-cur">2026-10-26 周一<span class="dn-badge">最新</span></div><select aria-label="选择日期"><option value="2026-10-26" selected>2026-10-26 周一</option></select><div class="dn-row"><a class="dn-a dn-prev off" aria-label="前一天" title="前一天">‹<span> 前一天</span></a><a class="dn-a dn-next off" aria-label="后一天" title="后一天"><span>后一天 </span>›</a></div><a class="dn-all" href="../archive/index.html">全部往期 →</a></div><script>
+(function(){var el=document.getElementById('dn');if(!el)return;var root=el.getAttribute('data-root')||'',cur=el.getAttribute('data-date')||'';
+function href(d){return root+'archive/'+d+'.html'}
+var sel=el.querySelector('select'),pv=el.querySelector('.dn-prev'),nx=el.querySelector('.dn-next'),bd=el.querySelector('.dn-badge');
+sel.addEventListener('change',function(){if(sel.value&&sel.value!==cur)location.href=href(sel.value)});
+fetch(root+'archive/dates.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(m){
+ var ds=(m.dates||m).slice().sort(function(a,b){return a.date<b.date?1:-1});if(!ds.length)return;
+ sel.innerHTML='';var found=false;
+ ds.forEach(function(d){var o=document.createElement('option');o.value=d.date;o.textContent=d.date+' '+(d.weekday||'')+(d.noon?' · 含午间快讯':'');if(d.summary)o.title=d.summary;if(d.date===cur){o.selected=true;found=true}sel.appendChild(o)});
+ if(!found&&cur){var o=document.createElement('option');o.value=cur;o.textContent=cur;o.selected=true;sel.insertBefore(o,sel.firstChild)}
+ var i=-1;ds.forEach(function(d,k){if(d.date===cur)i=k});
+ function set(a,d,lab){if(d){a.href=href(d.date);a.classList.remove('off');a.title=lab+'：'+d.date+(d.summary?'\n'+d.summary:'')}else{a.classList.add('off');a.removeAttribute('href')}}
+ set(pv,i>=0?ds[i+1]:null,'前一天');set(nx,i>0?ds[i-1]:null,'后一天');
+ if(bd){if(i===0){bd.textContent='最新';bd.classList.remove('old')}else if(i>0){bd.textContent='往期';bd.classList.add('old')}}
+}).catch(function(){});
+document.addEventListener('keydown',function(e){if(e.target.closest&&e.target.closest('input,textarea,select'))return;if(e.altKey||e.ctrlKey||e.metaKey)return;
+ if(e.key==='['&&pv.href)location.href=pv.href;if(e.key===']'&&nx.href)location.href=nx.href});
+})();
+</script><!--/datenav--><ul class="nav"><li><a href="#keys">今日要点</a></li><li><a href="#news">重点新闻和数据</a></li><li><a href="#kol">大V观点</a></li><li><a href="#view">我的观点</a></li><li><a href="#drafts">发帖草稿</a></li><li><a href="#replies">互动评论</a></li><li><a href="#follow">追踪账号</a></li></ul><div class="foot">覆盖北京时间 10/25 07:40 – 10/26 07:40（UTC+8）<br>所有草稿均未发布</div></aside><main><section id="keys"><h1>币圈早报 · 2026-10-26（周一）</h1><div class="lead">行情快照：<a href="https://www.coingecko.com/en/coins/hyperliquid" target="_blank" rel="noopener">CoinGecko</a> 与 Hyperliquid 官方 API，北京时间 10/26 07:35 读数。</div><ul class="keys"><li><b class="n">01</b>今天白天主线：EQX Labs 11 个代币化美股/ETF 现货市场计划北京时间约 21:30（美东 9:30）在 Hyperliquid 开盘——债务债权结构、不对美国人士开放。</li><li><b class="n">02</b>周日完成网络升级（约 09:30–09:50 UTC，~10 分钟停机）；测试网还修订了操作优先级并上线支持 agent 签名的 cDeposit2。</li><li><b class="n">03</b>盘面偏软：BTC ≈ $79.9K、HYPE ≈ $76.2；HL 巨鲸敞口约 $81.2 亿且空头占比 53.44%；美现货 BTC ETF 上周仍净流入约 $3.0–3.05 亿。</li></ul></section><section id="news"><h2>重点新闻和数据</h2><p class="sub">Hyperliquid 优先 · 每条附原始来源 · 已避开周日写过的 Hayes 清仓主叙事、Machi 连爆、FreedomXMR、SpaceX 周末题材</p><div class="stats"><div class="stat"><div class="k">HYPE</div><div class="v">$76.15</div><div class="d">24h −0.58% · <a href="https://www.coingecko.com/en/coins/hyperliquid" target="_blank" rel="noopener">CoinGecko</a></div></div><div class="stat"><div class="k">BTC</div><div class="v">$79,944</div><div class="d">24h −0.97%</div></div><div class="stat"><div class="k">ETH</div><div class="v">$2,319.2</div><div class="d">24h −1.61%</div></div><div class="stat"><div class="k">SOL</div><div class="v">$100.83</div><div class="d">24h −1.41%</div></div><div class="stat"><div class="k">HL 主盘持仓</div><div class="v">$111.4 亿</div><div class="d">24h 成交 $28.1 亿 · <a href="https://app.hyperliquid.xyz/trade" target="_blank" rel="noopener">交易页</a></div></div><div class="stat"><div class="k">HIP-3 xyz 持仓</div><div class="v">$39.3 亿</div><div class="d">24h 成交 $7.2 亿 · 周一早盘回升</div></div><div class="stat"><div class="k">HYPE 资金费率</div><div class="v">+0.00125%/h</div><div class="d">持仓约 $16.0 亿 · 略偏多</div></div><div class="stat"><div class="k">协议费用 近1日</div><div class="v">$257 万</div><div class="d">7 天 $1,978 万 · <a href="https://defillama.com/protocol/hyperliquid" target="_blank" rel="noopener">DefiLlama</a></div></div></div><div class="cards"><article class="card"><h3>① 今天：EQX Labs 11 个代币化美股/ETF 现货市场开盘</h3><ul><li>@eqxlabs 公告：EQX 代币化现货股票将于周一（10/26）美东 9:30（UTC 13:30 ≈ 北京 21:30）在 <a href="https://x.com/HyperliquidX" target="_blank" rel="noopener">@HyperliquidX</a> 开盘交易（<a href="https://x.com/eqxlabs/status/2113623982415241235" target="_blank" rel="noopener">原帖</a>，约 242 赞）。</li><li><a href="https://www.tokenpost.com/news/business/40564" target="_blank" rel="noopener">TokenPost</a> / <a href="https://bingx.com/en/flash-news/post/hyperliquid-to-list-tokenized-us-stocks-and-etfs-on-october" target="_blank" rel="noopener">BingX 快讯</a>：首批 11 个 USDC 计价 HIP-1 现货市场——EQSPY、EQQQQ（跟踪标普500 / 纳指100），以及挂钩 NVDA、TSLA、AAPL、MSFT、AMZN、GOOGL、META、MU、SpaceX 的代币。</li><li>官方文档强调：代币 1:1 由正股 backing，但法律上是 BVI 隔离组合公司发行的有限追索债务债权，不是直接持股；不对美国人士 / 美国境内人士 / BVI 居民开放（<a href="https://docs.eqxlabs.io/" target="_blank" rel="noopener">EQX Docs</a>）。</li><li>发帖务必写清：债务债权 ≠ 股票所有权；美国用户不可用。开盘后观察深度、溢价/折价与 xyz 永续的价差。</li></ul><div class="src">来源：<a href="https://x.com/eqxlabs/status/2113623982415241235" target="_blank" rel="noopener">@eqxlabs</a> · <a href="https://www.tokenpost.com/news/business/40564" target="_blank" rel="noopener">TokenPost</a> · <a href="https://docs.eqxlabs.io/" target="_blank" rel="noopener">EQX Docs</a></div></article><article class="card"><h3>② 网络升级已完成；测试网优先级 + cDeposit2</h3><ul><li><a href="https://hyperliquid.statuspage.io/" target="_blank" rel="noopener">Hyperliquid Status</a>：10/25 网络升级于 07:14 UTC 预告、09:30 UTC 开始、09:50 UTC 标记完成；预告停机约 10 分钟。</li><li><a href="https://coinalerts.org/news/articles/706137/" target="_blank" rel="noopener">CoinAlerts</a> 转述 @HyperliquidX：升级约在 2026-10-25 09:30 UTC，预期约 10 分钟停机。本次检索其 X 时间线未见可抓取原创帖，以 Status 页为准。</li><li><a href="https://www.tokenpost.com/news/technology/40433" target="_blank" rel="noopener">TokenPost</a>：测试网修订操作优先级——除 noop / scheduleCancel / cancel / cancelByCloid / order / modify / batchModify 外，其他操作在提交完成前会降低其他操作优先级；修订后 noop 与 scheduleCancel 不再影响优先级；并新增支持 agent 签名的 cDeposit2（行为类似 cDeposit）。</li></ul><div class="src">来源：<a href="https://hyperliquid.statuspage.io/" target="_blank" rel="noopener">Status</a> · <a href="https://coinalerts.org/news/articles/706137/" target="_blank" rel="noopener">CoinAlerts</a> · <a href="https://www.tokenpost.com/news/technology/40433" target="_blank" rel="noopener">TokenPost 测试网</a></div></article><article class="card"><h3>③ 盘面：周一清晨偏软；巨鲸偏空；xyz 周末溢价</h3><ul><li>CoinGecko（北京时间 07:35）：HYPE $76.15（24h −0.58%），BTC $79,944（−0.97%），ETH $2,319（−1.61%），SOL $100.83（−1.41%），ZEC $1,191（−1.62%）。</li><li>Hyperliquid API：主盘总持仓约 $111.4 亿，24h 成交约 $28.1 亿（周日早盘约 $47.9 亿，周末后半段缩量）。持仓大致 BTC $34.5 亿、ETH $25.9 亿、HYPE $16.0 亿；HYPE 资金费率约 +0.00125%/小时。</li><li>xyz（HIP-3）持仓约 $39.3 亿，24h 成交约 $7.2 亿；成交靠前：CL / XYZ100 / SP500 / BRENTOIL / SKHX 等。</li><li><a href="https://www.tokenpost.com/news/investing/40434" target="_blank" rel="noopener">TokenPost 巨鲸</a>（10/25 快照）：巨鲸敞口合计约 $81.22 亿，空头 $43.41 亿（占 53.44%）、多头 $37.81 亿，多空比 0.87；多头合计浮盈约 $9,415 万，空头合计浮亏约 $4,015 万。</li><li><a href="https://www.tokenpost.com/news/investing/40478" target="_blank" rel="noopener">TokenPost xyz</a>：周末 xyz 24h 成交约 $4.73 亿、持仓约 $38.6 亿（纽约时间 10/25 07:00）；巴西 ETF EWZ 链上价相对现金收盘溢价约 +4.72%；成交领跑 XYZ100 / CL / SP500。</li><li><a href="https://www.tokenpost.com/news/investing/40465" target="_blank" rel="noopener">TokenPost BTC 空单</a>：地址 0x3ff54f…f705 持有约 1,109.3 BTC 空单（名义约 $8,910 万，快照价 $80,317），约为 10/16 同址仓位的两倍以上。</li><li>DefiLlama：近 1 日协议费用约 $257 万，7 日约 $1,978 万（<a href="https://defillama.com/protocol/hyperliquid" target="_blank" rel="noopener">DefiLlama</a>）。</li></ul><div class="src">来源：<a href="https://www.coingecko.com/en/coins/hyperliquid" target="_blank" rel="noopener">CoinGecko</a> · Hyperliquid API（北京时间 07:35）· TokenPost 三条</div></article><article class="card"><h3>④ 链上续集：ETH 大多头补保证金；抄底多头现身</h3><ul><li>@lookonchain：持有约 93,184 ETH（约 $2.14 亿）多单的巨鲸追加约 $567 万 USDC 保证金，新清算价约 $2,181.69 / $2,177.79；浮亏约 $1,862 万，已付资金费约 $268 万（<a href="https://x.com/lookonchain/status/2114187347906748592" target="_blank" rel="noopener">原帖</a>，约 355 赞）。</li><li>@EmberCN：ETH 一度低见约 $2,282，该巨鲸距清算仅约 $30；补保后清算价从约 $2,256 降至约 $2,181；并称其 BTC+ETH 多单名义约 $3.965 亿量级（<a href="https://x.com/EmberCN/status/2114157583338787130" target="_blank" rel="noopener">原帖</a>）。数字口径与 Lookonchain 略有出入，发帖请标明来源。</li><li>@lookonchain：地址 0xe813 在下跌后开多约 26,974 ETH（约 $6,388 万），浮盈约 $84.2 万；该地址称对 $NEAR 曾有 $330 万盈利、100% 胜率样本（<a href="https://x.com/lookonchain/status/2114220826174402783" target="_blank" rel="noopener">原帖</a>，约 425 赞）——历史胜率≠未来，观察用。</li></ul><div class="src">来源：<a href="https://x.com/lookonchain/status/2114187347906748592" target="_blank" rel="noopener">补保证金</a> · <a href="https://x.com/EmberCN/status/2114157583338787130" target="_blank" rel="noopener">余烬</a> · <a href="https://x.com/lookonchain/status/2114220826174402783" target="_blank" rel="noopener">0xe813</a></div></article><article class="card"><h3>⑤ 大盘与 ETF：上周 BTC ETF 仍净流入；周一开门</h3><ul><li><a href="https://decrypt.co/381777/bitcoin-etfs-snap-two-week-losing-streak-despite-late-week-slide" target="_blank" rel="noopener">Decrypt</a>：美现货 BTC ETF 周五流出约 −$1.379 亿，但全周仍约 +$3.01 亿，终结连续两周净流出；10 月累计仍约 −$3.14 亿。ETH ETF 全周约 −$2.21 亿，10 月约 −$11.8 亿。</li><li><a href="https://www.tokenpost.com/news/investing/40647" target="_blank" rel="noopener">TokenPost ETF</a> 口径相近：BTC 周净流入约 $3.05 亿；ETH 连续第四周净流出约 $2.20 亿。</li><li><a href="https://farside.co.uk/btc/" target="_blank" rel="noopener">Farside</a>：最新交易日仍是 10/23（−$1.379 亿）；10/22 −$6.356 亿。美股周一开盘后才会有 10/26 新数据。</li><li>周末 BTC 一度贴近/跌破 $80K 一带（多家媒体引用清算数据）；周一亚盘 CoinGecko 读数约 $79.9K——发帖写“附近”而非精确点位。</li></ul><div class="src">来源：<a href="https://decrypt.co/381777/bitcoin-etfs-snap-two-week-losing-streak-despite-late-week-slide" target="_blank" rel="noopener">Decrypt</a> · <a href="https://farside.co.uk/btc/" target="_blank" rel="noopener">Farside</a> · <a href="https://www.tokenpost.com/news/investing/40647" target="_blank" rel="noopener">TokenPost</a></div></article><article class="card"><h3>⑥ 叙事：Jeff「更像互联网/Linux」；亚洲周报要点</h3><ul><li>@WuBlockchain 转述 Jeff Yan 在 DAS Asia 2026（10/7）观点：Hyperliquid 更像互联网或 Linux，不宜简单当成某一家交易所的竞品（<a href="https://x.com/WuBlockchain/status/2114145025051541950" target="_blank" rel="noopener">原帖</a>，约 81 赞）。注意：这是旧演讲的媒体再转写，非 24h 新发言。</li><li>同账号亚洲周报 TOP10：韩国把稳定币按支付手段监管、中国推进国家级区块链网络、汇丰推出稳定币、香港代币化进入部署阶段、Robinhood 获迪拜批准等（<a href="https://x.com/WuBlockchain/status/2114287006754984371" target="_blank" rel="noopener">原帖</a>）。</li><li>@ai_9684xtpa：Tornado 相关实体自 10/23 起累计买入约 3,000.5 ETH（约 $706 万）后经 THORChain 换成 BTC——高点曾分批卖出（<a href="https://x.com/ai_9684xtpa/status/2114356419680227532" target="_blank" rel="noopener">原帖</a>）。适合风控/资金路径选题，别当投资信号。</li></ul><div class="src">来源：见各条内链接</div></article><article class="card"><h3>⑦ 🎬 YouTube / 播客</h3><ul><li>TOKEN2049 Singapore：Hart Lambur × Jeff「Hyperliquid: Rebuilding Finance from First Principles」（<a href="https://www.youtube.com/watch?v=t5s7LICMJKE" target="_blank" rel="noopener">YouTube</a>）——可对照今天 EQX 现货上线，理解 HIP-3 / RWA 叙事从演讲到产品的落差。</li><li>过去 24 小时未检索到新的 Hyperliquid 专属长视频；Status 升级与 EQX 开盘是今天更值得盯的一手事件。</li></ul><div class="src">来源：<a href="https://www.youtube.com/watch?v=t5s7LICMJKE" target="_blank" rel="noopener">TOKEN2049 访谈</a></div></article></div><div class="note">未重复写周日早报主叙事：Hayes 清空方向性仓位、Machi 连爆、FreedomXMR 指控、SpaceX 周末题材、Glassnode RWA 份额主线。Hayes 后续再抛 ENA 的细节本次仅作旁注，不展开。</div><div class="note">@HyperliquidX 升级公告本次未能从 X API 直接抓到原文，依据 Status 页完成时间线 + CoinAlerts 转述；发帖优先链到 Status。</div><div class="note">ETH 大多头仓位：Lookonchain 与 EmberCN 的 ETH 数量/名义金额口径不完全一致，草稿写区间或单源。</div><div class="note">EQX 开盘时间写清美东 9:30 / 北京约 21:30；法律结构（债务债权、非美国人士）必须出现在相关草稿里。</div><div class="note">巨鲸 $81.2 亿 / 空头 53.44% 与 xyz 周末 $4.73 亿成交均为 TokenPost 10/25 快照，发帖注明时效。</div></section><section id="kol"><h2>大V观点</h2><p class="sub">过去约 24 小时原帖</p><div class="kolwrap"><div class="kol"><div class="who"><a href="https://x.com/eqxlabs/status/2113623982415241235" target="_blank" rel="noopener">EQX Labs</a><small>@eqxlabs · 发行人</small></div><div>“EQX tokenized spot equities will begin trading Monday, October 26 at 9:30 AM ET on @HyperliquidX.” 约 242 赞——今天日程中心。</div></div><div class="kol"><div class="who"><a href="https://x.com/lookonchain/status/2114220826174402783" target="_blank" rel="noopener">Lookonchain</a><small>@lookonchain</small></div><div>0xe813 下跌后开多约 2.7 万 ETH（约 $6,388 万）；另更新 ETH 大多头补保证金、清算价下移。</div></div><div class="kol"><div class="who"><a href="https://x.com/EmberCN/status/2114157583338787130" target="_blank" rel="noopener">余烬 EmberCN</a><small>@EmberCN</small></div><div>中文拆解 ETH 大多头距清算约 $30、紧急补保；并追踪 Hayes 再抛 ENA。</div></div><div class="kol"><div class="who"><a href="https://x.com/ai_9684xtpa/status/2114356419680227532" target="_blank" rel="noopener">Ai 姨</a><small>@ai_9684xtpa</small></div><div>Tornado 相关实体低位买回 ETH 再换 BTC——资金路径选题。</div></div><div class="kol"><div class="who"><a href="https://x.com/WuBlockchain/status/2114145025051541950" target="_blank" rel="noopener">Wu Blockchain</a><small>@WuBlockchain</small></div><div>转述 Jeff：HL 更像互联网/Linux；另发亚洲周报 TOP10。</div></div><div class="kol"><div class="who"><a href="https://hyperliquid.statuspage.io/" target="_blank" rel="noopener">Hyperliquid Status</a><small>官方状态页</small></div><div>10/25 09:30–09:50 UTC 网络升级完成——比社交媒体更可靠的停机时间线。</div></div></div></section><section id="view"><div class="view"><h2>我的观点和看法</h2><p class="sub">分析</p><p><b>今天的产品日，不是价格日。</b>EQX 现货开盘把「链上华尔街」从永续叙事推进到现货代币；但文档写得很清楚——你买的是债务债权，不是股票本身，美国人士还进不去。发帖价值在拆结构，不在喊涨。</p><p><b>升级短、叙事长。</b>~10 分钟停机说明 L1 运维节奏仍偏「互联网式」；测试网的 agent 存款与优先级修订，更像给做市/代理钱包铺路。对 geleek 来说，值得记的是「基础设施还在迭代」，而不是停机本身。</p><p><b>巨鲸偏空 ≠ 立刻看空发帖。</b>空头占 53% 敞口、周末 EWZ 溢价、ETF 上周仍净流入——三组信号互相打架。更稳的写法是并列呈现，让读者自己选权重。以上为分析，不构成投资建议 / NFA DYOR。</p><span class="disc">以上为分析，不构成投资建议。</span></div></section><section id="drafts"><h2>发帖草稿 · 10 条</h2><p class="sub">按建议发帖时间排序（北京时间，今天周一）· 中英双语 · 中文每字按 2 字符计</p><table class="sched"><thead><tr><th>时间（北京）</th><th>类型</th><th>主题</th><th>提醒</th></tr></thead><tbody><tr><td class="t"><a href="#d0">08:30</a></td><td>突发快讯</td><td>EQX 今天开盘预告</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d1">09:45</a></td><td>基础设施</td><td>周日网络升级完成</td><td><span class=flag>需截图</span></td></tr><tr><td class="t"><a href="#d2">11:00</a></td><td>可截图数据</td><td>周一早盘快照</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d3">12:30</a></td><td>数据观点</td><td>巨鲸偏空 53%</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d4">15:30</a></td><td>短分析</td><td>周末 xyz 溢价课</td><td></td></tr><tr><td class="t"><a href="#d5">17:30</a></td><td>TradFi 交叉</td><td>BTC ETF 周流入</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d6">19:30</a></td><td>巨鲸/风险教育</td><td>ETH 大多头补保</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d7">21:15</a></td><td>开盘跟进</td><td>EQX 开盘观察</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d8">22:00</a></td><td>长推开头</td><td>周一三件事</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d9">22:45</a></td><td>轻互动/提问</td><td>你会碰 EQX 吗</td><td></td></tr></tbody></table><div class="draft" id="d0"><div class="dh"><span class="time">08:30</span><span class="tag acc">突发快讯</span><span class="dt">EQX 今天开盘预告</span><span class="flag">⚠ 发前更新价格：开盘后若已上线，改成「已开盘」并附交易页截图</span></div><div class="meta">开盘第一条；务必写清非直接持股 + 非美国人士<br>来源：<a href="https://x.com/eqxlabs/status/2113623982415241235" target="_blank" rel="noopener">@eqxlabs</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d0zh">复制</button></div><div class="txt" id="d0zh">⚡️ 今天 Hyperliquid 大事提醒
+
+EQX Labs：11 个代币化美股/ETF 现货市场，计划美东 9:30（北京约 21:30）开盘。
+含 EQSPY / EQQQQ，以及 NVDA、TSLA、AAPL 等。
+
+注意：这是 1:1 正股 backing 的债务债权，不是直接持股；不对美国人士开放。
+
+NFA/DYOR #Hyperliquid #RWA</div><div class="cnt" id="d0zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d0en">复制</button></div><div class="txt" id="d0en">⚡️ Hyperliquid calendar note for today
+
+EQX Labs: 11 tokenized U.S. stock/ETF spot markets plan to open at 9:30 AM ET (~21:30 Beijing).
+Lineup includes EQSPY / EQQQQ plus NVDA, TSLA, AAPL and more.
+
+Important: 1:1 share-backed debt claims — not direct stock ownership; unavailable to U.S. persons.
+
+NFA/DYOR #Hyperliquid #RWA</div><div class="cnt" id="d0en-n"></div></div></div></div><div class="draft" id="d1"><div class="dh"><span class="time">09:45</span><span class="tag acc">基础设施</span><span class="dt">周日网络升级完成</span></div><div class="meta">📷 截图：可截 Status 页 Oct 25 Network upgrade Completed<br>链到 Status 页；别夸大停机影响<br>来源：<a href="https://hyperliquid.statuspage.io/" target="_blank" rel="noopener">Status</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d1zh">复制</button></div><div class="txt" id="d1zh">🛠️ 周末运维小结：
+
+Hyperliquid 10/25 约 09:30 UTC 网络升级，Status 页 09:50 UTC 标记完成，预告停机约 10 分钟。
+
+测试网还改了操作优先级，并加了支持 agent 签名的 cDeposit2。
+
+L1 还在迭代——短停机，长基建。
+
+#Hyperliquid $HYPE</div><div class="cnt" id="d1zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d1en">复制</button></div><div class="txt" id="d1en">🛠️ Weekend ops note:
+
+Hyperliquid’s Oct 25 network upgrade started ~09:30 UTC; Status marked completed at 09:50 UTC (~10 min downtime as scheduled).
+
+Testnet also revised op priorities and added agent-signed cDeposit2.
+
+Short downtime, longer infrastructure story.
+
+#Hyperliquid $HYPE</div><div class="cnt" id="d1en-n"></div></div></div></div><div class="draft" id="d2"><div class="dh"><span class="time">11:00</span><span class="tag acc">可截图数据</span><span class="dt">周一早盘快照</span><span class="flag">⚠ 发前更新价格：价格、持仓、成交发前重读</span></div><div class="meta">📷 截图：CoinGecko HYPE 页 + https://app.hyperliquid.xyz/trade 总览<br>截 CoinGecko + HL 交易页<br>来源：<a href="https://www.coingecko.com/en/coins/hyperliquid" target="_blank" rel="noopener">CoinGecko</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d2zh">复制</button></div><div class="txt" id="d2zh">🖥️ 周一早盘快照（发前请更新）：
+
+$HYPE ≈ $76.2｜BTC ≈ $79.9K｜ETH ≈ $2.32K
+Hyperliquid 主盘持仓 ≈ $111 亿，24h 成交 ≈ $28 亿
+xyz 持仓 ≈ $39 亿，24h 成交 ≈ $7 亿
+
+周末缩量后的第一个工作日，先看量能不能回来。
+
+数据：CoinGecko + HL API
+NFA #Hyperliquid $HYPE $BTC</div><div class="cnt" id="d2zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d2en">复制</button></div><div class="txt" id="d2en">🖥️ Monday morning snapshot (refresh before post):
+
+$HYPE ≈ $76.2｜BTC ≈ $79.9K｜ETH ≈ $2.32K
+Hyperliquid main OI ≈ $11.1B, 24h vol ≈ $2.8B
+xyz OI ≈ $3.9B, 24h vol ≈ $0.72B
+
+First weekday after a soft weekend — watch whether volume returns.
+
+Sources: CoinGecko + HL API
+NFA #Hyperliquid $HYPE $BTC</div><div class="cnt" id="d2en-n"></div></div></div></div><div class="draft" id="d3"><div class="dh"><span class="time">12:30</span><span class="tag acc">数据观点</span><span class="dt">巨鲸偏空 53%</span><span class="flag">⚠ 发前更新价格：若有更新快照则替换数字</span></div><div class="meta">📷 截图：TokenPost 文章数据图或 HL 巨鲸页<br>TokenPost 10/25 快照，注明时效<br>来源：<a href="https://www.tokenpost.com/news/investing/40434" target="_blank" rel="noopener">TokenPost</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d3zh">复制</button></div><div class="txt" id="d3zh">📊 Hyperliquid 巨鲸快照（TokenPost 10/25）：
+
+总敞口约 $81.2 亿
+空头约 $43.4 亿（53.44%）｜多头约 $37.8 亿
+多头合计浮盈约 $9,415 万，空头合计浮亏约 $4,015 万
+
+偏空，但不等于马上崩。仓位拥挤时，方向一变燃料也够。
+
+NFA/DYOR #Hyperliquid</div><div class="cnt" id="d3zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d3en">复制</button></div><div class="txt" id="d3en">📊 Hyperliquid whale snapshot (TokenPost Oct 25):
+
+~$8.12B total exposure
+Shorts ~$4.34B (53.44%)｜Longs ~$3.78B
+Longs +$94.15M combined｜Shorts −$40.15M
+
+Net short ≠ imminent crash. Crowded books can become fuel either way.
+
+NFA/DYOR #Hyperliquid</div><div class="cnt" id="d3en-n"></div></div></div></div><div class="draft" id="d4"><div class="dh"><span class="time">15:30</span><span class="tag acc">短分析</span><span class="dt">周末 xyz 溢价课</span></div><div class="meta">用 EWZ 讲清 24/7 链上 vs 现金收盘<br>来源：<a href="https://www.tokenpost.com/news/investing/40478" target="_blank" rel="noopener">TokenPost xyz</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d4zh">复制</button></div><div class="txt" id="d4zh">🧠 周末链上股票课：
+
+xyz 24h 成交约 $4.73 亿（10/25 纽约早盘快照）
+巴西 ETF EWZ 相对现金收盘溢价约 +4.72%
+
+美股关门时，链上订单簿还在定价预期。溢价/折价本身不是方向信号，是「谁更急」的温度计。
+
+NFA #Hyperliquid #HIP3</div><div class="cnt" id="d4zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d4en">复制</button></div><div class="txt" id="d4en">🧠 Weekend on-chain equities lesson:
+
+xyz did ~$472.75M 24h volume (Oct 25 NY morning snapshot)
+Brazil ETF EWZ traded ~4.72% above its cash close
+
+When TradFi is closed, the on-chain book still prices expectations. Premium/discount is a urgency thermometer — not a signal by itself.
+
+NFA #Hyperliquid #HIP3</div><div class="cnt" id="d4en-n"></div></div></div></div><div class="draft" id="d5"><div class="dh"><span class="time">17:30</span><span class="tag acc">TradFi 交叉</span><span class="dt">BTC ETF 周流入</span><span class="flag">⚠ 发前更新价格：若 10/26 流入数据已出，更新一句</span></div><div class="meta">周一美股开盘后可补最新 Farside<br>来源：<a href="https://decrypt.co/381777/bitcoin-etfs-snap-two-week-losing-streak-despite-late-week-slide" target="_blank" rel="noopener">Decrypt</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d5zh">复制</button></div><div class="txt" id="d5zh">🏦 上周 ETF 成绩单（Decrypt / TokenPost）：
+
+美现货 BTC ETF 全周约 +$3.0–3.05 亿，终结连两周净流出
+但周四+周五合计流出约 $7.7 亿；10 月仍约 −$3.1 亿
+ETH ETF 全周约 −$2.2 亿，10 月约 −$11.8 亿
+
+「周正、月负」——叙事别只截一半。
+
+NFA #Bitcoin #ETF</div><div class="cnt" id="d5zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d5en">复制</button></div><div class="txt" id="d5en">🏦 Last week’s ETF report card (Decrypt / TokenPost):
+
+U.S. spot BTC ETFs ~+$301–305M on the week, ending a 2-week outflow streak
+But Thu+Fri still saw ~$773M leave; October still ~−$314M
+ETH ETFs ~−$220M on the week, ~−$1.18B in October
+
+Weekly green, monthly red — don’t crop the chart.
+
+NFA #Bitcoin #ETF</div><div class="cnt" id="d5en-n"></div></div></div></div><div class="draft" id="d6"><div class="dh"><span class="time">19:30</span><span class="tag acc">巨鲸/风险教育</span><span class="dt">ETH 大多头补保</span><span class="flag">⚠ 发前更新价格：清算价/浮亏发前对照原帖</span></div><div class="meta">📷 截图：Lookonchain 原帖图<br>引用 Lookonchain；提醒非跟单<br>来源：<a href="https://x.com/lookonchain/status/2114187347906748592" target="_blank" rel="noopener">@lookonchain</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d6zh">复制</button></div><div class="txt" id="d6zh">🧯 风控镜头：约 $2.14 亿 ETH 多单巨鲸，追加约 $567 万保证金，清算价下移到约 $2,178–2,182。
+
+浮亏约 $1,862 万 + 已付资金费约 $268 万——杠杆仓位活下来的成本，不只是价格跌幅。
+
+观察点，不是跟单信号。
+NFA/DYOR #ETH #Hyperliquid</div><div class="cnt" id="d6zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d6en">复制</button></div><div class="txt" id="d6en">🧯 Risk lens: the ~$214M ETH long whale added ~$5.67M margin; liq prices now ~$2,178–2,182.
+
+~$18.6M unrealized loss + ~$2.68M funding paid — surviving leverage costs more than the drawdown alone.
+
+Watchpoint, not a copy-trade.
+NFA/DYOR #ETH #Hyperliquid</div><div class="cnt" id="d6en-n"></div></div></div></div><div class="draft" id="d7"><div class="dh"><span class="time">21:15</span><span class="tag acc">开盘跟进</span><span class="dt">EQX 开盘观察</span><span class="flag">⚠ 发前更新价格：开盘价、成交额、相对 xyz 永续溢价</span></div><div class="meta">📷 截图：Hyperliquid 上 EQSPY/EQQQQ 等现货盘口<br>美东 9:30 后发；截交易页深度/成交<br>来源：<a href="https://www.tokenpost.com/news/business/40564" target="_blank" rel="noopener">TokenPost</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d7zh">复制</button></div><div class="txt" id="d7zh">🔔 EQX 开盘观察（发前更新数字）：
+
+首批 11 个 USDC 现货市场按计划上线了吗？
+先看三件事：
+1) 买卖盘深度
+2) 相对 xyz 永续的溢价/折价
+3) 有没有异常插针
+
+结构提醒：债务债权 · 非美国人士。
+NFA #Hyperliquid #EQX</div><div class="cnt" id="d7zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d7en">复制</button></div><div class="txt" id="d7en">🔔 EQX open checklist (refresh numbers):
+
+Did the first 11 USDC spot markets go live as planned?
+Watch three things:
+1) book depth
+2) premium/discount vs xyz perps
+3) wick risk / thin liquidity
+
+Structure reminder: debt claims · not for U.S. persons.
+NFA #Hyperliquid #EQX</div><div class="cnt" id="d7en-n"></div></div></div></div><div class="draft" id="d8"><div class="dh"><span class="time">22:00</span><span class="tag acc">长推开头</span><span class="dt">周一三件事</span><span class="flag">⚠ 发前更新价格：线程第 2 条更新开盘实况</span></div><div class="meta">可做成线程：1 EQX 2 升级 3 巨鲸/ETF<br>来源：<a href="https://x.com/eqxlabs/status/2113623982415241235" target="_blank" rel="noopener">@eqxlabs</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d8zh">复制</button></div><div class="txt" id="d8zh">🧵 周一值得记下的三件事：
+
+1) EQX 11 个代币化现货开盘——链上华尔街从永续迈向现货
+2) 周日网络升级约 10 分钟完成——基建还在迭代
+3) 巨鲸偏空 + ETF 上周仍净流入——信号互相打架
+
+展开 👇
+
+#Hyperliquid #crypto $HYPE</div><div class="cnt" id="d8zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d8en">复制</button></div><div class="txt" id="d8en">🧵 Three Monday notes:
+
+1) EQX’s 11 tokenized spot markets — on-chain Wall Street moves from perps toward spot
+2) Sunday’s ~10-min network upgrade — infra still iterating
+3) Whales net short + BTC ETFs still green on the week — signals conflict
+
+Thread 👇
+
+#Hyperliquid #crypto $HYPE</div><div class="cnt" id="d8en-n"></div></div></div></div><div class="draft" id="d9"><div class="dh"><span class="time">22:45</span><span class="tag acc">轻互动/提问</span><span class="dt">你会碰 EQX 吗</span></div><div class="meta">配投票更好；强调合规边界<br>来源：<a href="https://docs.eqxlabs.io/" target="_blank" rel="noopener">EQX Docs</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d9zh">复制</button></div><div class="txt" id="d9zh">🤔 想听听大家：
+EQX 现货上线后，你更可能？
+
+A 先看深度和溢价，不动
+B 小仓位试水（确认自己符合资格）
+C 继续只用 xyz 永续做敞口
+D 不碰，等真正「代币=股票」
+
+评论区聊聊为什么
+NFA/DYOR #Hyperliquid</div><div class="cnt" id="d9zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d9en">复制</button></div><div class="txt" id="d9en">🤔 Quick poll after EQX spot goes live — what would you do?
+
+A Watch depth/premium only
+B Tiny size (if eligible)
+C Stick to xyz perps for exposure
+D Wait until the token is the share
+
+Reply with your why
+NFA/DYOR #Hyperliquid</div><div class="cnt" id="d9en-n"></div></div></div></div></section><section id="replies"><h2>互动评论草稿</h2><p class="sub">打开原帖 → 复制 → 回复</p><div class="draft"><div class="dh"><span class="dt">① <a href="https://x.com/eqxlabs/status/2113623982415241235" target="_blank" rel="noopener">@eqxlabs：周一 9:30 ET 开盘</a></span></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="r0zh">复制</button></div><div class="txt" id="r0zh">记下了 🗓️ 发帖前会把「债务债权 ≠ 直接持股」和「非美国人士」写清楚。开盘后最想先看的是 EQSPY/EQQQQ 的深度，以及相对 xyz 永续有没有系统性溢价。</div><div class="cnt" id="r0zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="r0en">复制</button></div><div class="txt" id="r0en">On the calendar 🗓️ I’ll keep repeating debt-claim ≠ share ownership and not-for-U.S.-persons. After open, first things I’ll watch: EQSPY/EQQQQ depth, and any persistent premium vs xyz perps.</div><div class="cnt" id="r0en-n"></div></div></div></div><div class="draft"><div class="dh"><span class="dt">② <a href="https://x.com/lookonchain/status/2114187347906748592" target="_blank" rel="noopener">@lookonchain：ETH 大多头补保证金</a></span></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="r1zh">复制</button></div><div class="txt" id="r1zh">补保把清算线拉开，说明他还想留在牌桌上 🧯 浮亏 + 资金费一起看，才知道杠杆「活着」有多贵。谢谢持续更新这个极端样本。</div><div class="cnt" id="r1zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="r1en">复制</button></div><div class="txt" id="r1en">Adding margin to push liq lower = still wants a seat at the table 🧯 Unrealized + funding together show how expensive survival can get. Thanks for keeping this extreme sample visible.</div><div class="cnt" id="r1en-n"></div></div></div></div><div class="draft"><div class="dh"><span class="dt">③ <a href="https://x.com/lookonchain/status/2114220826174402783" target="_blank" rel="noopener">@lookonchain：0xe813 开多 ETH</a></span></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="r2zh">复制</button></div><div class="txt" id="r2zh">下跌后出手的样本总是很吸睛 👀 不过「历史 100% 胜率」更像旁白，不是说明书。你会同时盯他的加仓节奏和保证金变化吗？</div><div class="cnt" id="r2zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="r2en">复制</button></div><div class="txt" id="r2en">Dip-buying whales always pull focus 👀 But a past 100% win-rate is narration, not a manual. Do you watch size cadence and margin changes together?</div><div class="cnt" id="r2en-n"></div></div></div></div><div class="draft"><div class="dh"><span class="dt">④ <a href="https://x.com/WuBlockchain/status/2114145025051541950" target="_blank" rel="noopener">@WuBlockchain：Jeff 谈互联网/Linux</a></span></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="r3zh">复制</button></div><div class="txt" id="r3zh">「更像互联网/Linux」这句适合当长期框架，而不是日内交易信号 🐧 今天 EQX 现货开盘，倒像在给这句框架交作业。</div><div class="cnt" id="r3zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="r3en">复制</button></div><div class="txt" id="r3en">“More like the internet / Linux” works better as a long-term frame than a day-trade signal 🐧 EQX spot going live today feels like homework for that metaphor.</div><div class="cnt" id="r3en-n"></div></div></div></div></section><section id="follow"><h2>建议追踪的账号</h2><p class="sub">“近期活跃”按本次检索到的发帖时间判断</p><table class="tbl"><thead><tr><th>X 账号</th><th>类型</th><th>为什么值得追踪</th><th>活跃情况</th></tr></thead><tbody><tr><td><a href="https://x.com/HyperliquidX" target="_blank" rel="noopener">@HyperliquidX</a></td><td>官方</td><td>产品上线、持仓纪录等一手公告</td><td class="act n">本次窗口 X 原创难抓取；Status 有升级记录</td></tr><tr><td><a href="https://x.com/chameleon_jeff" target="_blank" rel="noopener">@chameleon_jeff</a></td><td>创始人 Jeff</td><td>HIP-3 / 基础设施一手思路</td><td class="act n">本次窗口无新原创；吴说转述旧演讲</td></tr><tr><td><a href="https://x.com/EmberCN" target="_blank" rel="noopener">@EmberCN</a></td><td>中文链上数据</td><td>巨鲸与机构资金路径追踪</td><td class="act y">✓ ETH 大多头补保 / Hayes ENA</td></tr><tr><td><a href="https://x.com/ai_9684xtpa" target="_blank" rel="noopener">@ai_9684xtpa</a></td><td>中文链上数据</td><td>巨鲸囤币、换仓、异常资金</td><td class="act y">✓ Tornado 实体买 ETH</td></tr><tr><td><a href="https://x.com/WuBlockchain" target="_blank" rel="noopener">@WuBlockchain</a></td><td>新闻</td><td>亚洲视角监管、ETF、行业快讯</td><td class="act y">✓ Jeff 转述 / 亚洲周报</td></tr><tr><td><a href="https://x.com/tier10k" target="_blank" rel="noopener">@tier10k</a></td><td>新闻快讯</td><td>头条快讯源</td><td class="act n">本次窗口未见相关原创</td></tr><tr><td><a href="https://x.com/lookonchain" target="_blank" rel="noopener">@lookonchain</a></td><td>链上数据</td><td>鲸鱼、清算、巨鲸仓位</td><td class="act y">✓ 高频（ETH 多头/0xe813）</td></tr><tr><td><a href="https://x.com/coinglass_com" target="_blank" rel="noopener">@coinglass_com</a></td><td>衍生品数据</td><td>清算热力图、订单墙、资金费率</td><td class="act y">✓ 有更新（图表向）</td></tr><tr><td><a href="https://x.com/0xngmi" target="_blank" rel="noopener">@0xngmi</a></td><td>DefiLlama</td><td>DeFi 数据口径讨论</td><td class="act n">本次窗口未见</td></tr><tr><td><a href="https://x.com/CryptoHayes" target="_blank" rel="noopener">@CryptoHayes</a></td><td>KOL</td><td>宏观与仓位框架</td><td class="act n">本次窗口未见新原创（周日清仓已覆盖）</td></tr><tr><td><a href="https://x.com/cobie" target="_blank" rel="noopener">@cobie</a></td><td>KOL</td><td>老牌行业观察</td><td class="act n">本次窗口未见</td></tr><tr><td><a href="https://x.com/Pentosh1" target="_blank" rel="noopener">@Pentosh1</a></td><td>交易 KOL</td><td>中长线交易观点</td><td class="act n">本次窗口未见</td></tr><tr><td><a href="https://x.com/blknoiz06" target="_blank" rel="noopener">@blknoiz06</a></td><td>交易 KOL</td><td>山寨与 Solana 情绪</td><td class="act n">本次窗口未见原创</td></tr><tr><td><a href="https://x.com/CryptoCred" target="_blank" rel="noopener">@CryptoCred</a></td><td>交易教育</td><td>技术分析与交易心理</td><td class="act n">本次窗口未见</td></tr><tr><td><a href="https://x.com/KoroushAK" target="_blank" rel="noopener">@KoroushAK</a></td><td>交易教育</td><td>订单流与数据化交易</td><td class="act n">本次窗口未见</td></tr><tr><td><a href="https://x.com/DefiIgnas" target="_blank" rel="noopener">@DefiIgnas</a></td><td>DeFi 研究</td><td>DeFi 估值与新项目雷达</td><td class="act n">本次窗口未见原创</td></tr><tr><td><a href="https://x.com/ASvanevik" target="_blank" rel="noopener">@ASvanevik</a></td><td>Nansen CEO</td><td>链上数据与 AI 交易工具</td><td class="act n">本次窗口未见原创</td></tr><tr><td><a href="https://x.com/eqxlabs" target="_blank" rel="noopener">@eqxlabs</a></td><td>EQX 发行人（补充）</td><td>代币化美股/ETF 现货一手公告</td><td class="act y">✓ 开盘日程帖</td></tr><tr><td><a href="https://x.com/HyperliquidPC" target="_blank" rel="noopener">@HyperliquidPC</a></td><td>政策中心（补充）</td><td>美国合规化一手信息</td><td class="act n">本次未专项检索到新帖</td></tr><tr><td><a href="https://x.com/MBxxvv" target="_blank" rel="noopener">@MBxxvv</a></td><td>Hyperliquid 生态（补充）</td><td>HyperEVM / 生态观察</td><td class="act n">本次未逐条核对</td></tr></tbody></table><h2 style="margin-top:48px">YouTube 频道</h2><p class="sub">均已确认频道页存在</p><div class="yt"><div><b><a href="https://www.youtube.com/watch?v=t5s7LICMJKE" target="_blank" rel="noopener">TOKEN2049：Rebuilding Finance from First Principles</a></b><br>Hart Lambur × Jeff；对照今天 EQX 现货上线</div><div><b><a href="https://hyperliquid.statuspage.io/" target="_blank" rel="noopener">Hyperliquid Status</a></b><br>10/25 网络升级完成时间线</div><div><b><a href="https://docs.eqxlabs.io/" target="_blank" rel="noopener">EQX Docs</a></b><br>债务债权结构、资格限制、托管说明</div><div><b><a href="https://www.youtube.com/@Bankless" target="_blank" rel="noopener">Bankless YouTube</a></b><br>每周 ROLLUP 复盘</div><div><b><a href="https://www.youtube.com/@TheRollupCo" target="_blank" rel="noopener">The Rollup</a></b><br>机构/VC 访谈，含 Hyperliquid 专题</div><div><b><a href="https://www.youtube.com/@bloombergpodcasts" target="_blank" rel="noopener">Bloomberg Podcasts</a></b><br>Odd Lots；Jeff / TradFi 交叉视角</div><div><b><a href="https://www.youtube.com/@CoinBureau" target="_blank" rel="noopener">Coin Bureau</a></b><br>项目科普与行业深度</div></div><div class="note">过去 24 小时未确认到新的 Hyperliquid 专属长视频；本期推荐 TOKEN2049 访谈 + Status/EQX 文档作为一手材料。</div></section><footer>本页所有草稿均未发布，需本人确认后再发。数据为北京时间 10/26 07:35 快照，价格类内容发前请更新。内容仅为信息整理与分析，不构成投资建议。NFA / DYOR。</footer></main><script>
+function fallbackCopy(t){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.position='fixed';a.style.top='-1000px';document.body.appendChild(a);a.select();a.setSelectionRange(0,t.length);var ok=false;try{ok=document.execCommand('copy')}catch(e){}document.body.removeChild(a);return ok}
+function done(b,ok){var o=b.dataset.label||b.textContent;b.dataset.label=o;b.textContent=ok?'已复制 ✓':'复制失败';b.classList.toggle('ok',ok);clearTimeout(b._t);b._t=setTimeout(function(){b.textContent=o;b.classList.remove('ok')},1600)}
+document.addEventListener('click',function(e){var b=e.target.closest('.cp');if(!b)return;var t=document.getElementById(b.dataset.for).textContent;
+ if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(function(){done(b,true)},function(){done(b,fallbackCopy(t))})}else{done(b,fallbackCopy(t))}});
+// X 加权字数：CJK 计 2，其余计 1（近似）
+document.querySelectorAll('.txt').forEach(function(el){var s=el.textContent,n=0;for(var ch of s){n+=/[\u1100-\uFFFF]/.test(ch)&&!/[\u2000-\u206F\u2190-\u2BFF]/.test(ch)?2:1}var c=document.getElementById(el.id+'-n');if(c)c.textContent='约 '+n+' / 280 字符（X 加权估算，emoji 与链接以输入框为准）'});
+// 导航高亮
+var links=[].slice.call(document.querySelectorAll('.nav a'));var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+en.target.id)})}})},{rootMargin:'-20% 0px -70% 0px'});secs.forEach(function(s){s&&io.observe(s)});
+</script></body></html>
