@@ -1,0 +1,287 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>币圈早报 · 2026-10-28（周三）</title><style>
+:root{
+ --fg:#2b3442;--mut:#525d6b;--line:rgba(255,255,255,.55);--hair:rgba(43,52,66,.10);
+ --acc:#44607b;--acc-bg:rgba(79,109,138,.12);--sage:#4d6656;--warn:#83583a;--warn-bg:rgba(184,140,110,.16);
+ --glass:rgba(255,255,255,.46);--glass-strong:rgba(255,255,255,.62);--glass-fallback:rgba(250,249,246,.94);
+ --shadow:0 8px 32px rgba(60,72,92,.08);--blur:blur(20px) saturate(120%);
+ --bg:#eef0ee;--b1:#b4c6d8;--b2:#bccfba;--b3:#e0c0c2;--b4:#ecdcc4;--side:256px;--r:18px
+}
+@media (prefers-color-scheme:dark){:root{
+ --fg:#dfe4ea;--mut:#9aa5b2;--line:rgba(255,255,255,.10);--hair:rgba(255,255,255,.08);
+ --acc:#9db4cb;--acc-bg:rgba(157,180,203,.14);--sage:#a3b8a8;--warn:#d6b08f;--warn-bg:rgba(214,176,143,.13);
+ --glass:rgba(30,34,42,.48);--glass-strong:rgba(36,40,49,.62);--glass-fallback:rgba(28,31,38,.95);
+ --shadow:0 8px 32px rgba(0,0,0,.28);
+ --bg:#14171c;--b1:#33445a;--b2:#33443a;--b3:#4a363c;--b4:#443d31}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--fg);font:15px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+ background:
+  radial-gradient(closest-side,var(--b1),transparent) -8vw -12vh/62vw 62vw no-repeat,
+  radial-gradient(closest-side,var(--b2),transparent) 62vw 4vh/48vw 48vw no-repeat,
+  radial-gradient(closest-side,var(--b3),transparent) 18vw 58vh/52vw 52vw no-repeat,
+  radial-gradient(closest-side,var(--b4),transparent) 70vw 62vh/50vw 50vw no-repeat,var(--bg);
+ filter:blur(40px)}
+a{color:var(--acc);text-decoration:none;text-underline-offset:3px}a:hover{text-decoration:underline}
+.glass,.side,.card,.stats,.draft,.sched,.tbl,.kolwrap,.view,.yt div,.note{background:var(--glass-fallback)}
+@supports ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){
+ .side,.card,.stats,.draft,.sched,.tbl,.kolwrap,.view,.yt div,.note{background:var(--glass);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur)}
+}
+.side,.card,.stats,.draft,.sched,.tbl,.kolwrap,.view,.yt div{border:1px solid var(--line);box-shadow:var(--shadow)}
+.side{position:fixed;top:16px;left:16px;bottom:16px;width:calc(var(--side) - 32px);padding:32px 22px;border-radius:22px;overflow-y:auto;z-index:10}
+.brand{font-weight:700;font-size:18px;letter-spacing:-.01em}
+.date{color:var(--mut);font-size:13px;margin:4px 0 28px}
+.nav{list-style:none;margin:0;padding:0}
+.nav a{display:block;padding:8px 12px;margin:2px -6px;border-radius:12px;color:var(--mut);font-size:14px;transition:background .2s,color .2s}
+.nav a:hover{color:var(--fg);background:var(--acc-bg);text-decoration:none}
+.nav a.on{color:var(--fg);background:var(--glass-strong);border:1px solid var(--line);font-weight:600;box-shadow:0 2px 10px rgba(60,72,92,.06)}
+.side .foot{margin-top:28px;font-size:12px;color:var(--mut);line-height:1.6}
+main{margin-left:var(--side);padding:48px 56px 120px 40px;max-width:calc(var(--side) + 1120px)}
+section{padding:4px 0 44px;margin-bottom:28px}
+h1{font-size:30px;line-height:1.25;margin:0 0 8px;letter-spacing:-.02em}
+h2{font-size:21px;margin:0 0 4px;letter-spacing:-.01em}
+.sub{color:var(--mut);font-size:13px;margin:0 0 22px}
+.lead{font-size:13px;color:var(--mut);margin-bottom:32px}
+.keys{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.keys li{padding:16px 20px 16px 58px;position:relative;font-size:15.5px;border-radius:var(--r);border:1px solid var(--line);box-shadow:var(--shadow);background:var(--glass-fallback)}
+@supports ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){.keys li{background:var(--glass);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur)}}
+.keys li b.n{position:absolute;left:20px;top:16px;color:var(--sage);font-variant-numeric:tabular-nums}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-radius:var(--r);overflow:hidden;margin:0 0 24px}
+.stat{padding:16px 20px;border-right:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.stat:nth-child(4n){border-right:0}.stat:nth-last-child(-n+4){border-bottom:0}
+.stat .k{font-size:12px;color:var(--mut)}.stat .v{font-size:22px;font-weight:650;font-variant-numeric:tabular-nums;letter-spacing:-.01em}.stat .d{font-size:12px;color:var(--mut)}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card{border-radius:var(--r);padding:20px 22px}
+.card h3{font-size:16px;margin:0 0 10px;line-height:1.45}
+.card ul{margin:0;padding-left:18px}.card li{margin:4px 0}.card li::marker{color:var(--sage)}
+.card .src{margin-top:12px;padding-top:10px;border-top:1px solid var(--hair);font-size:12.5px;color:var(--mut)}
+.note{border:1px solid var(--line);border-left:3px solid var(--warn);padding:12px 16px;border-radius:12px;font-size:13.5px;margin-top:16px}
+.kolwrap{border-radius:var(--r);padding:4px 22px}
+.kol{display:grid;grid-template-columns:200px 1fr;gap:6px 24px;padding:16px 0;border-top:1px solid var(--hair)}
+.kol:first-child{border-top:0}.kol .who{font-weight:600}.kol .who small{display:block;font-weight:400;color:var(--mut);font-size:12.5px}
+.view{border-radius:var(--r);padding:24px 26px}
+.view h2,.view .sub{margin-left:0}
+.view p{margin:0 0 14px;max-width:860px}
+.disc{display:inline-block;margin-top:4px;font-weight:600;color:var(--warn);background:var(--warn-bg);padding:4px 12px;border-radius:99px;font-size:13.5px}
+.sched,.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:14px;border-radius:var(--r);overflow:hidden}
+.sched{margin-bottom:28px}
+.sched th,.sched td,.tbl th,.tbl td{text-align:left;padding:10px 16px;border-bottom:1px solid var(--hair);vertical-align:top}
+.sched tr:last-child td,.tbl tr:last-child td{border-bottom:0}
+.sched th,.tbl th{font-size:12px;color:var(--mut);font-weight:500;background:rgba(255,255,255,.18)}
+.sched td.t{font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap}
+.draft{border-radius:20px;margin-bottom:22px;overflow:hidden}
+.dh{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:14px 22px;border-bottom:1px solid var(--hair);background:rgba(255,255,255,.14)}
+.time{font-weight:700;font-size:17px;font-variant-numeric:tabular-nums}
+.tag{font-size:12px;padding:2px 10px;border-radius:99px;border:1px solid var(--hair);color:var(--mut)}
+.tag.acc{color:var(--acc);border-color:transparent;background:var(--acc-bg)}
+.dt{font-weight:600}
+.flag{font-size:12.5px;padding:3px 10px;border-radius:99px;color:var(--warn);background:var(--warn-bg)}
+.meta{padding:10px 22px;font-size:13px;color:var(--mut);border-bottom:1px solid var(--hair)}
+.pair{display:grid;grid-template-columns:1fr 1fr}
+.pane{padding:16px 22px 18px;display:flex;flex-direction:column;min-width:0}
+.pane+.pane{border-left:1px solid var(--hair)}
+.ph{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.lang{font-size:12px;color:var(--mut);letter-spacing:.06em}
+.txt{white-space:pre-wrap;word-break:break-word;font-size:14.5px;line-height:1.75;flex:1}
+.cp{font:inherit;font-size:13px;cursor:pointer;border:1px solid var(--line);background:var(--glass-strong);color:var(--fg);padding:5px 16px;border-radius:99px;min-width:76px;transition:.2s;box-shadow:0 1px 6px rgba(60,72,92,.06)}
+.cp:hover{color:var(--acc);border-color:var(--acc)}
+.cp.ok{background:var(--sage);border-color:var(--sage);color:#fff}
+.cnt{font-size:11.5px;color:var(--mut);margin-top:8px}
+.act{white-space:nowrap;font-size:12.5px}.act.y{color:var(--sage);font-weight:600}.act.n{color:var(--mut)}
+.yt{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:8px}
+.yt div{padding:14px 18px;border-radius:14px}
+footer{color:var(--mut);font-size:12.5px;margin-top:24px}
+@media (max-width:1100px){main{padding:40px 32px 100px 32px}.cards{grid-template-columns:1fr}}
+@media (max-width:820px){
+ html{scroll-padding-top:72px}.flag{white-space:nowrap}
+ .side{position:sticky;top:8px;left:auto;bottom:auto;width:auto;height:auto;margin:8px;padding:8px 14px;border-radius:16px;display:flex;align-items:center;gap:14px;overflow-x:auto;white-space:nowrap}
+ .date,.side .foot{display:none}.brand{font-size:15px}
+ .nav{display:flex;gap:4px}.nav a{margin:0;padding:6px 10px;font-size:13px}
+ main{margin-left:0;padding:24px 14px 80px}
+ .pair{grid-template-columns:1fr}.pane+.pane{border-left:0;border-top:1px solid var(--hair)}
+ .kol{grid-template-columns:1fr}.yt{grid-template-columns:1fr}
+ .stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat:nth-child(n){border-right:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+ .sched,.tbl{display:block;overflow-x:auto}
+ h1{font-size:24px}
+}
+</style></head><body><aside class="side"><div class="brand">geleek 早报</div><div class="date">2026-10-28 · 周三</div><!--datenav--><style>
+.dn{margin:-14px 0 26px;padding:12px 12px 10px;border-radius:14px;border:1px solid var(--line);background:var(--glass-strong);box-shadow:0 2px 10px rgba(60,72,92,.06);font-size:12.5px}
+.dn .dn-k{color:var(--mut);font-size:11.5px;letter-spacing:.04em;display:flex;justify-content:space-between;align-items:center}
+.dn .dn-cur{font-weight:650;font-size:14px;color:var(--fg);margin:2px 0 8px;font-variant-numeric:tabular-nums;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.dn .dn-badge{font-size:11px;font-weight:500;padding:1px 8px;border-radius:99px;color:var(--sage);background:rgba(77,102,86,.12)}
+.dn .dn-badge:empty{display:none}
+.dn .dn-badge.old{color:var(--warn);background:var(--warn-bg)}
+.dn .dn-row{display:flex;gap:6px;align-items:center;margin-top:6px}
+.dn select{width:100%;font:inherit;font-size:12.5px;color:var(--fg);background:var(--glass);border:1px solid var(--hair);border-radius:10px;padding:5px 6px;cursor:pointer;font-variant-numeric:tabular-nums}
+.dn .dn-a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:4px;height:28px;border-radius:10px;border:1px solid var(--hair);background:var(--glass);color:var(--fg);font-size:12px;line-height:1}
+.dn .dn-a:hover{text-decoration:none;color:var(--acc);border-color:var(--acc)}
+.dn .dn-a.off{opacity:.35;pointer-events:none}
+.dn .dn-all{display:inline-block;margin-top:8px;font-size:12px}
+@media (max-width:820px){.dn{margin:0;padding:4px 8px;display:flex;align-items:center;gap:8px;flex:none}.dn .dn-k,.dn .dn-all,.dn .dn-cur{display:none}.dn select{width:150px}.dn .dn-row{margin:0}.dn .dn-a{flex:none;width:28px}.dn .dn-a span{display:none}}
+</style><div class="dn" id="dn" data-date="2026-10-28" data-root="../" data-pub="1793144152"><div class="dn-k"><span>正在查看</span><span title="快捷键：[ 前一天，] 后一天">⌨ [ ]</span></div><div class="dn-cur">2026-10-28 周三<span class="dn-badge">最新</span></div><select aria-label="选择日期"><option value="2026-10-28" selected>2026-10-28 周三</option></select><div class="dn-row"><a class="dn-a dn-prev off" aria-label="前一天" title="前一天">‹<span> 前一天</span></a><a class="dn-a dn-next off" aria-label="后一天" title="后一天"><span>后一天 </span>›</a></div><a class="dn-all" href="../archive/index.html">全部往期 →</a></div><script>
+(function(){var el=document.getElementById('dn');if(!el)return;var root=el.getAttribute('data-root')||'',cur=el.getAttribute('data-date')||'';
+function href(d){return root+'archive/'+d+'.html'}
+var sel=el.querySelector('select'),pv=el.querySelector('.dn-prev'),nx=el.querySelector('.dn-next'),bd=el.querySelector('.dn-badge');
+sel.addEventListener('change',function(){if(sel.value&&sel.value!==cur)location.href=href(sel.value)});
+fetch(root+'archive/dates.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(m){
+ var ds=(m.dates||m).slice().sort(function(a,b){return a.date<b.date?1:-1});if(!ds.length)return;
+ sel.innerHTML='';var found=false;
+ ds.forEach(function(d){var o=document.createElement('option');o.value=d.date;o.textContent=d.date+' '+(d.weekday||'')+(d.noon?' · 含午间快讯':'');if(d.summary)o.title=d.summary;if(d.date===cur){o.selected=true;found=true}sel.appendChild(o)});
+ if(!found&&cur){var o=document.createElement('option');o.value=cur;o.textContent=cur;o.selected=true;sel.insertBefore(o,sel.firstChild)}
+ var i=-1;ds.forEach(function(d,k){if(d.date===cur)i=k});
+ function set(a,d,lab){if(d){a.href=href(d.date);a.classList.remove('off');a.title=lab+'：'+d.date+(d.summary?'\n'+d.summary:'')}else{a.classList.add('off');a.removeAttribute('href')}}
+ set(pv,i>=0?ds[i+1]:null,'前一天');set(nx,i>0?ds[i-1]:null,'后一天');
+ if(bd){if(i===0){bd.textContent='最新';bd.classList.remove('old')}else if(i>0){bd.textContent='往期';bd.classList.add('old')}}
+}).catch(function(){});
+document.addEventListener('keydown',function(e){if(e.target.closest&&e.target.closest('input,textarea,select'))return;if(e.altKey||e.ctrlKey||e.metaKey)return;
+ if(e.key==='['&&pv.href)location.href=pv.href;if(e.key===']'&&nx.href)location.href=nx.href});
+})();
+</script><!--/datenav--><ul class="nav"><li><a href="#keys">今日要点</a></li><li><a href="#news">重点新闻和数据</a></li><li><a href="#kol">大V观点</a></li><li><a href="#view">我的观点</a></li><li><a href="#drafts">发帖草稿</a></li><li><a href="#replies">互动评论</a></li><li><a href="#follow">追踪账号</a></li></ul><div class="foot">覆盖北京时间 10/27 07:40 – 10/28 07:35（UTC+8）<br>所有草稿均未发布</div></aside><main><section id="keys"><h1>币圈早报 · 2026-10-28（周三）</h1><div class="lead">行情快照：<a href="https://www.coingecko.com/en/coins/hyperliquid" target="_blank" rel="noopener">CoinGecko</a> 与 Hyperliquid 官方 API，北京时间 10/28 07:34 读数。</div><ul class="keys"><li><b class="n">01</b>主线仓位：Glassnode 称 Hyperliquid 大户对 BTC 永续翻成净空——自 3 月以来首次；BTC 现约 $80.8K，价格回暖与大户方向打架。</li><li><b class="n">02</b>产品：@HyperliquidX 应社区请求上线 Extended（$XTEN）hyperp（最高 3x）；午间已写的 NIFTY 仍极薄；trade.xyz 为 Anthropic（ANT）开启全仓。</li><li><b class="n">03</b>盘面 + 风险案例：$HYPE ≈ $81.4（24h +4.3%）；@lookonchain 追踪 Machi 在 Papertrade 亏光、HL 仅剩约 $4.5K——适合做仓位教育，不作猎奇。</li></ul></section><section id="news"><h2>重点新闻和数据</h2><p class="sub">Hyperliquid 优先 · 每条附原始来源 · Payward/HIP-3* 与 EQX live 已在周二早报详写，本期只作旁注</p><div class="stats"><div class="stat"><div class="k">HYPE</div><div class="v">$81.39</div><div class="d">24h +4.31% · <a href="https://www.coingecko.com/en/coins/hyperliquid" target="_blank" rel="noopener">CoinGecko</a></div></div><div class="stat"><div class="k">BTC</div><div class="v">$80,815</div><div class="d">24h +1.08%</div></div><div class="stat"><div class="k">ETH</div><div class="v">$2,347.5</div><div class="d">24h +1.39%</div></div><div class="stat"><div class="k">SOL</div><div class="v">$101.16</div><div class="d">24h +0.61%</div></div><div class="stat"><div class="k">HL 主盘持仓</div><div class="v">$115.3 亿</div><div class="d">24h 成交 $37.6 亿 · <a href="https://app.hyperliquid.xyz/trade" target="_blank" rel="noopener">交易页</a></div></div><div class="stat"><div class="k">HIP-3 xyz 持仓</div><div class="v">$39.6 亿</div><div class="d">24h 成交 $27.2 亿</div></div><div class="stat"><div class="k">HYPE 资金费率</div><div class="v">+0.00125%/h</div><div class="d">持仓约 $16.8 亿 · 24h 成交约 $3.1 亿</div></div><div class="stat"><div class="k">协议费用 近1日</div><div class="v">$281 万</div><div class="d">7 天约 $1,936 万 · <a href="https://defillama.com/protocol/hyperliquid" target="_blank" rel="noopener">DefiLlama</a></div></div></div><div class="cards"><article class="card"><h3>① 仓位：HL 大户对 BTC 翻成净空（Glassnode）</h3><ul><li><a href="https://x.com/glassnode/status/2115068864337781017" target="_blank" rel="noopener">@glassnode</a>（10/27 13:11 UTC，约 378 赞 / 31 转）：“Hyperliquid whales are net short bitcoin:native for the first time since March.” 这批账户曾在底部做多，上周仓位翻空。</li><li>Glassnode 原话留了两种可能：他们提前押更深回调，或价格反弹时被轧空。Cointelegraph 等媒体跟进转发，讨论度高。</li><li>发帖提醒：这是单一 DEX 场所的大户簿，不等于全市场净空；对冲与费率套利也会显示为空头（见社区评论）。截图优先用 Glassnode 原帖附图。</li><li>旁证：<a href="https://x.com/cryptojack/status/2115165679087136994" target="_blank" rel="noopener">@cryptojack</a> 等转述称「若仍处牛市，历史上此类翻空偏多」——属二手解读，引用时标明。</li></ul><div class="src">来源：<a href="https://x.com/glassnode/status/2115068864337781017" target="_blank" rel="noopener">@glassnode</a> · <a href="https://x.com/Cointelegraph/status/2115111619994820645" target="_blank" rel="noopener">@Cointelegraph</a> · <a href="https://x.com/i/trending/2115127977637745134" target="_blank" rel="noopener">X 新闻汇总</a></div></article><article class="card"><h3>② 产品：XTEN hyperp 上线；NIFTY 仍薄；ANT 全仓</h3><ul><li><a href="https://x.com/HyperliquidX/status/2114972775173828785" target="_blank" rel="noopener">@HyperliquidX</a>（10/27 06:49 UTC，约 747 赞）：“By community request, Extended (XTEN) hyperp has been listed with up to 3x leverage.”</li><li>跟帖说明 hyperps 不依赖外部现货/指数预言机，资金费率相对自身移动均价（<a href="https://x.com/HyperliquidX/status/2114972778017554800" target="_blank" rel="noopener">说明帖</a>）。API 早盘核对：XTEN mark ≈ $0.268，持仓名义约 $61 万，24h 成交约 $284 万——仍浅。</li><li>NIFTY（Nifty 50）午间已由 <a href="https://x.com/tradexyz" target="_blank" rel="noopener">@tradexyz</a> 官宣；今早 API：xyz:NIFTY 持仓约 $5 万、24h 成交约 $9 万——覆盖面新闻，不是流动性事件。</li><li><a href="https://x.com/tradexyz/status/2115179921760715202" target="_blank" rel="noopener">@tradexyz</a>：Anthropic（ANT）已开启 cross margin；另发本周美股财报日历（HOOD/SKHX、MSFT/GOOGL 等）。</li></ul><div class="src">来源：<a href="https://x.com/HyperliquidX/status/2114972775173828785" target="_blank" rel="noopener">@HyperliquidX XTEN</a> · <a href="https://x.com/HyperliquidX/status/2114972778017554800" target="_blank" rel="noopener">hyperps 说明</a> · <a href="https://x.com/tradexyz/status/2115179921760715202" target="_blank" rel="noopener">@tradexyz ANT</a></div></article><article class="card"><h3>③ 盘面：HYPE 反弹至约 $81；成交回落</h3><ul><li>CoinGecko（北京时间 07:34）：HYPE $81.39（24h +4.31%，市值约 $181 亿），BTC $80,815（+1.08%），ETH $2,347.5（+1.39%），SOL $101.16（+0.61%）。</li><li>Hyperliquid API：主盘总持仓约 $115.3 亿，24h 成交约 $37.6 亿（昨早约 $51 亿、午间约 $44 亿——滚动窗口回落）。持仓大致 BTC $35.2 亿、ETH $26.5 亿、HYPE $16.8 亿；HYPE 资金费率仍约 +0.00125%/小时。</li><li>xyz 持仓约 $39.6 亿，24h 成交约 $27.2 亿；成交靠前：SKHX / SP500 / CL / XYZ100 / SNDK。</li><li>DefiLlama：最近完整日（10/26）协议费用约 $281 万，7 日约 $1,936 万；L1 TVL 约 $24.8 亿（<a href="https://defillama.com/protocol/hyperliquid" target="_blank" rel="noopener">DefiLlama</a>）。</li><li>旁注：Payward×HIP-3*、EQX 11 个现货 live 已在周二早报展开，本期不重复。</li></ul><div class="src">来源：<a href="https://www.coingecko.com/en/coins/hyperliquid" target="_blank" rel="noopener">CoinGecko</a> · Hyperliquid API（北京时间 07:34）· DefiLlama</div></article><article class="card"><h3>④ 风险案例：Machi 在 Papertrade 亏光</h3><ul><li><a href="https://x.com/lookonchain/status/2114916681638395915" target="_blank" rel="noopener">@lookonchain</a>（10/27 03:06 UTC，约 542 赞）：Machi（@machibigbrother）在 @papertrade_xyz 亏光资金；Hyperliquid 仅剩约 $4,517.7；一小时前又亏本卖出一只 Mutant Ape 为交易筹资。</li><li>多家媒体转述称其本月在 HL 上从约 $1,220 万跌至不足 $5,000（交易 ETH/BTC/HYPE/PUMP）——以 Lookonchain 一手为准，百分比类二手数字发帖时核对原帖。</li><li>适合 geleek 的角度：公开钱包 ≠ 风控；杠杆会把「补仓冲动」放大。别写成嘲讽帖。</li></ul><div class="src">来源：<a href="https://x.com/lookonchain/status/2114916681638395915" target="_blank" rel="noopener">@lookonchain</a> · <a href="https://x.com/OdailyChina/status/2114919818260525540" target="_blank" rel="noopener">Odaily 中文</a></div></article><article class="card"><h3>⑤ 链上与资金流</h3><ul><li><a href="https://x.com/lookonchain/status/2115073152162365478" target="_blank" rel="noopener">@lookonchain</a> ETF：BTC 1D 净流入 +1,359 BTC（约 +$1.089 亿）；ETH 1D 净流出 −38,303 ETH（约 −$8,907 万）。7D：BTC 仍净流出、ETH 继续流出。</li><li><a href="https://x.com/EmberCN/status/2114908937233580175" target="_blank" rel="noopener">@EmberCN</a>：疑似 UXLINK 黑客地址在 HL 开 30,282 ETH 多单（开仓约 $2,134，名义约 $7,025 万）；<a href="https://x.com/WuBlockchain/status/2115152459152994606" target="_blank" rel="noopener">@WuBlockchain</a> 跟进称浮盈约 $654 万（数字以各帖读数时间为准）。</li><li><a href="https://x.com/ai_9684xtpa/status/2115082096582750410" target="_blank" rel="noopener">@ai_9684xtpa</a>：地址开 25x ETH 空约 9,700 枚（约 $2,246 万），止盈设想约 $2,058。</li><li><a href="https://x.com/lookonchain/status/2114881809175793806" target="_blank" rel="noopener">@lookonchain</a>：疑似 MARA 转出 1,000 BTC（约 $8,019 万）——「抛售」属推测，发帖写「疑似/转出」。</li></ul><div class="src">来源：见各条内链接</div></article><article class="card"><h3>⑥ 监管与 TradFi 交叉</h3><ul><li><a href="https://x.com/WuBlockchain/status/2115138099206611017" target="_blank" rel="noopener">@WuBlockchain</a>：路透称 CFTC 再次调查 Polymarket 是否违反 2022 和解（阻拦美国用户等）。同日 X 新闻称 Polymarket 美区 App 推 5 分钟加密涨跌盘——两条并读，别写成已定罪。</li><li><a href="https://x.com/WuBlockchain/status/2115101238668988844" target="_blank" rel="noopener">@WuBlockchain</a>：Coinbase 将于 10/30 为 EEA 零售用户自动转换 14 种受限资产（含 USDT 等）——MiCA 合规落地。</li><li><a href="https://x.com/i/trending/2115105224452907356" target="_blank" rel="noopener">X 新闻·VanEck</a>：VanEck Wealth Builder ETF（$WBMO）含约 2% BTC 敞口；<a href="https://x.com/i/trending/2115102774065037807" target="_blank" rel="noopener">X 新闻·Luxor</a>：Luxor 融资 $1,600 万打通矿机与 AI 算力——算力×金融叙事可对照 Hayes 此前长文。</li><li><a href="https://x.com/WuBlockchain/status/2115185708629725346" target="_blank" rel="noopener">@WuBlockchain</a>：Robinhood Q3 营收约 $14.24 亿符合预期；预测市场收入大增，加密收入同比 −55%。</li></ul><div class="src">来源：见各条内链接</div></article><article class="card"><h3>⑦ 生态讨论与需谨慎的二手消息</h3><ul><li><a href="https://x.com/MBxxvv/status/2115203117532975209" target="_blank" rel="noopener">@MBxxvv</a>：多数人仍用「加密交易所」看 HL，而它已长成围绕同一套基础设施的生态——适合引用加自己的产品观察。</li><li><a href="https://x.com/Mars_DeFi/status/2115026239958434105" target="_blank" rel="noopener">@Mars_DeFi</a>：Elysium 目标 11/9 主网；80+ 团队在探索。Uniswap×Elysium 仍多见二手讨论、未见 Uniswap 官方确认帖——本期不升格为「已官宣」。</li><li>X 新闻汇总 <a href="https://x.com/i/trending/2115210092790567010" target="_blank" rel="noopener">TxFlow</a>：社区指 TxFlow 前端/桥/API 酷似 HL（「Temu 版 Hyperliquid」）——属社区指控与截图，发帖务必写「指控/相似」，勿当已证实抄袭判决。</li></ul><div class="src">来源：<a href="https://x.com/MBxxvv/status/2115203117532975209" target="_blank" rel="noopener">@MBxxvv</a> · <a href="https://x.com/Mars_DeFi/status/2115026239958434105" target="_blank" rel="noopener">@Mars_DeFi</a> · <a href="https://x.com/i/trending/2115210092790567010" target="_blank" rel="noopener">TxFlow 汇总</a></div></article></div><div class="note">Payward×HIP-3*、EQX live 周二早报已详写；本期旁注即可，避免重复占头条。</div><div class="note">NIFTY 已在 10/27 午间快讯首发；今早只更新「仍极薄」的流动性观察。</div><div class="note">Glassnode「净空」是 HL 场所大户样本，不是 CME/全市场结论；发帖并列两种解读（看跌 vs 轧空燃料）。</div><div class="note">Machi 数字以 @lookonchain 原帖为准；「从 $12.2M 到 <$5K」等多见于二手转述，引用时核对。</div><div class="note">Uniswap×Elysium、TxFlow「抄袭」均未达到一手官宣/判决标准，本期放入「需谨慎」而非主新闻断言。</div><div class="note">协议费用 $281 万为 DefiLlama 10/26 完整日；与今早行情窗口不完全对齐。</div></section><section id="kol"><h2>大V观点</h2><p class="sub">过去约 24 小时原帖</p><div class="kolwrap"><div class="kol"><div class="who"><a href="https://x.com/glassnode/status/2115068864337781017" target="_blank" rel="noopener">glassnode</a><small>@glassnode · 链上数据</small></div><div>HL 大户对 BTC 永续自 3 月以来首次净空；曾抄底，上周翻空。约 378 赞。</div></div><div class="kol"><div class="who"><a href="https://x.com/HyperliquidX/status/2114972775173828785" target="_blank" rel="noopener">Hyperliquid</a><small>@HyperliquidX · 官方</small></div><div>应社区请求上线 Extended（XTEN）hyperp，最高 3x；另说明 hyperps 无外部预言机。约 747 赞。</div></div><div class="kol"><div class="who"><a href="https://x.com/lookonchain/status/2114916681638395915" target="_blank" rel="noopener">Lookonchain</a><small>@lookonchain</small></div><div>Machi 在 Papertrade 亏光，HL 约剩 $4.5K，并亏本卖 MAYC 筹资。约 542 赞。</div></div><div class="kol"><div class="who"><a href="https://x.com/EmberCN/status/2114908937233580175" target="_blank" rel="noopener">余烬</a><small>@EmberCN</small></div><div>疑似 UXLINK 黑客地址在 HL 持约 3 万 ETH 多单。</div></div><div class="kol"><div class="who"><a href="https://x.com/blknoiz06/status/2115136401364979876" target="_blank" rel="noopener">Ansem</a><small>@blknoiz06</small></div><div>把 ETH/SOL 更看作与生态增长绑定的货币资产，而非按收入估值的传统生意——TradFi 更难定价。约 312 赞。</div></div><div class="kol"><div class="who"><a href="https://x.com/MBxxvv/status/2115203117532975209" target="_blank" rel="noopener">MB.hl</a><small>@MBxxvv · HL 生态</small></div><div>别只把 HL 当交易所；基础设施上长出了整套生态。</div></div></div></section><section id="view"><div class="view"><h2>我的观点和看法</h2><p class="sub">分析</p><p><b>今天最值得写的不是涨跌幅，是「价格 vs 大户方向」的错位。</b>HYPE +4%、BTC 站回 $80K 上方，但 Glassnode 显示 HL 大户对 BTC 翻成净空。这两种事实可以同时成立：场所内大户 ≠ 全市场，空头也可能是对冲。geleek 的优势是把数据来源和适用范围写清楚，而不是站队喊多空。</p><p><b>产品侧在 quietly 扩覆盖面。</b>XTEN hyperp、NIFTY、ANT 全仓，都是「能交易的东西变多了」——但深度决定它是新闻还是可交易机会。今早 XTEN/NIFTY 的持仓与成交都偏浅，适合当生态进度条，不适合当立刻冲的流动性事件。</p><p><b>Machi 是风控教案，不是八卦。</b>公开账本让人看见爆仓全过程，却拦不住报复性加仓。对新手账号，一条「杠杆如何绑架决策」比再转一条鲸鱼表情包更有长期信任。以上为分析，不构成投资建议 / NFA DYOR。</p><span class="disc">以上为分析，不构成投资建议。</span></div></section><section id="drafts"><h2>发帖草稿 · 10 条</h2><p class="sub">按建议发帖时间排序（北京时间，今天周三）· 中英双语 · 中文每字按 2 字符计</p><table class="sched"><thead><tr><th>时间（北京）</th><th>类型</th><th>主题</th><th>提醒</th></tr></thead><tbody><tr><td class="t"><a href="#d0">08:30</a></td><td>突发快讯</td><td>HL 大户净空 BTC</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d1">09:45</a></td><td>产品快讯</td><td>XTEN hyperp 上线</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d2">11:00</a></td><td>可截图数据</td><td>周三早盘快照</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d3">12:30</a></td><td>短分析</td><td>净空怎么读</td><td></td></tr><tr><td class="t"><a href="#d4">15:30</a></td><td>风险教育</td><td>Machi 与杠杆</td><td><span class=flag>需截图</span></td></tr><tr><td class="t"><a href="#d5">17:30</a></td><td>大V引用</td><td>Ansem：货币资产</td><td><span class=flag>需截图</span></td></tr><tr><td class="t"><a href="#d6">19:00</a></td><td>链上快讯</td><td>ETF + 疑似黑客多单</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d7">21:00</a></td><td>对比观察</td><td>扩品 vs 深度</td><td></td></tr><tr><td class="t"><a href="#d8">22:00</a></td><td>长推开头</td><td>周三三件事</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d9">22:45</a></td><td>轻互动/提问</td><td>你更信哪种解读</td><td></td></tr></tbody></table><div class="draft" id="d0"><div class="dh"><span class="time">08:30</span><span class="tag acc">突发快讯</span><span class="dt">HL 大户净空 BTC</span><span class="flag">⚠ 发前更新价格：BTC 现价</span></div><div class="meta">📷 截图：Glassnode 原帖附图<br>今天主线；写清「Glassnode / HL 场所」<br>来源：<a href="https://x.com/glassnode/status/2115068864337781017" target="_blank" rel="noopener">@glassnode</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d0zh">复制</button></div><div class="txt" id="d0zh">⚡️ Glassnode：Hyperliquid 大户对 BTC 永续，自 3 月以来首次翻成净空。
+
+这批账户曾在底部做多，上周仓位转向。
+
+提醒：这是单一 DEX 的大户簿，不是全市场结论；对冲也会显示为空头。
+价格回暖 ≠ 大户同向。
+
+NFA/DYOR #Bitcoin #Hyperliquid $BTC</div><div class="cnt" id="d0zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d0en">复制</button></div><div class="txt" id="d0en">⚡️ Glassnode: Hyperliquid whales just flipped net short on BTC perps — first time since March.
+
+Same cohort that longed the bottom flipped last week.
+
+Caveat: one DEX’s whale book ≠ global positioning; hedges can look “short” too.
+Price bouncing ≠ whales agreeing.
+
+NFA/DYOR #Bitcoin #Hyperliquid $BTC</div><div class="cnt" id="d0en-n"></div></div></div></div><div class="draft" id="d1"><div class="dh"><span class="time">09:45</span><span class="tag acc">产品快讯</span><span class="dt">XTEN hyperp 上线</span><span class="flag">⚠ 发前更新价格：XTEN 标记价与成交</span></div><div class="meta">📷 截图：HL 交易页 XTEN 或官帖截图<br>官帖一手；说明 hyperps 无外部预言机<br>来源：<a href="https://x.com/HyperliquidX/status/2114972775173828785" target="_blank" rel="noopener">@HyperliquidX</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d1zh">复制</button></div><div class="txt" id="d1zh">🆕 Hyperliquid 官宣：应社区请求，Extended（$XTEN）hyperp 已上线，最高 3x。
+
+hyperps 不靠外部现货/指数预言机，资金费率相对自身均价。
+
+今早深度仍浅——先当产品进度，再谈能不能冲。
+
+NFA/DYOR #Hyperliquid $XTEN</div><div class="cnt" id="d1zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d1en">复制</button></div><div class="txt" id="d1en">🆕 Hyperliquid: by community request, Extended ($XTEN) hyperp is live — up to 3x.
+
+Hyperps don’t use an external spot/index oracle; funding refs a moving average of the contract itself.
+
+Depth still thin this morning — treat as product progress, not instant liquidity.
+
+NFA/DYOR #Hyperliquid $XTEN</div><div class="cnt" id="d1en-n"></div></div></div></div><div class="draft" id="d2"><div class="dh"><span class="time">11:00</span><span class="tag acc">可截图数据</span><span class="dt">周三早盘快照</span><span class="flag">⚠ 发前更新价格：价格、持仓、成交发前重读</span></div><div class="meta">📷 截图：CoinGecko HYPE + https://app.hyperliquid.xyz/trade 总览<br>截 CoinGecko + HL 交易页<br>来源：<a href="https://www.coingecko.com/en/coins/hyperliquid" target="_blank" rel="noopener">CoinGecko</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d2zh">复制</button></div><div class="txt" id="d2zh">🖥️ 周三早盘快照（发前请更新）：
+
+$HYPE ≈ $81.4（+4%）｜BTC ≈ $80.8K｜ETH ≈ $2.35K
+Hyperliquid 主盘持仓 ≈ $115 亿，24h 成交 ≈ $38 亿
+xyz 持仓 ≈ $40 亿，24h 成交 ≈ $27 亿
+
+价格抬了，滚动成交比昨早公告窗口低一档。
+
+数据：CoinGecko + HL API
+NFA #Hyperliquid $HYPE $BTC</div><div class="cnt" id="d2zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d2en">复制</button></div><div class="txt" id="d2en">🖥️ Wednesday morning snapshot (refresh before post):
+
+$HYPE ≈ $81.4 (+4%)｜BTC ≈ $80.8K｜ETH ≈ $2.35K
+Hyperliquid main OI ≈ $11.5B, 24h vol ≈ $3.8B
+xyz OI ≈ $4.0B, 24h vol ≈ $2.7B
+
+Price up; rolling volume cooler than yesterday’s headline window.
+
+Sources: CoinGecko + HL API
+NFA #Hyperliquid $HYPE $BTC</div><div class="cnt" id="d2en-n"></div></div></div></div><div class="draft" id="d3"><div class="dh"><span class="time">12:30</span><span class="tag acc">短分析</span><span class="dt">净空怎么读</span></div><div class="meta">教育帖；两种解读并列<br>来源：<a href="https://x.com/glassnode/status/2115068864337781017" target="_blank" rel="noopener">@glassnode</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d3zh">复制</button></div><div class="txt" id="d3zh">🧠 怎么读「HL 大户净空」：
+
+A）他们提前押更深回调
+B）价格若继续上，空头可能变成轧空燃料
+C）部分「空」其实是对冲/套保
+
+同一张图，三种故事。写仓位时，先写样本范围，再写观点。
+
+NFA #Bitcoin #Hyperliquid</div><div class="cnt" id="d3zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d3en">复制</button></div><div class="txt" id="d3en">🧠 How to read “HL whales net short”:
+
+A) They’re early to a deeper pullback
+B) If price keeps climbing, that short book can become squeeze fuel
+C) Some “shorts” are hedges, not directional bets
+
+Same chart, three stories. Scope the sample before the take.
+
+NFA #Bitcoin #Hyperliquid</div><div class="cnt" id="d3en-n"></div></div></div></div><div class="draft" id="d4"><div class="dh"><span class="time">15:30</span><span class="tag acc">风险教育</span><span class="dt">Machi 与杠杆</span></div><div class="meta">📷 截图：Lookonchain 原帖（打码敏感细节）<br>风控教案；避免嘲讽口吻<br>来源：<a href="https://x.com/lookonchain/status/2114916681638395915" target="_blank" rel="noopener">@lookonchain</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d4zh">复制</button></div><div class="txt" id="d4zh">⚠️ 链上公开课：@lookonchain 显示 Machi 在 Papertrade 亏光，Hyperliquid 约剩 $4.5K，还亏本卖 MAYC 筹资继续交易。
+
+公开钱包挡不住报复性加仓。
+杠杆最狠的不是一次爆仓，是让人把最后一点筹码也推上台面。
+
+NFA/DYOR #Hyperliquid #risk</div><div class="cnt" id="d4zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d4en">复制</button></div><div class="txt" id="d4en">⚠️ Public-wallet lesson: Lookonchain shows Machi wiped on Papertrade, ~$4.5K left on Hyperliquid, and sold a Mutant Ape at a loss to keep trading.
+
+Transparency ≠ risk control.
+Leverage’s worst trick isn’t one liquidation — it’s making you shove the last chip in.
+
+NFA/DYOR #Hyperliquid #risk</div><div class="cnt" id="d4en-n"></div></div></div></div><div class="draft" id="d5"><div class="dh"><span class="time">17:30</span><span class="tag acc">大V引用</span><span class="dt">Ansem：货币资产</span></div><div class="meta">📷 截图：Ansem 原帖截图<br>引用加自己的看法<br>来源：<a href="https://x.com/blknoiz06/status/2115136401364979876" target="_blank" rel="noopener">@blknoiz06</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d5zh">复制</button></div><div class="txt" id="d5zh">📌 Ansem：他更把 ETH/SOL 看成与生态增长绑定的「货币资产」，而不是按收入估值的传统生意——所以 TradFi 更难给它们定价。
+
+我的补充：HYPE 更常被按费用/回购讲故事；ETH/SOL 更常被按生态货币性讲故事。框架不同，别混着用同一套 PE。
+
+NFA/DYOR #ETH #SOL</div><div class="cnt" id="d5zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d5en">复制</button></div><div class="txt" id="d5en">📌 Ansem: he treats ETH/SOL more like monetary assets tied to ecosystem growth than businesses valued on revenue — harder for TradFi to underwrite.
+
+My add: $HYPE often gets a fees/buyback story; ETH/SOL often get a monetary-premium story. Different frames — don’t force one PE lens on both.
+
+NFA/DYOR #ETH #SOL</div><div class="cnt" id="d5en-n"></div></div></div></div><div class="draft" id="d6"><div class="dh"><span class="time">19:00</span><span class="tag acc">链上快讯</span><span class="dt">ETF + 疑似黑客多单</span><span class="flag">⚠ 发前更新价格：ETF 数字以原帖图为准</span></div><div class="meta">📷 截图：lookonchain ETF 图 / 余烬仓位图<br>两条并读；黑客地址写「疑似」<br>来源：<a href="https://x.com/lookonchain/status/2115073152162365478" target="_blank" rel="noopener">@lookonchain ETF</a> · <a href="https://x.com/EmberCN/status/2114908937233580175" target="_blank" rel="noopener">@EmberCN</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d6zh">复制</button></div><div class="txt" id="d6zh">📊 资金流两则：
+
+① BTC ETF 单日约 +$1.09 亿；ETH ETF 单日约 −$8,900 万（@lookonchain）
+② 疑似 UXLINK 黑客地址在 HL 持约 3 万 ETH 多单（@EmberCN）
+
+机构在买 BTC 敞口，链上仍有高波动故事——分开写，别揉成一句「聪明钱」。
+
+NFA/DYOR $BTC $ETH #Hyperliquid</div><div class="cnt" id="d6zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d6en">复制</button></div><div class="txt" id="d6en">📊 Two flow notes:
+
+① BTC ETFs ~+$109M in one day; ETH ETFs ~−$89M (@lookonchain)
+② A wallet allegedly tied to the UXLINK hack holds ~30k ETH long on HL (@EmberCN)
+
+Institutions adding BTC exposure ≠ “smart money” as one blob — keep the stories separate.
+
+NFA/DYOR $BTC $ETH #Hyperliquid</div><div class="cnt" id="d6en-n"></div></div></div></div><div class="draft" id="d7"><div class="dh"><span class="time">21:00</span><span class="tag acc">对比观察</span><span class="dt">扩品 vs 深度</span></div><div class="meta">XTEN / NIFTY / 净空并读<br>来源：<a href="https://x.com/HyperliquidX/status/2114972775173828785" target="_blank" rel="noopener">@HyperliquidX</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d7zh">复制</button></div><div class="txt" id="d7zh">🧭 同一天的两条线：
+
+产品：XTEN、NIFTY、ANT 全仓——能交易的东西变多了
+仓位：HL 大户对 BTC 翻空——愿意承担方向风险的钱更谨慎了
+
+扩品很热闹，深度和风险偏好才决定这热闹能不能变成交量。
+
+NFA #Hyperliquid</div><div class="cnt" id="d7zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d7en">复制</button></div><div class="txt" id="d7en">🧭 Two threads, same day:
+
+Product: XTEN, NIFTY, ANT cross-margin — more things to trade
+Positioning: HL whales flipped net short BTC — directional risk appetite looks cautious
+
+Listings make noise; depth + risk appetite decide whether noise becomes volume.
+
+NFA #Hyperliquid</div><div class="cnt" id="d7en-n"></div></div></div></div><div class="draft" id="d8"><div class="dh"><span class="time">22:00</span><span class="tag acc">长推开头</span><span class="dt">周三三件事</span><span class="flag">⚠ 发前更新价格：线程第 2 条更新 XTEN 深度</span></div><div class="meta">可做线程：1 净空 2 XTEN 3 Machi<br>来源：<a href="https://x.com/glassnode/status/2115068864337781017" target="_blank" rel="noopener">@glassnode</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d8zh">复制</button></div><div class="txt" id="d8zh">🧵 周三值得记下的三件事：
+
+1) Glassnode：HL 大户对 BTC 自 3 月来首次净空
+2) $XTEN hyperp 上线——产品覆盖面又扩一格
+3) Machi 公开账本再提醒：杠杆会绑架决策
+
+展开 👇
+
+#Hyperliquid #crypto $BTC</div><div class="cnt" id="d8zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d8en">复制</button></div><div class="txt" id="d8en">🧵 Three Wednesday notes:
+
+1) Glassnode: HL whales net short BTC for the first time since March
+2) $XTEN hyperp live — another listing on the coverage map
+3) Machi’s public wallet: leverage can hijack decisions
+
+Thread 👇
+
+#Hyperliquid #crypto $BTC</div><div class="cnt" id="d8en-n"></div></div></div></div><div class="draft" id="d9"><div class="dh"><span class="time">22:45</span><span class="tag acc">轻互动/提问</span><span class="dt">你更信哪种解读</span></div><div class="meta">配投票更好<br>来源：<a href="https://x.com/glassnode/status/2115068864337781017" target="_blank" rel="noopener">@glassnode</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d9zh">复制</button></div><div class="txt" id="d9zh">🤔 想听听大家：HL 大户净空 BTC，你更站哪边？
+
+A 他们看对了，还会更深回调
+B 空头是轧空燃料，价格继续上
+C 很多是对冲，方向意义有限
+D 只看自己的系统和仓位
+
+评论区说说为什么
+NFA/DYOR #Bitcoin #Hyperliquid</div><div class="cnt" id="d9zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d9en">复制</button></div><div class="txt" id="d9en">🤔 Quick poll — HL whales net short BTC. Where do you land?
+
+A They’re right; deeper pullback still coming
+B Shorts = squeeze fuel if price keeps climbing
+C Mostly hedges; limited directional signal
+D Ignore them; run your own system
+
+Reply with your why
+NFA/DYOR #Bitcoin #Hyperliquid</div><div class="cnt" id="d9en-n"></div></div></div></div></section><section id="replies"><h2>互动评论草稿</h2><p class="sub">打开原帖 → 复制 → 回复</p><div class="draft"><div class="dh"><span class="dt">① <a href="https://x.com/glassnode/status/2115068864337781017" target="_blank" rel="noopener">@glassnode：HL whales net short</a></span></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="r0zh">复制</button></div><div class="txt" id="r0zh">样本范围写得很清楚 👏 我这边会并列两种读法：提前看跌 vs 反弹时的轧空燃料；再加一条——场所内大户 ≠ CME/全市场。感谢把「曾抄底、上周翻空」的路径也标出来。</div><div class="cnt" id="r0zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="r0en">复制</button></div><div class="txt" id="r0en">Appreciate the scoped sample 👏 I’ll hold both reads: early to a pullback vs squeeze fuel on a bounce — plus the reminder that one venue’s whales ≠ CME/global books. The “longed the bottom → flipped last week” path is the useful part.</div><div class="cnt" id="r0en-n"></div></div></div></div><div class="draft"><div class="dh"><span class="dt">② <a href="https://x.com/HyperliquidX/status/2114972775173828785" target="_blank" rel="noopener">@HyperliquidX：XTEN hyperp</a></span></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="r1zh">复制</button></div><div class="txt" id="r1zh">社区请求 → 上线这条路径很 Hyperliquid 👍 想确认的是 hyperps 的标记价路径（相对均价）在波动大时滑点与资金费率会怎么表现——会盯着深度看几天再写结论。</div><div class="cnt" id="r1zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="r1en">复制</button></div><div class="txt" id="r1en">Community-request → listing feels very Hyperliquid 👍 Watching how hyperp mark (vs moving average) behaves in chop — funding + slippage — before calling it more than a coverage expand.</div><div class="cnt" id="r1en-n"></div></div></div></div><div class="draft"><div class="dh"><span class="dt">③ <a href="https://x.com/lookonchain/status/2114916681638395915" target="_blank" rel="noopener">@lookonchain：Machi Papertrade</a></span></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="r2zh">复制</button></div><div class="txt" id="r2zh">这比任何「别用高杠杆」口号都直观 😬 公开账本能看见过程，却挡不住补仓冲动。风控清单第一项可能是：预写「亏到多少就停」，而不是盘中再谈判。</div><div class="cnt" id="r2zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="r2en">复制</button></div><div class="txt" id="r2en">More convincing than any “don’t overlever” slogan 😬 Public books show the path; they don’t stop revenge sizing. Risk rule #1 might be writing the stop *before* the session — not negotiating mid-drawdown.</div><div class="cnt" id="r2en-n"></div></div></div></div><div class="draft"><div class="dh"><span class="dt">④ <a href="https://x.com/blknoiz06/status/2115136401364979876" target="_blank" rel="noopener">@blknoiz06：ETH/SOL as monetary assets</a></span></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="r3zh">复制</button></div><div class="txt" id="r3zh">「货币资产 vs 收入生意」这组对比很好用 📌 也解释了为什么同一套 TradFi 估值模板套到 L1 上会别扭。好奇你怎么看费用清晰的交易类代币——是否更容易被传统框架吸收？</div><div class="cnt" id="r3zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="r3en">复制</button></div><div class="txt" id="r3en">“Monetary asset vs revenue business” is a clean frame 📌 Explains why one-size TradFi templates feel awkward on L1s. Curious where you’d put fee-clear trading tokens — easier for traditional frameworks to digest?</div><div class="cnt" id="r3en-n"></div></div></div></div></section><section id="follow"><h2>建议追踪的账号</h2><p class="sub">“近期活跃”按本次检索到的发帖时间判断</p><table class="tbl"><thead><tr><th>X 账号</th><th>类型</th><th>为什么值得追踪</th><th>活跃情况</th></tr></thead><tbody><tr><td><a href="https://x.com/HyperliquidX" target="_blank" rel="noopener">@HyperliquidX</a></td><td>官方</td><td>产品上线、hyperps 等一手公告</td><td class="act y">✓ 昨晚 XTEN 官帖</td></tr><tr><td><a href="https://x.com/chameleon_jeff" target="_blank" rel="noopener">@chameleon_jeff</a></td><td>创始人 Jeff</td><td>HIP-3 / 基础设施一手思路</td><td class="act n">本次窗口无新原创（周二有 Payward 跟帖）</td></tr><tr><td><a href="https://x.com/EmberCN" target="_blank" rel="noopener">@EmberCN</a></td><td>中文链上数据</td><td>巨鲸与异常资金路径</td><td class="act y">✓ 疑似黑客 ETH 多单</td></tr><tr><td><a href="https://x.com/ai_9684xtpa" target="_blank" rel="noopener">@ai_9684xtpa</a></td><td>中文链上数据</td><td>巨鲸仓位、异常开仓</td><td class="act y">✓ ETH 空单等</td></tr><tr><td><a href="https://x.com/WuBlockchain" target="_blank" rel="noopener">@WuBlockchain</a></td><td>新闻</td><td>亚洲视角监管、交易所、黑客快讯</td><td class="act y">✓ 高频</td></tr><tr><td><a href="https://x.com/tier10k" target="_blank" rel="noopener">@tier10k</a></td><td>新闻快讯</td><td>头条快讯源</td><td class="act n">本次窗口未见相关原创</td></tr><tr><td><a href="https://x.com/lookonchain" target="_blank" rel="noopener">@lookonchain</a></td><td>链上数据</td><td>鲸鱼、ETF、人物仓位</td><td class="act y">✓ Machi / ETF / MARA</td></tr><tr><td><a href="https://x.com/coinglass_com" target="_blank" rel="noopener">@coinglass_com</a></td><td>衍生品数据</td><td>清算热力图、订单墙</td><td class="act y">✓ 48h 热力图等</td></tr><tr><td><a href="https://x.com/0xngmi" target="_blank" rel="noopener">@0xngmi</a></td><td>DefiLlama</td><td>DeFi 数据口径讨论</td><td class="act n">本次窗口未见</td></tr><tr><td><a href="https://x.com/CryptoHayes" target="_blank" rel="noopener">@CryptoHayes</a></td><td>KOL</td><td>宏观与 AI×金融</td><td class="act n">本次窗口无新长文（可对照 Luxor 融资）</td></tr><tr><td><a href="https://x.com/cobie" target="_blank" rel="noopener">@cobie</a></td><td>KOL</td><td>老牌行业观察</td><td class="act n">本次窗口未见</td></tr><tr><td><a href="https://x.com/Pentosh1" target="_blank" rel="noopener">@Pentosh1</a></td><td>交易 KOL</td><td>中长线交易观点</td><td class="act n">本次窗口未见</td></tr><tr><td><a href="https://x.com/blknoiz06" target="_blank" rel="noopener">@blknoiz06</a></td><td>交易 KOL</td><td>情绪与资产框架</td><td class="act y">✓ ETH/SOL 货币资产帖</td></tr><tr><td><a href="https://x.com/CryptoCred" target="_blank" rel="noopener">@CryptoCred</a></td><td>交易教育</td><td>技术分析与交易心理</td><td class="act n">本次窗口未见</td></tr><tr><td><a href="https://x.com/KoroushAK" target="_blank" rel="noopener">@KoroushAK</a></td><td>交易教育</td><td>订单流与数据化交易</td><td class="act n">本次窗口未见</td></tr><tr><td><a href="https://x.com/DefiIgnas" target="_blank" rel="noopener">@DefiIgnas</a></td><td>DeFi 研究</td><td>DeFi 估值与赛道</td><td class="act n">本次窗口无相关原创</td></tr><tr><td><a href="https://x.com/ASvanevik" target="_blank" rel="noopener">@ASvanevik</a></td><td>Nansen CEO</td><td>链上数据与 AI 工具</td><td class="act n">本次窗口无相关原创</td></tr><tr><td><a href="https://x.com/glassnode" target="_blank" rel="noopener">@glassnode</a></td><td>链上数据（补充）</td><td>大户仓位与宏观链上指标</td><td class="act y">✓ 净空 BTC 帖</td></tr><tr><td><a href="https://x.com/tradexyz" target="_blank" rel="noopener">@tradexyz</a></td><td>HIP-3 部署方（补充）</td><td>指数/美股永续上新与保证金</td><td class="act y">✓ ANT 全仓 / 财报日历</td></tr><tr><td><a href="https://x.com/MBxxvv" target="_blank" rel="noopener">@MBxxvv</a></td><td>Hyperliquid 生态（补充）</td><td>生态叙事与产品观察</td><td class="act y">✓ 基础设施帖</td></tr></tbody></table><h2 style="margin-top:48px">YouTube 频道</h2><p class="sub">均已确认频道页存在</p><div class="yt"><div><b><a href="https://x.com/HyperliquidX/status/2114972775173828785" target="_blank" rel="noopener">@HyperliquidX：XTEN 官帖</a></b><br>昨晚产品一手原文</div><div><b><a href="https://x.com/glassnode/status/2115068864337781017" target="_blank" rel="noopener">@glassnode：大户净空</a></b><br>仓位主线附图</div><div><b><a href="https://x.com/lookonchain/status/2114916681638395915" target="_blank" rel="noopener">@lookonchain：Machi</a></b><br>风险教育一手</div><div><b><a href="https://www.youtube.com/@Bankless" target="_blank" rel="noopener">Bankless YouTube</a></b><br>每周 ROLLUP 复盘</div><div><b><a href="https://www.youtube.com/@TheRollupCo" target="_blank" rel="noopener">The Rollup</a></b><br>机构/VC 访谈，含 Hyperliquid 专题</div><div><b><a href="https://www.youtube.com/watch?v=t5s7LICMJKE" target="_blank" rel="noopener">TOKEN2049：Jeff</a></b><br>基础设施叙事背景对照</div></div><div class="note">过去 24 小时未确认到新的 Hyperliquid 专属长视频首发；本期优先读官帖 + Glassnode + Lookonchain，视频作背景对照。</div></section><footer>本页所有草稿均未发布，需本人确认后再发。数据为北京时间 10/28 07:34 快照，价格类内容发前请更新。内容仅为信息整理与分析，不构成投资建议。NFA / DYOR。</footer></main><script>
+function fallbackCopy(t){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.position='fixed';a.style.top='-1000px';document.body.appendChild(a);a.select();a.setSelectionRange(0,t.length);var ok=false;try{ok=document.execCommand('copy')}catch(e){}document.body.removeChild(a);return ok}
+function done(b,ok){var o=b.dataset.label||b.textContent;b.dataset.label=o;b.textContent=ok?'已复制 ✓':'复制失败';b.classList.toggle('ok',ok);clearTimeout(b._t);b._t=setTimeout(function(){b.textContent=o;b.classList.remove('ok')},1600)}
+document.addEventListener('click',function(e){var b=e.target.closest('.cp');if(!b)return;var t=document.getElementById(b.dataset.for).textContent;
+ if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(function(){done(b,true)},function(){done(b,fallbackCopy(t))})}else{done(b,fallbackCopy(t))}});
+// X 加权字数：CJK 计 2，其余计 1（近似）
+document.querySelectorAll('.txt').forEach(function(el){var s=el.textContent,n=0;for(var ch of s){n+=/[\u1100-\uFFFF]/.test(ch)&&!/[\u2000-\u206F\u2190-\u2BFF]/.test(ch)?2:1}var c=document.getElementById(el.id+'-n');if(c)c.textContent='约 '+n+' / 280 字符（X 加权估算，emoji 与链接以输入框为准）'});
+// 导航高亮
+var links=[].slice.call(document.querySelectorAll('.nav a'));var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+en.target.id)})}})},{rootMargin:'-20% 0px -70% 0px'});secs.forEach(function(s){s&&io.observe(s)});
+</script></body></html>
