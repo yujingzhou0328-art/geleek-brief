@@ -1,6 +1,12 @@
 {
- "updated": "2026-10-28 13:34 (UTC+8)",
+ "updated": "2026-10-29 08:28 (UTC+8)",
  "dates": [
+  {
+   "date": "2026-10-29",
+   "weekday": "周四",
+   "summary": "Fed 10–2 hold；Pump.fun 上线 HL perps；Solidus 指原油异常挂撤单",
+   "noon": false
+  },
   {
    "date": "2026-10-28",
    "weekday": "周三",
