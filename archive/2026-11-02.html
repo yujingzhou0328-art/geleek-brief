@@ -1,0 +1,299 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>币圈早报 · 2026-11-02（周一）</title><style>
+:root{
+ --fg:#2b3442;--mut:#525d6b;--line:rgba(255,255,255,.55);--hair:rgba(43,52,66,.10);
+ --acc:#44607b;--acc-bg:rgba(79,109,138,.12);--sage:#4d6656;--warn:#83583a;--warn-bg:rgba(184,140,110,.16);
+ --glass:rgba(255,255,255,.46);--glass-strong:rgba(255,255,255,.62);--glass-fallback:rgba(250,249,246,.94);
+ --shadow:0 8px 32px rgba(60,72,92,.08);--blur:blur(20px) saturate(120%);
+ --bg:#eef0ee;--b1:#b4c6d8;--b2:#bccfba;--b3:#e0c0c2;--b4:#ecdcc4;--side:256px;--r:18px
+}
+@media (prefers-color-scheme:dark){:root{
+ --fg:#dfe4ea;--mut:#9aa5b2;--line:rgba(255,255,255,.10);--hair:rgba(255,255,255,.08);
+ --acc:#9db4cb;--acc-bg:rgba(157,180,203,.14);--sage:#a3b8a8;--warn:#d6b08f;--warn-bg:rgba(214,176,143,.13);
+ --glass:rgba(30,34,42,.48);--glass-strong:rgba(36,40,49,.62);--glass-fallback:rgba(28,31,38,.95);
+ --shadow:0 8px 32px rgba(0,0,0,.28);
+ --bg:#14171c;--b1:#33445a;--b2:#33443a;--b3:#4a363c;--b4:#443d31}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--fg);font:15px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+ background:
+  radial-gradient(closest-side,var(--b1),transparent) -8vw -12vh/62vw 62vw no-repeat,
+  radial-gradient(closest-side,var(--b2),transparent) 62vw 4vh/48vw 48vw no-repeat,
+  radial-gradient(closest-side,var(--b3),transparent) 18vw 58vh/52vw 52vw no-repeat,
+  radial-gradient(closest-side,var(--b4),transparent) 70vw 62vh/50vw 50vw no-repeat,var(--bg);
+ filter:blur(40px)}
+a{color:var(--acc);text-decoration:none;text-underline-offset:3px}a:hover{text-decoration:underline}
+.glass,.side,.card,.stats,.draft,.sched,.tbl,.kolwrap,.view,.yt div,.note{background:var(--glass-fallback)}
+@supports ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){
+ .side,.card,.stats,.draft,.sched,.tbl,.kolwrap,.view,.yt div,.note{background:var(--glass);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur)}
+}
+.side,.card,.stats,.draft,.sched,.tbl,.kolwrap,.view,.yt div{border:1px solid var(--line);box-shadow:var(--shadow)}
+.side{position:fixed;top:16px;left:16px;bottom:16px;width:calc(var(--side) - 32px);padding:32px 22px;border-radius:22px;overflow-y:auto;z-index:10}
+.brand{font-weight:700;font-size:18px;letter-spacing:-.01em}
+.date{color:var(--mut);font-size:13px;margin:4px 0 28px}
+.nav{list-style:none;margin:0;padding:0}
+.nav a{display:block;padding:8px 12px;margin:2px -6px;border-radius:12px;color:var(--mut);font-size:14px;transition:background .2s,color .2s}
+.nav a:hover{color:var(--fg);background:var(--acc-bg);text-decoration:none}
+.nav a.on{color:var(--fg);background:var(--glass-strong);border:1px solid var(--line);font-weight:600;box-shadow:0 2px 10px rgba(60,72,92,.06)}
+.side .foot{margin-top:28px;font-size:12px;color:var(--mut);line-height:1.6}
+main{margin-left:var(--side);padding:48px 56px 120px 40px;max-width:calc(var(--side) + 1120px)}
+section{padding:4px 0 44px;margin-bottom:28px}
+h1{font-size:30px;line-height:1.25;margin:0 0 8px;letter-spacing:-.02em}
+h2{font-size:21px;margin:0 0 4px;letter-spacing:-.01em}
+.sub{color:var(--mut);font-size:13px;margin:0 0 22px}
+.lead{font-size:13px;color:var(--mut);margin-bottom:32px}
+.keys{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.keys li{padding:16px 20px 16px 58px;position:relative;font-size:15.5px;border-radius:var(--r);border:1px solid var(--line);box-shadow:var(--shadow);background:var(--glass-fallback)}
+@supports ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){.keys li{background:var(--glass);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur)}}
+.keys li b.n{position:absolute;left:20px;top:16px;color:var(--sage);font-variant-numeric:tabular-nums}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-radius:var(--r);overflow:hidden;margin:0 0 24px}
+.stat{padding:16px 20px;border-right:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.stat:nth-child(4n){border-right:0}.stat:nth-last-child(-n+4){border-bottom:0}
+.stat .k{font-size:12px;color:var(--mut)}.stat .v{font-size:22px;font-weight:650;font-variant-numeric:tabular-nums;letter-spacing:-.01em}.stat .d{font-size:12px;color:var(--mut)}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card{border-radius:var(--r);padding:20px 22px}
+.card h3{font-size:16px;margin:0 0 10px;line-height:1.45}
+.card ul{margin:0;padding-left:18px}.card li{margin:4px 0}.card li::marker{color:var(--sage)}
+.card .src{margin-top:12px;padding-top:10px;border-top:1px solid var(--hair);font-size:12.5px;color:var(--mut)}
+.note{border:1px solid var(--line);border-left:3px solid var(--warn);padding:12px 16px;border-radius:12px;font-size:13.5px;margin-top:16px}
+.kolwrap{border-radius:var(--r);padding:4px 22px}
+.kol{display:grid;grid-template-columns:200px 1fr;gap:6px 24px;padding:16px 0;border-top:1px solid var(--hair)}
+.kol:first-child{border-top:0}.kol .who{font-weight:600}.kol .who small{display:block;font-weight:400;color:var(--mut);font-size:12.5px}
+.view{border-radius:var(--r);padding:24px 26px}
+.view h2,.view .sub{margin-left:0}
+.view p{margin:0 0 14px;max-width:860px}
+.disc{display:inline-block;margin-top:4px;font-weight:600;color:var(--warn);background:var(--warn-bg);padding:4px 12px;border-radius:99px;font-size:13.5px}
+.sched,.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:14px;border-radius:var(--r);overflow:hidden}
+.sched{margin-bottom:28px}
+.sched th,.sched td,.tbl th,.tbl td{text-align:left;padding:10px 16px;border-bottom:1px solid var(--hair);vertical-align:top}
+.sched tr:last-child td,.tbl tr:last-child td{border-bottom:0}
+.sched th,.tbl th{font-size:12px;color:var(--mut);font-weight:500;background:rgba(255,255,255,.18)}
+.sched td.t{font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap}
+.draft{border-radius:20px;margin-bottom:22px;overflow:hidden}
+.dh{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:14px 22px;border-bottom:1px solid var(--hair);background:rgba(255,255,255,.14)}
+.time{font-weight:700;font-size:17px;font-variant-numeric:tabular-nums}
+.tag{font-size:12px;padding:2px 10px;border-radius:99px;border:1px solid var(--hair);color:var(--mut)}
+.tag.acc{color:var(--acc);border-color:transparent;background:var(--acc-bg)}
+.dt{font-weight:600}
+.flag{font-size:12.5px;padding:3px 10px;border-radius:99px;color:var(--warn);background:var(--warn-bg)}
+.meta{padding:10px 22px;font-size:13px;color:var(--mut);border-bottom:1px solid var(--hair)}
+.pair{display:grid;grid-template-columns:1fr 1fr}
+.pane{padding:16px 22px 18px;display:flex;flex-direction:column;min-width:0}
+.pane+.pane{border-left:1px solid var(--hair)}
+.ph{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.lang{font-size:12px;color:var(--mut);letter-spacing:.06em}
+.txt{white-space:pre-wrap;word-break:break-word;font-size:14.5px;line-height:1.75;flex:1}
+.cp{font:inherit;font-size:13px;cursor:pointer;border:1px solid var(--line);background:var(--glass-strong);color:var(--fg);padding:5px 16px;border-radius:99px;min-width:76px;transition:.2s;box-shadow:0 1px 6px rgba(60,72,92,.06)}
+.cp:hover{color:var(--acc);border-color:var(--acc)}
+.cp.ok{background:var(--sage);border-color:var(--sage);color:#fff}
+.cnt{font-size:11.5px;color:var(--mut);margin-top:8px}
+.act{white-space:nowrap;font-size:12.5px}.act.y{color:var(--sage);font-weight:600}.act.n{color:var(--mut)}
+.yt{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:8px}
+.yt div{padding:14px 18px;border-radius:14px}
+footer{color:var(--mut);font-size:12.5px;margin-top:24px}
+@media (max-width:1100px){main{padding:40px 32px 100px 32px}.cards{grid-template-columns:1fr}}
+@media (max-width:820px){
+ html{scroll-padding-top:72px}.flag{white-space:nowrap}
+ .side{position:sticky;top:8px;left:auto;bottom:auto;width:auto;height:auto;margin:8px;padding:8px 14px;border-radius:16px;display:flex;align-items:center;gap:14px;overflow-x:auto;white-space:nowrap}
+ .date,.side .foot{display:none}.brand{font-size:15px}
+ .nav{display:flex;gap:4px}.nav a{margin:0;padding:6px 10px;font-size:13px}
+ main{margin-left:0;padding:24px 14px 80px}
+ .pair{grid-template-columns:1fr}.pane+.pane{border-left:0;border-top:1px solid var(--hair)}
+ .kol{grid-template-columns:1fr}.yt{grid-template-columns:1fr}
+ .stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat:nth-child(n){border-right:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+ .sched,.tbl{display:block;overflow-x:auto}
+ h1{font-size:24px}
+}
+</style></head><body><aside class="side"><div class="brand">geleek 早报</div><div class="date">2026-11-02 · 周一</div><!--datenav--><style>
+.dn{margin:-14px 0 26px;padding:12px 12px 10px;border-radius:14px;border:1px solid var(--line);background:var(--glass-strong);box-shadow:0 2px 10px rgba(60,72,92,.06);font-size:12.5px}
+.dn .dn-k{color:var(--mut);font-size:11.5px;letter-spacing:.04em;display:flex;justify-content:space-between;align-items:center}
+.dn .dn-cur{font-weight:650;font-size:14px;color:var(--fg);margin:2px 0 8px;font-variant-numeric:tabular-nums;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.dn .dn-badge{font-size:11px;font-weight:500;padding:1px 8px;border-radius:99px;color:var(--sage);background:rgba(77,102,86,.12)}
+.dn .dn-badge:empty{display:none}
+.dn .dn-badge.old{color:var(--warn);background:var(--warn-bg)}
+.dn .dn-row{display:flex;gap:6px;align-items:center;margin-top:6px}
+.dn select{width:100%;font:inherit;font-size:12.5px;color:var(--fg);background:var(--glass);border:1px solid var(--hair);border-radius:10px;padding:5px 6px;cursor:pointer;font-variant-numeric:tabular-nums}
+.dn .dn-a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:4px;height:28px;border-radius:10px;border:1px solid var(--hair);background:var(--glass);color:var(--fg);font-size:12px;line-height:1}
+.dn .dn-a:hover{text-decoration:none;color:var(--acc);border-color:var(--acc)}
+.dn .dn-a.off{opacity:.35;pointer-events:none}
+.dn .dn-all{display:inline-block;margin-top:8px;font-size:12px}
+@media (max-width:820px){.dn{margin:0;padding:4px 8px;display:flex;align-items:center;gap:8px;flex:none}.dn .dn-k,.dn .dn-all,.dn .dn-cur{display:none}.dn select{width:150px}.dn .dn-row{margin:0}.dn .dn-a{flex:none;width:28px}.dn .dn-a span{display:none}}
+</style><div class="dn" id="dn" data-date="2026-11-02" data-root="../" data-pub="1793576641"><div class="dn-k"><span>正在查看</span><span title="快捷键：[ 前一天，] 后一天">⌨ [ ]</span></div><div class="dn-cur">2026-11-02 周一<span class="dn-badge">最新</span></div><select aria-label="选择日期"><option value="2026-11-02" selected>2026-11-02 周一</option></select><div class="dn-row"><a class="dn-a dn-prev off" aria-label="前一天" title="前一天">‹<span> 前一天</span></a><a class="dn-a dn-next off" aria-label="后一天" title="后一天"><span>后一天 </span>›</a></div><a class="dn-all" href="../archive/index.html">全部往期 →</a></div><script>
+(function(){var el=document.getElementById('dn');if(!el)return;var root=el.getAttribute('data-root')||'',cur=el.getAttribute('data-date')||'';
+function href(d){return root+'archive/'+d+'.html'}
+var sel=el.querySelector('select'),pv=el.querySelector('.dn-prev'),nx=el.querySelector('.dn-next'),bd=el.querySelector('.dn-badge');
+sel.addEventListener('change',function(){if(sel.value&&sel.value!==cur)location.href=href(sel.value)});
+fetch(root+'archive/dates.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(m){
+ var ds=(m.dates||m).slice().sort(function(a,b){return a.date<b.date?1:-1});if(!ds.length)return;
+ sel.innerHTML='';var found=false;
+ ds.forEach(function(d){var o=document.createElement('option');o.value=d.date;o.textContent=d.date+' '+(d.weekday||'')+(d.noon?' · 含午间快讯':'');if(d.summary)o.title=d.summary;if(d.date===cur){o.selected=true;found=true}sel.appendChild(o)});
+ if(!found&&cur){var o=document.createElement('option');o.value=cur;o.textContent=cur;o.selected=true;sel.insertBefore(o,sel.firstChild)}
+ var i=-1;ds.forEach(function(d,k){if(d.date===cur)i=k});
+ function set(a,d,lab){if(d){a.href=href(d.date);a.classList.remove('off');a.title=lab+'：'+d.date+(d.summary?'\n'+d.summary:'')}else{a.classList.add('off');a.removeAttribute('href')}}
+ set(pv,i>=0?ds[i+1]:null,'前一天');set(nx,i>0?ds[i-1]:null,'后一天');
+ if(bd){if(i===0){bd.textContent='最新';bd.classList.remove('old')}else if(i>0){bd.textContent='往期';bd.classList.add('old')}}
+}).catch(function(){});
+document.addEventListener('keydown',function(e){if(e.target.closest&&e.target.closest('input,textarea,select'))return;if(e.altKey||e.ctrlKey||e.metaKey)return;
+ if(e.key==='['&&pv.href)location.href=pv.href;if(e.key===']'&&nx.href)location.href=nx.href});
+})();
+</script><!--/datenav--><ul class="nav"><li><a href="#keys">今日要点</a></li><li><a href="#news">重点新闻和数据</a></li><li><a href="#kol">大V观点</a></li><li><a href="#view">我的观点</a></li><li><a href="#drafts">发帖草稿</a></li><li><a href="#replies">互动评论</a></li><li><a href="#follow">追踪账号</a></li></ul><div class="foot">覆盖北京时间 11/01 07:35 – 11/02 07:40（UTC+8）<br>所有草稿均未发布</div></aside><main><section id="keys"><h1>币圈早报 · 2026-11-02（周一）</h1><div class="lead">周一早报。主线是<strong>币安 Update #4 / 分阶段提现已落地</strong>：06:00 UTC 起恢复，12:36 UTC 前首批 15 条网络齐开；官方计 06:00–15:30 UTC 提现约 <b>$46.49 亿</b>、净流出约 <b>$36.4 亿</b>（约合 AUM 2.1%）。Hyperliquid 侧新亮点是 <b>XPL 闪崩 → HLP 金库约亏 $55.6 万</b>。旁注：黑客经 Relay 换 SOL→BTC、假赔付骗局高发。行情快照：<a href="https://www.coingecko.com/en/coins/hyperliquid" target="_blank" rel="noopener">CoinGecko</a> 与 Hyperliquid API，约北京时间 11/02 07:40。</div><ul class="keys"><li><b class="n">01</b>币安提现：Update #4 宣布分阶段恢复；官方后续确认 06:00 UTC 起开、12:36 UTC 首批 15 网络齐开；06:00–15:30 UTC 提现 $46.49 亿 / 充值 $10.1 亿 / 净流出 ≈ $36.4 亿（约 2.1% of $171B AUM）。缺口补齐口径升至约 95%（昨报 Update #3 约 90%）。仍有资产/网络未进下一阶段——发帖写「首批已开 / 分阶段」，勿写成全站全部开放。</li><li><b class="n">02</b>Hyperliquid：XPL 约 18–20% 闪崩，HLP 被动承接约 1.604 亿枚 XPL 多单（名义约 $12.18M），平仓实现亏损约 $55.6 万；多组关联钱包在暴跌前抽走保证金（TokenPost / kenni）。</li><li><b class="n">03</b>盘面：HYPE 约 $87.9（24h 近乎持平）；BTC 约 $78.1K、ETH 约 $2,270；HL 主盘持仓约 $106.7 亿、24h 成交约 $22.4 亿（仍偏淡）；资金费率约 +0.0013%/h。</li></ul></section><section id="news"><h2>重点新闻和数据</h2><p class="sub">Hyperliquid 优先 · 每条附原始来源 · 昨报已写的 Update #3「目标日」/ SAFU 7499 BTC / 周末 HYPE 巨鲸兑现不重复占头条，只写落地 UPDATE 与新盘面</p><div class="stats"><div class="stat"><div class="k">HYPE</div><div class="v">$87.85</div><div class="d">24h +0.13% · <a href="https://www.coingecko.com/en/coins/hyperliquid" target="_blank" rel="noopener">CoinGecko</a></div></div><div class="stat"><div class="k">BTC</div><div class="v">$78,099</div><div class="d">24h +0.84%</div></div><div class="stat"><div class="k">ETH</div><div class="v">$2,270.2</div><div class="d">24h +0.71%</div></div><div class="stat"><div class="k">SOL</div><div class="v">$94.24</div><div class="d">24h −1.14%</div></div><div class="stat"><div class="k">HL 主盘持仓</div><div class="v">$106.7 亿</div><div class="d">24h 成交约 $22.4 亿 · <a href="https://app.hyperliquid.xyz/trade" target="_blank" rel="noopener">交易页</a></div></div><div class="stat"><div class="k">HIP-3 xyz 持仓</div><div class="v">$41.2 亿</div><div class="d">24h 成交约 $5.7 亿</div></div><div class="stat"><div class="k">HYPE 资金费率</div><div class="v">+0.0013%/h</div><div class="d">持仓约 $19.3 亿 · 24h 成交约 $2.2 亿</div></div><div class="stat"><div class="k">协议费用 近1日</div><div class="v">$147 万</div><div class="d">DefiLlama total24h · 7 天约 $2,228 万 · <a href="https://defillama.com/protocol/hyperliquid" target="_blank" rel="noopener">DefiLlama</a></div></div></div><div class="cards"><article class="card"><h3>① 币安 Update #4：分阶段提现落地；首批 15 网络齐开；净流出约 $36.4 亿</h3><ul><li><a href="https://www.binance.com/en/support/announcement/detail/73911fb819b240f88b88256bdd318eda" target="_blank" rel="noopener">@binance Update #4 公告</a> / <a href="https://x.com/binance/status/2116744986096292263" target="_blank" rel="noopener">对应帖</a>（约北京 12:11）：准备于 11/01 06:00–09:00 UTC 启动第一阶段提现；缺口补齐口径升至约 <b>95%</b>（Update #3 约 90%）；重申用户不承担损失。</li><li><a href="https://x.com/binance/status/2116926305254133892" target="_blank" rel="noopener">@binance 进度汇总</a>（16:12 UTC，约北京 00:12，约 2,056 赞）：06:00 UTC 起分阶段恢复；<b>12:36 UTC</b> 前首批 15 条网络/资产全部重新开放；06:00–15:30 UTC 提现 <b>$46.49 亿</b>、充值 <b>$10.1 亿</b>、净流出约 <b>$36.4 亿</b>（约合最新 PoR AUM $171 亿的 <b>2.1%</b>）；称提现峰值后回落、存款仍可观。</li><li>分批官宣脉络：<a href="https://x.com/binance/status/2116777408074600621" target="_blank" rel="noopener">先开 BTC</a> → <a href="https://x.com/binance/status/2116799757507305516" target="_blank" rel="noopener">ETH/BSC 等</a> → … → <a href="https://x.com/binance/status/2116871932075516174" target="_blank" rel="noopener">ZEC/TON/SUI 凑齐首批</a>。<a href="https://techcrunch.com/2026/11/01/binance-resumes-withdrawals-following-6-3-billion-breach/" target="_blank" rel="noopener">TechCrunch</a> / <a href="https://exchange.news/news/binance-withdrawals-4-65-billion-net-outflow-2-1-percent-proof-of-reserves/" target="_blank" rel="noopener">exchange.news 数字核验</a> 对照官方数字。</li><li>注意：网络状态页仍可能显示部分资产「Partial / Suspended」（含 HYPE 等未进首批者）——发帖区分「首批 15 已开」与「全币种全网络」。PoR：10/31 00:00 UTC 新快照 + ZKP，官方称报告「预计明天」上线（相对 11/01 汇总帖即约 11/02）。</li></ul><div class="src">来源：<a href="https://www.binance.com/en/support/announcement/detail/73911fb819b240f88b88256bdd318eda" target="_blank" rel="noopener">Update #4 公告</a> · <a href="https://x.com/binance/status/2116926305254133892" target="_blank" rel="noopener">Binance 汇总帖</a> · <a href="https://techcrunch.com/2026/11/01/binance-resumes-withdrawals-following-6-3-billion-breach/" target="_blank" rel="noopener">TechCrunch</a> · <a href="https://x.com/WuBlockchain/status/2116749793699754374" target="_blank" rel="noopener">Wu 预告</a></div></article><article class="card"><h3>② Hyperliquid：XPL 闪崩，HLP 金库约亏 $55.6 万</h3><ul><li><a href="https://www.tokenpost.com/news/investing/45783" target="_blank" rel="noopener">TokenPost</a>：16 个钱包自 10/29 起累积约 2.69 亿枚 XPL 多单（名义约 $2,300 万）；暴跌前 12 个钱包抽走约 <b>202 万 USDC</b> 保证金。XPL 自约 $0.0864 跌至约 $0.0694。</li><li>HLP（社区金库 / 清算背书）承接约 <b>1.6039 亿枚</b> XPL 多单，均价约 $0.07592，名义约 <b>$12.18M</b>；随后约 $0.0725 平仓，实现亏损约 <b>$556,000</b>。</li><li><a href="https://x.com/kennishjp/status/2116772334811922815" target="_blank" rel="noopener">@kennishjp</a>（约 587 赞）：跌前 8 分钟内 11 个账户抽走约 $162 万保证金，再把约 $1,200 万仓位清算进 HLP；称多为 CCTP 注资的新地址。读法：金库收益不是免费的——你是清算对手方。</li><li>本报未见 @HyperliquidX 官方事件说明帖；发帖标明 TokenPost / kenni 链上复盘，勿写成「官方确认被攻击」。</li></ul><div class="src">来源：<a href="https://www.tokenpost.com/news/investing/45783" target="_blank" rel="noopener">TokenPost</a> · <a href="https://x.com/kennishjp/status/2116772334811922815" target="_blank" rel="noopener">kenni</a> · <a href="https://x.com/i/trending/2116827011058372975" target="_blank" rel="noopener">X 新闻汇总</a></div></article><article class="card"><h3>③ 盘面：HYPE 横盘，周一仍缩量；费率温和正值</h3><ul><li>CoinGecko（约北京 07:40）：HYPE ≈ $87.85（24h +0.13%，市值约 $210 亿），BTC ≈ $78,099（+0.84%），ETH ≈ $2,270（+0.71%），SOL ≈ $94.24（−1.14%）。</li><li>Hyperliquid API：主盘持仓约 $106.7 亿，24h 成交约 $22.4 亿；HYPE 持仓约 $19.3 亿，mark ≈ $87.89，资金费率约 <b>+0.0013%/h</b>（昨早约 +0.00125%，拥挤度仍低）。xyz 持仓约 $41.2 亿，24h 成交约 $5.7 亿。</li><li>DefiLlama：协议近 1 日费用约 <b>$147 万</b>（周末/缩量日偏低；7 日约 $2,228 万）。链侧 TVL：Hyperliquid L1 ≈ $79.1 亿（另 Arb ≈ $2.2 亿）。</li><li>读法：提现落地后大盘略稳、HYPE 未跟情绪暴冲——更像「风险窗口从冻结切到流出观察」，不是新的产品利空。</li></ul><div class="src">来源：<a href="https://www.coingecko.com/en/coins/hyperliquid" target="_blank" rel="noopener">CoinGecko</a> · Hyperliquid API（约北京 07:40）· <a href="https://defillama.com/protocol/hyperliquid" target="_blank" rel="noopener">DefiLlama</a></div></article><article class="card"><h3>④ 链上余波：黑客 SOL→BTC；PROM 砸池仅换 $71</h3><ul><li><a href="https://x.com/lookonchain/status/2116841508599144917" target="_blank" rel="noopener">@lookonchain</a>（约 614 赞）：币安黑客正在把被盗约 <b>970,522 SOL</b>（约 $9,590 万）换成 BTC；过去一小时已转移约 486,970 SOL（约 $4,640 万）经 <a href="https://x.com/lookonchain/status/2116841508599144917" target="_blank" rel="noopener">Relay</a>。<a href="https://x.com/WuBlockchain/status/2116707438628069850" target="_blank" rel="noopener">@WuBlockchain</a> 早前亦报经 Relay 约 $3,800 万/7h。</li><li><a href="https://x.com/lookonchain/status/2116746249097666777" target="_blank" rel="noopener">@lookonchain</a>（约 897 赞）：黑客向近空 Uniswap V2 池砸约 908,793 PROM（约 $500 万名义），仅换得 0.0316 ETH（约 <b>$71</b>）——流动性陷阱样本。</li><li><a href="https://x.com/lookonchain/status/2116789401342894421" target="_blank" rel="noopener">@lookonchain</a>：EVM 侧已砸 130+ 山寨，换得约 123,400 ETH（约 $2.77 亿）+ 169 万 USDC。</li></ul><div class="src">来源：<a href="https://x.com/lookonchain/status/2116841508599144917" target="_blank" rel="noopener">Lookonchain SOL→BTC</a> · <a href="https://x.com/lookonchain/status/2116746249097666777" target="_blank" rel="noopener">PROM 砸池</a> · <a href="https://x.com/WuBlockchain/status/2116707438628069850" target="_blank" rel="noopener">Wu Relay</a></div></article><article class="card"><h3>⑤ 情绪与骗局：提现窗口诈骗高发；Ai姨「无处更安全」</h3><ul><li><a href="https://x.com/heyibinance/status/2116921036390506669" target="_blank" rel="noopener">@heyibinance</a> / <a href="https://x.com/heyibinance/status/2116920588556194172" target="_blank" rel="noopener">相关</a>：提醒钓鱼与混乱中的新诈骗形态。X 新闻汇总亦见假「$150 Reward Hub 赔付」截图流传（<a href="https://x.com/i/trending/2116958575776170419" target="_blank" rel="noopener">汇总</a>）——只认官网与 @binance。</li><li><a href="https://x.com/ai_9684xtpa/status/2116776814366646748" target="_blank" rel="noopener">@ai_9684xtpa</a>（约 362 赞）：「好消息：可以提现了；坏消息：似乎没什么更安全的去处了」——提现日情绪标本，可作互动引用。</li><li><a href="https://x.com/0xngmi/status/2116864334160687194" target="_blank" rel="noopener">@0xngmi</a>（约 1,741 赞，较早读数）：称提现开启数小时后仅约 $25 亿提出、不足托管资产 2%——与官方晚间 $46.49 亿口径对照时，标明「早盘读数 vs 官方全日窗」。</li></ul><div class="src">来源：<a href="https://x.com/heyibinance/status/2116921036390506669" target="_blank" rel="noopener">何一防骗</a> · <a href="https://x.com/ai_9684xtpa/status/2116776814366646748" target="_blank" rel="noopener">Ai姨</a> · <a href="https://x.com/0xngmi/status/2116864334160687194" target="_blank" rel="noopener">0xngmi</a></div></article><article class="card"><h3>⑥ 外围：ETH ETF 连流出；OKXICE 代币化股票遭 50 家公司反对</h3><ul><li><a href="https://x.com/WuBlockchain/status/2116691279530901834" target="_blank" rel="noopener">@WuBlockchain</a>：Glassnode——美现货 ETH ETF 连续 <b>23</b> 个交易日净流出，为上线以来最长。属宏观资金面旁注。</li><li><a href="https://x.com/WuBlockchain/status/2116885852181954619" target="_blank" rel="noopener">@WuBlockchain</a>：反对 OKXICE（OKX×ICE）代币化股票的公司增至约 <b>50</b> 家（含 Nvidia、Micron、Nike、Costco、Reddit 等）。与 HL/trade[XYZ] 美区路径无直接等同，但同属「TradFi 入场阻力」旁注——勿写成 ICE×HL 合作被否。</li><li><a href="https://x.com/WuBlockchain/status/2116840024213958767" target="_blank" rel="noopener">@WuBlockchain</a>：特朗普称若朝方涉币安黑客，美方将与平壤接触——地缘口径，发帖标明 Wu / 媒体转述。</li><li><a href="https://x.com/DefiIgnas/status/2116899081788305466" target="_blank" rel="noopener">@DefiIgnas</a>：Rabby 移除 MegaETH 支持——与 HL 无关的生态情绪旁注。</li></ul><div class="src">来源：<a href="https://x.com/WuBlockchain/status/2116691279530901834" target="_blank" rel="noopener">Wu ETH ETF</a> · <a href="https://x.com/WuBlockchain/status/2116885852181954619" target="_blank" rel="noopener">Wu OKXICE</a> · <a href="https://x.com/DefiIgnas/status/2116899081788305466" target="_blank" rel="noopener">Ignas MegaETH</a></div></article></div><div class="note">提现：首批 15 网络已开 ≠ 全资产全网络；状态页仍可能 Partial/Suspended。发帖写「分阶段 / 首批」。</div><div class="note">缺口补齐约 95% 为官方口径（相对 Update #3 的 90%）；剩余多为低流动性代币。</div><div class="note">净流出 $36.4 亿 / 2.1% AUM 来自官方 06:00–15:30 UTC 窗；0xngmi 早盘 $25 亿是更早切片，引用时标明时间差。</div><div class="note">HLP ≈ $55.6 万亏损数字来自 TokenPost；kenni 口径约 $0.6M——同量级，发帖优先 TokenPost 并附 kenni 链上细节。</div><div class="note">未见 @HyperliquidX 对 XPL/HLP 事件的官方定性帖；勿写成平台被黑。</div><div class="note">HYPE 在币安网络状态页或仍显示提现 Suspended（首批名单未必含 HYPE）——与「HL 链上可交易」不是一回事。</div><div class="note">协议费用 $147 万为 DefiLlama total24h（缩量日），勿与完整交易日高峰直接比。</div><div class="note">昨报主题（Update #3 目标、SAFU 7499 BTC、周末 HYPE dump、ICE 谨慎重发、Pump.fun×HL）本报不重复占头条。</div></section><section id="kol"><h2>大V观点</h2><p class="sub">过去约 24 小时原帖</p><div class="kolwrap"><div class="kol"><div class="who"><a href="https://x.com/binance/status/2116926305254133892" target="_blank" rel="noopener">Binance 提现汇总</a><small>@binance · 官方</small></div><div>首批 15 网络齐开；提现 $46.49 亿 / 净流出 $36.4 亿（2.1% AUM）。约 2,056 赞。</div></div><div class="kol"><div class="who"><a href="https://x.com/kennishjp/status/2116772334811922815" target="_blank" rel="noopener">kenni · XPL/HLP</a><small>@kennishjp · HL 生态</small></div><div>跌前抽保证金 + 清算进 HLP ≈ $0.6M。约 587 赞。</div></div><div class="kol"><div class="who"><a href="https://x.com/lookonchain/status/2116841508599144917" target="_blank" rel="noopener">Lookonchain SOL→BTC</a><small>@lookonchain</small></div><div>黑客换 97 万 SOL→BTC（Relay）。约 614 赞。</div></div><div class="kol"><div class="who"><a href="https://x.com/lookonchain/status/2116746249097666777" target="_blank" rel="noopener">Lookonchain PROM</a><small>@lookonchain</small></div><div>$5M PROM 砸池仅换 $71。约 897 赞。</div></div><div class="kol"><div class="who"><a href="https://x.com/0xngmi/status/2116864334160687194" target="_blank" rel="noopener">0xngmi 流出读数</a><small>@0xngmi · DefiLlama</small></div><div>早盘称约 $25 亿提出、<2% 托管——对照官方全日窗。约 1,741 赞。</div></div><div class="kol"><div class="who"><a href="https://x.com/ai_9684xtpa/status/2116776814366646748" target="_blank" rel="noopener">Ai姨 提现日</a><small>@ai_9684xtpa</small></div><div>「能提现了，但似乎没更安全的去处」。约 362 赞。</div></div></div></section><section id="view"><div class="view"><h2>我的观点和看法</h2><p class="sub">分析</p><p><b>今天的主线从「会不会按时开提现」切换到「开了之后钱往哪流、盘面稳不稳」。</b>官方把故事写成：首批 15 网络齐开 + 净流出约 2.1% AUM + 峰值后回落。对 geleek 账号，最有信息量的是可核验数字（$46.49 亿 / $36.4 亿 / 2.1% / 95%），而不是情绪化「挤兑」标题——2% 量级更像压力测试样本，不是崩盘叙事；但仍要写清「分阶段、未全部开放」。</p><p><b>HLP × XPL 是本期最该讲的 Hyperliquid 结构课。</b>金库吃清算、LP 赚的是波动与对手方风险；关联钱包先抽保证金再把仓位甩给背书池，是「收益来源 = 风险来源」的现场演示。发帖重点放机制与数字（$12.18M 名义 / ≈$556k 亏损），避免阴谋论升级，也避免暗示官方确认「攻击成功」。</p><p><b>HYPE 横盘 + 费率温和，说明 ICE 叙事后的再平衡尚未演变成新一波投机潮。</b>周一成交仍淡，优先跟踪：① 币安下一阶段开放名单；② HLP 是否有官方复盘；③ 黑客换仓是否继续冲击 SOL/BTC 现货。以上为分析，不构成投资建议 / NFA DYOR。</p><span class="disc">以上为分析，不构成投资建议。</span></div></section><section id="drafts"><h2>发帖草稿 · 10 条</h2><p class="sub">周一排期 · 建议 08:30–22:30（北京时间）错峰发布 · 中英双语 · 中文每字按 2 字符计 · 所有草稿均未发布</p><table class="sched"><thead><tr><th>时间（北京）</th><th>类型</th><th>主题</th><th>提醒</th></tr></thead><tbody><tr><td class="t"><a href="#d0">08:35</a></td><td>突发快讯</td><td>币安提现首批落地 + 数字</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d1">09:45</a></td><td>短分析</td><td>读 2.1% 净流出</td><td><span class=flag>需截图</span></td></tr><tr><td class="t"><a href="#d2">11:00</a></td><td>链上机制</td><td>XPL → HLP 金库吃清算</td><td><span class=flag>需截图</span></td></tr><tr><td class="t"><a href="#d3">12:30</a></td><td>行情快照</td><td>HYPE 横盘 + HL 缩量</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d4">14:30</a></td><td>巨鲸/黑客动向</td><td>SOL→BTC 换仓</td><td><span class=flag>需截图</span></td></tr><tr><td class="t"><a href="#d5">16:00</a></td><td>数据图表</td><td>PROM 砸池 $71</td><td><span class=flag>需截图</span></td></tr><tr><td class="t"><a href="#d6">18:00</a></td><td>大V引用</td><td>Ai姨：提现后去哪</td><td></td></tr><tr><td class="t"><a href="#d7">19:30</a></td><td>防骗提醒</td><td>假赔付 / 假客服</td><td></td></tr><tr><td class="t"><a href="#d8">21:00</a></td><td>长推开头</td><td>周一三条线</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d9">22:20</a></td><td>轻互动/提问</td><td>你更在意哪条</td><td></td></tr></tbody></table><div class="draft" id="d0"><div class="dh"><span class="time">08:35</span><span class="tag acc">突发快讯</span><span class="dt">币安提现首批落地 + 数字</span><span class="flag">⚠ 发前更新价格：网络状态页是否仍有 Partial/Suspended</span></div><div class="meta">📷 截图：Binance 提现/净流出官方图<br>必写「首批 15 / 分阶段」；可配官方图；发前确认状态页<br>来源：<a href="https://x.com/binance/status/2116926305254133892" target="_blank" rel="noopener">@binance 汇总</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d0zh">复制</button></div><div class="txt" id="d0zh">⚡️ 币安提现 Update（发前请再看状态页）：
+
+• 06:00 UTC 起分阶段恢复；12:36 UTC 前首批 15 条网络齐开
+• 06:00–15:30 UTC：提现 ≈ $46.49 亿｜充值 ≈ $10.1 亿｜净流出 ≈ $36.4 亿（约 2.1% of $171B AUM）
+• 缺口补齐口径约 95%（昨报约 90%）
+
+首批已开 ≠ 全币种全网络。跟官方时间线。
+
+NFA/DYOR #Binance</div><div class="cnt" id="d0zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d0en">复制</button></div><div class="txt" id="d0en">⚡️ Binance withdrawals (refresh the status page first):
+
+• Phased reopen from 06:00 UTC; all 15 phase-1 networks live by 12:36 UTC
+• 06:00–15:30 UTC: ~$4.649B out｜~$1.01B in｜net ~$3.64B (~2.1% of $171B AUM)
+• Gap covered ~95% (was ~90%)
+
+Phase-1 open ≠ every asset/network. Follow the official clock.
+
+NFA/DYOR #Binance</div><div class="cnt" id="d0en-n"></div></div></div></div><div class="draft" id="d1"><div class="dh"><span class="time">09:45</span><span class="tag acc">短分析</span><span class="dt">读 2.1% 净流出</span></div><div class="meta">📷 截图：官方净流出图 + 0xngmi 帖（可选）<br>防「挤兑」标题党；对照 0xngmi 早盘读数<br>来源：<a href="https://x.com/binance/status/2116926305254133892" target="_blank" rel="noopener">@binance</a> · <a href="https://x.com/0xngmi/status/2116864334160687194" target="_blank" rel="noopener">@0xngmi</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d1zh">复制</button></div><div class="txt" id="d1zh">📌 怎么读币安首日净流出 ≈ $36.4 亿（2.1% AUM）？
+
+• 有流出很正常：冻结后的需求释放
+• 2% 量级更像压力测试，不是「挤兑崩盘」标题
+• 0xngmi 早盘曾报约 $25 亿——和官方全日窗不是同一切片
+
+数字要对齐时间窗，再谈情绪。
+
+NFA/DYOR #Binance</div><div class="cnt" id="d1zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d1en">复制</button></div><div class="txt" id="d1en">📌 How to read Binance’s day-one net outflow ~$3.64B (~2.1% AUM):
+
+• Some outflow is normal after a freeze
+• ~2% looks more like a stress sample than a “bank-run” headline
+• 0xngmi’s earlier ~$2.5B read ≠ the official full window
+
+Align the clock before the vibes.
+
+NFA/DYOR #Binance</div><div class="cnt" id="d1en-n"></div></div></div></div><div class="draft" id="d2"><div class="dh"><span class="time">11:00</span><span class="tag acc">链上机制</span><span class="dt">XPL → HLP 金库吃清算</span></div><div class="meta">📷 截图：kenni 线程图 / TokenPost 要点<br>标明 TokenPost / kenni；勿写成官方确认攻击<br>来源：<a href="https://www.tokenpost.com/news/investing/45783" target="_blank" rel="noopener">TokenPost</a> · <a href="https://x.com/kennishjp/status/2116772334811922815" target="_blank" rel="noopener">@kennishjp</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d2zh">复制</button></div><div class="txt" id="d2zh">🏦 Hyperliquid HLP 昨天上了一课：
+
+XPL 闪崩约 18–20% 后，金库被动接约 1.60 亿枚多单（名义约 $12.2M），平仓实现亏损约 $55.6 万。
+链上复盘：多组地址跌前抽走保证金，再把仓位清算进背书池。
+
+金库收益不是免费午餐——你是清算对手方。
+
+据 TokenPost / @kennishjp
+NFA/DYOR #Hyperliquid $HYPE</div><div class="cnt" id="d2zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d2en">复制</button></div><div class="txt" id="d2en">🏦 Hyperliquid’s HLP just taught a hard lesson:
+
+After an ~18–20% XPL flush, the vault absorbed ~160M XPL longs (~$12.2M notional) and realized ~$556k loss on exit.
+Onchain read: linked wallets pulled margin before the drop, then liquidations hit the backstop.
+
+Vault yield isn’t free — you’re the counterparty.
+
+Per TokenPost / @kennishjp
+NFA/DYOR #Hyperliquid $HYPE</div><div class="cnt" id="d2en-n"></div></div></div></div><div class="draft" id="d3"><div class="dh"><span class="time">12:30</span><span class="tag acc">行情快照</span><span class="dt">HYPE 横盘 + HL 缩量</span><span class="flag">⚠ 发前更新价格：HYPE / BTC / ETH 现价与 HYPE 费率</span></div><div class="meta">📷 截图：CoinGecko + HL 交易页<br>发前更新价格与费率<br>来源：<a href="https://www.coingecko.com/en/coins/hyperliquid" target="_blank" rel="noopener">CoinGecko</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d3zh">复制</button></div><div class="txt" id="d3zh">🖥️ 周一盘面（发前请更新）：
+
+$HYPE ≈ $87.9（24h 近乎持平）｜BTC ≈ $78.1K｜ETH ≈ $2.27K
+HL 主盘持仓 ≈ $107 亿，24h 成交 ≈ $22 亿（仍偏淡）
+HYPE 永续持仓 ≈ $19.3 亿，资金费率约 +0.0013%/h
+
+提现落地后，先看流出是否稳态，再看情绪。
+
+数据：CoinGecko + HL API
+NFA #Hyperliquid $HYPE</div><div class="cnt" id="d3zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d3en">复制</button></div><div class="txt" id="d3en">🖥️ Monday tape (refresh before post):
+
+$HYPE ≈ $87.9 (flat 24h)｜BTC ≈ $78.1K｜ETH ≈ $2.27K
+HL main OI ≈ $10.7B, 24h vol ≈ $2.2B (still thin)
+HYPE perps OI ≈ $1.93B, funding ~+0.0013%/h
+
+After withdrawals reopened, watch whether outflows stabilize before vibes.
+
+Sources: CoinGecko + HL API
+NFA #Hyperliquid $HYPE</div><div class="cnt" id="d3en-n"></div></div></div></div><div class="draft" id="d4"><div class="dh"><span class="time">14:30</span><span class="tag acc">巨鲸/黑客动向</span><span class="dt">SOL→BTC 换仓</span></div><div class="meta">📷 截图：Lookonchain SOL→BTC 图<br>标明 Lookonchain；非 HL 主盘，但是行业主线<br>来源：<a href="https://x.com/lookonchain/status/2116841508599144917" target="_blank" rel="noopener">@lookonchain</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d4zh">复制</button></div><div class="txt" id="d4zh">🐋 Lookonchain：币安黑客在把被盗约 970,522 $SOL（约 $9,590 万）换成 $BTC（经 Relay）。
+
+过去一小时已见约 48.7 万 SOL（约 $4,640 万）转移。
+
+执法与跨链桥仍在追——这是「赃款流动性」样本，不是跟单信号。
+
+NFA/DYOR #Binance</div><div class="cnt" id="d4zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d4en">复制</button></div><div class="txt" id="d4en">🐋 Per Lookonchain: the Binance hacker is swapping stolen ~970,522 $SOL (~$95.9M) into $BTC via Relay.
+
+~486,970 SOL (~$46.4M) moved in an hour-long window.
+
+Law enforcement + bridges still chasing — laundering tape, not a trade signal.
+
+NFA/DYOR #Binance</div><div class="cnt" id="d4en-n"></div></div></div></div><div class="draft" id="d5"><div class="dh"><span class="time">16:00</span><span class="tag acc">数据图表</span><span class="dt">PROM 砸池 $71</span></div><div class="meta">📷 截图：Lookonchain PROM 砸池图<br>适合截图；强调流动性风险<br>来源：<a href="https://x.com/lookonchain/status/2116746249097666777" target="_blank" rel="noopener">@lookonchain</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d5zh">复制</button></div><div class="txt" id="d5zh">📉 黑客教程翻车现场：
+
+约 908,793 $PROM（名义约 $500 万）砸进近空的 Uniswap V2 池，只换回 0.0316 ETH（约 $71）。
+
+会黑客 ≠ 会 DEX。浅池 + 市价单 = 把自己当接盘。
+
+via @lookonchain
+NFA #DeFi</div><div class="cnt" id="d5zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d5en">复制</button></div><div class="txt" id="d5en">📉 Hacker skill issue:
+
+~908,793 $PROM (~$5M notional) dumped into a near-empty Uniswap V2 pool → 0.0316 ETH (~$71).
+
+Exploit ≠ DEX literacy. Thin pool + market sell = you are the exit liquidity.
+
+h/t @lookonchain
+NFA #DeFi</div><div class="cnt" id="d5en-n"></div></div></div></div><div class="draft" id="d6"><div class="dh"><span class="time">18:00</span><span class="tag acc">大V引用</span><span class="dt">Ai姨：提现后去哪</span></div><div class="meta">建议 QT；保持轻松<br>来源：<a href="https://x.com/ai_9684xtpa/status/2116776814366646748" target="_blank" rel="noopener">@ai_9684xtpa</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d6zh">复制</button></div><div class="txt" id="d6zh">💬 Ai姨的提现日表情包总结得太准：
+「好消息：可以提现了；坏消息：似乎没什么更安全的去处了。」
+
+我的补充：更安全往往是流程（2FA、白名单、小额试提、冷钱包），不是换一个「看起来更新」的平台。
+
+NFA/DYOR #crypto</div><div class="cnt" id="d6zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d6en">复制</button></div><div class="txt" id="d6en">💬 Ai姨 nailed the withdrawal-day mood:
+“Good news: you can withdraw. Bad news: nowhere feels safer.”
+
+My add: safer is usually process (2FA, allowlists, test sends, cold storage) — not hopping to whatever looks newer.
+
+NFA/DYOR #crypto</div><div class="cnt" id="d6en-n"></div></div></div></div><div class="draft" id="d7"><div class="dh"><span class="time">19:30</span><span class="tag acc">防骗提醒</span><span class="dt">假赔付 / 假客服</span></div><div class="meta">提现窗口骗局高发<br>来源：<a href="https://x.com/heyibinance/status/2116921036390506669" target="_blank" rel="noopener">@heyibinance</a> · <a href="https://x.com/i/trending/2116958575776170419" target="_blank" rel="noopener">X 新闻汇总</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d7zh">复制</button></div><div class="txt" id="d7zh">🚨 提现恢复窗口，高发骗局通常是：
+
+• 假「$150 赔付 / Reward Hub」截图
+• 假客服私聊要你「验证提现 / 加速费」
+• 伪造的币安公告图
+
+官方不会私聊向你要币、密码或 2FA。只认 @binance 与官网。
+
+#Binance #scam</div><div class="cnt" id="d7zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d7en">复制</button></div><div class="txt" id="d7en">🚨 Around a withdrawal reopen, the scam script is:
+
+• Fake “$150 compensation / Reward Hub” screenshots
+• Fake support DMs asking for “verify / priority fee”
+• Doctored Binance announcement images
+
+Officials won’t DM for coins, passwords, or 2FA. Only @binance + the real site.
+
+#Binance #scam</div><div class="cnt" id="d7en-n"></div></div></div></div><div class="draft" id="d8"><div class="dh"><span class="time">21:00</span><span class="tag acc">长推开头</span><span class="dt">周一三条线</span><span class="flag">⚠ 发前更新价格：提现下一阶段是否有新公告</span></div><div class="meta">可接线程：提现数字 / HLP / 黑客换仓<br>来源：<a href="https://x.com/binance/status/2116926305254133892" target="_blank" rel="noopener">@binance</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d8zh">复制</button></div><div class="txt" id="d8zh">🧵 周一三条线（发前刷新状态页）：
+
+1/ 币安：首批提现落地 + 净流出约 2.1% AUM
+2/ Hyperliquid：XPL 闪崩，HLP 约亏 $55.6 万——金库是对手方
+3/ 链上：黑客 SOL→BTC；浅池砸盘换 $71
+
+先跟可核验数字，再谈情绪。
+
+NFA/DYOR #Hyperliquid #Binance</div><div class="cnt" id="d8zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d8en">复制</button></div><div class="txt" id="d8en">🧵 Monday’s three threads (refresh status page first):
+
+1/ Binance: phase-1 withdrawals live + ~2.1% AUM net outflow
+2/ Hyperliquid: XPL flush, HLP ~−$556k — vaults are counterparties
+3/ Onchain: hacker SOL→BTC; $5M PROM → $71
+
+Verifiable numbers first; vibes second.
+
+NFA/DYOR #Hyperliquid #Binance</div><div class="cnt" id="d8en-n"></div></div></div></div><div class="draft" id="d9"><div class="dh"><span class="time">22:20</span><span class="tag acc">轻互动/提问</span><span class="dt">你更在意哪条</span></div><div class="meta">配投票更好<br>来源：<a href="https://x.com/binance/status/2116926305254133892" target="_blank" rel="noopener">@binance</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d9zh">复制</button></div><div class="txt" id="d9zh">🤔 周一三条线，你更在意哪条？
+
+A 币安净流出 2.1%——压力测试还是信心危机？
+B HLP 吃下 XPL 清算——还敢做金库 LP 吗？
+C 黑客换仓路径（SOL→BTC / 浅池翻车）
+D 先看 HYPE 能不能走出横盘
+
+评论区选一个并说为什么
+NFA/DYOR #Hyperliquid</div><div class="cnt" id="d9zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d9en">复制</button></div><div class="txt" id="d9en">🤔 Which Monday thread matters most?
+
+A Binance’s ~2.1% net outflow — stress test or confidence crack?
+B HLP eating XPL liquidations — still LP the vault?
+C Hacker routing (SOL→BTC / thin-pool fail)
+D Whether $HYPE can leave the flat range
+
+Pick one + why
+NFA/DYOR #Hyperliquid</div><div class="cnt" id="d9en-n"></div></div></div></div></section><section id="replies"><h2>互动评论草稿</h2><p class="sub">打开原帖 → 复制 → 回复</p><div class="draft"><div class="dh"><span class="dt">① <a href="https://x.com/binance/status/2116926305254133892" target="_blank" rel="noopener">@binance 提现汇总</a></span></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="r0zh">复制</button></div><div class="txt" id="r0zh">首批 15 齐开 + 净流出约 2.1% AUM，这组数字比单喊「恢复了」有用 📌 下一阶段大概按什么优先级开？状态页仍 Partial 的资产用户该怎么预期时延？</div><div class="cnt" id="r0zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="r0en">复制</button></div><div class="txt" id="r0en">Phase-1 15 live + ~2.1% AUM net outflow beats a vague “we’re back” 📌 What’s the priority order for the next phase? How should users read assets still marked Partial on the status page?</div><div class="cnt" id="r0en-n"></div></div></div></div><div class="draft"><div class="dh"><span class="dt">② <a href="https://x.com/kennishjp/status/2116772334811922815" target="_blank" rel="noopener">@kennishjp XPL/HLP</a></span></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="r1zh">复制</button></div><div class="txt" id="r1zh">跌前抽保证金再把仓位甩给 HLP，这是金库 LP 必须正视的对手方风险 👏 你觉得协议侧更该改保证金可提取规则，还是清算定价/仓位上限？</div><div class="cnt" id="r1zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="r1en">复制</button></div><div class="txt" id="r1en">Pulling margin then dumping the bag into HLP is exactly the counterparty risk vault LPs underwrite 👏 Protocol fix: withdrawable-margin rules, or liquidation pricing / position caps?</div><div class="cnt" id="r1en-n"></div></div></div></div><div class="draft"><div class="dh"><span class="dt">③ <a href="https://x.com/0xngmi/status/2116864334160687194" target="_blank" rel="noopener">@0xngmi 流出读数</a></span></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="r2zh">复制</button></div><div class="txt" id="r2zh">早盘 &lt;$2% 的读数和官方全日窗 $46.49 亿可以对着看 📊 你更关心峰值提现速度，还是净流出占 AUM 的稳态水平？</div><div class="cnt" id="r2zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="r2en">复制</button></div><div class="txt" id="r2en">Your early &lt;$2% read vs Binance’s full-window $4.649B is a useful clock check 📊 Do you care more about peak withdrawal velocity, or steady-state net outflow / AUM?</div><div class="cnt" id="r2en-n"></div></div></div></div><div class="draft"><div class="dh"><span class="dt">④ <a href="https://x.com/lookonchain/status/2116841508599144917" target="_blank" rel="noopener">@lookonchain SOL→BTC</a></span></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="r3zh">复制</button></div><div class="txt" id="r3zh">被盗资金换入 BTC 会改变冻结/追回的难度曲线 👀 Relay 这类路径之后，你还会重点盯哪些桥或聚合器？</div><div class="cnt" id="r3zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="r3en">复制</button></div><div class="txt" id="r3en">Rotating stolen funds into BTC changes the freeze/recovery difficulty curve 👀 After Relay-style paths, which bridges/aggregators are you watching next?</div><div class="cnt" id="r3en-n"></div></div></div></div></section><section id="follow"><h2>建议追踪的账号</h2><p class="sub">“近期活跃”按本次检索到的发帖时间判断</p><table class="tbl"><thead><tr><th>X 账号</th><th>类型</th><th>为什么值得追踪</th><th>活跃情况</th></tr></thead><tbody><tr><td><a href="https://x.com/HyperliquidX" target="_blank" rel="noopener">@HyperliquidX</a></td><td>官方</td><td>产品上线、生态一手公告</td><td class="act n">本次窗口未见相关原创</td></tr><tr><td><a href="https://x.com/chameleon_jeff" target="_blank" rel="noopener">@chameleon_jeff</a></td><td>创始人 Jeff</td><td>HIP-3 / 基础设施一手思路</td><td class="act n">本次窗口未见相关原创</td></tr><tr><td><a href="https://x.com/EmberCN" target="_blank" rel="noopener">@EmberCN</a></td><td>中文链上数据</td><td>巨鲸与异常资金路径</td><td class="act y">✓ THORChain/FBI 讨论（窗口内）</td></tr><tr><td><a href="https://x.com/ai_9684xtpa" target="_blank" rel="noopener">@ai_9684xtpa</a></td><td>中文链上数据</td><td>巨鲸仓位、提现日情绪</td><td class="act y">✓ 提现日表情包 / 山寨充提</td></tr><tr><td><a href="https://x.com/WuBlockchain" target="_blank" rel="noopener">@WuBlockchain</a></td><td>新闻</td><td>亚洲视角监管、交易所、宏观快讯</td><td class="act y">✓ 提现预告 / ETH ETF / OKXICE / Trump</td></tr><tr><td><a href="https://x.com/tier10k" target="_blank" rel="noopener">@tier10k</a></td><td>新闻快讯</td><td>头条快讯源</td><td class="act n">本次窗口未见相关原创</td></tr><tr><td><a href="https://x.com/lookonchain" target="_blank" rel="noopener">@lookonchain</a></td><td>链上数据</td><td>鲸鱼、黑客资金、异常成交</td><td class="act y">✓ SOL→BTC / PROM / BTC 提现重启</td></tr><tr><td><a href="https://x.com/coinglass_com" target="_blank" rel="noopener">@coinglass_com</a></td><td>衍生品数据</td><td>清算热力图、订单墙</td><td class="act n">本次窗口未见相关原创</td></tr><tr><td><a href="https://x.com/0xngmi" target="_blank" rel="noopener">@0xngmi</a></td><td>DefiLlama</td><td>托管流出与 DeFi 数据口径</td><td class="act y">✓ 提现开启后流出读数</td></tr><tr><td><a href="https://x.com/CryptoHayes" target="_blank" rel="noopener">@CryptoHayes</a></td><td>KOL</td><td>宏观与交易情绪</td><td class="act n">本次窗口未见相关原创</td></tr><tr><td><a href="https://x.com/cobie" target="_blank" rel="noopener">@cobie</a></td><td>KOL</td><td>老牌行业观察</td><td class="act n">本次窗口未见</td></tr><tr><td><a href="https://x.com/Pentosh1" target="_blank" rel="noopener">@Pentosh1</a></td><td>交易 KOL</td><td>中长线交易观点</td><td class="act n">本次窗口未见</td></tr><tr><td><a href="https://x.com/blknoiz06" target="_blank" rel="noopener">@blknoiz06</a></td><td>交易 KOL</td><td>情绪与盘面吐槽</td><td class="act n">本次窗口未见相关原创</td></tr><tr><td><a href="https://x.com/CryptoCred" target="_blank" rel="noopener">@CryptoCred</a></td><td>交易教育</td><td>技术分析与交易心理</td><td class="act n">本次窗口未见</td></tr><tr><td><a href="https://x.com/KoroushAK" target="_blank" rel="noopener">@KoroushAK</a></td><td>交易教育</td><td>订单流与心态</td><td class="act y">✓ 存活时间长推（偏通用）</td></tr><tr><td><a href="https://x.com/DefiIgnas" target="_blank" rel="noopener">@DefiIgnas</a></td><td>DeFi 研究</td><td>DeFi 估值与赛道</td><td class="act y">✓ Rabby×MegaETH</td></tr><tr><td><a href="https://x.com/ASvanevik" target="_blank" rel="noopener">@ASvanevik</a></td><td>Nansen CEO</td><td>链上数据与 AI 工具</td><td class="act y">✓ 轻互动（非主线）</td></tr><tr><td><a href="https://x.com/binance" target="_blank" rel="noopener">@binance</a></td><td>交易所（补充）</td><td>安全事件一手口径</td><td class="act y">✓ Update #4 + 分阶段进度帖</td></tr><tr><td><a href="https://x.com/heyibinance" target="_blank" rel="noopener">@heyibinance</a></td><td>币安联合创始人（补充）</td><td>防骗与社区沟通</td><td class="act y">✓ 钓鱼提醒等高频</td></tr><tr><td><a href="https://x.com/kennishjp" target="_blank" rel="noopener">@kennishjp</a></td><td>HL 生态（补充）</td><td>HLP/清算结构复盘</td><td class="act y">✓ XPL→HLP 线程</td></tr></tbody></table><h2 style="margin-top:48px">YouTube 频道</h2><p class="sub">均已确认频道页存在</p><div class="yt"><div><b><a href="https://www.binance.com/en/support/announcement/detail/73911fb819b240f88b88256bdd318eda" target="_blank" rel="noopener">Binance Update #4 公告</a></b><br>提现恢复一手书面</div><div><b><a href="https://x.com/binance/status/2116926305254133892" target="_blank" rel="noopener">@binance 汇总帖</a></b><br>首批齐开 + 流出数字</div><div><b><a href="https://techcrunch.com/2026/11/01/binance-resumes-withdrawals-following-6-3-billion-breach/" target="_blank" rel="noopener">TechCrunch</a></b><br>主流媒体对照</div><div><b><a href="https://www.tokenpost.com/news/investing/45783" target="_blank" rel="noopener">TokenPost HLP</a></b><br>XPL/HLP 数字核验</div><div><b><a href="https://x.com/kennishjp/status/2116772334811922815" target="_blank" rel="noopener">@kennishjp 线程</a></b><br>链上时间线</div><div><b><a href="https://www.youtube.com/@Bankless" target="_blank" rel="noopener">Bankless YouTube</a></b><br>每周 ROLLUP 复盘</div></div><div class="note">过去 24 小时未确认到必须写入的 Hyperliquid 专属长视频首发；本期优先读 Binance Update #4 / 提现汇总帖、TokenPost HLP 与 Lookonchain 黑客动向。</div></section><footer>所有草稿均未发布，需本人确认后再发。数据为北京时间 11/02 约 07:40 快照，价格与提现状态类内容发前请更新。内容仅为信息整理与分析，不构成投资建议。NFA / DYOR。</footer></main><script>
+function fallbackCopy(t){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.position='fixed';a.style.top='-1000px';document.body.appendChild(a);a.select();a.setSelectionRange(0,t.length);var ok=false;try{ok=document.execCommand('copy')}catch(e){}document.body.removeChild(a);return ok}
+function done(b,ok){var o=b.dataset.label||b.textContent;b.dataset.label=o;b.textContent=ok?'已复制 ✓':'复制失败';b.classList.toggle('ok',ok);clearTimeout(b._t);b._t=setTimeout(function(){b.textContent=o;b.classList.remove('ok')},1600)}
+document.addEventListener('click',function(e){var b=e.target.closest('.cp');if(!b)return;var t=document.getElementById(b.dataset.for).textContent;
+ if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(function(){done(b,true)},function(){done(b,fallbackCopy(t))})}else{done(b,fallbackCopy(t))}});
+// X 加权字数：CJK 计 2，其余计 1（近似）
+document.querySelectorAll('.txt').forEach(function(el){var s=el.textContent,n=0;for(var ch of s){n+=/[\u1100-\uFFFF]/.test(ch)&&!/[\u2000-\u206F\u2190-\u2BFF]/.test(ch)?2:1}var c=document.getElementById(el.id+'-n');if(c)c.textContent='约 '+n+' / 280 字符（X 加权估算，emoji 与链接以输入框为准）'});
+// 导航高亮
+var links=[].slice.call(document.querySelectorAll('.nav a'));var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+en.target.id)})}})},{rootMargin:'-20% 0px -70% 0px'});secs.forEach(function(s){s&&io.observe(s)});
+</script></body></html>
