@@ -1,0 +1,305 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>币圈早报 · 2026-11-03（周二）</title><style>
+:root{
+ --fg:#2b3442;--mut:#525d6b;--line:rgba(255,255,255,.55);--hair:rgba(43,52,66,.10);
+ --acc:#44607b;--acc-bg:rgba(79,109,138,.12);--sage:#4d6656;--warn:#83583a;--warn-bg:rgba(184,140,110,.16);
+ --glass:rgba(255,255,255,.46);--glass-strong:rgba(255,255,255,.62);--glass-fallback:rgba(250,249,246,.94);
+ --shadow:0 8px 32px rgba(60,72,92,.08);--blur:blur(20px) saturate(120%);
+ --bg:#eef0ee;--b1:#b4c6d8;--b2:#bccfba;--b3:#e0c0c2;--b4:#ecdcc4;--side:256px;--r:18px
+}
+@media (prefers-color-scheme:dark){:root{
+ --fg:#dfe4ea;--mut:#9aa5b2;--line:rgba(255,255,255,.10);--hair:rgba(255,255,255,.08);
+ --acc:#9db4cb;--acc-bg:rgba(157,180,203,.14);--sage:#a3b8a8;--warn:#d6b08f;--warn-bg:rgba(214,176,143,.13);
+ --glass:rgba(30,34,42,.48);--glass-strong:rgba(36,40,49,.62);--glass-fallback:rgba(28,31,38,.95);
+ --shadow:0 8px 32px rgba(0,0,0,.28);
+ --bg:#14171c;--b1:#33445a;--b2:#33443a;--b3:#4a363c;--b4:#443d31}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--fg);font:15px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+ background:
+  radial-gradient(closest-side,var(--b1),transparent) -8vw -12vh/62vw 62vw no-repeat,
+  radial-gradient(closest-side,var(--b2),transparent) 62vw 4vh/48vw 48vw no-repeat,
+  radial-gradient(closest-side,var(--b3),transparent) 18vw 58vh/52vw 52vw no-repeat,
+  radial-gradient(closest-side,var(--b4),transparent) 70vw 62vh/50vw 50vw no-repeat,var(--bg);
+ filter:blur(40px)}
+a{color:var(--acc);text-decoration:none;text-underline-offset:3px}a:hover{text-decoration:underline}
+.glass,.side,.card,.stats,.draft,.sched,.tbl,.kolwrap,.view,.yt div,.note{background:var(--glass-fallback)}
+@supports ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){
+ .side,.card,.stats,.draft,.sched,.tbl,.kolwrap,.view,.yt div,.note{background:var(--glass);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur)}
+}
+.side,.card,.stats,.draft,.sched,.tbl,.kolwrap,.view,.yt div{border:1px solid var(--line);box-shadow:var(--shadow)}
+.side{position:fixed;top:16px;left:16px;bottom:16px;width:calc(var(--side) - 32px);padding:32px 22px;border-radius:22px;overflow-y:auto;z-index:10}
+.brand{font-weight:700;font-size:18px;letter-spacing:-.01em}
+.date{color:var(--mut);font-size:13px;margin:4px 0 28px}
+.nav{list-style:none;margin:0;padding:0}
+.nav a{display:block;padding:8px 12px;margin:2px -6px;border-radius:12px;color:var(--mut);font-size:14px;transition:background .2s,color .2s}
+.nav a:hover{color:var(--fg);background:var(--acc-bg);text-decoration:none}
+.nav a.on{color:var(--fg);background:var(--glass-strong);border:1px solid var(--line);font-weight:600;box-shadow:0 2px 10px rgba(60,72,92,.06)}
+.side .foot{margin-top:28px;font-size:12px;color:var(--mut);line-height:1.6}
+main{margin-left:var(--side);padding:48px 56px 120px 40px;max-width:calc(var(--side) + 1120px)}
+section{padding:4px 0 44px;margin-bottom:28px}
+h1{font-size:30px;line-height:1.25;margin:0 0 8px;letter-spacing:-.02em}
+h2{font-size:21px;margin:0 0 4px;letter-spacing:-.01em}
+.sub{color:var(--mut);font-size:13px;margin:0 0 22px}
+.lead{font-size:13px;color:var(--mut);margin-bottom:32px}
+.keys{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.keys li{padding:16px 20px 16px 58px;position:relative;font-size:15.5px;border-radius:var(--r);border:1px solid var(--line);box-shadow:var(--shadow);background:var(--glass-fallback)}
+@supports ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){.keys li{background:var(--glass);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur)}}
+.keys li b.n{position:absolute;left:20px;top:16px;color:var(--sage);font-variant-numeric:tabular-nums}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-radius:var(--r);overflow:hidden;margin:0 0 24px}
+.stat{padding:16px 20px;border-right:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.stat:nth-child(4n){border-right:0}.stat:nth-last-child(-n+4){border-bottom:0}
+.stat .k{font-size:12px;color:var(--mut)}.stat .v{font-size:22px;font-weight:650;font-variant-numeric:tabular-nums;letter-spacing:-.01em}.stat .d{font-size:12px;color:var(--mut)}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card{border-radius:var(--r);padding:20px 22px}
+.card h3{font-size:16px;margin:0 0 10px;line-height:1.45}
+.card ul{margin:0;padding-left:18px}.card li{margin:4px 0}.card li::marker{color:var(--sage)}
+.card .src{margin-top:12px;padding-top:10px;border-top:1px solid var(--hair);font-size:12.5px;color:var(--mut)}
+.note{border:1px solid var(--line);border-left:3px solid var(--warn);padding:12px 16px;border-radius:12px;font-size:13.5px;margin-top:16px}
+.kolwrap{border-radius:var(--r);padding:4px 22px}
+.kol{display:grid;grid-template-columns:200px 1fr;gap:6px 24px;padding:16px 0;border-top:1px solid var(--hair)}
+.kol:first-child{border-top:0}.kol .who{font-weight:600}.kol .who small{display:block;font-weight:400;color:var(--mut);font-size:12.5px}
+.view{border-radius:var(--r);padding:24px 26px}
+.view h2,.view .sub{margin-left:0}
+.view p{margin:0 0 14px;max-width:860px}
+.disc{display:inline-block;margin-top:4px;font-weight:600;color:var(--warn);background:var(--warn-bg);padding:4px 12px;border-radius:99px;font-size:13.5px}
+.sched,.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:14px;border-radius:var(--r);overflow:hidden}
+.sched{margin-bottom:28px}
+.sched th,.sched td,.tbl th,.tbl td{text-align:left;padding:10px 16px;border-bottom:1px solid var(--hair);vertical-align:top}
+.sched tr:last-child td,.tbl tr:last-child td{border-bottom:0}
+.sched th,.tbl th{font-size:12px;color:var(--mut);font-weight:500;background:rgba(255,255,255,.18)}
+.sched td.t{font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap}
+.draft{border-radius:20px;margin-bottom:22px;overflow:hidden}
+.dh{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:14px 22px;border-bottom:1px solid var(--hair);background:rgba(255,255,255,.14)}
+.time{font-weight:700;font-size:17px;font-variant-numeric:tabular-nums}
+.tag{font-size:12px;padding:2px 10px;border-radius:99px;border:1px solid var(--hair);color:var(--mut)}
+.tag.acc{color:var(--acc);border-color:transparent;background:var(--acc-bg)}
+.dt{font-weight:600}
+.flag{font-size:12.5px;padding:3px 10px;border-radius:99px;color:var(--warn);background:var(--warn-bg)}
+.meta{padding:10px 22px;font-size:13px;color:var(--mut);border-bottom:1px solid var(--hair)}
+.pair{display:grid;grid-template-columns:1fr 1fr}
+.pane{padding:16px 22px 18px;display:flex;flex-direction:column;min-width:0}
+.pane+.pane{border-left:1px solid var(--hair)}
+.ph{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.lang{font-size:12px;color:var(--mut);letter-spacing:.06em}
+.txt{white-space:pre-wrap;word-break:break-word;font-size:14.5px;line-height:1.75;flex:1}
+.cp{font:inherit;font-size:13px;cursor:pointer;border:1px solid var(--line);background:var(--glass-strong);color:var(--fg);padding:5px 16px;border-radius:99px;min-width:76px;transition:.2s;box-shadow:0 1px 6px rgba(60,72,92,.06)}
+.cp:hover{color:var(--acc);border-color:var(--acc)}
+.cp.ok{background:var(--sage);border-color:var(--sage);color:#fff}
+.cnt{font-size:11.5px;color:var(--mut);margin-top:8px}
+.act{white-space:nowrap;font-size:12.5px}.act.y{color:var(--sage);font-weight:600}.act.n{color:var(--mut)}
+.yt{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:8px}
+.yt div{padding:14px 18px;border-radius:14px}
+footer{color:var(--mut);font-size:12.5px;margin-top:24px}
+@media (max-width:1100px){main{padding:40px 32px 100px 32px}.cards{grid-template-columns:1fr}}
+@media (max-width:820px){
+ html{scroll-padding-top:72px}.flag{white-space:nowrap}
+ .side{position:sticky;top:8px;left:auto;bottom:auto;width:auto;height:auto;margin:8px;padding:8px 14px;border-radius:16px;display:flex;align-items:center;gap:14px;overflow-x:auto;white-space:nowrap}
+ .date,.side .foot{display:none}.brand{font-size:15px}
+ .nav{display:flex;gap:4px}.nav a{margin:0;padding:6px 10px;font-size:13px}
+ main{margin-left:0;padding:24px 14px 80px}
+ .pair{grid-template-columns:1fr}.pane+.pane{border-left:0;border-top:1px solid var(--hair)}
+ .kol{grid-template-columns:1fr}.yt{grid-template-columns:1fr}
+ .stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat:nth-child(n){border-right:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+ .sched,.tbl{display:block;overflow-x:auto}
+ h1{font-size:24px}
+}
+</style></head><body><aside class="side"><div class="brand">geleek 早报</div><div class="date">2026-11-03 · 周二</div><!--datenav--><style>
+.dn{margin:-14px 0 26px;padding:12px 12px 10px;border-radius:14px;border:1px solid var(--line);background:var(--glass-strong);box-shadow:0 2px 10px rgba(60,72,92,.06);font-size:12.5px}
+.dn .dn-k{color:var(--mut);font-size:11.5px;letter-spacing:.04em;display:flex;justify-content:space-between;align-items:center}
+.dn .dn-cur{font-weight:650;font-size:14px;color:var(--fg);margin:2px 0 8px;font-variant-numeric:tabular-nums;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.dn .dn-badge{font-size:11px;font-weight:500;padding:1px 8px;border-radius:99px;color:var(--sage);background:rgba(77,102,86,.12)}
+.dn .dn-badge:empty{display:none}
+.dn .dn-badge.old{color:var(--warn);background:var(--warn-bg)}
+.dn .dn-row{display:flex;gap:6px;align-items:center;margin-top:6px}
+.dn select{width:100%;font:inherit;font-size:12.5px;color:var(--fg);background:var(--glass);border:1px solid var(--hair);border-radius:10px;padding:5px 6px;cursor:pointer;font-variant-numeric:tabular-nums}
+.dn .dn-a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:4px;height:28px;border-radius:10px;border:1px solid var(--hair);background:var(--glass);color:var(--fg);font-size:12px;line-height:1}
+.dn .dn-a:hover{text-decoration:none;color:var(--acc);border-color:var(--acc)}
+.dn .dn-a.off{opacity:.35;pointer-events:none}
+.dn .dn-all{display:inline-block;margin-top:8px;font-size:12px}
+@media (max-width:820px){.dn{margin:0;padding:4px 8px;display:flex;align-items:center;gap:8px;flex:none}.dn .dn-k,.dn .dn-all,.dn .dn-cur{display:none}.dn select{width:150px}.dn .dn-row{margin:0}.dn .dn-a{flex:none;width:28px}.dn .dn-a span{display:none}}
+</style><div class="dn" id="dn" data-date="2026-11-03" data-root="../" data-pub="1793662670"><div class="dn-k"><span>正在查看</span><span title="快捷键：[ 前一天，] 后一天">⌨ [ ]</span></div><div class="dn-cur">2026-11-03 周二<span class="dn-badge">最新</span></div><select aria-label="选择日期"><option value="2026-11-03" selected>2026-11-03 周二</option></select><div class="dn-row"><a class="dn-a dn-prev off" aria-label="前一天" title="前一天">‹<span> 前一天</span></a><a class="dn-a dn-next off" aria-label="后一天" title="后一天"><span>后一天 </span>›</a></div><a class="dn-all" href="../archive/index.html">全部往期 →</a></div><script>
+(function(){var el=document.getElementById('dn');if(!el)return;var root=el.getAttribute('data-root')||'',cur=el.getAttribute('data-date')||'';
+function href(d){return root+'archive/'+d+'.html'}
+var sel=el.querySelector('select'),pv=el.querySelector('.dn-prev'),nx=el.querySelector('.dn-next'),bd=el.querySelector('.dn-badge');
+sel.addEventListener('change',function(){if(sel.value&&sel.value!==cur)location.href=href(sel.value)});
+fetch(root+'archive/dates.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(m){
+ var ds=(m.dates||m).slice().sort(function(a,b){return a.date<b.date?1:-1});if(!ds.length)return;
+ sel.innerHTML='';var found=false;
+ ds.forEach(function(d){var o=document.createElement('option');o.value=d.date;o.textContent=d.date+' '+(d.weekday||'')+(d.noon?' · 含午间快讯':'');if(d.summary)o.title=d.summary;if(d.date===cur){o.selected=true;found=true}sel.appendChild(o)});
+ if(!found&&cur){var o=document.createElement('option');o.value=cur;o.textContent=cur;o.selected=true;sel.insertBefore(o,sel.firstChild)}
+ var i=-1;ds.forEach(function(d,k){if(d.date===cur)i=k});
+ function set(a,d,lab){if(d){a.href=href(d.date);a.classList.remove('off');a.title=lab+'：'+d.date+(d.summary?'\n'+d.summary:'')}else{a.classList.add('off');a.removeAttribute('href')}}
+ set(pv,i>=0?ds[i+1]:null,'前一天');set(nx,i>0?ds[i-1]:null,'后一天');
+ if(bd){if(i===0){bd.textContent='最新';bd.classList.remove('old')}else if(i>0){bd.textContent='往期';bd.classList.add('old')}}
+}).catch(function(){});
+document.addEventListener('keydown',function(e){if(e.target.closest&&e.target.closest('input,textarea,select'))return;if(e.altKey||e.ctrlKey||e.metaKey)return;
+ if(e.key==='['&&pv.href)location.href=pv.href;if(e.key===']'&&nx.href)location.href=nx.href});
+})();
+</script><!--/datenav--><ul class="nav"><li><a href="#keys">今日要点</a></li><li><a href="#news">重点新闻和数据</a></li><li><a href="#kol">大V观点</a></li><li><a href="#view">我的观点</a></li><li><a href="#drafts">发帖草稿</a></li><li><a href="#replies">互动评论</a></li><li><a href="#follow">追踪账号</a></li></ul><div class="foot">覆盖北京时间 11/02 07:40 – 11/03 07:35（UTC+8）<br>所有草稿均未发布</div></aside><main><section id="keys"><h1>币圈早报 · 2026-11-03（周二）</h1><div class="lead">周二早报。主线三条：① 隔夜风险偏好回落，<a href="https://www.coingecko.com/en/coins/hyperliquid" target="_blank" rel="noopener">HYPE</a> 约 <b>$83.8（−4.2%）</b>、BTC 约 $76.7K；② <a href="https://x.com/tradexyz/status/2117270210449183031" target="_blank" rel="noopener">trade.xyz</a> GitBook 遭未授权改动（文档已于美东 9:15 恢复，资金/交易不受影响）；③ 午间「ETH 巨鲸扫货」剧情反转——<a href="https://x.com/lookonchain/status/2117246398664163663" target="_blank" rel="noopener">ZachXBT</a> 指 0x9eca 买家疑为对某欧盟实体窃取 <b>$1.06 亿+</b> 的攻击者。旁注：Mercado Bitcoin 约 $3800–4000 万事件、币安 DefiLlama 净流出从高峰约 $70 亿回落至约 $32.9 亿。行情快照：CoinGecko + Hyperliquid API，约北京时间 11/03 07:34。</div><ul class="keys"><li><b class="n">01</b>隔夜风险偏好回落：HYPE 约 $83.8（24h −4.2%），BTC 约 $76.7K（−1.8%），ZEC 约 −8%；HL 主盘 24h 成交升至约 $59.6 亿（午间约 $27 亿），持仓回落至约 $104 亿（午间约 $108 亿）——量升仓降，更像去杠杆/换手，不是单纯「缩量阴跌」。</li><li><b class="n">02</b>trade.xyz GitBook 遭未授权活动：官方称文档已于美东时间 9:15 AM 恢复；提醒勿点文档内链接。Crypto Briefing：资金、交易与链上结算未受影响。</li><li><b class="n">03</b>剧情反转：午间买 27,553 ETH（约 $6,297 万）的 0x9eca，被 ZachXBT 指向疑似对某欧盟实体造成 $1.06 亿+ 损失的攻击者钱包；叠加 Mercado Bitcoin 约 $3800–4000 万事件 + Tether 冻结超 450 万 USDT；币安侧 DefiLlama 24h 净流出约 $32.9 亿（自约 $70 亿高峰回落）。</li></ul></section><section id="news"><h2>重点新闻和数据</h2><p class="sub">Hyperliquid 优先 · 每条附原始来源 · 勿重复 Update #4 提现总额 / XPL-HLP $55.6 万 / 把午间 ETH 巨鲸当利多头条——本期新角度是 ZachXBT 黑客嫌疑</p><div class="stats"><div class="stat"><div class="k">HYPE</div><div class="v">$83.82</div><div class="d">24h −4.19% · <a href="https://www.coingecko.com/en/coins/hyperliquid" target="_blank" rel="noopener">CoinGecko</a></div></div><div class="stat"><div class="k">BTC</div><div class="v">$76,651</div><div class="d">24h −1.83%</div></div><div class="stat"><div class="k">ETH</div><div class="v">$2,246.78</div><div class="d">24h −0.87%</div></div><div class="stat"><div class="k">SOL</div><div class="v">$91.63</div><div class="d">24h −2.51%</div></div><div class="stat"><div class="k">HL 主盘持仓</div><div class="v">$103.92 亿</div><div class="d">24h 成交约 $59.56 亿 · <a href="https://app.hyperliquid.xyz/trade" target="_blank" rel="noopener">交易页</a></div></div><div class="stat"><div class="k">HIP-3 xyz 持仓</div><div class="v">$42.19 亿</div><div class="d">24h 成交约 $49.9 亿</div></div><div class="stat"><div class="k">HYPE 资金费率</div><div class="v">+0.0013%/h</div><div class="d">持仓约 $18.86 亿 · 24h 成交约 $7.54 亿</div></div><div class="stat"><div class="k">协议费用 近1日</div><div class="v">$153 万</div><div class="d">DefiLlama total24h · 7 天约 $2,209 万 · <a href="https://defillama.com/protocol/hyperliquid" target="_blank" rel="noopener">DefiLlama</a></div></div></div><div class="cards"><article class="card"><h3>① trade.xyz：GitBook 文档遭未授权活动；已恢复，资金未受影响</h3><ul><li><a href="https://x.com/tradexyz/status/2117270210449183031" target="_blank" rel="noopener">@tradexyz 官方帖</a>（约 1,004 赞）：GitBook 文档出现未授权活动；已于美东时间 <b>9:15 AM</b> 恢复。明确提醒：<b>不要点击文档内链接</b>。</li><li><a href="https://cryptobriefing.com/tradexyz-gitbook-documentation-unauthorized-activity/" target="_blank" rel="noopener">Crypto Briefing</a>：资金、交易与链上结算未受影响——这是文档/内容面事件，不是清算或金库事件。</li><li>读法：HIP-3 / trade.xyz 仍是 HL 生态高频话题；发帖优先写「文档被改 → 已恢复 → 勿点链 → 资金未动」，避免写成「平台被黑 / 资金被盗」。</li><li>本报窗口内 @HyperliquidX / Jeff 未见相关原创帖——trade.xyz 侧自行通报。</li></ul><div class="src">来源：<a href="https://x.com/tradexyz/status/2117270210449183031" target="_blank" rel="noopener">@tradexyz</a> · <a href="https://cryptobriefing.com/tradexyz-gitbook-documentation-unauthorized-activity/" target="_blank" rel="noopener">Crypto Briefing</a></div></article><article class="card"><h3>② 剧情反转：午间 ETH「巨鲸」0x9eca = ZachXBT 指向的疑似黑客</h3><ul><li>午间曾报地址 0x9eca 买入约 <b>27,553 ETH</b>（约 $6,297 万，均价约 $2,286）。<a href="https://x.com/lookonchain/status/2117246398664163663" target="_blank" rel="noopener">@lookonchain</a> 转述 ZachXBT：该买家疑为对某欧盟实体造成 <b>$1.06 亿+</b> 损失的攻击者钱包。</li><li><a href="https://x.com/WuBlockchain/status/2117233673749831965" target="_blank" rel="noopener">@WuBlockchain</a> / <a href="https://x.com/EmberCN/status/2117237239482908897" target="_blank" rel="noopener">@EmberCN</a> 同步中文侧传播——发帖务必把「巨鲸扫货」改写成「疑似赃款回流买 ETH」，并标明 ZachXBT / Lookonchain。</li><li>这不是新的多头信号：大额买入可以是黑客处置赃款、换仓或混淆路径。勿把 0x9eca 写成「聪明钱抄底」。</li><li>对照：昨报/午间若已当利多写过，今日必须用 Zach 线纠偏。</li></ul><div class="src">来源：<a href="https://x.com/lookonchain/status/2117246398664163663" target="_blank" rel="noopener">Lookonchain · ZachXBT</a> · <a href="https://x.com/WuBlockchain/status/2117233673749831965" target="_blank" rel="noopener">Wu</a> · <a href="https://x.com/EmberCN/status/2117237239482908897" target="_blank" rel="noopener">EmberCN</a></div></article><article class="card"><h3>③ Mercado Bitcoin 遇袭约 $3800–4000 万；Tether 冻结超 450 万 USDT</h3><ul><li><a href="https://x.com/WuBlockchain/status/2117255057280204824" target="_blank" rel="noopener">@WuBlockchain</a>：Hypernative 等口径称巴西交易所 Mercado Bitcoin 遭受网络攻击，嫌疑规模逾 <b>$4,000 万</b>；后续回复口径约 <b>$3,800 万</b> 涉案、约 <b>$1,100 万</b> 被拦下。</li><li><a href="https://x.com/WuBlockchain/status/2117274022081970253" target="_blank" rel="noopener">@WuBlockchain</a>：Tether 已冻结超过 <b>450 万 USDT</b>——稳定币发行方冻结仍是追赃第一反应工具。</li><li>与币安事件并列阅读：交易所/托管面安全叙事仍紧；发帖区分「巴西本地所」与「全球 CEX」，勿混写成「又一次币安」。</li></ul><div class="src">来源：<a href="https://x.com/WuBlockchain/status/2117255057280204824" target="_blank" rel="noopener">Wu Mercado</a> · <a href="https://x.com/WuBlockchain/status/2117274022081970253" target="_blank" rel="noopener">Wu Tether 冻结</a></div></article><article class="card"><h3>④ 盘面：HYPE −4%、量升仓降；费率仍温和正值</h3><ul><li>CoinGecko（约北京 07:34）：HYPE ≈ $83.82（24h −4.19%，市值约 $201 亿），BTC ≈ $76,651（−1.83%），ETH ≈ $2,246.78（−0.87%），SOL ≈ $91.63（−2.51%），ZEC ≈ $1,131（−8.0%）。</li><li>Hyperliquid API：主盘持仓约 <b>$103.92 亿</b>（午间约 $108.2 亿），24h 成交约 <b>$59.56 亿</b>（午间约 $27.3 亿）——成交翻倍级抬升、持仓回落。HYPE mark ≈ $83.89，持仓约 $18.86 亿，资金费率约 <b>+0.0013%/h</b>（raw 0.000013；午间约 +0.0041%/h）。</li><li>xyz（dex=xyz）：持仓约 $42.19 亿，24h 成交约 $49.9 亿——HIP-3 侧成交活跃度明显高于午间主盘对比印象。</li><li>DefiLlama：协议近 1 日费用约 <b>$153 万</b>（total24h ≈ $1,532,330；7 日约 $2,209 万）。</li><li><a href="https://x.com/coinglass_com/status/2117340564433801594" target="_blank" rel="noopener">@coinglass_com</a> 盯 BTC 77K；另见 <a href="https://x.com/coinglass_com/status/2117306265403539844" target="_blank" rel="noopener">77000 买单墙约 $1,219 万</a>——短线支撑叙事，发前刷新是否还在。</li></ul><div class="src">来源：<a href="https://www.coingecko.com/en/coins/hyperliquid" target="_blank" rel="noopener">CoinGecko</a> · Hyperliquid API（约北京 07:34）· <a href="https://defillama.com/protocol/hyperliquid" target="_blank" rel="noopener">DefiLlama</a> · <a href="https://x.com/coinglass_com/status/2117340564433801594" target="_blank" rel="noopener">CoinGlass</a></div></article><article class="card"><h3>⑤ ETF 继续流出；Strategy / BitMine 仍在加仓</h3><ul><li><a href="https://x.com/lookonchain/status/2117250038053360029" target="_blank" rel="noopener">@lookonchain</a>：11/02 美现货 BTC ETF 1D −7,919 BTC（约 −$6.143 亿）；ETH ETF −44,837 ETH（约 −$1.021 亿）。</li><li><a href="https://x.com/lookonchain/status/2117249827524485140" target="_blank" rel="noopener">@lookonchain</a>：BlackRock 相关 ETH 过去约一个月累计流出约 <b>580,145 ETH</b>（约 $13.2 亿）——机构赎回压力仍在。</li><li>对照买盘：<a href="https://x.com/WuBlockchain/status/2117243669334184287" target="_blank" rel="noopener">Strategy +811 BTC</a>（约 $6,550 万，均价约 $80,846，区间 Oct26–Nov1）；<a href="https://x.com/WuBlockchain/status/2117248870178775440" target="_blank" rel="noopener">BitMine +8,573 ETH</a> → 持仓约 606 万 ETH。</li><li>读法：ETF 流出 ≠ 链上永久抛压，但和隔夜 risk-off 同向；Strategy/BitMine 是「公司金库继续买」旁注，不是短期价格催化剂。</li></ul><div class="src">来源：<a href="https://x.com/lookonchain/status/2117250038053360029" target="_blank" rel="noopener">Lookonchain ETF</a> · <a href="https://x.com/lookonchain/status/2117249827524485140" target="_blank" rel="noopener">BlackRock ETH</a> · <a href="https://x.com/WuBlockchain/status/2117243669334184287" target="_blank" rel="noopener">Wu Strategy</a> · <a href="https://x.com/WuBlockchain/status/2117248870178775440" target="_blank" rel="noopener">Wu BitMine</a></div></article><article class="card"><h3>⑥ Entropy：AAPL 永续上 HIP-3（RedStone 预言机）；与 trade.xyz 同标的竞品</h3><ul><li><a href="https://cryptobriefing.com/redstone-apple-perp-hyperliquid-entropy/" target="_blank" rel="noopener">Crypto Briefing</a>：Entropy 在 Hyperliquid HIP-3 上线 AAPL 永续，最高约 <b>25x</b>，采用 RedStone 预言机；为拿到 ticker 支付约 <b>575.23 HYPE</b>（约 $5.1 万）。</li><li>同文对比：trade.xyz 既有 AAPL 合约当时约 $7,500 万持仓 / 约 $900 万 24h 成交、20x——HIP-3 上开始出现「同一股票多部署方」格局。</li><li>发帖角度：讲清楚 HIP-3 许可/竞价拿 ticker + 预言机选择，勿夸成「苹果官方上链」。</li></ul><div class="src">来源：<a href="https://cryptobriefing.com/redstone-apple-perp-hyperliquid-entropy/" target="_blank" rel="noopener">Crypto Briefing · Entropy AAPL</a></div></article><article class="card"><h3>⑦ 外围：币安净流出降温；朝方否认；TokenInsight Q3 量缩仓升</h3><ul><li><a href="https://x.com/WuBlockchain/status/2117286587730170046" target="_blank" rel="noopener">@WuBlockchain</a>：DefiLlama 口径，币安相关 24h 净流出约 <b>$32.9 亿</b>（自约 $70 亿高峰回落）；追踪约 $1,277.8 亿币安关联资产——流出「降温」≠ 风险结束，但是可核验的缓解信号。</li><li><a href="https://x.com/TreeNewsFeed/status/2117364485857947785" target="_blank" rel="noopener">@TreeNewsFeed</a>（Reuters 线）：朝方否认涉币安劫案——地缘旁注，发帖标明转述。</li><li><a href="https://x.com/EmberCN/status/2117261385705083389" target="_blank" rel="noopener">@EmberCN</a> TokenInsight Q3：成交额约 $12T（环比 −27.5%），但 OI +11%；TradFi 永续约 $2.1T——「量缩、仓位不散」的季度底色，和昨夜 HL 量升仓降可对照着读。</li></ul><div class="src">来源：<a href="https://x.com/WuBlockchain/status/2117286587730170046" target="_blank" rel="noopener">Wu 流出降温</a> · <a href="https://x.com/TreeNewsFeed/status/2117364485857947785" target="_blank" rel="noopener">TreeNews/Reuters</a> · <a href="https://x.com/EmberCN/status/2117261385705083389" target="_blank" rel="noopener">EmberCN TokenInsight</a></div></article></div><div class="note">勿再当头条复述：Update #4 提现 $46.49 亿 / 净流出 $36.4 亿；XPL→HLP ≈$55.6 万；把午间 0x9eca 买 ETH 写成利多巨鲸。</div><div class="note">0x9eca 线以 ZachXBT（经 Lookonchain/Wu/EmberCN）为准；「疑似」二字保留，勿写成法院定罪。</div><div class="note">trade.xyz GitBook = 文档未授权，非资金被盗；Crypto Briefing 明确资金/交易/结算未受影响。</div><div class="note">Mercado 数字：Hypernative 嫌疑 >$40M；后续回复约 $38M 涉案 / ~$11M 拦截——发帖可写区间并附 Wu 帖。</div><div class="note">HYPE 资金费率展示为 +0.0013%/h（与既有早报口径一致；API raw ≈ 0.000013）。</div><div class="note">@HyperliquidX / Jeff / HPC：本窗口 0 条相关原创——跟单与公告以 trade.xyz / 第三方研报为准。</div><div class="note">协议费用 $153 万为 DefiLlama total24h；与午间同量级，勿夸成费用暴增。</div><div class="note">Tron $242M / Gate $250k 等旧旁注本报不重复占头条。</div></section><section id="kol"><h2>大V观点</h2><p class="sub">过去约 24 小时原帖</p><div class="kolwrap"><div class="kol"><div class="who"><a href="https://x.com/tradexyz/status/2117270210449183031" target="_blank" rel="noopener">tradexyz GitBook</a><small>@tradexyz · 官方</small></div><div>GitBook 未授权活动；美东 9:15 已恢复；勿点文档链接。约 1,004 赞。</div></div><div class="kol"><div class="who"><a href="https://x.com/lookonchain/status/2117246398664163663" target="_blank" rel="noopener">Lookonchain · ZachXBT</a><small>@lookonchain / ZachXBT</small></div><div>0x9eca 买家疑为 $1.06 亿+ 欧盟实体攻击者。</div></div><div class="kol"><div class="who"><a href="https://x.com/EmberCN/status/2117237239482908897" target="_blank" rel="noopener">EmberCN · Zach / TokenInsight</a><small>@EmberCN</small></div><div>Zach 线中文传播；另发 TokenInsight Q3 量缩仓升。</div></div><div class="kol"><div class="who"><a href="https://x.com/ai_9684xtpa/status/2117247047871143945" target="_blank" rel="noopener">Ai姨 · 黑客笨拙</a><small>@ai_9684xtpa</small></div><div>点评币安黑客操作笨拙——可作互动素材。</div></div><div class="kol"><div class="who"><a href="https://x.com/DefiIgnas/status/2117266955237241246" target="_blank" rel="noopener">DefiIgnas · 律师治国</a><small>@DefiIgnas</small></div><div>Crypto run by lawyers / Armstrong 引用——监管叙事旁注。</div></div><div class="kol"><div class="who"><a href="https://x.com/coinglass_com/status/2117340564433801594" target="_blank" rel="noopener">CoinGlass · 77K</a><small>@coinglass_com</small></div><div>BTC 77K 关注位；另有 77000 约 $1219 万买单墙。</div></div></div></section><section id="view"><div class="view"><h2>我的观点和看法</h2><p class="sub">分析</p><p><b>今天最重要的纠偏：大额买入 ≠ 聪明钱。</b>午间 0x9eca 扫 2.7 万 ETH 的「巨鲸叙事」，被 ZachXBT 一夜间改写成「疑似赃款回流」。对 geleek 来说，可发的信息不是价格预测，而是方法论：链上大单要先对攻击者标签、再谈方向。保留「疑似」，附 Lookonchain / Wu / EmberCN。</p><p><b>trade.xyz GitBook 事件是「内容面事故」，不是「金库事故」。</b>官方 + Crypto Briefing 口径一致：文档被改 → 已恢复 → 勿点链 → 资金/交易/结算未动。HIP-3 生态越热闹，文档/前端/社媒被投毒的攻击面越大——发帖可把它当成安全意识课，而不是 FUD 标题。</p><p><b>盘面：量升仓降 + HYPE −4%，更像 risk-off 换手，不是单一 HL 利空。</b>主盘成交从午间约 $27 亿抬到约 $60 亿、OI 略降；费率仍仅 +0.0013%/h，拥挤度不高。ETF 流出与 Mercado/币安安全余波同向压制风险偏好。优先跟踪：① 0x9eca 后续换仓/冻结；② trade.xyz 是否有正式事后说明；③ BTC 77K 墙是否守住。以上为分析，不构成投资建议 / NFA DYOR。</p><span class="disc">以上为分析，不构成投资建议。</span></div></section><section id="drafts"><h2>发帖草稿 · 10 条</h2><p class="sub">周二排期 · 建议 08:45–22:30（北京时间）错峰发布 · 中英双语 · 中文每字按 2 字符计 · 所有草稿均未发布</p><table class="sched"><thead><tr><th>时间（北京）</th><th>类型</th><th>主题</th><th>提醒</th></tr></thead><tbody><tr><td class="t"><a href="#d0">08:45</a></td><td>突发快讯</td><td>trade.xyz GitBook 未授权</td><td><span class=flag>需截图</span></td></tr><tr><td class="t"><a href="#d1">09:30</a></td><td>剧情反转</td><td>0x9eca = 疑似黑客</td><td><span class=flag>需截图</span></td></tr><tr><td class="t"><a href="#d2">11:00</a></td><td>行情快照</td><td>HYPE −4% · 量升仓降</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d3">12:30</a></td><td>安全旁注</td><td>Mercado + Tether 冻结</td><td><span class=flag>需截图</span></td></tr><tr><td class="t"><a href="#d4">14:30</a></td><td>数据图表</td><td>币安流出降温 + ETF</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d5">16:30</a></td><td>产品/HIP-3</td><td>Entropy AAPL × RedStone</td><td><span class=flag>需截图</span></td></tr><tr><td class="t"><a href="#d6">18:30</a></td><td>大V引用</td><td>Ai姨 × 黑客操作</td><td></td></tr><tr><td class="t"><a href="#d7">20:00</a></td><td>短分析</td><td>量升仓降怎么读</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d8">21:30</a></td><td>长推开头</td><td>周二三条线</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d9">22:30</a></td><td>轻互动/提问</td><td>你更在意哪条</td><td></td></tr></tbody></table><div class="draft" id="d0"><div class="dh"><span class="time">08:45</span><span class="tag acc">突发快讯</span><span class="dt">trade.xyz GitBook 未授权</span></div><div class="meta">📷 截图：tradexyz 官方帖截图<br>强调：文档事件 ≠ 资金被盗；可配官方帖<br>来源：<a href="https://x.com/tradexyz/status/2117270210449183031" target="_blank" rel="noopener">@tradexyz</a> · <a href="https://cryptobriefing.com/tradexyz-gitbook-documentation-unauthorized-activity/" target="_blank" rel="noopener">Crypto Briefing</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d0zh">复制</button></div><div class="txt" id="d0zh">⚡️ trade.xyz：GitBook 文档出现未授权活动
+
+• 美东 9:15 AM 已恢复
+• 官方：不要点击文档里的链接
+• Crypto Briefing：资金 / 交易 / 链上结算未受影响
+
+内容面事故，不是金库被掏。先核实来源，再点任何「文档更新」链接。
+
+NFA/DYOR #Hyperliquid #HIP3</div><div class="cnt" id="d0zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d0en">复制</button></div><div class="txt" id="d0en">⚡️ trade.xyz: unauthorized activity on its GitBook docs
+
+• Restored 9:15 AM ET
+• Official: do NOT click links inside the docs
+• Crypto Briefing: funds / trading / on-chain settlement unaffected
+
+Docs incident ≠ vault drain. Verify the source before clicking any “doc update” link.
+
+NFA/DYOR #Hyperliquid #HIP3</div><div class="cnt" id="d0en-n"></div></div></div></div><div class="draft" id="d1"><div class="dh"><span class="time">09:30</span><span class="tag acc">剧情反转</span><span class="dt">0x9eca = 疑似黑客</span></div><div class="meta">📷 截图：Lookonchain / ZachXBT 线程图<br>必写「疑似」；纠偏午间巨鲸叙事<br>来源：<a href="https://x.com/lookonchain/status/2117246398664163663" target="_blank" rel="noopener">@lookonchain</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d1zh">复制</button></div><div class="txt" id="d1zh">🔁 剧情反转（重要纠偏）：
+
+午间买约 27,553 $ETH（≈ $6,297 万）的 0x9eca，被 ZachXBT 指向——疑似对某欧盟实体造成 $1.06 亿+ 损失的攻击者钱包。
+
+大额买入 ≠ 聪明钱。先对标签，再谈方向。
+
+h/t @lookonchain / ZachXBT
+NFA/DYOR #ETH</div><div class="cnt" id="d1zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d1en">复制</button></div><div class="txt" id="d1en">🔁 Plot twist (important correction):
+
+The 0x9eca wallet that bought ~27,553 $ETH (~$62.97M) is flagged by ZachXBT as a suspected attacker tied to a $106M+ loss at an EU entity.
+
+Size ≠ smart money. Label the wallet before you label the tape.
+
+h/t @lookonchain / ZachXBT
+NFA/DYOR #ETH</div><div class="cnt" id="d1en-n"></div></div></div></div><div class="draft" id="d2"><div class="dh"><span class="time">11:00</span><span class="tag acc">行情快照</span><span class="dt">HYPE −4% · 量升仓降</span><span class="flag">⚠ 发前更新价格：HYPE / BTC / ETH 现价与 HYPE 费率；HL OI/vol</span></div><div class="meta">📷 截图：CoinGecko + HL 交易页<br>发前更新价格与费率<br>来源：<a href="https://www.coingecko.com/en/coins/hyperliquid" target="_blank" rel="noopener">CoinGecko</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d2zh">复制</button></div><div class="txt" id="d2zh">🖥️ 周二盘面（发前请更新）：
+
+$HYPE ≈ $83.8（24h −4.2%）｜BTC ≈ $76.7K｜ETH ≈ $2.25K｜SOL ≈ $91.6
+HL 主盘持仓 ≈ $104 亿（午间约 $108 亿），24h 成交 ≈ $60 亿（午间约 $27 亿）→ 量升仓降
+HYPE 永续持仓 ≈ $18.9 亿，资金费率约 +0.0013%/h
+xyz 持仓 ≈ $42 亿，24h 成交 ≈ $50 亿
+
+更像 risk-off 换手，不是单一产品利空。
+
+数据：CoinGecko + HL API
+NFA #Hyperliquid $HYPE</div><div class="cnt" id="d2zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d2en">复制</button></div><div class="txt" id="d2en">🖥️ Tuesday tape (refresh before post):
+
+$HYPE ≈ $83.8 (−4.2% 24h)｜BTC ≈ $76.7K｜ETH ≈ $2.25K｜SOL ≈ $91.6
+HL main OI ≈ $10.4B (noon ~$10.8B), 24h vol ≈ $6.0B (noon ~$2.7B) → vol up, OI down
+HYPE perps OI ≈ $1.89B, funding ~+0.0013%/h
+xyz OI ≈ $4.2B, 24h vol ≈ $5.0B
+
+Looks like risk-off turnover, not a single-product shock.
+
+Sources: CoinGecko + HL API
+NFA #Hyperliquid $HYPE</div><div class="cnt" id="d2en-n"></div></div></div></div><div class="draft" id="d3"><div class="dh"><span class="time">12:30</span><span class="tag acc">安全旁注</span><span class="dt">Mercado + Tether 冻结</span></div><div class="meta">📷 截图：Wu 帖截图（可选）<br>标明 Wu / Hypernative；写区间数字<br>来源：<a href="https://x.com/WuBlockchain/status/2117255057280204824" target="_blank" rel="noopener">@WuBlockchain Mercado</a> · <a href="https://x.com/WuBlockchain/status/2117274022081970253" target="_blank" rel="noopener">Tether 冻结</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d3zh">复制</button></div><div class="txt" id="d3zh">🚨 巴西 Mercado Bitcoin：Hypernative 等口径嫌疑逾 $4,000 万；后续约 $3,800 万涉案、约 $1,100 万被拦。
+Tether 已冻结超过 450 万 USDT。
+
+和币安余波叠在一起读：托管/交易所安全叙事还没松开。稳定币冻结仍是追赃第一反应。
+
+via @WuBlockchain
+NFA/DYOR #security</div><div class="cnt" id="d3zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d3en">复制</button></div><div class="txt" id="d3en">🚨 Mercado Bitcoin (Brazil): Hypernative-scale reads &gt;$40M suspected; later ~$38M involved / ~$11M blocked.
+Tether froze &gt;4.5M USDT.
+
+Read next to the Binance aftermath: custody risk narrative isn’t done. Stablecoin freezes remain the first recovery reflex.
+
+via @WuBlockchain
+NFA/DYOR #security</div><div class="cnt" id="d3en-n"></div></div></div></div><div class="draft" id="d4"><div class="dh"><span class="time">14:30</span><span class="tag acc">数据图表</span><span class="dt">币安流出降温 + ETF</span><span class="flag">⚠ 发前更新价格：DefiLlama 币安净流出是否续降</span></div><div class="meta">📷 截图：DefiLlama 流出图 + ETF 1D 图<br>可配 DefiLlama / Lookonchain 图<br>来源：<a href="https://x.com/WuBlockchain/status/2117286587730170046" target="_blank" rel="noopener">@WuBlockchain 流出</a> · <a href="https://x.com/lookonchain/status/2117250038053360029" target="_blank" rel="noopener">@lookonchain ETF</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d4zh">复制</button></div><div class="txt" id="d4zh">📊 两条资金面（发前刷新）：
+
+• 币安：DefiLlama 24h 净流出约 $32.9 亿（自约 $70 亿高峰回落）
+• 美现货 ETF 11/02：BTC −7,919（≈ −$6.14 亿）；ETH −44,837（≈ −$1.02 亿）
+• BlackRock 相关 ETH 近月累计流出约 58 万枚（≈ $13.2 亿）
+
+流出降温 ≠ 风险结束；ETF 赎回和现货 risk-off 同向。
+
+NFA/DYOR #Bitcoin #ETH</div><div class="cnt" id="d4zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d4en">复制</button></div><div class="txt" id="d4en">📊 Two flow tapes (refresh before post):
+
+• Binance: DefiLlama 24h net outflows ~$3.29B (down from ~$7B peak)
+• US spot ETFs 11/02: BTC −7,919 (~−$614M); ETH −44,837 (~−$102M)
+• BlackRock-linked ETH ~580k coins out over the past month (~$1.32B)
+
+Cooling ≠ clear; ETF redemptions rhyme with spot risk-off.
+
+NFA/DYOR #Bitcoin #ETH</div><div class="cnt" id="d4en-n"></div></div></div></div><div class="draft" id="d5"><div class="dh"><span class="time">16:30</span><span class="tag acc">产品/HIP-3</span><span class="dt">Entropy AAPL × RedStone</span></div><div class="meta">📷 截图：Briefing 要点 / HL AAPL 页（可选）<br>勿写成苹果官方；讲 ticker 竞价<br>来源：<a href="https://cryptobriefing.com/redstone-apple-perp-hyperliquid-entropy/" target="_blank" rel="noopener">Crypto Briefing</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d5zh">复制</button></div><div class="txt" id="d5zh">🍎 HIP-3 上又多了一家 AAPL 永续：Entropy
+
+• 最高约 25x，预言机 RedStone
+• 为 ticker 支付约 575.23 $HYPE（≈ $5.1 万）
+• 对照：trade.xyz 既有 AAPL 当时约 $7,500 万 OI / 约 $900 万 24h vol（20x）
+
+同一股票、多部署方——HIP-3 开始像「永续应用商店」。不是苹果官方上链。
+
+via Crypto Briefing
+NFA/DYOR #Hyperliquid #HIP3</div><div class="cnt" id="d5zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d5en">复制</button></div><div class="txt" id="d5en">🍎 Another AAPL perp on HIP-3: Entropy
+
+• Up to ~25x, RedStone oracle
+• Paid ~575.23 $HYPE (~$51k) for the ticker
+• vs trade.xyz AAPL then ~$75M OI / ~$9M 24h vol at 20x
+
+Same equity, multiple deployers — HIP-3 is starting to look like an app store for perps. Not “Apple onchain.”
+
+via Crypto Briefing
+NFA/DYOR #Hyperliquid #HIP3</div><div class="cnt" id="d5en-n"></div></div></div></div><div class="draft" id="d6"><div class="dh"><span class="time">18:30</span><span class="tag acc">大V引用</span><span class="dt">Ai姨 × 黑客操作</span></div><div class="meta">建议 QT；轻松口吻<br>来源：<a href="https://x.com/ai_9684xtpa/status/2117247047871143945" target="_blank" rel="noopener">@ai_9684xtpa</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d6zh">复制</button></div><div class="txt" id="d6zh">💬 Ai姨又在吐槽黑客「操作笨拙」——结合今天 0x9eca 被打上 Zach 标签，更像提醒：
+
+链上会搬砖 ≠ 会藏踪迹。大额买入被盯上，只是时间问题。
+
+我们普通人不需要「更聪明」，只需要：不对来路不明的巨鲸叙事 FOMO。
+
+NFA/DYOR #crypto</div><div class="cnt" id="d6zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d6en">复制</button></div><div class="txt" id="d6en">💬 Ai姨 roasting clumsy hacker ops again — and today’s 0x9eca Zach tag rhymes:
+
+Being able to move size ≠ being able to stay unlabeled. Big buys get watched; it’s usually just a matter of time.
+
+Retail edge isn’t “smarter” — it’s not FOMO-ing unlabeled whale narratives.
+
+NFA/DYOR #crypto</div><div class="cnt" id="d6en-n"></div></div></div></div><div class="draft" id="d7"><div class="dh"><span class="time">20:00</span><span class="tag acc">短分析</span><span class="dt">量升仓降怎么读</span><span class="flag">⚠ 发前更新价格：主盘 OI / 24h vol</span></div><div class="meta">📷 截图：HL OI vs vol（可选）<br>结构课；配 HL 数据<br>来源：<a href="https://app.hyperliquid.xyz/trade" target="_blank" rel="noopener">交易页</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d7zh">复制</button></div><div class="txt" id="d7zh">📌 怎么读「成交翻倍、持仓略降」？
+
+• 量升仓降 ≈ 换手/去杠杆，不是单边新开仓堆积
+• HYPE 费率仍约 +0.0013%/h —— 拥挤度不高
+• 叠加 ETF 流出 + 安全事件余波 → 更像 risk-off，而非 HL 独有利空
+
+先看 OI 结构，再编故事。
+
+NFA/DYOR #Hyperliquid</div><div class="cnt" id="d7zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d7en">复制</button></div><div class="txt" id="d7en">📌 How to read “vol doubled, OI slipped”:
+
+• Vol up + OI down ≈ turnover / deleveraging, not fresh one-sided buildup
+• HYPE funding still ~+0.0013%/h — not crowded
+• ETF outflows + security headlines → risk-off tape more than an HL-only shock
+
+Read OI structure before the story.
+
+NFA/DYOR #Hyperliquid</div><div class="cnt" id="d7en-n"></div></div></div></div><div class="draft" id="d8"><div class="dh"><span class="time">21:30</span><span class="tag acc">长推开头</span><span class="dt">周二三条线</span><span class="flag">⚠ 发前更新价格：HYPE 现价；0x9eca 是否有新冻结</span></div><div class="meta">可接线程：GitBook / Zach / 盘面<br>来源：<a href="https://x.com/tradexyz/status/2117270210449183031" target="_blank" rel="noopener">@tradexyz</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d8zh">复制</button></div><div class="txt" id="d8zh">🧵 周二三条线（发前刷新）：
+
+1/ trade.xyz GitBook 未授权 → 已恢复，资金未动（勿点文档链）
+2/ 午间 ETH「巨鲸」0x9eca → ZachXBT：$1.06 亿+ 疑似攻击者
+3/ 盘面 risk-off：HYPE ≈ $83.8（−4%），HL 量升仓降
+
+先核验标签与官方口径，再谈多空。
+
+NFA/DYOR #Hyperliquid</div><div class="cnt" id="d8zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d8en">复制</button></div><div class="txt" id="d8en">🧵 Tuesday’s three threads (refresh first):
+
+1/ trade.xyz GitBook unauthorized → restored; funds untouched (don’t click doc links)
+2/ Noon ETH “whale” 0x9eca → ZachXBT: suspected $106M+ attacker
+3/ Risk-off tape: $HYPE ≈ $83.8 (−4%), HL vol up / OI down
+
+Verify labels + official wording before the long/short take.
+
+NFA/DYOR #Hyperliquid</div><div class="cnt" id="d8en-n"></div></div></div></div><div class="draft" id="d9"><div class="dh"><span class="time">22:30</span><span class="tag acc">轻互动/提问</span><span class="dt">你更在意哪条</span></div><div class="meta">配投票更好<br>来源：<a href="https://x.com/lookonchain/status/2117246398664163663" target="_blank" rel="noopener">@lookonchain</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d9zh">复制</button></div><div class="txt" id="d9zh">🤔 周二三条线，你更在意哪条？
+
+A GitBook 投毒——HIP-3 文档/前端攻击面该怎么防？
+B 0x9eca 被打上黑客标签——还会信「巨鲸扫货」吗？
+C HYPE −4% + 量升仓降——换手结束还是继续 risk-off？
+D 先看 BTC 77K 墙守不守得住
+
+评论区选一个并说为什么
+NFA/DYOR #Hyperliquid</div><div class="cnt" id="d9zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d9en">复制</button></div><div class="txt" id="d9en">🤔 Which Tuesday thread matters most?
+
+A GitBook poison — how should HIP-3 harden docs/frontends?
+B 0x9eca labeled attacker — still trust “whale bid” headlines?
+C $HYPE −4% + vol-up/OI-down — turnover done or more risk-off?
+D Whether the BTC 77K wall holds
+
+Pick one + why
+NFA/DYOR #Hyperliquid</div><div class="cnt" id="d9en-n"></div></div></div></div></section><section id="replies"><h2>互动评论草稿</h2><p class="sub">打开原帖 → 复制 → 回复</p><div class="draft"><div class="dh"><span class="dt">① <a href="https://x.com/tradexyz/status/2117270210449183031" target="_blank" rel="noopener">@tradexyz GitBook</a></span></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="r0zh">复制</button></div><div class="txt" id="r0zh">及时披露 + 明确「勿点链接」很关键 👏 后续会公开攻击面（GitBook 权限 / 镜像域名）和用户自查清单吗？资金未动是最重要的一句。</div><div class="cnt" id="r0zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="r0en">复制</button></div><div class="txt" id="r0en">Fast disclosure + a clear “don’t click the links” warning matters 👏 Will you publish the attack surface (GitBook perms / mirror domains) and a user checklist? “Funds untouched” is the line that counts.</div><div class="cnt" id="r0en-n"></div></div></div></div><div class="draft"><div class="dh"><span class="dt">② <a href="https://x.com/lookonchain/status/2117246398664163663" target="_blank" rel="noopener">@lookonchain Zach 线</a></span></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="r1zh">复制</button></div><div class="txt" id="r1zh">这是今天最重要的纠偏：大单先对攻击者标签 🔍 0x9eca 后续更可能继续换稳定币/跨链，还是已经有冻结动作？</div><div class="cnt" id="r1zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="r1en">复制</button></div><div class="txt" id="r1en">Best correction of the day: label the wallet before you label the bid 🔍 For 0x9eca next — more stablecoin/bridge hops, or freezes already in motion?</div><div class="cnt" id="r1en-n"></div></div></div></div><div class="draft"><div class="dh"><span class="dt">③ <a href="https://x.com/DefiIgnas/status/2117266955237241246" target="_blank" rel="noopener">@DefiIgnas 律师叙事</a></span></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="r2zh">复制</button></div><div class="txt" id="r2zh">「律师在管加密」这句在安全事件周特别刺耳 📌 你觉得下一阶段更会约束 CEX 托管，还是 onchain 部署方（HIP-3 这类）的披露义务？</div><div class="cnt" id="r2zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="r2en">复制</button></div><div class="txt" id="r2en">“Crypto run by lawyers” hits different in a security-heavy week 📌 Next constraint layer: CEX custody rules, or disclosure duties for onchain deployers (HIP-3-style)?</div><div class="cnt" id="r2en-n"></div></div></div></div><div class="draft"><div class="dh"><span class="dt">④ <a href="https://x.com/coinglass_com/status/2117340564433801594" target="_blank" rel="noopener">@coinglass_com 77K</a></span></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="r3zh">复制</button></div><div class="txt" id="r3zh">77K + 77000 墙是短线情绪锚 📊 这堵约 $1,219 万的买单墙如果撤了，你更看哪个下一支撑？</div><div class="cnt" id="r3zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="r3en">复制</button></div><div class="txt" id="r3en">77K + the 77000 wall is the short-term vibe anchor 📊 If that ~$12.19M bid pulls, which level do you mark next?</div><div class="cnt" id="r3en-n"></div></div></div></div></section><section id="follow"><h2>建议追踪的账号</h2><p class="sub">“近期活跃”按本次检索到的发帖时间判断</p><table class="tbl"><thead><tr><th>X 账号</th><th>类型</th><th>为什么值得追踪</th><th>活跃情况</th></tr></thead><tbody><tr><td><a href="https://x.com/HyperliquidX" target="_blank" rel="noopener">@HyperliquidX</a></td><td>官方</td><td>产品上线、生态一手公告</td><td class="act n">本次窗口 0 条相关原创</td></tr><tr><td><a href="https://x.com/chameleon_jeff" target="_blank" rel="noopener">@chameleon_jeff</a></td><td>创始人 Jeff</td><td>HIP-3 / 基础设施一手思路</td><td class="act n">本次窗口未见相关原创</td></tr><tr><td><a href="https://x.com/EmberCN" target="_blank" rel="noopener">@EmberCN</a></td><td>中文链上数据</td><td>巨鲸与异常资金路径</td><td class="act y">✓ Zach 线 / TokenInsight Q3</td></tr><tr><td><a href="https://x.com/ai_9684xtpa" target="_blank" rel="noopener">@ai_9684xtpa</a></td><td>中文链上数据</td><td>巨鲸仓位、黑客点评</td><td class="act y">✓ 黑客操作笨拙点评</td></tr><tr><td><a href="https://x.com/WuBlockchain" target="_blank" rel="noopener">@WuBlockchain</a></td><td>新闻</td><td>亚洲视角监管、交易所、宏观快讯</td><td class="act y">✓ Zach / Mercado / Tether / 流出降温 / Strategy</td></tr><tr><td><a href="https://x.com/tier10k" target="_blank" rel="noopener">@tier10k</a></td><td>新闻快讯</td><td>头条快讯源</td><td class="act n">本次窗口未见相关原创</td></tr><tr><td><a href="https://x.com/lookonchain" target="_blank" rel="noopener">@lookonchain</a></td><td>链上数据</td><td>鲸鱼、黑客资金、ETF</td><td class="act y">✓ ZachXBT 0x9eca / ETF 流出</td></tr><tr><td><a href="https://x.com/coinglass_com" target="_blank" rel="noopener">@coinglass_com</a></td><td>衍生品数据</td><td>清算热力图、订单墙</td><td class="act y">✓ BTC 77K / 77000 买单墙</td></tr><tr><td><a href="https://x.com/0xngmi" target="_blank" rel="noopener">@0xngmi</a></td><td>DefiLlama</td><td>托管流出与 DeFi 数据口径</td><td class="act n">本次窗口未见相关原创</td></tr><tr><td><a href="https://x.com/CryptoHayes" target="_blank" rel="noopener">@CryptoHayes</a></td><td>KOL</td><td>宏观与交易情绪</td><td class="act n">本次窗口未见相关原创</td></tr><tr><td><a href="https://x.com/cobie" target="_blank" rel="noopener">@cobie</a></td><td>KOL</td><td>老牌行业观察</td><td class="act n">本次窗口未见</td></tr><tr><td><a href="https://x.com/Pentosh1" target="_blank" rel="noopener">@Pentosh1</a></td><td>交易 KOL</td><td>中长线交易观点</td><td class="act n">本次窗口未见</td></tr><tr><td><a href="https://x.com/blknoiz06" target="_blank" rel="noopener">@blknoiz06</a></td><td>交易 KOL</td><td>情绪与盘面吐槽</td><td class="act y">✓ SanDisk / 200d EMA（偏外围）</td></tr><tr><td><a href="https://x.com/CryptoCred" target="_blank" rel="noopener">@CryptoCred</a></td><td>交易教育</td><td>技术分析与交易心理</td><td class="act n">本次窗口未见</td></tr><tr><td><a href="https://x.com/KoroushAK" target="_blank" rel="noopener">@KoroushAK</a></td><td>交易教育</td><td>订单流与心态</td><td class="act y">✓ 交易系统线程</td></tr><tr><td><a href="https://x.com/DefiIgnas" target="_blank" rel="noopener">@DefiIgnas</a></td><td>DeFi 研究</td><td>DeFi 估值与赛道</td><td class="act y">✓ lawyers / Armstrong 引用</td></tr><tr><td><a href="https://x.com/ASvanevik" target="_blank" rel="noopener">@ASvanevik</a></td><td>Nansen CEO</td><td>链上数据与 AI 工具</td><td class="act n">本次窗口未见相关原创</td></tr><tr><td><a href="https://x.com/tradexyz" target="_blank" rel="noopener">@tradexyz</a></td><td>HIP-3 部署方（补充）</td><td>xyz 产品与安全披露</td><td class="act y">✓ GitBook 未授权活动公告</td></tr></tbody></table><h2 style="margin-top:48px">YouTube 频道</h2><p class="sub">均已确认频道页存在</p><div class="yt"><div><b><a href="https://x.com/tradexyz/status/2117270210449183031" target="_blank" rel="noopener">@tradexyz GitBook 帖</a></b><br>文档事件一手口径</div><div><b><a href="https://cryptobriefing.com/tradexyz-gitbook-documentation-unauthorized-activity/" target="_blank" rel="noopener">Crypto Briefing · GitBook</a></b><br>资金未受影响核验</div><div><b><a href="https://x.com/lookonchain/status/2117246398664163663" target="_blank" rel="noopener">@lookonchain Zach 线</a></b><br>0x9eca 黑客嫌疑</div><div><b><a href="https://cryptobriefing.com/redstone-apple-perp-hyperliquid-entropy/" target="_blank" rel="noopener">Crypto Briefing · Entropy AAPL</a></b><br>HIP-3 AAPL 竞品</div><div><b><a href="https://x.com/WuBlockchain/status/2117286587730170046" target="_blank" rel="noopener">@WuBlockchain 流出降温</a></b><br>币安净流出回落</div><div><b><a href="https://www.youtube.com/@Bankless" target="_blank" rel="noopener">Bankless YouTube</a></b><br>每周 ROLLUP 复盘</div></div><div class="note">过去 24 小时未确认到必须写入的 Hyperliquid 专属长视频首发；本期优先读 trade.xyz GitBook 官方帖、ZachXBT/Lookonchain 0x9eca 线、Crypto Briefing Entropy AAPL 与 CoinGlass 盘面墙。</div></section><footer>所有草稿均未发布，需本人确认后再发。数据为北京时间 11/03 约 07:34 快照，价格与链上标签类内容发前请更新。内容仅为信息整理与分析，不构成投资建议。NFA / DYOR。</footer></main><script>
+function fallbackCopy(t){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.position='fixed';a.style.top='-1000px';document.body.appendChild(a);a.select();a.setSelectionRange(0,t.length);var ok=false;try{ok=document.execCommand('copy')}catch(e){}document.body.removeChild(a);return ok}
+function done(b,ok){var o=b.dataset.label||b.textContent;b.dataset.label=o;b.textContent=ok?'已复制 ✓':'复制失败';b.classList.toggle('ok',ok);clearTimeout(b._t);b._t=setTimeout(function(){b.textContent=o;b.classList.remove('ok')},1600)}
+document.addEventListener('click',function(e){var b=e.target.closest('.cp');if(!b)return;var t=document.getElementById(b.dataset.for).textContent;
+ if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(function(){done(b,true)},function(){done(b,fallbackCopy(t))})}else{done(b,fallbackCopy(t))}});
+// X 加权字数：CJK 计 2，其余计 1（近似）
+document.querySelectorAll('.txt').forEach(function(el){var s=el.textContent,n=0;for(var ch of s){n+=/[\u1100-\uFFFF]/.test(ch)&&!/[\u2000-\u206F\u2190-\u2BFF]/.test(ch)?2:1}var c=document.getElementById(el.id+'-n');if(c)c.textContent='约 '+n+' / 280 字符（X 加权估算，emoji 与链接以输入框为准）'});
+// 导航高亮
+var links=[].slice.call(document.querySelectorAll('.nav a'));var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+en.target.id)})}})},{rootMargin:'-20% 0px -70% 0px'});secs.forEach(function(s){s&&io.observe(s)});
+</script></body></html>
