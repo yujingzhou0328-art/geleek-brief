@@ -1,0 +1,309 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>币圈早报 · 2026-11-06（周五）</title><style>
+:root{
+ --fg:#2b3442;--mut:#525d6b;--line:rgba(255,255,255,.55);--hair:rgba(43,52,66,.10);
+ --acc:#44607b;--acc-bg:rgba(79,109,138,.12);--sage:#4d6656;--warn:#83583a;--warn-bg:rgba(184,140,110,.16);
+ --glass:rgba(255,255,255,.46);--glass-strong:rgba(255,255,255,.62);--glass-fallback:rgba(250,249,246,.94);
+ --shadow:0 8px 32px rgba(60,72,92,.08);--blur:blur(20px) saturate(120%);
+ --bg:#eef0ee;--b1:#b4c6d8;--b2:#bccfba;--b3:#e0c0c2;--b4:#ecdcc4;--side:256px;--r:18px
+}
+@media (prefers-color-scheme:dark){:root{
+ --fg:#dfe4ea;--mut:#9aa5b2;--line:rgba(255,255,255,.10);--hair:rgba(255,255,255,.08);
+ --acc:#9db4cb;--acc-bg:rgba(157,180,203,.14);--sage:#a3b8a8;--warn:#d6b08f;--warn-bg:rgba(214,176,143,.13);
+ --glass:rgba(30,34,42,.48);--glass-strong:rgba(36,40,49,.62);--glass-fallback:rgba(28,31,38,.95);
+ --shadow:0 8px 32px rgba(0,0,0,.28);
+ --bg:#14171c;--b1:#33445a;--b2:#33443a;--b3:#4a363c;--b4:#443d31}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--fg);font:15px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+ background:
+  radial-gradient(closest-side,var(--b1),transparent) -8vw -12vh/62vw 62vw no-repeat,
+  radial-gradient(closest-side,var(--b2),transparent) 62vw 4vh/48vw 48vw no-repeat,
+  radial-gradient(closest-side,var(--b3),transparent) 18vw 58vh/52vw 52vw no-repeat,
+  radial-gradient(closest-side,var(--b4),transparent) 70vw 62vh/50vw 50vw no-repeat,var(--bg);
+ filter:blur(40px)}
+a{color:var(--acc);text-decoration:none;text-underline-offset:3px}a:hover{text-decoration:underline}
+.glass,.side,.card,.stats,.draft,.sched,.tbl,.kolwrap,.view,.yt div,.note{background:var(--glass-fallback)}
+@supports ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){
+ .side,.card,.stats,.draft,.sched,.tbl,.kolwrap,.view,.yt div,.note{background:var(--glass);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur)}
+}
+.side,.card,.stats,.draft,.sched,.tbl,.kolwrap,.view,.yt div{border:1px solid var(--line);box-shadow:var(--shadow)}
+.side{position:fixed;top:16px;left:16px;bottom:16px;width:calc(var(--side) - 32px);padding:32px 22px;border-radius:22px;overflow-y:auto;z-index:10}
+.brand{font-weight:700;font-size:18px;letter-spacing:-.01em}
+.date{color:var(--mut);font-size:13px;margin:4px 0 28px}
+.nav{list-style:none;margin:0;padding:0}
+.nav a{display:block;padding:8px 12px;margin:2px -6px;border-radius:12px;color:var(--mut);font-size:14px;transition:background .2s,color .2s}
+.nav a:hover{color:var(--fg);background:var(--acc-bg);text-decoration:none}
+.nav a.on{color:var(--fg);background:var(--glass-strong);border:1px solid var(--line);font-weight:600;box-shadow:0 2px 10px rgba(60,72,92,.06)}
+.side .foot{margin-top:28px;font-size:12px;color:var(--mut);line-height:1.6}
+main{margin-left:var(--side);padding:48px 56px 120px 40px;max-width:calc(var(--side) + 1120px)}
+section{padding:4px 0 44px;margin-bottom:28px}
+h1{font-size:30px;line-height:1.25;margin:0 0 8px;letter-spacing:-.02em}
+h2{font-size:21px;margin:0 0 4px;letter-spacing:-.01em}
+.sub{color:var(--mut);font-size:13px;margin:0 0 22px}
+.lead{font-size:13px;color:var(--mut);margin-bottom:32px}
+.keys{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.keys li{padding:16px 20px 16px 58px;position:relative;font-size:15.5px;border-radius:var(--r);border:1px solid var(--line);box-shadow:var(--shadow);background:var(--glass-fallback)}
+@supports ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){.keys li{background:var(--glass);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur)}}
+.keys li b.n{position:absolute;left:20px;top:16px;color:var(--sage);font-variant-numeric:tabular-nums}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-radius:var(--r);overflow:hidden;margin:0 0 24px}
+.stat{padding:16px 20px;border-right:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.stat:nth-child(4n){border-right:0}.stat:nth-last-child(-n+4){border-bottom:0}
+.stat .k{font-size:12px;color:var(--mut)}.stat .v{font-size:22px;font-weight:650;font-variant-numeric:tabular-nums;letter-spacing:-.01em}.stat .d{font-size:12px;color:var(--mut)}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card{border-radius:var(--r);padding:20px 22px}
+.card h3{font-size:16px;margin:0 0 10px;line-height:1.45}
+.card ul{margin:0;padding-left:18px}.card li{margin:4px 0}.card li::marker{color:var(--sage)}
+.card .src{margin-top:12px;padding-top:10px;border-top:1px solid var(--hair);font-size:12.5px;color:var(--mut)}
+.note{border:1px solid var(--line);border-left:3px solid var(--warn);padding:12px 16px;border-radius:12px;font-size:13.5px;margin-top:16px}
+.kolwrap{border-radius:var(--r);padding:4px 22px}
+.kol{display:grid;grid-template-columns:200px 1fr;gap:6px 24px;padding:16px 0;border-top:1px solid var(--hair)}
+.kol:first-child{border-top:0}.kol .who{font-weight:600}.kol .who small{display:block;font-weight:400;color:var(--mut);font-size:12.5px}
+.view{border-radius:var(--r);padding:24px 26px}
+.view h2,.view .sub{margin-left:0}
+.view p{margin:0 0 14px;max-width:860px}
+.disc{display:inline-block;margin-top:4px;font-weight:600;color:var(--warn);background:var(--warn-bg);padding:4px 12px;border-radius:99px;font-size:13.5px}
+.sched,.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:14px;border-radius:var(--r);overflow:hidden}
+.sched{margin-bottom:28px}
+.sched th,.sched td,.tbl th,.tbl td{text-align:left;padding:10px 16px;border-bottom:1px solid var(--hair);vertical-align:top}
+.sched tr:last-child td,.tbl tr:last-child td{border-bottom:0}
+.sched th,.tbl th{font-size:12px;color:var(--mut);font-weight:500;background:rgba(255,255,255,.18)}
+.sched td.t{font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap}
+.draft{border-radius:20px;margin-bottom:22px;overflow:hidden}
+.dh{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:14px 22px;border-bottom:1px solid var(--hair);background:rgba(255,255,255,.14)}
+.time{font-weight:700;font-size:17px;font-variant-numeric:tabular-nums}
+.tag{font-size:12px;padding:2px 10px;border-radius:99px;border:1px solid var(--hair);color:var(--mut)}
+.tag.acc{color:var(--acc);border-color:transparent;background:var(--acc-bg)}
+.dt{font-weight:600}
+.flag{font-size:12.5px;padding:3px 10px;border-radius:99px;color:var(--warn);background:var(--warn-bg)}
+.meta{padding:10px 22px;font-size:13px;color:var(--mut);border-bottom:1px solid var(--hair)}
+.pair{display:grid;grid-template-columns:1fr 1fr}
+.pane{padding:16px 22px 18px;display:flex;flex-direction:column;min-width:0}
+.pane+.pane{border-left:1px solid var(--hair)}
+.ph{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.lang{font-size:12px;color:var(--mut);letter-spacing:.06em}
+.txt{white-space:pre-wrap;word-break:break-word;font-size:14.5px;line-height:1.75;flex:1}
+.cp{font:inherit;font-size:13px;cursor:pointer;border:1px solid var(--line);background:var(--glass-strong);color:var(--fg);padding:5px 16px;border-radius:99px;min-width:76px;transition:.2s;box-shadow:0 1px 6px rgba(60,72,92,.06)}
+.cp:hover{color:var(--acc);border-color:var(--acc)}
+.cp.ok{background:var(--sage);border-color:var(--sage);color:#fff}
+.cnt{font-size:11.5px;color:var(--mut);margin-top:8px}
+.act{white-space:nowrap;font-size:12.5px}.act.y{color:var(--sage);font-weight:600}.act.n{color:var(--mut)}
+.yt{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:8px}
+.yt div{padding:14px 18px;border-radius:14px}
+footer{color:var(--mut);font-size:12.5px;margin-top:24px}
+@media (max-width:1100px){main{padding:40px 32px 100px 32px}.cards{grid-template-columns:1fr}}
+@media (max-width:820px){
+ html{scroll-padding-top:72px}.flag{white-space:nowrap}
+ .side{position:sticky;top:8px;left:auto;bottom:auto;width:auto;height:auto;margin:8px;padding:8px 14px;border-radius:16px;display:flex;align-items:center;gap:14px;overflow-x:auto;white-space:nowrap}
+ .date,.side .foot{display:none}.brand{font-size:15px}
+ .nav{display:flex;gap:4px}.nav a{margin:0;padding:6px 10px;font-size:13px}
+ main{margin-left:0;padding:24px 14px 80px}
+ .pair{grid-template-columns:1fr}.pane+.pane{border-left:0;border-top:1px solid var(--hair)}
+ .kol{grid-template-columns:1fr}.yt{grid-template-columns:1fr}
+ .stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat:nth-child(n){border-right:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+ .sched,.tbl{display:block;overflow-x:auto}
+ h1{font-size:24px}
+}
+</style></head><body><aside class="side"><div class="brand">geleek 早报</div><div class="date">2026-11-06 · 周五</div><!--datenav--><style>
+.dn{margin:-14px 0 26px;padding:12px 12px 10px;border-radius:14px;border:1px solid var(--line);background:var(--glass-strong);box-shadow:0 2px 10px rgba(60,72,92,.06);font-size:12.5px}
+.dn .dn-k{color:var(--mut);font-size:11.5px;letter-spacing:.04em;display:flex;justify-content:space-between;align-items:center}
+.dn .dn-cur{font-weight:650;font-size:14px;color:var(--fg);margin:2px 0 8px;font-variant-numeric:tabular-nums;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.dn .dn-badge{font-size:11px;font-weight:500;padding:1px 8px;border-radius:99px;color:var(--sage);background:rgba(77,102,86,.12)}
+.dn .dn-badge:empty{display:none}
+.dn .dn-badge.old{color:var(--warn);background:var(--warn-bg)}
+.dn .dn-row{display:flex;gap:6px;align-items:center;margin-top:6px}
+.dn select{width:100%;font:inherit;font-size:12.5px;color:var(--fg);background:var(--glass);border:1px solid var(--hair);border-radius:10px;padding:5px 6px;cursor:pointer;font-variant-numeric:tabular-nums}
+.dn .dn-a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:4px;height:28px;border-radius:10px;border:1px solid var(--hair);background:var(--glass);color:var(--fg);font-size:12px;line-height:1}
+.dn .dn-a:hover{text-decoration:none;color:var(--acc);border-color:var(--acc)}
+.dn .dn-a.off{opacity:.35;pointer-events:none}
+.dn .dn-all{display:inline-block;margin-top:8px;font-size:12px}
+@media (max-width:820px){.dn{margin:0;padding:4px 8px;display:flex;align-items:center;gap:8px;flex:none}.dn .dn-k,.dn .dn-all,.dn .dn-cur{display:none}.dn select{width:150px}.dn .dn-row{margin:0}.dn .dn-a{flex:none;width:28px}.dn .dn-a span{display:none}}
+</style><div class="dn" id="dn" data-date="2026-11-06" data-root="../" data-pub="1793922084"><div class="dn-k"><span>正在查看</span><span title="快捷键：[ 前一天，] 后一天">⌨ [ ]</span></div><div class="dn-cur">2026-11-06 周五<span class="dn-badge">最新</span></div><select aria-label="选择日期"><option value="2026-11-06" selected>2026-11-06 周五</option></select><div class="dn-row"><a class="dn-a dn-prev off" aria-label="前一天" title="前一天">‹<span> 前一天</span></a><a class="dn-a dn-next off" aria-label="后一天" title="后一天"><span>后一天 </span>›</a></div><a class="dn-all" href="../archive/index.html">全部往期 →</a></div><script>
+(function(){var el=document.getElementById('dn');if(!el)return;var root=el.getAttribute('data-root')||'',cur=el.getAttribute('data-date')||'';
+function href(d){return root+'archive/'+d+'.html'}
+var sel=el.querySelector('select'),pv=el.querySelector('.dn-prev'),nx=el.querySelector('.dn-next'),bd=el.querySelector('.dn-badge');
+sel.addEventListener('change',function(){if(sel.value&&sel.value!==cur)location.href=href(sel.value)});
+fetch(root+'archive/dates.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(m){
+ var ds=(m.dates||m).slice().sort(function(a,b){return a.date<b.date?1:-1});if(!ds.length)return;
+ sel.innerHTML='';var found=false;
+ ds.forEach(function(d){var o=document.createElement('option');o.value=d.date;o.textContent=d.date+' '+(d.weekday||'')+(d.noon?' · 含午间快讯':'');if(d.summary)o.title=d.summary;if(d.date===cur){o.selected=true;found=true}sel.appendChild(o)});
+ if(!found&&cur){var o=document.createElement('option');o.value=cur;o.textContent=cur;o.selected=true;sel.insertBefore(o,sel.firstChild)}
+ var i=-1;ds.forEach(function(d,k){if(d.date===cur)i=k});
+ function set(a,d,lab){if(d){a.href=href(d.date);a.classList.remove('off');a.title=lab+'：'+d.date+(d.summary?'\n'+d.summary:'')}else{a.classList.add('off');a.removeAttribute('href')}}
+ set(pv,i>=0?ds[i+1]:null,'前一天');set(nx,i>0?ds[i-1]:null,'后一天');
+ if(bd){if(i===0){bd.textContent='最新';bd.classList.remove('old')}else if(i>0){bd.textContent='往期';bd.classList.add('old')}}
+}).catch(function(){});
+document.addEventListener('keydown',function(e){if(e.target.closest&&e.target.closest('input,textarea,select'))return;if(e.altKey||e.ctrlKey||e.metaKey)return;
+ if(e.key==='['&&pv.href)location.href=pv.href;if(e.key===']'&&nx.href)location.href=nx.href});
+})();
+</script><!--/datenav--><ul class="nav"><li><a href="#keys">今日要点</a></li><li><a href="#news">重点新闻和数据</a></li><li><a href="#kol">大V观点</a></li><li><a href="#view">我的观点</a></li><li><a href="#drafts">发帖草稿</a></li><li><a href="#replies">互动评论</a></li><li><a href="#follow">追踪账号</a></li></ul><div class="foot">覆盖北京时间 11/05 13:41 – 11/06 07:38（UTC+8）<br>接续 11/05 午间快讯后窗口<br>所有草稿均未发布</div></aside><main><section id="keys"><h1>币圈早报 · 2026-11-06（周五）</h1><div class="lead">周五早报。覆盖约 <b>11/05 13:41 – 11/06 07:38</b>（接续午间）。主线三条：① 隔夜 risk-off：<a href="https://www.coingecko.com/en/coins/bitcoin" target="_blank" rel="noopener">BTC</a> 约 <b>$75.9K（24h ≈ −5.7%）</b>，<a href="https://www.coingecko.com/en/coins/hyperliquid" target="_blank" rel="noopener">HYPE</a> 约 <b>$77.0（≈ −8.1%）</b>——相对午间 HYPE≈$83.6 / BTC≈$80.5K 明显回吐；② 结构侧：<a href="https://x.com/WuBlockchain/status/2118464261232230434" target="_blank" rel="noopener">Hyperliquid Strategies（PURR）</a> 子公司申请美区 FCM，意在服务 HIP-3* 许可盘永续；今日另有约 <b>18 万枚 HYPE</b> 团队分发节点 + Caproni 案 CFTC 反对意见截止；③ 链上：<a href="https://x.com/lookonchain/status/2118378830939451728" target="_blank" rel="noopener">Lookonchain</a> 记录赌徒连续 8 次清算合计约 <b>201 BTC（$1,560 万）</b>。午间已报内容（Farside 11/04 补齐约 +$74.6M、Trump Media / MARA 大额 BTC 转出）不重复当新料。行情快照：CoinGecko + Hyperliquid API + DefiLlama，约北京时间 11/06 07:38。</div><ul class="keys"><li><b class="n">01</b>隔夜回吐：BTC 约 $75.9K（−5.7%）、ETH 约 $2,233（−7.9%）、HYPE 约 $77.0（−8.1%）；Wu 引 CoinGlass 约 4 小时清算 ~$8.8 亿、24h ~$10.3 亿——选举后挤压的反向。</li><li><b class="n">02</b>美区路径并行推进但仍「待批准」：PURR 子公司申请 FCM（服务许可盘 HIP-3*）；Caproni 案 CFTC 反对意见今日截止；与 ICE×trade[XYZ] 仍是不同主体。</li><li><b class="n">03</b>供应日历：Discord/TechFlow 口径今日向核心贡献者分发约 18 万枚 HYPE（约合现价 ~$1,385 万）——远低于部分解锁日历上的「千万级」纸面数；另记 Elysium（Kinetiq）计划 11/09 主网。</li></ul></section><section id="news"><h2>重点新闻和数据</h2><p class="sub">Hyperliquid 优先 · 覆盖 11/05 午间后–11/06 晨间 · 每条附原始来源 · 勿把 FCM 申请写成已获批 / 勿把团队分发写成千万枚解锁砸盘</p><div class="stats"><div class="stat"><div class="k">HYPE</div><div class="v">$76.99</div><div class="d">24h −8.15% · <a href="https://www.coingecko.com/en/coins/hyperliquid" target="_blank" rel="noopener">CoinGecko</a></div></div><div class="stat"><div class="k">BTC</div><div class="v">$75,907</div><div class="d">24h −5.75%</div></div><div class="stat"><div class="k">ETH</div><div class="v">$2,233.33</div><div class="d">24h −7.91%</div></div><div class="stat"><div class="k">SOL</div><div class="v">$89.24</div><div class="d">24h −6.70%</div></div><div class="stat"><div class="k">HL 主盘持仓</div><div class="v">$100.4 亿</div><div class="d">24h 成交约 $93.0 亿 · <a href="https://app.hyperliquid.xyz/trade" target="_blank" rel="noopener">交易页</a></div></div><div class="stat"><div class="k">HIP-3 xyz 持仓</div><div class="v">$45.0 亿</div><div class="d">24h 成交约 $89.1 亿</div></div><div class="stat"><div class="k">HYPE 资金费率</div><div class="v">+0.0013%/h</div><div class="d">持仓约 $17.16 亿 · 24h 成交约 $8.51 亿</div></div><div class="stat"><div class="k">协议费用 近1日</div><div class="v">$751 万</div><div class="d">DefiLlama overview/fees · change_1d ≈ +45.7% · 7 天约 $4,363 万 · <a href="https://defillama.com/protocol/hyperliquid" target="_blank" rel="noopener">DefiLlama</a></div></div></div><div class="cards"><article class="card"><h3>① 盘面：选举后挤压回吐；HYPE 跌破 $80，清算抬头</h3><ul><li><a href="https://www.coingecko.com/en/coins/hyperliquid" target="_blank" rel="noopener">CoinGecko</a>（约北京 07:38）：HYPE ≈ <b>$76.99</b>（24h −8.15%），BTC ≈ $75,907（−5.75%），ETH ≈ $2,233.33（−7.91%），SOL ≈ $89.24（−6.70%）。对照 11/05 午间 HYPE ≈ $83.55 / BTC ≈ $80.5K——一夜回吐约 $6–7（HYPE）与约 $4.6K（BTC）。</li><li>Hyperliquid API：主盘持仓约 <b>$100.4 亿</b>，24h 成交约 <b>$93.0 亿</b>。HYPE mark ≈ $76.86，持仓约 $17.16 亿，资金费率约 <b>+0.0013%/h</b>（raw 0.0000125）。xyz 持仓约 $45.0 亿，24h 成交约 $89.1 亿——商品/HIP-3 侧成交仍高，但价格跟着大盘走。</li><li><a href="https://defillama.com/protocol/hyperliquid" target="_blank" rel="noopener">DefiLlama overview/fees</a>：协议近 1 日费用约 <b>$751 万</b>（total24h ≈ $7,506,654；change_1d ≈ +45.7%；7 日约 $4,363 万）。说明：summary/fees 接口图表仍停在 11/04（$492 万），本期改用 overview 口径。</li><li><a href="https://x.com/WuBlockchain/status/2118377202761015579" target="_blank" rel="noopener">@WuBlockchain</a>：美股与加密同跌，叙事侧指向民主党横扫国会后的 AI 监管担忧；盘中 Nasdaq ≈ −5.10%、S&P ≈ −3.43%、道指 ≈ −2.41%；引 CoinGlass：过去 4 小时清算约 <b>$8.80 亿</b>（多头约 $8.19 亿），24h 约 <b>$10.3 亿</b>、约 19.8 万名交易者。短线是回吐/清算，不是新的「趋势盖章」。</li></ul><div class="src">来源：<a href="https://www.coingecko.com/en/coins/hyperliquid" target="_blank" rel="noopener">CoinGecko</a> · Hyperliquid API（约北京 07:38）· <a href="https://defillama.com/protocol/hyperliquid" target="_blank" rel="noopener">DefiLlama</a> · <a href="https://x.com/WuBlockchain/status/2118377202761015579" target="_blank" rel="noopener">Wu 回吐</a></div></article><article class="card"><h3>② 美区结构：PURR 申请 FCM；Caproni 案 CFTC 意见今日截止</h3><ul><li><a href="https://x.com/WuBlockchain/status/2118464261232230434" target="_blank" rel="noopener">@WuBlockchain</a> / <a href="https://coinedition.com/hyperliquid-strategies-eyes-us-perpetual-futures-via-fcm-filing/" target="_blank" rel="noopener">CoinEdition</a>：Hyperliquid Strategies（NASDAQ: <b>PURR</b>）称子公司已申请注册为美区期货佣金商（FCM）；若获批，拟服务在 Hyperliquid 提议的 <b>HIP-3*</b> 许可盘上交易永续的美国客户。CEO David Schamis：把美区准入计划与公司 HYPE 持仓绑定。</li><li>财报旁注（截至 9/30 季度）：净利约 $6.206 亿（主要来自 HYPE 未实现收益约 $8.03 亿）；季内募资约 $9.11 亿，花费约 $7.85 亿买入约 910 万枚 HYPE；至 10/28 持仓约 <b>3,890 万枚</b>，均价约 $56.35。申请 ≠ 批准 ≠ 今天就能给美国人开仓。</li><li><a href="https://storage.courtlistener.com/recap/gov.uscourts.nysd.676387/gov.uscourts.nysd.676387.11.0.pdf" target="_blank" rel="noopener">Caproni 裁定（案号 1:26-cv-09608）</a> / <a href="https://protos.com/kalshi-coinbase-stock-perps-under-threat-ahead-of-cftc-deadline/" target="_blank" rel="noopener">Protos</a>：CFTC 对初步禁令动议的反对意见原定 <b>11/06</b> 提交，原告回复约 11/10。拒 TRO 但仍「很可能越权」的口径未变——今日看有没有按时交状，不预设结果。与 ICE×trade[XYZ]、PURR FCM 是三条平行线。</li></ul><div class="src">来源：<a href="https://x.com/WuBlockchain/status/2118464261232230434" target="_blank" rel="noopener">Wu PURR</a> · <a href="https://coinedition.com/hyperliquid-strategies-eyes-us-perpetual-futures-via-fcm-filing/" target="_blank" rel="noopener">CoinEdition</a> · <a href="https://storage.courtlistener.com/recap/gov.uscourts.nysd.676387/gov.uscourts.nysd.676387.11.0.pdf" target="_blank" rel="noopener">CourtListener 裁定</a></div></article><article class="card"><h3>③ 供应日历：今日约 18 万枚 HYPE 团队分发；Elysium 计划 11/09 主网</h3><ul><li><a href="https://www.techflowpost.com/en-US/newsletter/141744" target="_blank" rel="noopener">TechFlow（10/28）</a>：项目成员在 Discord 称 Hyperliquid Labs 于 10/28 解锁 18 万枚 HYPE，计划 <b>11/06</b> 分发给团队成员。<a href="https://cryptoticker.io/en/hyperliquid-team-unlock-180000-hype/" target="_blank" rel="noopener">CryptoTicker 梳理</a>：公开 vesting 日历上 11/06 纸面数字远大于 18 万——发帖务必写「实际承诺分发 18 万」，勿按千万级日历吓人。</li><li>按今早现价约 $77，18 万枚约合 <b>$1,385 万</b>，相对日成交（HYPE 永续约 $8.5 亿）体量不大；分发 ≠ 立刻市价砸盘，也可能质押/OTC/持有。</li><li><a href="https://kinetiq.xyz/blog/elysium-mainnet-launch" target="_blank" rel="noopener">Kinetiq · Elysium</a> / <a href="https://elysium.kinetiq.xyz/docs/what-is-elysium" target="_blank" rel="noopener">文档</a>：Elysium（Arbitrum Orbit L2，结算到 HyperEVM，Gas 为 HYPE）计划 <b>11/09</b> 主网；文档写明规格与时间表主网前仍可能调整；HyperCore 读写接口约在主网后四周的 ArbOS 升级。写「计划上线」，不要写成已经可交易。</li></ul><div class="src">来源：<a href="https://www.techflowpost.com/en-US/newsletter/141744" target="_blank" rel="noopener">TechFlow</a> · <a href="https://cryptoticker.io/en/hyperliquid-team-unlock-180000-hype/" target="_blank" rel="noopener">CryptoTicker</a> · <a href="https://kinetiq.xyz/blog/elysium-mainnet-launch" target="_blank" rel="noopener">Kinetiq</a></div></article><article class="card"><h3>④ 链上：连续清算 201 BTC；ETF 11/05 小流入 vs Farside 未出齐</h3><ul><li><a href="https://x.com/lookonchain/status/2118378830939451728" target="_blank" rel="noopener">@lookonchain</a>：一名交易者连续被清算 8 次，合计约 <b>201 BTC（$1,560 万）</b>；附 Hyperbot 地址页（HL / Aster 仓位视图）。这是杠杆尾部风险样本，不是「全市场方向信号」。</li><li><a href="https://x.com/lookonchain/status/2118337418931921267" target="_blank" rel="noopener">@lookonchain Nov5 Update</a>：BTC ETF 1D <b>+208 BTC（+$1,656 万）</b>、7D −14,117 BTC；ETH ETF 1D <b>+16,825 ETH（+$4,018 万）</b>、7D −177,044 ETH。</li><li><a href="https://farside.co.uk/btc/" target="_blank" rel="noopener">Farside BTC</a>：11/04 已齐——合计约 <b>+$74.6M</b>（IBIT −201.2 / FBTC +236.7 等，午间已纠正早报未出齐口径）；11/05 多数基金仍为 “-”，目前仅见 GBTC 约 −$49.9M、合计约 −$49.9M——发帖写「未出齐」。与 Lookonchain 11/05 小流入并列表态。</li></ul><div class="src">来源：<a href="https://x.com/lookonchain/status/2118378830939451728" target="_blank" rel="noopener">Lookonchain 清算</a> · <a href="https://x.com/lookonchain/status/2118337418931921267" target="_blank" rel="noopener">Lookonchain ETF</a> · <a href="https://farside.co.uk/btc/" target="_blank" rel="noopener">Farside</a></div></article><article class="card"><h3>⑤ 宏观旁注：Hayes「稀释」续集；美股单日重挫图</h3><ul><li><a href="https://x.com/CryptoHayes/status/2118194461528449450" target="_blank" rel="noopener">@CryptoHayes</a>「D is for Dilution」：讨论 SpaceX / Anthropic / OpenAI 上市稀释对 AI 与流动性的压力（午间窗口已点过标题；隔夜他再发 <a href="https://x.com/CryptoHayes/status/2118480791831490981" target="_blank" rel="noopener">「TA 之神说 CRASH」</a>——情绪帖，不当价格预测）。</li><li><a href="https://x.com/coinglass_com/status/2118431202449453085" target="_blank" rel="noopener">@coinglass_com</a> 配图称「美股史上最大单日市值回撤」；另有 <a href="https://x.com/coinglass_com/status/2118463025304711523" target="_blank" rel="noopener">Buy the dip / $75k 防守</a>——图表情绪，发帖注明来源与时间。</li><li><a href="https://x.com/WuBlockchain/status/2118405197701771395" target="_blank" rel="noopener">@WuBlockchain</a>：Core Scientific 称将于 2026 Q4 前彻底退出自有比特币挖矿——矿企转算力/AI 旁注，非 HL 主线。</li></ul><div class="src">来源：<a href="https://x.com/CryptoHayes/status/2118194461528449450" target="_blank" rel="noopener">Hayes Dilution</a> · <a href="https://x.com/coinglass_com/status/2118431202449453085" target="_blank" rel="noopener">CoinGlass 图</a> · <a href="https://x.com/WuBlockchain/status/2118405197701771395" target="_blank" rel="noopener">Wu Core Scientific</a></div></article><article class="card"><h3>⑥ 官方静音：@HyperliquidX / Jeff / trade.xyz 本窗口无新帖</h3><ul><li>检索窗口（约 UTC 11/05 05:00 起）：@HyperliquidX、@chameleon_jeff、@tradexyz、@HyperliquidPC、@EmberCN 相关原创均为 0。</li><li>GitBook 迁出、ICE×XYZ 待批准等叙事仍以既有官方口径为准；今日增量在 PURR 申请与 Caproni 截止日，不在 HL 官方 X。</li></ul><div class="src">来源：X search_posts_all（from:HyperliquidX / chameleon_jeff / tradexyz / EmberCN；start_time 2026-11-05T05:00:00Z）</div></article></div><div class="note">窗口：11/05 13:41–11/06 07:38；午间已报（Farside 11/04 +$74.6M、Trump Media / MARA）不重复当新料。</div><div class="note">勿写成：PURR FCM 已获批；ICE×trade[XYZ] 已对美用户开放；18 万枚团队分发 = 日历上千万枚砸盘；Elysium 已可交易。</div><div class="note">HYPE 资金费率展示 +0.0013%/h（API raw ≈ 0.0000125）。</div><div class="note">费用：改用 DefiLlama overview/fees（~ $751 万）；summary/fees 图表仍停 11/04。</div><div class="note">ETF：Farside 11/05 未出齐 vs Lookonchain Nov5 +208 BTC——并列表态。</div><div class="note">@HyperliquidX / Jeff / tradexyz / EmberCN：本窗口 0 条相关原创。</div><div class="note">Caproni：今日是 CFTC 反对意见截止日；本报发稿时未确认已交状内容。</div></section><section id="kol"><h2>大V观点</h2><p class="sub">过去约 24 小时原帖</p><div class="kolwrap"><div class="kol"><div class="who"><a href="https://x.com/WuBlockchain/status/2118464261232230434" target="_blank" rel="noopener">Wu · PURR FCM</a><small>@WuBlockchain</small></div><div>PURR 子公司申请美区 FCM；季报净利约 $6.21 亿（多为未实现）。约 50 赞。</div></div><div class="kol"><div class="who"><a href="https://x.com/WuBlockchain/status/2118377202761015579" target="_blank" rel="noopener">Wu · 回吐清算</a><small>@WuBlockchain</small></div><div>美股+加密同跌；4h 清算约 $8.8 亿 / 24h 约 $10.3 亿。</div></div><div class="kol"><div class="who"><a href="https://x.com/lookonchain/status/2118378830939451728" target="_blank" rel="noopener">Lookonchain · 201 BTC</a><small>@lookonchain</small></div><div>连续 8 次清算合计 201 BTC（$1,560 万）。约 282 赞。</div></div><div class="kol"><div class="who"><a href="https://x.com/lookonchain/status/2118337418931921267" target="_blank" rel="noopener">Lookonchain · ETF Nov5</a><small>@lookonchain</small></div><div>BTC +208 / ETH +16,825（1D）；7D 仍大额净流出。</div></div><div class="kol"><div class="who"><a href="https://x.com/CryptoHayes/status/2118480791831490981" target="_blank" rel="noopener">Hayes · CRASH</a><small>@CryptoHayes</small></div><div>隔夜情绪帖：TA 口径 CRASH；不当预测引用。</div></div><div class="kol"><div class="who"><a href="https://x.com/coinglass_com/status/2118431202449453085" target="_blank" rel="noopener">CoinGlass · 美股回撤图</a><small>@coinglass_com</small></div><div>「史上最大单日市值回撤」配图。约 253 赞。</div></div></div></section><section id="view"><div class="view"><h2>我的观点和看法</h2><p class="sub">分析</p><p><b>先认回吐，再拆结构。</b>午间还在 $83.5 / $80.5K 附近，今早 HYPE≈$77、BTC≈$76K——选举后挤压的收益大部分吐回去了。清算数字（4h ~$8.8 亿）说明杠杆端先受伤；费率仍只约 +0.0013%/h，拥挤多头信号不强，更像 beta 回撤。</p><p><b>美区三条线不要揉成一条利好。</b>① PURR 申请 FCM（待批，服务 HIP-3* 许可盘）；② Caproni 案今天看 CFTC 状纸；③ ICE×trade[XYZ] 仍待监管批准。主体、产品、杠杆全不同。发帖模板：谁申请 → 服务谁 → 是否已批准，三句写清。</p><p><b>供应日历要写「实际分发」不是「纸面解锁」。</b>今日 18 万枚团队分发按现价约 $1,400 万量级，解释不了 −8% 的跌幅；真正压力更可能来自大盘 beta + 杠杆清算。顺带把 11/09 Elysium 主网计划放进日程，但标注「计划/规格可改」。优先跟踪：① Caproni 状纸是否按时；② Farside 11/05 是否补齐；③ 18 万枚是否出现可追踪的交易所流入；④ PURR 申请后续披露。以上为分析，不构成投资建议 / NFA DYOR。</p><span class="disc">以上为分析，不构成投资建议。</span></div></section><section id="drafts"><h2>发帖草稿 · 10 条</h2><p class="sub">周五早报排期 · 建议 08:15–22:30（北京时间）错峰 · 中英双语 · 中文每字按 2 字符计 · 所有草稿均未发布</p><table class="sched"><thead><tr><th>时间（北京）</th><th>类型</th><th>主题</th><th>提醒</th></tr></thead><tbody><tr><td class="t"><a href="#d0">08:15</a></td><td>突发快讯</td><td>隔夜回吐三点</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d1">09:30</a></td><td>行情快照</td><td>HYPE 跌破 $80 + 费用</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d2">11:00</a></td><td>监管快讯</td><td>PURR FCM 申请</td><td><span class=flag>需截图</span></td></tr><tr><td class="t"><a href="#d3">12:30</a></td><td>日历提醒</td><td>18万枚团队分发 + Caproni</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d4">14:30</a></td><td>链上故事</td><td>201 BTC 连续爆仓</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d5">16:00</a></td><td>数据图表</td><td>ETF 并列表态</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d6">18:00</a></td><td>产品/生态</td><td>Elysium 11/09 计划</td><td></td></tr><tr><td class="t"><a href="#d7">20:00</a></td><td>短分析</td><td>回吐 ≠ 结构叙事失效</td><td></td></tr><tr><td class="t"><a href="#d8">21:30</a></td><td>大V引用</td><td>Hayes 稀释 + CRASH 情绪</td><td></td></tr><tr><td class="t"><a href="#d9">22:30</a></td><td>轻互动/提问</td><td>你更在意哪条</td><td></td></tr></tbody></table><div class="draft" id="d0"><div class="dh"><span class="time">08:15</span><span class="tag acc">突发快讯</span><span class="dt">隔夜回吐三点</span><span class="flag">⚠ 发前更新价格：HYPE / BTC 现价</span></div><div class="meta">先交代相对午间的变化<br>来源：<a href="https://yujingzhou0328-art.github.io/geleek-brief/" target="_blank" rel="noopener">早报页</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d0zh">复制</button></div><div class="txt" id="d0zh">📬 周五早报（接续昨午）
+
+三点：
+1) 隔夜回吐：$BTC ≈ $75.9K（−5.7%），$HYPE ≈ $77（−8%）——相对午间 $83.6 / $80.5K
+2) 结构：PURR 子公司申请美区 FCM（HIP-3* 许可盘）；Caproni 案 CFTC 意见今日截止
+3) 供应：今日约 18 万枚 HYPE 团队分发（≠ 千万级纸面解锁）
+
+完整版👉 https://yujingzhou0328-art.github.io/geleek-brief/
+NFA/DYOR #Hyperliquid</div><div class="cnt" id="d0zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d0en">复制</button></div><div class="txt" id="d0en">📬 Friday brief (after yesterday’s noon)
+
+Three lines:
+1) Overnight giveback: $BTC ≈ $75.9K (−5.7%), $HYPE ≈ $77 (−8%) vs noon $83.6 / $80.5K
+2) Structure: PURR sub applied for US FCM (HIP-3* permissioned); Caproni CFTC brief due today
+3) Supply: ~180k HYPE team distribution today (≠ multi-million paper unlock)
+
+Full brief 👉 https://yujingzhou0328-art.github.io/geleek-brief/
+NFA/DYOR #Hyperliquid</div><div class="cnt" id="d0en-n"></div></div></div></div><div class="draft" id="d1"><div class="dh"><span class="time">09:30</span><span class="tag acc">行情快照</span><span class="dt">HYPE 跌破 $80 + 费用</span><span class="flag">⚠ 发前更新价格：HYPE/BTC/ETH 现价；HL OI/vol；费率</span></div><div class="meta">📷 截图：CoinGecko + HL 交易页<br>发前更新价格/OI/费率<br>来源：<a href="https://www.coingecko.com/en/coins/hyperliquid" target="_blank" rel="noopener">CoinGecko</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d1zh">复制</button></div><div class="txt" id="d1zh">🖥️ 周五晨间盘面（发前请更新）：
+
+$HYPE ≈ $77.0（24h −8.1%）｜BTC ≈ $75.9K（−5.7%）｜ETH ≈ $2.23K（−7.9%）｜SOL ≈ $89
+HL 主盘持仓 ≈ $100 亿，24h 成交 ≈ $93 亿
+HYPE 永续持仓 ≈ $17.2 亿，资金费率约 +0.0013%/h
+xyz 持仓 ≈ $45 亿，24h 成交 ≈ $89 亿
+协议费用近 1 日 ≈ $751 万（overview 口径）
+
+大盘回吐，HYPE 弹性更大；费率仍不拥挤。
+
+数据：CoinGecko + HL API + DefiLlama
+NFA #Hyperliquid $HYPE</div><div class="cnt" id="d1zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d1en">复制</button></div><div class="txt" id="d1en">🖥️ Friday AM tape (refresh before post):
+
+$HYPE ≈ $77.0 (−8.1% 24h)｜BTC ≈ $75.9K (−5.7%)｜ETH ≈ $2.23K (−7.9%)｜SOL ≈ $89
+HL main OI ≈ $10.0B, 24h vol ≈ $9.3B
+HYPE perps OI ≈ $1.72B, funding ~+0.0013%/h
+xyz OI ≈ $4.5B, 24h vol ≈ $8.9B
+Protocol fees ~$7.51M (overview)
+
+Beta giveback; $HYPE softer; funding still calm.
+
+Sources: CoinGecko + HL API + DefiLlama
+NFA #Hyperliquid $HYPE</div><div class="cnt" id="d1en-n"></div></div></div></div><div class="draft" id="d2"><div class="dh"><span class="time">11:00</span><span class="tag acc">监管快讯</span><span class="dt">PURR FCM 申请</span></div><div class="meta">📷 截图：Wu 截图 / CoinEdition 要点<br>必写：申请 ≠ 获批<br>来源：<a href="https://x.com/WuBlockchain/status/2118464261232230434" target="_blank" rel="noopener">Wu PURR</a> · <a href="https://coinedition.com/hyperliquid-strategies-eyes-us-perpetual-futures-via-fcm-filing/" target="_blank" rel="noopener">CoinEdition</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d2zh">复制</button></div><div class="txt" id="d2zh">🏛️ Hyperliquid Strategies（$PURR）动了一下美区棋：
+
+• 子公司申请注册为美区 FCM（期货佣金商）
+• 目标：若获批，服务 HIP-3* 许可盘上的美国永续客户
+• 旁注：持仓约 3,890 万枚 $HYPE（均价约 $56.35，截至 10/28）
+
+申请 ≠ 批准 ≠ 今天开盘。和 ICE×trade[XYZ]、CFTC 个股永续官司是平行线。
+
+h/t @WuBlockchain
+NFA/DYOR #Hyperliquid #HIP3</div><div class="cnt" id="d2zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d2en">复制</button></div><div class="txt" id="d2en">🏛️ Hyperliquid Strategies ($PURR) made a US-access move:
+
+• Subsidiary applied to register as a US FCM
+• Aim: if approved, serve US clients on HIP-3* permissioned perps
+• Side note: ~38.9M $HYPE treasury (~$56.35 avg as of Oct 28)
+
+Application ≠ approval ≠ trading today. Parallel to ICE×trade[XYZ] and the equity-perps lawsuit.
+
+h/t @WuBlockchain
+NFA/DYOR #Hyperliquid #HIP3</div><div class="cnt" id="d2en-n"></div></div></div></div><div class="draft" id="d3"><div class="dh"><span class="time">12:30</span><span class="tag acc">日历提醒</span><span class="dt">18万枚团队分发 + Caproni</span><span class="flag">⚠ 发前更新价格：是否已出现可追踪流入</span></div><div class="meta">强调实际分发规模<br>来源：<a href="https://www.techflowpost.com/en-US/newsletter/141744" target="_blank" rel="noopener">TechFlow</a> · <a href="https://storage.courtlistener.com/recap/gov.uscourts.nysd.676387/gov.uscourts.nysd.676387.11.0.pdf" target="_blank" rel="noopener">CourtListener</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d3zh">复制</button></div><div class="txt" id="d3zh">📅 周五两个日历点：
+
+1) 团队分发：Discord/TechFlow 口径今日向核心贡献者分发约 18 万枚 $HYPE（≈ 现价 $1,385 万）——不是部分解锁网站写的「千万级」
+2) Caproni 案：CFTC 反对意见原定今日提交（个股永续管辖权）
+
+分发 ≠ 必砸；状纸 ≠ 已判。分开跟踪。
+
+NFA/DYOR #HYPE #perps</div><div class="cnt" id="d3zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d3en">复制</button></div><div class="txt" id="d3en">📅 Two Friday calendar marks:
+
+1) Team distribution: ~180k $HYPE to core contributors today per Discord/TechFlow (~$13.9M at spot) — not the multi-million “schedule” some unlock sites show
+2) Caproni case: CFTC opposition due today (equity-perps jurisdiction)
+
+Distribution ≠ forced dump; brief ≠ ruling. Track separately.
+
+NFA/DYOR #HYPE #perps</div><div class="cnt" id="d3en-n"></div></div></div></div><div class="draft" id="d4"><div class="dh"><span class="time">14:30</span><span class="tag acc">链上故事</span><span class="dt">201 BTC 连续爆仓</span><span class="flag">⚠ 发前更新价格：该地址是否还有仓</span></div><div class="meta">📷 截图：Lookonchain 清算图<br>可配 Lookonchain 图<br>来源：<a href="https://x.com/lookonchain/status/2118378830939451728" target="_blank" rel="noopener">@lookonchain</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d4zh">复制</button></div><div class="txt" id="d4zh">💥 连续爆仓课：
+
+一名交易者被清算 8 次，合计约 201 $BTC（$1,560 万）。
+
+隔夜大盘回吐时，杠杆尾部先付钱。别把「巨鲸爆了」读成单一方向信号——先问杠杆倍数和保证金。
+
+h/t @lookonchain
+NFA/DYOR #Bitcoin #Hyperliquid</div><div class="cnt" id="d4zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d4en">复制</button></div><div class="txt" id="d4en">💥 Serial-liquidation lesson:
+
+One trader got liquidated 8 times for ~201 $BTC ($15.6M).
+
+When beta gives back overnight, levered tails pay first. “Whale blew up” ≠ one-way signal — ask size and margin first.
+
+h/t @lookonchain
+NFA/DYOR #Bitcoin #Hyperliquid</div><div class="cnt" id="d4en-n"></div></div></div></div><div class="draft" id="d5"><div class="dh"><span class="time">16:00</span><span class="tag acc">数据图表</span><span class="dt">ETF 并列表态</span><span class="flag">⚠ 发前更新价格：Farside 11/05 是否补齐</span></div><div class="meta">📷 截图：Farside 表 + Lookonchain 图<br>Lookonchain vs Farside 11/05<br>来源：<a href="https://farside.co.uk/btc/" target="_blank" rel="noopener">Farside</a> · <a href="https://x.com/lookonchain/status/2118337418931921267" target="_blank" rel="noopener">@lookonchain</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d5zh">复制</button></div><div class="txt" id="d5zh">📊 ETF 记得并列表态：
+
+• Lookonchain Nov5：BTC +208（+$1,656 万）；ETH +16,825（+$4,018 万）——1D 小流入，7D 仍大额净流出
+• Farside：11/04 已齐约 +$74.6M；11/05 多数基金仍 “-”（目前可见 GBTC 约 −$49.9M）
+
+同一天两套未对齐数字——写清来源，别混成一句「ETF 大流入」。
+
+NFA/DYOR #Bitcoin #ETH</div><div class="cnt" id="d5zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d5en">复制</button></div><div class="txt" id="d5en">📊 ETF flows — both tapes:
+
+• Lookonchain Nov 5: BTC +208 (+$16.6M); ETH +16,825 (+$40.2M) — small 1D in, still heavy 7D out
+• Farside: Nov 4 complete ~+$74.6M; Nov 5 mostly blank so far (GBTC ~−$49.9M visible)
+
+Same day, incomplete alignment — cite sources; don’t mash into one “huge inflow” line.
+
+NFA/DYOR #Bitcoin #ETH</div><div class="cnt" id="d5en-n"></div></div></div></div><div class="draft" id="d6"><div class="dh"><span class="time">18:00</span><span class="tag acc">产品/生态</span><span class="dt">Elysium 11/09 计划</span></div><div class="meta">标注计划/规格可改<br>来源：<a href="https://kinetiq.xyz/blog/elysium-mainnet-launch" target="_blank" rel="noopener">Kinetiq</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d6zh">复制</button></div><div class="txt" id="d6zh">🛠️ 生态日程：Kinetiq 的 Elysium（Hyperliquid L2）计划 11/09 主网
+
+• Gas = $HYPE，结算到 HyperEVM
+• 文档：主网前规格/时间表仍可能调整
+• HyperCore 读写接口约在主网后 ~4 周
+
+写「计划上线」，别写成已经能跑实盘策略。
+
+NFA/DYOR #Hyperliquid #HyperEVM</div><div class="cnt" id="d6zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d6en">复制</button></div><div class="txt" id="d6en">🛠️ Eco calendar: Kinetiq’s Elysium (Hyperliquid L2) plans mainnet Nov 9
+
+• Gas = $HYPE, settles to HyperEVM
+• Docs: specs/timelines may still change pre-mainnet
+• HyperCore read/write ~4 weeks after launch
+
+Say “planned,” not “live trading today.”
+
+NFA/DYOR #Hyperliquid #HyperEVM</div><div class="cnt" id="d6en-n"></div></div></div></div><div class="draft" id="d7"><div class="dh"><span class="time">20:00</span><span class="tag acc">短分析</span><span class="dt">回吐 ≠ 结构叙事失效</span></div><div class="meta">结构课；配三条美区线<br>来源：<a href="https://x.com/WuBlockchain/status/2118464261232230434" target="_blank" rel="noopener">Wu PURR</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d7zh">复制</button></div><div class="txt" id="d7zh">📌 价格回吐和结构新闻可以同屏：
+
+• 盘面：选举后挤压一夜吐回，$HYPE 弹性更大
+• 结构：PURR 申请 FCM + Caproni 今日截止 + ICE×XYZ 仍待批
+• 供应：18 万枚分发解释不了 −8%
+
+短线看清算与 beta；中线仍看美区三条线有没有「获批」实质进度。别用日线情绪否掉周线结构，也别用结构叙事硬扛日线回撤。
+
+NFA/DYOR #Hyperliquid</div><div class="cnt" id="d7zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d7en">复制</button></div><div class="txt" id="d7en">📌 Price giveback and structure news can share one screen:
+
+• Tape: post-election squeeze reversed overnight; $HYPE more elastic
+• Structure: PURR FCM filing + Caproni due today + ICE×XYZ still pending
+• Supply: 180k distribute doesn’t explain −8%
+
+Short-term = liquidations + beta; medium-term = whether any US track actually gets approved. Don’t let a daily mood kill a weekly structure — or use structure to ignore a daily dump.
+
+NFA/DYOR #Hyperliquid</div><div class="cnt" id="d7en-n"></div></div></div></div><div class="draft" id="d8"><div class="dh"><span class="time">21:30</span><span class="tag acc">大V引用</span><span class="dt">Hayes 稀释 + CRASH 情绪</span></div><div class="meta">建议 QT；区分论文与情绪帖<br>来源：<a href="https://x.com/CryptoHayes/status/2118194461528449450" target="_blank" rel="noopener">Hayes Dilution</a> · <a href="https://x.com/CryptoHayes/status/2118480791831490981" target="_blank" rel="noopener">Hayes CRASH</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d8zh">复制</button></div><div class="txt" id="d8zh">🎧 Hayes 两条要分开读：
+
+1) 「D is for Dilution」——AI 巨头上市稀释 → 短线压力流动性/风险资产的论文
+2) 隔夜「TA 之神说 CRASH」——情绪帖，他自己也说没把握
+
+论文可以对照持仓框架；情绪帖当噪声。
+
+NFA/DYOR</div><div class="cnt" id="d8zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d8en">复制</button></div><div class="txt" id="d8en">🎧 Two Hayes posts, two buckets:
+
+1) “D is for Dilution” — essay on AI IPO dilution → near-term pressure on liquidity/risk assets
+2) Overnight “god of TA says CRASH” — vibe post; he says he has no clue
+
+Essay → framework. Vibe → noise.
+
+NFA/DYOR</div><div class="cnt" id="d8en-n"></div></div></div></div><div class="draft" id="d9"><div class="dh"><span class="time">22:30</span><span class="tag acc">轻互动/提问</span><span class="dt">你更在意哪条</span></div><div class="meta">配投票更好<br>来源：<a href="https://yujingzhou0328-art.github.io/geleek-brief/" target="_blank" rel="noopener">早报页</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d9zh">复制</button></div><div class="txt" id="d9zh">🤔 周五你更在意哪条？
+
+A 隔夜回吐 + 清算（beta）
+B PURR 申请 FCM（美区路径）
+C 今日 18 万枚团队分发
+D Caproni 案 CFTC 状纸
+
+评论区选一个并说为什么
+NFA/DYOR #Hyperliquid</div><div class="cnt" id="d9zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d9en">复制</button></div><div class="txt" id="d9en">🤔 Friday — which thread matters most?
+
+A Overnight giveback + liquidations (beta)
+B PURR FCM filing (US access path)
+C Today’s 180k team distribution
+D Caproni CFTC brief
+
+Pick one + why
+NFA/DYOR #Hyperliquid</div><div class="cnt" id="d9en-n"></div></div></div></div></section><section id="replies"><h2>互动评论草稿</h2><p class="sub">打开原帖 → 复制 → 回复</p><div class="draft"><div class="dh"><span class="dt">① <a href="https://x.com/WuBlockchain/status/2118464261232230434" target="_blank" rel="noopener">@WuBlockchain PURR</a></span></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="r0zh">复制</button></div><div class="txt" id="r0zh">申请 FCM 这步写清楚很重要 👏 有披露预计审阅时间表，或 HIP-3* 许可名单谁来维护吗？</div><div class="cnt" id="r0zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="r0en">复制</button></div><div class="txt" id="r0en">Clear FCM-application framing helps 👏 Any disclosed review timeline, or who maintains the HIP-3* allowlist?</div><div class="cnt" id="r0en-n"></div></div></div></div><div class="draft"><div class="dh"><span class="dt">② <a href="https://x.com/lookonchain/status/2118378830939451728" target="_blank" rel="noopener">@lookonchain 201 BTC</a></span></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="r1zh">复制</button></div><div class="txt" id="r1zh">8 次连续爆合计 201 BTC，这是杠杆课不是方向课 💥 他还在同一地址加仓吗？</div><div class="cnt" id="r1zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="r1en">复制</button></div><div class="txt" id="r1en">Eight serial liqs totaling 201 BTC is a leverage lesson, not a direction stamp 💥 Still adding on the same address?</div><div class="cnt" id="r1en-n"></div></div></div></div><div class="draft"><div class="dh"><span class="dt">③ <a href="https://x.com/CryptoHayes/status/2118480791831490981" target="_blank" rel="noopener">@CryptoHayes CRASH</a></span></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="r2zh">复制</button></div><div class="txt" id="r2zh">「TA 说 CRASH」当情绪噪声没问题 📌 Dilution 论文那条更值得对照持仓框架。</div><div class="cnt" id="r2zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="r2en">复制</button></div><div class="txt" id="r2en">“TA says CRASH” is fine as vibe noise 📌 The Dilution essay is the one worth pairing with a portfolio framework.</div><div class="cnt" id="r2en-n"></div></div></div></div><div class="draft"><div class="dh"><span class="dt">④ <a href="https://x.com/coinglass_com/status/2118431202449453085" target="_blank" rel="noopener">@coinglass_com 回撤图</a></span></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="r3zh">复制</button></div><div class="txt" id="r3zh">图表很唬人，记得标注口径是「市值回撤」还是「指数点位」📊 和币圈 24h 清算怎么叠着看？</div><div class="cnt" id="r3zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="r3en">复制</button></div><div class="txt" id="r3en">Dramatic chart — label whether it’s market-cap wipeout or index points 📊 How do you stack it with crypto 24h liquidations?</div><div class="cnt" id="r3en-n"></div></div></div></div></section><section id="follow"><h2>建议追踪的账号</h2><p class="sub">“近期活跃”按本次检索到的发帖时间判断</p><table class="tbl"><thead><tr><th>X 账号</th><th>类型</th><th>为什么值得追踪</th><th>活跃情况</th></tr></thead><tbody><tr><td><a href="https://x.com/HyperliquidX" target="_blank" rel="noopener">@HyperliquidX</a></td><td>官方</td><td>产品上线、生态一手公告</td><td class="act n">本次窗口 0 条相关原创</td></tr><tr><td><a href="https://x.com/chameleon_jeff" target="_blank" rel="noopener">@chameleon_jeff</a></td><td>创始人 Jeff</td><td>HIP-3 / 基础设施一手思路</td><td class="act n">本次窗口 X 无原创</td></tr><tr><td><a href="https://x.com/EmberCN" target="_blank" rel="noopener">@EmberCN</a></td><td>中文链上数据</td><td>巨鲸与异常资金路径</td><td class="act n">本次窗口 0 条</td></tr><tr><td><a href="https://x.com/ai_9684xtpa" target="_blank" rel="noopener">@ai_9684xtpa</a></td><td>中文链上数据</td><td>巨鲸仓位</td><td class="act y">✓ 情绪帖 / 稍早 ETH 追涨地址（非 HYPE 主线）</td></tr><tr><td><a href="https://x.com/WuBlockchain" target="_blank" rel="noopener">@WuBlockchain</a></td><td>新闻</td><td>亚洲视角监管、交易所、宏观快讯</td><td class="act y">✓ PURR FCM / 回吐清算 / Core Scientific</td></tr><tr><td><a href="https://x.com/tier10k" target="_blank" rel="noopener">@tier10k</a></td><td>新闻快讯</td><td>头条快讯源</td><td class="act n">本次窗口未见相关原创</td></tr><tr><td><a href="https://x.com/lookonchain" target="_blank" rel="noopener">@lookonchain</a></td><td>链上数据</td><td>鲸鱼、黑客资金、ETF</td><td class="act y">✓ 201 BTC 连续清算 / ETF Nov5</td></tr><tr><td><a href="https://x.com/coinglass_com" target="_blank" rel="noopener">@coinglass_com</a></td><td>衍生品数据</td><td>清算热力图、订单墙</td><td class="act y">✓ 美股回撤图 / $75k 防守 / 清算热力</td></tr><tr><td><a href="https://x.com/0xngmi" target="_blank" rel="noopener">@0xngmi</a></td><td>DefiLlama</td><td>托管流出与 DeFi 数据口径</td><td class="act n">本次窗口未见相关原创</td></tr><tr><td><a href="https://x.com/CryptoHayes" target="_blank" rel="noopener">@CryptoHayes</a></td><td>KOL</td><td>宏观与交易情绪</td><td class="act y">✓ Dilution 论文 + 隔夜 CRASH 情绪帖</td></tr><tr><td><a href="https://x.com/cobie" target="_blank" rel="noopener">@cobie</a></td><td>KOL</td><td>老牌行业观察</td><td class="act n">本次窗口未见</td></tr><tr><td><a href="https://x.com/Pentosh1" target="_blank" rel="noopener">@Pentosh1</a></td><td>交易 KOL</td><td>中长线交易观点</td><td class="act n">本次窗口未见</td></tr><tr><td><a href="https://x.com/blknoiz06" target="_blank" rel="noopener">@blknoiz06</a></td><td>交易 KOL</td><td>情绪与盘面</td><td class="act y">✓ 股指反弹/油/ZEC 评论（篮球噪声略）</td></tr><tr><td><a href="https://x.com/CryptoCred" target="_blank" rel="noopener">@CryptoCred</a></td><td>交易教育</td><td>技术分析与交易心理</td><td class="act n">本次窗口未见</td></tr><tr><td><a href="https://x.com/KoroushAK" target="_blank" rel="noopener">@KoroushAK</a></td><td>交易教育</td><td>订单流与心态</td><td class="act n">本次窗口未见相关原创</td></tr><tr><td><a href="https://x.com/DefiIgnas" target="_blank" rel="noopener">@DefiIgnas</a></td><td>DeFi 研究</td><td>DeFi 估值与赛道</td><td class="act n">本次窗口未见相关原创</td></tr><tr><td><a href="https://x.com/ASvanevik" target="_blank" rel="noopener">@ASvanevik</a></td><td>Nansen CEO</td><td>链上数据与 AI 工具</td><td class="act n">本次窗口未见相关原创</td></tr><tr><td><a href="https://x.com/tradexyz" target="_blank" rel="noopener">@tradexyz</a></td><td>HIP-3 部署方（补充）</td><td>xyz 产品与安全披露</td><td class="act n">本次窗口 0 条；GitBook 迁出仍以旧帖为准</td></tr></tbody></table><h2 style="margin-top:48px">YouTube 频道</h2><p class="sub">均已确认频道页存在</p><div class="yt"><div><b><a href="https://x.com/WuBlockchain/status/2118464261232230434" target="_blank" rel="noopener">Wu · PURR FCM</a></b><br>美区 FCM 申请一手转述</div><div><b><a href="https://coinedition.com/hyperliquid-strategies-eyes-us-perpetual-futures-via-fcm-filing/" target="_blank" rel="noopener">CoinEdition PURR</a></b><br>FCM 报道</div><div><b><a href="https://storage.courtlistener.com/recap/gov.uscourts.nysd.676387/gov.uscourts.nysd.676387.11.0.pdf" target="_blank" rel="noopener">Caproni 裁定 PDF</a></b><br>11/06 截止日一手</div><div><b><a href="https://www.techflowpost.com/en-US/newsletter/141744" target="_blank" rel="noopener">TechFlow 18万 HYPE</a></b><br>团队分发口径</div><div><b><a href="https://kinetiq.xyz/blog/elysium-mainnet-launch" target="_blank" rel="noopener">Kinetiq Elysium</a></b><br>11/09 主网计划</div><div><b><a href="https://x.com/CryptoHayes/status/2118194461528449450" target="_blank" rel="noopener">Hayes Dilution</a></b><br>宏观论文入口</div></div><div class="note">本窗口未确认到必须写入的 Hyperliquid 专属长视频首发；优先读 PURR FCM 报道、Caproni 裁定、TechFlow 团队分发口径与 Kinetiq Elysium 博文。</div></section><footer>所有草稿均未发布，需本人确认后再发。数据为北京时间 11/06 约 07:38 快照，价格与链上标签类内容发前请更新。覆盖窗口接续 11/05 午间快讯。内容仅为信息整理与分析，不构成投资建议。NFA / DYOR。</footer></main><script>
+function fallbackCopy(t){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.position='fixed';a.style.top='-1000px';document.body.appendChild(a);a.select();a.setSelectionRange(0,t.length);var ok=false;try{ok=document.execCommand('copy')}catch(e){}document.body.removeChild(a);return ok}
+function done(b,ok){var o=b.dataset.label||b.textContent;b.dataset.label=o;b.textContent=ok?'已复制 ✓':'复制失败';b.classList.toggle('ok',ok);clearTimeout(b._t);b._t=setTimeout(function(){b.textContent=o;b.classList.remove('ok')},1600)}
+document.addEventListener('click',function(e){var b=e.target.closest('.cp');if(!b)return;var t=document.getElementById(b.dataset.for).textContent;
+ if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(function(){done(b,true)},function(){done(b,fallbackCopy(t))})}else{done(b,fallbackCopy(t))}});
+// X 加权字数：CJK 计 2，其余计 1（近似）
+document.querySelectorAll('.txt').forEach(function(el){var s=el.textContent,n=0;for(var ch of s){n+=/[\u1100-\uFFFF]/.test(ch)&&!/[\u2000-\u206F\u2190-\u2BFF]/.test(ch)?2:1}var c=document.getElementById(el.id+'-n');if(c)c.textContent='约 '+n+' / 280 字符（X 加权估算，emoji 与链接以输入框为准）'});
+// 导航高亮
+var links=[].slice.call(document.querySelectorAll('.nav a'));var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+en.target.id)})}})},{rootMargin:'-20% 0px -70% 0px'});secs.forEach(function(s){s&&io.observe(s)});
+</script></body></html>
