@@ -1,6 +1,12 @@
 {
- "updated": "2026-11-07 13:39 (UTC+8)",
+ "updated": "2026-11-08 07:41 (UTC+8)",
  "dates": [
+  {
+   "date": "2026-11-08",
+   "weekday": "周日",
+   "summary": "周末缩量：HYPE≈7.5；Elysium 倒计时合作官宣；BTC ETF 上周−python3 /workspace/geleek-brief/publish.py /workspace/geleek-brief/2026-11-08.html --wait --summary \"周末缩量：HYPE≈$77.5；Elysium 倒计时合作官宣；BTC ETF 上周−$12.8亿、2026转负\"2.8亿、2026转负",
+   "noon": true
+  },
   {
    "date": "2026-11-07",
    "weekday": "周六",
