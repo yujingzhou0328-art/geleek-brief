@@ -1,0 +1,281 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>币圈早报 · 2026-11-10（周二）</title><style>
+:root{
+ --fg:#2b3442;--mut:#525d6b;--line:rgba(255,255,255,.55);--hair:rgba(43,52,66,.10);
+ --acc:#44607b;--acc-bg:rgba(79,109,138,.12);--sage:#4d6656;--warn:#83583a;--warn-bg:rgba(184,140,110,.16);
+ --glass:rgba(255,255,255,.46);--glass-strong:rgba(255,255,255,.62);--glass-fallback:rgba(250,249,246,.94);
+ --shadow:0 8px 32px rgba(60,72,92,.08);--blur:blur(20px) saturate(120%);
+ --bg:#eef0ee;--b1:#b4c6d8;--b2:#bccfba;--b3:#e0c0c2;--b4:#ecdcc4;--side:256px;--r:18px
+}
+@media (prefers-color-scheme:dark){:root{
+ --fg:#dfe4ea;--mut:#9aa5b2;--line:rgba(255,255,255,.10);--hair:rgba(255,255,255,.08);
+ --acc:#9db4cb;--acc-bg:rgba(157,180,203,.14);--sage:#a3b8a8;--warn:#d6b08f;--warn-bg:rgba(214,176,143,.13);
+ --glass:rgba(30,34,42,.48);--glass-strong:rgba(36,40,49,.62);--glass-fallback:rgba(28,31,38,.95);
+ --shadow:0 8px 32px rgba(0,0,0,.28);
+ --bg:#14171c;--b1:#33445a;--b2:#33443a;--b3:#4a363c;--b4:#443d31}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--fg);font:15px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+ background:
+  radial-gradient(closest-side,var(--b1),transparent) -8vw -12vh/62vw 62vw no-repeat,
+  radial-gradient(closest-side,var(--b2),transparent) 62vw 4vh/48vw 48vw no-repeat,
+  radial-gradient(closest-side,var(--b3),transparent) 18vw 58vh/52vw 52vw no-repeat,
+  radial-gradient(closest-side,var(--b4),transparent) 70vw 62vh/50vw 50vw no-repeat,var(--bg);
+ filter:blur(40px)}
+a{color:var(--acc);text-decoration:none;text-underline-offset:3px}a:hover{text-decoration:underline}
+.glass,.side,.card,.stats,.draft,.sched,.tbl,.kolwrap,.view,.yt div,.note{background:var(--glass-fallback)}
+@supports ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){
+ .side,.card,.stats,.draft,.sched,.tbl,.kolwrap,.view,.yt div,.note{background:var(--glass);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur)}
+}
+.side,.card,.stats,.draft,.sched,.tbl,.kolwrap,.view,.yt div{border:1px solid var(--line);box-shadow:var(--shadow)}
+.side{position:fixed;top:16px;left:16px;bottom:16px;width:calc(var(--side) - 32px);padding:32px 22px;border-radius:22px;overflow-y:auto;z-index:10}
+.brand{font-weight:700;font-size:18px;letter-spacing:-.01em}
+.date{color:var(--mut);font-size:13px;margin:4px 0 28px}
+.nav{list-style:none;margin:0;padding:0}
+.nav a{display:block;padding:8px 12px;margin:2px -6px;border-radius:12px;color:var(--mut);font-size:14px;transition:background .2s,color .2s}
+.nav a:hover{color:var(--fg);background:var(--acc-bg);text-decoration:none}
+.nav a.on{color:var(--fg);background:var(--glass-strong);border:1px solid var(--line);font-weight:600;box-shadow:0 2px 10px rgba(60,72,92,.06)}
+.side .foot{margin-top:28px;font-size:12px;color:var(--mut);line-height:1.6}
+main{margin-left:var(--side);padding:48px 56px 120px 40px;max-width:calc(var(--side) + 1120px)}
+section{padding:4px 0 44px;margin-bottom:28px}
+h1{font-size:30px;line-height:1.25;margin:0 0 8px;letter-spacing:-.02em}
+h2{font-size:21px;margin:0 0 4px;letter-spacing:-.01em}
+.sub{color:var(--mut);font-size:13px;margin:0 0 22px}
+.lead{font-size:13px;color:var(--mut);margin-bottom:32px}
+.keys{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.keys li{padding:16px 20px 16px 58px;position:relative;font-size:15.5px;border-radius:var(--r);border:1px solid var(--line);box-shadow:var(--shadow);background:var(--glass-fallback)}
+@supports ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){.keys li{background:var(--glass);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur)}}
+.keys li b.n{position:absolute;left:20px;top:16px;color:var(--sage);font-variant-numeric:tabular-nums}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-radius:var(--r);overflow:hidden;margin:0 0 24px}
+.stat{padding:16px 20px;border-right:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.stat:nth-child(4n){border-right:0}.stat:nth-last-child(-n+4){border-bottom:0}
+.stat .k{font-size:12px;color:var(--mut)}.stat .v{font-size:22px;font-weight:650;font-variant-numeric:tabular-nums;letter-spacing:-.01em}.stat .d{font-size:12px;color:var(--mut)}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card{border-radius:var(--r);padding:20px 22px}
+.card h3{font-size:16px;margin:0 0 10px;line-height:1.45}
+.card ul{margin:0;padding-left:18px}.card li{margin:4px 0}.card li::marker{color:var(--sage)}
+.card .src{margin-top:12px;padding-top:10px;border-top:1px solid var(--hair);font-size:12.5px;color:var(--mut)}
+.note{border:1px solid var(--line);border-left:3px solid var(--warn);padding:12px 16px;border-radius:12px;font-size:13.5px;margin-top:16px}
+.kolwrap{border-radius:var(--r);padding:4px 22px}
+.kol{display:grid;grid-template-columns:200px 1fr;gap:6px 24px;padding:16px 0;border-top:1px solid var(--hair)}
+.kol:first-child{border-top:0}.kol .who{font-weight:600}.kol .who small{display:block;font-weight:400;color:var(--mut);font-size:12.5px}
+.view{border-radius:var(--r);padding:24px 26px}
+.view h2,.view .sub{margin-left:0}
+.view p{margin:0 0 14px;max-width:860px}
+.disc{display:inline-block;margin-top:4px;font-weight:600;color:var(--warn);background:var(--warn-bg);padding:4px 12px;border-radius:99px;font-size:13.5px}
+.sched,.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:14px;border-radius:var(--r);overflow:hidden}
+.sched{margin-bottom:28px}
+.sched th,.sched td,.tbl th,.tbl td{text-align:left;padding:10px 16px;border-bottom:1px solid var(--hair);vertical-align:top}
+.sched tr:last-child td,.tbl tr:last-child td{border-bottom:0}
+.sched th,.tbl th{font-size:12px;color:var(--mut);font-weight:500;background:rgba(255,255,255,.18)}
+.sched td.t{font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap}
+.draft{border-radius:20px;margin-bottom:22px;overflow:hidden}
+.dh{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:14px 22px;border-bottom:1px solid var(--hair);background:rgba(255,255,255,.14)}
+.time{font-weight:700;font-size:17px;font-variant-numeric:tabular-nums}
+.tag{font-size:12px;padding:2px 10px;border-radius:99px;border:1px solid var(--hair);color:var(--mut)}
+.tag.acc{color:var(--acc);border-color:transparent;background:var(--acc-bg)}
+.dt{font-weight:600}
+.flag{font-size:12.5px;padding:3px 10px;border-radius:99px;color:var(--warn);background:var(--warn-bg)}
+.meta{padding:10px 22px;font-size:13px;color:var(--mut);border-bottom:1px solid var(--hair)}
+.pair{display:grid;grid-template-columns:1fr 1fr}
+.pane{padding:16px 22px 18px;display:flex;flex-direction:column;min-width:0}
+.pane+.pane{border-left:1px solid var(--hair)}
+.ph{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.lang{font-size:12px;color:var(--mut);letter-spacing:.06em}
+.txt{white-space:pre-wrap;word-break:break-word;font-size:14.5px;line-height:1.75;flex:1}
+.cp{font:inherit;font-size:13px;cursor:pointer;border:1px solid var(--line);background:var(--glass-strong);color:var(--fg);padding:5px 16px;border-radius:99px;min-width:76px;transition:.2s;box-shadow:0 1px 6px rgba(60,72,92,.06)}
+.cp:hover{color:var(--acc);border-color:var(--acc)}
+.cp.ok{background:var(--sage);border-color:var(--sage);color:#fff}
+.cnt{font-size:11.5px;color:var(--mut);margin-top:8px}
+.act{white-space:nowrap;font-size:12.5px}.act.y{color:var(--sage);font-weight:600}.act.n{color:var(--mut)}
+.yt{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:8px}
+.yt div{padding:14px 18px;border-radius:14px}
+footer{color:var(--mut);font-size:12.5px;margin-top:24px}
+@media (max-width:1100px){main{padding:40px 32px 100px 32px}.cards{grid-template-columns:1fr}}
+@media (max-width:820px){
+ html{scroll-padding-top:72px}.flag{white-space:nowrap}
+ .side{position:sticky;top:8px;left:auto;bottom:auto;width:auto;height:auto;margin:8px;padding:8px 14px;border-radius:16px;display:flex;align-items:center;gap:14px;overflow-x:auto;white-space:nowrap}
+ .date,.side .foot{display:none}.brand{font-size:15px}
+ .nav{display:flex;gap:4px}.nav a{margin:0;padding:6px 10px;font-size:13px}
+ main{margin-left:0;padding:24px 14px 80px}
+ .pair{grid-template-columns:1fr}.pane+.pane{border-left:0;border-top:1px solid var(--hair)}
+ .kol{grid-template-columns:1fr}.yt{grid-template-columns:1fr}
+ .stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat:nth-child(n){border-right:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+ .sched,.tbl{display:block;overflow-x:auto}
+ h1{font-size:24px}
+}
+</style></head><body><aside class="side"><div class="brand">geleek 早报</div><div class="date">2026-11-10 · 周二</div><!--datenav--><style>
+.dn{margin:-14px 0 26px;padding:12px 12px 10px;border-radius:14px;border:1px solid var(--line);background:var(--glass-strong);box-shadow:0 2px 10px rgba(60,72,92,.06);font-size:12.5px}
+.dn .dn-k{color:var(--mut);font-size:11.5px;letter-spacing:.04em;display:flex;justify-content:space-between;align-items:center}
+.dn .dn-cur{font-weight:650;font-size:14px;color:var(--fg);margin:2px 0 8px;font-variant-numeric:tabular-nums;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.dn .dn-badge{font-size:11px;font-weight:500;padding:1px 8px;border-radius:99px;color:var(--sage);background:rgba(77,102,86,.12)}
+.dn .dn-badge:empty{display:none}
+.dn .dn-badge.old{color:var(--warn);background:var(--warn-bg)}
+.dn .dn-row{display:flex;gap:6px;align-items:center;margin-top:6px}
+.dn select{width:100%;font:inherit;font-size:12.5px;color:var(--fg);background:var(--glass);border:1px solid var(--hair);border-radius:10px;padding:5px 6px;cursor:pointer;font-variant-numeric:tabular-nums}
+.dn .dn-a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:4px;height:28px;border-radius:10px;border:1px solid var(--hair);background:var(--glass);color:var(--fg);font-size:12px;line-height:1}
+.dn .dn-a:hover{text-decoration:none;color:var(--acc);border-color:var(--acc)}
+.dn .dn-a.off{opacity:.35;pointer-events:none}
+.dn .dn-all{display:inline-block;margin-top:8px;font-size:12px}
+@media (max-width:820px){.dn{margin:0;padding:4px 8px;display:flex;align-items:center;gap:8px;flex:none}.dn .dn-k,.dn .dn-all,.dn .dn-cur{display:none}.dn select{width:150px}.dn .dn-row{margin:0}.dn .dn-a{flex:none;width:28px}.dn .dn-a span{display:none}}
+</style><div class="dn" id="dn" data-date="2026-11-10" data-root="../" data-pub="1794267558"><div class="dn-k"><span>正在查看</span><span title="快捷键：[ 前一天，] 后一天">⌨ [ ]</span></div><div class="dn-cur">2026-11-10 周二<span class="dn-badge">最新</span></div><select aria-label="选择日期"><option value="2026-11-10" selected>2026-11-10 周二</option></select><div class="dn-row"><a class="dn-a dn-prev off" aria-label="前一天" title="前一天">‹<span> 前一天</span></a><a class="dn-a dn-next off" aria-label="后一天" title="后一天"><span>后一天 </span>›</a></div><a class="dn-all" href="../archive/index.html">全部往期 →</a></div><script>
+(function(){var el=document.getElementById('dn');if(!el)return;var root=el.getAttribute('data-root')||'',cur=el.getAttribute('data-date')||'';
+function href(d){return root+'archive/'+d+'.html'}
+var sel=el.querySelector('select'),pv=el.querySelector('.dn-prev'),nx=el.querySelector('.dn-next'),bd=el.querySelector('.dn-badge');
+sel.addEventListener('change',function(){if(sel.value&&sel.value!==cur)location.href=href(sel.value)});
+fetch(root+'archive/dates.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(m){
+ var ds=(m.dates||m).slice().sort(function(a,b){return a.date<b.date?1:-1});if(!ds.length)return;
+ sel.innerHTML='';var found=false;
+ ds.forEach(function(d){var o=document.createElement('option');o.value=d.date;o.textContent=d.date+' '+(d.weekday||'')+(d.noon?' · 含午间快讯':'');if(d.summary)o.title=d.summary;if(d.date===cur){o.selected=true;found=true}sel.appendChild(o)});
+ if(!found&&cur){var o=document.createElement('option');o.value=cur;o.textContent=cur;o.selected=true;sel.insertBefore(o,sel.firstChild)}
+ var i=-1;ds.forEach(function(d,k){if(d.date===cur)i=k});
+ function set(a,d,lab){if(d){a.href=href(d.date);a.classList.remove('off');a.title=lab+'：'+d.date+(d.summary?'\n'+d.summary:'')}else{a.classList.add('off');a.removeAttribute('href')}}
+ set(pv,i>=0?ds[i+1]:null,'前一天');set(nx,i>0?ds[i-1]:null,'后一天');
+ if(bd){if(i===0){bd.textContent='最新';bd.classList.remove('old')}else if(i>0){bd.textContent='往期';bd.classList.add('old')}}
+}).catch(function(){});
+document.addEventListener('keydown',function(e){if(e.target.closest&&e.target.closest('input,textarea,select'))return;if(e.altKey||e.ctrlKey||e.metaKey)return;
+ if(e.key==='['&&pv.href)location.href=pv.href;if(e.key===']'&&nx.href)location.href=nx.href});
+})();
+</script><!--/datenav--><ul class="nav"><li><a href="#keys">今日要点</a></li><li><a href="#news">重点新闻和数据</a></li><li><a href="#kol">大V观点</a></li><li><a href="#view">我的观点</a></li><li><a href="#drafts">发帖草稿</a></li><li><a href="#replies">互动评论</a></li><li><a href="#follow">追踪账号</a></li></ul><div class="foot">覆盖北京时间 11/09 13:40 – 11/10 07:36（UTC+8）<br>接续 11/09 14:00 午间更新后窗口<br>所有草稿均未发布</div></aside><main><section id="keys"><h1>币圈早报 · 2026-11-10（周二）</h1><div class="lead">周二早报。覆盖约 <b>11/09 13:40 – 11/10 07:36</b>（接续昨午）。主线三条：① <b>验证日兑现</b>：<a href="https://x.com/Enter_Elysium/status/2119777337952841977" target="_blank" rel="noopener">@Enter_Elysium</a> 宣布 <b>Elysium 主网 live</b>（约北京 21:01），<a href="https://www.globenewswire.com/news-release/2026/11/09/3398435/0/en/kinetiq-launches-elysium-public-mainnet-a-high-performance-layer-2-built-for-hyperliquid.html" target="_blank" rel="noopener">GlobeNewswire</a> / <a href="https://blog.arbitrum.io/elysium-joins-the-programmable-economy/" target="_blank" rel="noopener">Arbitrum 博文</a> 同步；<a href="https://blog.hypercall.xyz/anthropic-options-are-live" target="_blank" rel="noopener">Hypercall 博文</a> 确认 <b>Anthropic 期权已上线</b>。② 盘面隔夜小幅回稳：<a href="https://www.coingecko.com/en/coins/hyperliquid" target="_blank" rel="noopener">HYPE</a> 约 <b>$75.1</b>（对照昨午 ≈$74.22），<a href="https://www.coingecko.com/en/coins/bitcoin" target="_blank" rel="noopener">BTC</a> 约 <b>$75.1K</b>，ETH 约 <b>$2,130</b>；主盘 24h 成交约 <b>$64.5 亿</b>、xyz 约 <b>$58.6 亿</b>（昨午分别约 $52.5 亿 / $24.5 亿）。③ 资金与链上：<a href="https://x.com/lookonchain/status/2119788505035575704" target="_blank" rel="noopener">Lookonchain</a> Nov 9 Update 记 BTC ETF 1D 约 <b>−$4.678 亿</b>；<a href="https://x.com/EmberCN/status/2119697975832154130" target="_blank" rel="noopener">余烬</a> 指 UXLINK 黑客开始 TWAP 平掉 HL 上约 <b>$1.48 亿</b> 多仓。昨午已充分覆盖的 FalconX 约 51.2 万 HYPE unstake、Elysium 文档仍 pre-launch / RPC 出块旁注，不重复当新料——今天升级为「主网已宣布 live」。行情快照：CoinGecko + Hyperliquid API + DefiLlama，约北京时间 11/10 07:36。</div><ul class="keys"><li><b class="n">01</b>验证日兑现：Elysium 主网已宣布 live（@Enter_Elysium，约北京 21:01）；Hypercall Anthropic 期权已上线（官方博文）——但 HyperCore 原生读写仍约四周后升级，期权是合成现金结算，不是 Anthropic 股票。</li><li><b class="n">02</b>盘面隔夜小幅回稳：HYPE 约 $75.1（昨午 ≈$74.22）、BTC 约 $75.1K、ETH 约 $2,130；主盘 24h 成交约 $64.5 亿、xyz 约 $58.6 亿——成交更满，价格仍横盘。</li><li><b class="n">03</b>资金与链上：Lookonchain 记 BTC ETF 1D 约 −$4.678 亿；UXLINK 黑客开始 TWAP 平 HL 上约 $1.48 亿多仓；大额 ETH 清算与抄底同框。</li></ul></section><section id="news"><h2>重点新闻和数据</h2><p class="sub">Hyperliquid 优先 · 覆盖 11/09 午间后–11/10 晨间 · 每条附原始来源 · Elysium/Hypercall 已切换为「已宣布上线」口径 · 勿把昨午 FalconX unstake / RPC 预出块再当新料 · Farside 11/09 行仍为空，ETF 日数据以 Lookonchain 原帖为准并注明</p><div class="stats"><div class="stat"><div class="k">HYPE</div><div class="v">$75.09</div><div class="d">24h −0.06% · <a href="https://www.coingecko.com/en/coins/hyperliquid" target="_blank" rel="noopener">CoinGecko</a></div></div><div class="stat"><div class="k">BTC</div><div class="v">$75,140</div><div class="d">24h −0.01%</div></div><div class="stat"><div class="k">ETH</div><div class="v">$2,129.90</div><div class="d">24h −0.64%</div></div><div class="stat"><div class="k">SOL</div><div class="v">$86.51</div><div class="d">24h −0.73%</div></div><div class="stat"><div class="k">HL 主盘持仓</div><div class="v">$92.1 亿</div><div class="d">24h 成交约 $64.5 亿 · <a href="https://app.hyperliquid.xyz/trade" target="_blank" rel="noopener">交易页</a></div></div><div class="stat"><div class="k">HIP-3 xyz 持仓</div><div class="v">$43.6 亿</div><div class="d">24h 成交约 $58.6 亿（周一全日）</div></div><div class="stat"><div class="k">HYPE 资金费率</div><div class="v">+0.000505%/h</div><div class="d">持仓约 $16.24 亿 · 24h 成交约 $5.54 亿</div></div><div class="stat"><div class="k">协议费用 近1日</div><div class="v">$453 万</div><div class="d">DefiLlama overview/fees · change_1d ≈ +29.9% · 7 天约 $3,768 万 · <a href="https://defillama.com/protocol/hyperliquid" target="_blank" rel="noopener">DefiLlama</a></div></div></div><div class="cards"><article class="card"><h3>① Elysium 主网已宣布 live：Hyperliquid 生态迎来专用 L2</h3><ul><li><a href="https://x.com/Enter_Elysium/status/2119777337952841977" target="_blank" rel="noopener">@Enter_Elysium</a>（约北京 11/09 21:01）：「Elysium mainnet is now live.」约 <b>4,745 赞 / 275 万曝光</b>。后续线解释：为 Hyperliquid 提供可与定价与流动性组合的高性能区块空间；并附生态页与文档。</li><li><a href="https://www.globenewswire.com/news-release/2026/11/09/3398435/0/en/kinetiq-launches-elysium-public-mainnet-a-high-performance-layer-2-built-for-hyperliquid.html" target="_blank" rel="noopener">GlobeNewswire</a>（Kinetiq）：Arbitrum Platform + Conduit；结算到 HyperEVM；Gas 为原生 <b>HYPE</b>（1:1 桥，无包装币）；目标 <b>100ms</b> 出块、约 <b>300 Mgas/s</b>。sequencer 收入 <b>50%</b> 回购 $KNTQ，<b>25%</b> 分给带动区块需求的 builder。</li><li>晨间自核 RPC：<a href="https://elysium.kinetiq.xyz/bridge" target="_blank" rel="noopener">rpc.elysium.kinetiq.xyz</a> 返回 chainId <b>99901</b>，块高约 <b>3,587,163</b>（对照昨午约 2,966,398）——从「RPC 已出块」升级为「官方宣布主网 live」。<a href="https://blog.arbitrum.io/elysium-joins-the-programmable-economy/" target="_blank" rel="noopener">Arbitrum 博文</a>：首个用 Arbitrum Platform 构建、结算到 HyperEVM 的专用链；并引 DefiLlama 称 HL 永续近 30 天名义成交超 $2,390 亿、OI 约 $70 亿。</li><li>重要边界：<a href="https://www.thetokenpress.com/article/kinetiq-launches-elysium-layer-2-for-hyperliquid-f849b67f" target="_blank" rel="noopener">TokenPress 整理</a> 强调 HyperCore 订单簿原生读/写约在主网后 <b>四周</b> ArbOS 升级；上线日不等于全部「直连交易」功能已齐。回流故事指向 <b>$KNTQ</b>，不是新的 $HYPE 官方回购规则。伙伴：Alchemy / Arbitrum / Conduit / Uniswap；另有 <a href="https://x.com/Enter_Elysium/status/2119836859501347066" target="_blank" rel="noopener">OpenSea 纪念 NFT</a>（8,888 枚，美东 12:00）。</li></ul><div class="src">来源：<a href="https://x.com/Enter_Elysium/status/2119777337952841977" target="_blank" rel="noopener">Enter_Elysium 原帖</a> · <a href="https://www.globenewswire.com/news-release/2026/11/09/3398435/0/en/kinetiq-launches-elysium-public-mainnet-a-high-performance-layer-2-built-for-hyperliquid.html" target="_blank" rel="noopener">GlobeNewswire</a> · <a href="https://blog.arbitrum.io/elysium-joins-the-programmable-economy/" target="_blank" rel="noopener">Arbitrum</a> · <a href="https://elysium.kinetiq.xyz/bridge" target="_blank" rel="noopener">桥/文档入口</a></div></article><article class="card"><h3>② Hypercall：Anthropic 期权已确认上线</h3><ul><li><a href="https://blog.hypercall.xyz/anthropic-options-are-live" target="_blank" rel="noopener">Hypercall 官方博文</a>（Nov 9）：「Anthropic Options Are Live on Hypercall」——可交易 ANT 的 call/put 与价差；到期为纽约 16:00；行权价间隔 2.5、距现价约 ±25%；同账户可对冲 ANT 永续。</li><li>关键边界（同文）：合约是 <b>合成、USDC 现金结算</b>，锚 ANT 永续 oracle 的 30 分钟修剪均值；<b>不是</b> Anthropic 股票 / IPO 配额 / 投票权；<b>不对美国人士开放</b>。举例（周一下午 ANT≈100）：11/27 到期 110 call 报价约 6.57；92.5 put 约 7.01——价格随盘口变，发帖前请重核。</li><li><a href="https://basecamp.markets/anthropic-options-hyperliquid/" target="_blank" rel="noopener">Base Camp 整理</a>：开盘约 UTC 13:00（美东 08:00 = 北京约 21:00）；21 个行权价、6 个到期日；未开盘前模型波动率约 47–50%。xyz 上 <a href="https://app.hyperliquid.xyz/trade" target="_blank" rel="noopener">xyz:ANT</a> 晨间 mark ≈ <b>$101.94</b>，24h 成交约 <b>$1,756 万</b>——这是 HIP-3 永续参考，不是期权盘本身。</li></ul><div class="src">来源：<a href="https://blog.hypercall.xyz/anthropic-options-are-live" target="_blank" rel="noopener">Hypercall 博文</a> · <a href="https://basecamp.markets/anthropic-options-hyperliquid/" target="_blank" rel="noopener">Base Camp</a> · Hyperliquid API（xyz:ANT）</div></article><article class="card"><h3>③ 盘面：隔夜小幅回稳；周一全日成交明显抬升</h3><ul><li><a href="https://www.coingecko.com/en/coins/hyperliquid" target="_blank" rel="noopener">CoinGecko</a>（约北京 07:36）：HYPE ≈ <b>$75.09</b>（24h −0.06%），BTC ≈ $75,140（−0.01%），ETH ≈ $2,129.90（−0.64%），SOL ≈ $86.51（−0.73%）。对照昨午 HYPE ≈ $74.22 / BTC ≈ $74.4K / ETH ≈ $2,129——HYPE、BTC 略回，ETH 基本横盘。</li><li>Hyperliquid API：主盘持仓约 <b>$92.1 亿</b>，24h 成交约 <b>$64.5 亿</b>（昨午约 $52.5 亿）。HYPE mark ≈ $75.06，持仓约 $16.24 亿，资金费率约 <b>+0.000505%/h</b>（raw ≈ 0.00000505），24h 成交约 $5.54 亿。xyz 持仓约 $43.6 亿，24h 成交约 <b>$58.6 亿</b>（昨午约 $24.5 亿）——NVDA、XYZ100、SKHX、SOXL、SP500、原油等周一全日活跃。</li><li><a href="https://defillama.com/protocol/hyperliquid" target="_blank" rel="noopener">DefiLlama overview/fees</a>：近 1 日费用约 <b>$453 万</b>（change_1d ≈ +29.9%；7 日约 $3,768 万）。L1 TVL（chains）约 <b>$23.7 亿</b>。HYPE 市值约 $180 亿、24h 现货成交约 $11.0 亿（CoinGecko）。</li></ul><div class="src">来源：<a href="https://www.coingecko.com/en/coins/hyperliquid" target="_blank" rel="noopener">CoinGecko</a> · Hyperliquid API（约北京 07:36）· <a href="https://defillama.com/protocol/hyperliquid" target="_blank" rel="noopener">DefiLlama</a></div></article><article class="card"><h3>④ 资金：Lookonchain 记 BTC ETF 1D 约 −$4.678 亿；Farside 11/09 仍空行</h3><ul><li><a href="https://x.com/lookonchain/status/2119788505035575704" target="_blank" rel="noopener">@lookonchain</a>（Nov 9 Update，约 157 赞）：BTC ETF 1D 净流出 <b>6,270 BTC（−$4.678 亿）</b>，7D 约 −17,694 BTC（−$13.2 亿）；ETH ETF 1D 约 −41,644 ETH（−$8,825 万），7D 约 −$3.634 亿。</li><li><a href="https://farside.co.uk/btc/" target="_blank" rel="noopener">Farside BTC</a>：页面最新完整一行仍是 <b>06 Nov</b> 约 −$411.9M；<b>09 Nov</b> 各基金显示 “-”、合计打印 0.0——晨间不以 Farside 确认 Lookonchain 的「1D」日历归属。写作时并列两源，勿把 Lookonchain 数字改写成「Farside 已出齐」。</li><li>旁注（非 HL 主线）：<a href="https://x.com/WuBlockchain/status/2119837412579020865" target="_blank" rel="noopener">@WuBlockchain</a> PNC×Coinbase 试点企业 USDC 收款；<a href="https://x.com/WuBlockchain/status/2119824622749434332" target="_blank" rel="noopener">Schwab</a> 现货加 SOL / AVAX / LINK。</li></ul><div class="src">来源：<a href="https://x.com/lookonchain/status/2119788505035575704" target="_blank" rel="noopener">Lookonchain ETF</a> · <a href="https://farside.co.uk/btc/" target="_blank" rel="noopener">Farside</a> · <a href="https://x.com/WuBlockchain/status/2119837412579020865" target="_blank" rel="noopener">Wu · PNC</a></div></article><article class="card"><h3>⑤ 链上：UXLINK 黑客 TWAP 平多；大额 ETH 清算与抄底同框</h3><ul><li><a href="https://x.com/EmberCN/status/2119697975832154130" target="_blank" rel="noopener">@EmberCN</a>：称 UXLINK 黑客开始用 TWAP（约 16 小时）平掉 HL 上约 <b>$1.48 亿</b> 多仓（含约 30,282 ETH、55 万 SOL、3,503 万 XRP）。这是「黑客仓位在 HL」故事的新一步——从持仓转向减仓，勿与昨午 Drift 攻击者路径混成同一地址。</li><li><a href="https://x.com/EmberCN/status/2119595625851580560" target="_blank" rel="noopener">@EmberCN</a> / <a href="https://x.com/lookonchain/status/2119609558226366539" target="_blank" rel="noopener">@lookonchain</a>：约北京 11/09 早上清算潮中，超大 ETH 多头被清算——余烬记约 $1.4 亿仓位、实现亏损约 <b>$6,141 万</b>；Lookonchain 记 56,667 ETH（约 $1.184 亿）多单全灭、亏约 <b>$4,478 万</b>（口径略有出入，分源引用，勿强行合成一张表）。</li><li>抄底侧：<a href="https://x.com/lookonchain/status/2119682638541959343" target="_blank" rel="noopener">@lookonchain</a> 地址 0xC356 约 3 小时从币安提 <b>34,601 ETH（约 $7,375 万）</b>；<a href="https://x.com/lookonchain/status/2119771624471957635" target="_blank" rel="noopener">另帖</a> 两钱包合计约 $908 万买 4,312 ETH（均价约 $2,106）。<a href="https://x.com/ai_9684xtpa/status/2119674723915456833" target="_blank" rel="noopener">@ai_9684xtpa</a>：两月前约 $2,358 抛售的大户以约 $2,149 买回 1 万枚 ETH。</li><li><a href="https://x.com/lookonchain/status/2119605580075872421" target="_blank" rel="noopener">@lookonchain · Abraxas</a>：称 Abraxas 两对冲账户在 HL 累计盈利约 <b>$4.286 亿</b>，仍持约 <b>$10.5 亿</b> 空头——做市/对冲样本，勿写成「机构集体砸盘」。昨午 FalconX 约 51.2 万 HYPE unstake 仍未见新的「已成交」一手确认，不重复当新料。</li></ul><div class="src">来源：<a href="https://x.com/EmberCN/status/2119697975832154130" target="_blank" rel="noopener">余烬 · UXLINK</a> · <a href="https://x.com/EmberCN/status/2119595625851580560" target="_blank" rel="noopener">余烬 · 清算</a> · <a href="https://x.com/lookonchain/status/2119609558226366539" target="_blank" rel="noopener">Lookonchain</a> · <a href="https://x.com/lookonchain/status/2119682638541959343" target="_blank" rel="noopener">0xC356</a></div></article><article class="card"><h3>⑥ 大V与情绪：Ansem 谈 HL 下一阶段；BTC–纳指背离</h3><ul><li><a href="https://x.com/blknoiz06/status/2119694898006028365" target="_blank" rel="noopener">@blknoiz06</a>（约 639 赞）：长期仍看好 Hyperliquid，但下一阶段增长很关键——眼下动能多来自 tradexyz，加密原生交易活跃度放缓、交易者基数扩张不够明显。另帖 <a href="https://x.com/blknoiz06/status/2119755882548584491" target="_blank" rel="noopener">跟进 Elysium</a>（约 854 赞）称主网前已可探索生态与桥。</li><li><a href="https://x.com/DefiIgnas/status/2119847945491108150" target="_blank" rel="noopener">@DefiIgnas</a>：称 BTC 与纳指相关性降至约 7 年最低，且已转负；另引用「股市大涨、BTC 不动」情绪。<a href="https://x.com/coinglass_com/status/2119670236676825220" target="_blank" rel="noopener">@coinglass_com</a>：提示 BTC 关键位若跌破偏空。</li><li>检索窗口：@HyperliquidX / @chameleon_jeff 仍未见对 Elysium live 的官方转发；产品叙事仍以 Kinetiq / Enter_Elysium 一手为准。</li></ul><div class="src">来源：<a href="https://x.com/blknoiz06/status/2119694898006028365" target="_blank" rel="noopener">Ansem · HL</a> · <a href="https://x.com/blknoiz06/status/2119755882548584491" target="_blank" rel="noopener">Ansem · Elysium</a> · <a href="https://x.com/DefiIgnas/status/2119847945491108150" target="_blank" rel="noopener">Ignas</a> · <a href="https://x.com/coinglass_com/status/2119670236676825220" target="_blank" rel="noopener">CoinGlass</a></div></article></div><div class="note">窗口：11/09 13:40–11/10 07:36；昨午已报（FalconX 约 51.2 万 HYPE unstake、Elysium 文档仍 pre-launch / RPC 出块、Hypercall 计划北京约 21:00）升级为「主网/期权已宣布 live」，不重复旧措辞。</div><div class="note">勿写成：Elysium Day-1 已具备完整 HyperCore 原生读/写下单；买 Hypercall 期权 = 买到 Anthropic 股票或 IPO 配额；对美用户可交易；Farside 已出齐 11/09 日数据；UXLINK 黑客 = Drift 攻击者；Abraxas 空头 = 机构出货；KNTQ 回购 = HYPE 官方新规。</div><div class="note">HYPE 资金费率展示 +0.000505%/h（API raw ≈ 0.00000505）。</div><div class="note">费用：主用 DefiLlama overview/fees（~$453 万，change_1d ≈ +29.9%）；summary/fees 协议口径另约 $231 万——两接口勿互相比。</div><div class="note">Elysium：官方帖 + GlobeNewswire + Arbitrum 博文；晨间 RPC chainId 99901、块高约 3,587,163。Hypercall：官方博文确认 live。</div><div class="note">ETF：Lookonchain Nov 9 Update 与 Farside 11/09 空行并存；写 Lookonchain 数字时注明来源，勿改写成 Farside。</div><div class="note">清算数字：余烬与 Lookonchain 对「超大 ETH 多头」口径略有出入，分源引用。</div><div class="note">@HyperliquidX / Jeff：本窗口未见对 Elysium live 的官方转发。</div></section><section id="kol"><h2>大V观点</h2><p class="sub">过去约 24 小时原帖</p><div class="kolwrap"><div class="kol"><div class="who"><a href="https://x.com/Enter_Elysium/status/2119777337952841977" target="_blank" rel="noopener">Enter_Elysium · mainnet live</a><small>@Enter_Elysium</small></div><div>「Elysium mainnet is now live.」约 4,745 赞 / 275 万曝光。</div></div><div class="kol"><div class="who"><a href="https://x.com/blknoiz06/status/2119694898006028365" target="_blank" rel="noopener">Ansem · HL 下一阶段</a><small>@blknoiz06</small></div><div>长期看好 HL，但加密原生交易者扩张不够；动能多在 tradexyz。约 639 赞。</div></div><div class="kol"><div class="who"><a href="https://x.com/blknoiz06/status/2119755882548584491" target="_blank" rel="noopener">Ansem · Elysium</a><small>@blknoiz06</small></div><div>主网前已跟进探索生态与桥。约 854 赞。</div></div><div class="kol"><div class="who"><a href="https://x.com/EmberCN/status/2119697975832154130" target="_blank" rel="noopener">余烬 · UXLINK TWAP</a><small>@EmberCN</small></div><div>UXLINK 黑客开始 TWAP 平约 $1.48 亿 HL 多仓。</div></div><div class="kol"><div class="who"><a href="https://x.com/lookonchain/status/2119788505035575704" target="_blank" rel="noopener">Lookonchain · ETF</a><small>@lookonchain</small></div><div>BTC ETF 1D 约 −$4.678 亿；ETH ETF 1D 约 −$8,825 万。</div></div><div class="kol"><div class="who"><a href="https://x.com/DefiIgnas/status/2119847945491108150" target="_blank" rel="noopener">Ignas · 相关性转负</a><small>@DefiIgnas</small></div><div>BTC–纳指相关性约 7 年最低且转负。</div></div></div></section><section id="view"><div class="view"><h2>我的观点和看法</h2><p class="sub">分析</p><p><b>先庆祝「验证日兑现」，再把边界写清楚。</b>昨早还在写「计划/待验证」；昨晚 Elysium 与 Hypercall 都给出了官方「live」一手。对 HYPE 来说，短期叙事是「生态吞吐层上线 + 期权层补齐」，但两条边界别混：① Elysium sequencer 回购指向 $KNTQ，不是新的 HYPE 官方销毁规则；② HyperCore 原生读/写大约四周后才到，Day-1 更像「可部署的高性能 EVM + 桥」，不是「合约已能直接打 HyperCore 订单簿」。Hypercall 同理：合成现金结算、不对美用户，结算锚的是 ANT 永续 oracle。</p><p><b>成交抬升、价格横盘，更像周一全日 risk 回场，不是新叙事立刻定价完毕。</b>HYPE 从昨午约 $74.2 回到约 $75.1，费率仍只有约 +0.0005%/h，多头拥挤信号不强。主盘与 xyz 成交都明显高于昨午——xyz 尤其从约 $24.5 亿抬到约 $58.6 亿，很大一部分是 NVDA / 指数 / 原油等传统资产周一全日活跃。把「成交满」写成「Elysium 利好已全面定价」，或把横盘写成「生态没人理」，都会误读。</p><p><b>资金与黑客仓位是两条并行风险轨。</b>Lookonchain 的 ETF 日流出与 Farside 空行并存——先记数字、再等 Farside 对齐。UXLINK 黑客 TWAP 平多，是「黑客仓位在 HL」从持有转向减仓；超大 ETH 多头清算与 0xC356 / 抄底买盘同框，说明杠杆清洗与现货吸筹可以同时发生。优先跟踪：① Elysium 桥/浏览器/伙伴盘口真实用量；② Hypercall ANT 期权深度与结算说明；③ UXLINK TWAP 是否按计划走完；④ 下一次 Farside 完整日打印。以上为分析，不构成投资建议 / NFA DYOR。</p><span class="disc">以上为分析，不构成投资建议。</span></div></section><section id="drafts"><h2>发帖草稿 · 10 条</h2><p class="sub">周二早报排期 · 建议 09:00–22:30（北京时间）错峰 · 中英双语 · 中文每字按 2 字符计 · 所有草稿均未发布</p><table class="sched"><thead><tr><th>时间（北京）</th><th>类型</th><th>主题</th><th>提醒</th></tr></thead><tbody><tr><td class="t"><a href="#d0">09:00</a></td><td>突发快讯</td><td>周二早报三点</td><td></td></tr><tr><td class="t"><a href="#d1">10:30</a></td><td>生态快讯</td><td>Elysium 主网 live</td><td></td></tr><tr><td class="t"><a href="#d2">12:00</a></td><td>可截图数据</td><td>周一全日成交对照</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d3">13:30</a></td><td>产品快讯</td><td>Hypercall Anthropic 期权</td><td></td></tr><tr><td class="t"><a href="#d4">15:00</a></td><td>HL链上/巨鲸</td><td>UXLINK 黑客 TWAP 平多</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d5">16:30</a></td><td>大V引用+看法</td><td>引用 Ansem 看 HL 下一阶段</td><td></td></tr><tr><td class="t"><a href="#d6">18:00</a></td><td>短分析</td><td>两本账：KNTQ vs HYPE</td><td></td></tr><tr><td class="t"><a href="#d7">19:30</a></td><td>长推开头</td><td>验证日复盘</td><td></td></tr><tr><td class="t"><a href="#d8">21:00</a></td><td>可截图数据</td><td>ETF 流出提醒</td><td><span class=flag>发前更新价格</span></td></tr><tr><td class="t"><a href="#d9">22:30</a></td><td>轻互动/提问</td><td>Elysium 后你先看什么</td><td></td></tr></tbody></table><div class="draft" id="d0"><div class="dh"><span class="time">09:00</span><span class="tag acc">突发快讯</span><span class="dt">周二早报三点</span></div><div class="meta">开场帖，带公开页链接</div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d0zh">复制</button></div><div class="txt" id="d0zh">📬 周二早报（接续昨午）
+
+三点：
+1) 验证日兑现：Elysium 主网已宣布 live；Hypercall Anthropic 期权已上线
+2) 盘面小幅回稳：$HYPE ≈ $75.1（昨午 ≈$74.2），$BTC ≈ $75.1K，ETH ≈ $2,130
+3) 资金/链上：Lookonchain 记 BTC ETF 1D 约 −$4.68 亿；UXLINK 黑客开始 TWAP 平约 $1.48 亿 HL 多仓
+
+完整版👉 https://yujingzhou0328-art.github.io/geleek-brief/
+NFA/DYOR #Hyperliquid</div><div class="cnt" id="d0zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d0en">复制</button></div><div class="txt" id="d0en">📬 Tuesday brief (after yesterday’s noon)
+
+Three lines:
+1) Calendar delivered: Elysium mainnet declared live; Hypercall Anthropic options are live
+2) Tape steadier: $HYPE ≈ $75.1 (noon ≈$74.2), $BTC ≈ $75.1K, ETH ≈ $2,130
+3) Flows/onchain: Lookonchain’s BTC ETF 1D ≈ −$468M; UXLINK hacker started a TWAP to close ~$148M HL longs
+
+Full brief 👉 https://yujingzhou0328-art.github.io/geleek-brief/
+NFA/DYOR #Hyperliquid</div><div class="cnt" id="d0en-n"></div></div></div></div><div class="draft" id="d1"><div class="dh"><span class="time">10:30</span><span class="tag acc">生态快讯</span><span class="dt">Elysium 主网 live</span></div><div class="meta">来源：<a href="https://x.com/Enter_Elysium/status/2119777337952841977" target="_blank" rel="noopener">Enter_Elysium</a> · <a href="https://www.globenewswire.com/news-release/2026/11/09/3398435/0/en/kinetiq-launches-elysium-public-mainnet-a-high-performance-layer-2-built-for-hyperliquid.html" target="_blank" rel="noopener">GlobeNewswire</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d1zh">复制</button></div><div class="txt" id="d1zh">🚀 Elysium 主网已宣布 live（@Enter_Elysium）
+
+要点：
+• 结算到 HyperEVM，Gas 用原生 $HYPE
+• 目标 100ms 出块 / ~300 Mgas/s
+• sequencer 收入 50% 回购 $KNTQ，25% 给 builder
+• HyperCore 原生读/写约四周后升级——Day-1 先看桥与部署，别当成「合约已直接打订单簿」
+
+NFA/DYOR #Hyperliquid #HyperEVM</div><div class="cnt" id="d1zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d1en">复制</button></div><div class="txt" id="d1en">🚀 Elysium mainnet is live (@Enter_Elysium)
+
+Key points:
+• Settles to HyperEVM; gas is native $HYPE
+• Targets 100ms blocks / ~300 Mgas/s
+• 50% of sequencer revenue buys $KNTQ; 25% to builders
+• Native HyperCore read/write ~4 weeks later — Day-1 is bridge + deploy, not “contracts already hitting the book”
+
+NFA/DYOR #Hyperliquid #HyperEVM</div><div class="cnt" id="d1en-n"></div></div></div></div><div class="draft" id="d2"><div class="dh"><span class="time">12:00</span><span class="tag acc">可截图数据</span><span class="dt">周一全日成交对照</span><span class="flag">⚠ 发前更新价格：HYPE / BTC 现价与 24h</span></div><div class="meta">📷 截图：截 <a href="https://www.coingecko.com/en/coins/hyperliquid" target="_blank" rel="noopener">CoinGecko HYPE</a> 价格卡，或 <a href="https://app.hyperliquid.xyz/trade" target="_blank" rel="noopener">HL 交易页</a>；对照昨午主盘约 $52.5 亿 vs 今早约 $64.5 亿、xyz 约 $24.5 亿 vs $58.6 亿。</div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d2zh">复制</button></div><div class="txt" id="d2zh">📊 周二晨间盘面（约北京 07:36）：
+• $HYPE ≈ $75.1（24h 基本持平），$BTC ≈ $75.1K，ETH ≈ $2,130
+• HL 主盘持仓约 $92.1 亿，24h 成交约 $64.5 亿
+• xyz 持仓约 $43.6 亿，成交约 $58.6 亿
+• 资金费率约 +0.0005%/h
+
+成交更满、价格仍横——更像周一全日回场，不是新叙事盖章 👇
+
+NFA/DYOR $HYPE #Hyperliquid</div><div class="cnt" id="d2zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d2en">复制</button></div><div class="txt" id="d2en">📊 Tuesday morning tape (~07:36 Beijing):
+• $HYPE ≈ $75.1 (flat 24h), $BTC ≈ $75.1K, ETH ≈ $2,130
+• HL core OI ~$9.21B, 24h volume ~$6.45B
+• xyz OI ~$4.36B, volume ~$5.86B
+• Funding ~+0.0005%/h
+
+Fuller books, still sideways — Monday session heat, not a narrative stamp 👇
+
+NFA/DYOR $HYPE #Hyperliquid</div><div class="cnt" id="d2en-n"></div></div></div></div><div class="draft" id="d3"><div class="dh"><span class="time">13:30</span><span class="tag acc">产品快讯</span><span class="dt">Hypercall Anthropic 期权</span></div><div class="meta">来源：<a href="https://blog.hypercall.xyz/anthropic-options-are-live" target="_blank" rel="noopener">Hypercall 博文</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d3zh">复制</button></div><div class="txt" id="d3zh">⚡️ Hypercall：Anthropic 期权已上线
+
+• call / put / 价差都可做
+• 合成、USDC 现金结算，锚 ANT 永续 oracle
+• 不是股票、不是 IPO 配额；不对美用户开放
+
+有永续之外的「波动率腿」了——先读结算条款再动手 ✅
+NFA/DYOR #Hyperliquid #Anthropic</div><div class="cnt" id="d3zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d3en">复制</button></div><div class="txt" id="d3en">⚡️ Hypercall: Anthropic options are live
+
+• Calls, puts, and spreads
+• Synthetic, cash-settled in USDC vs the ANT perp oracle
+• Not shares, not IPO allocation; not available to US persons
+
+You finally get a vol leg beyond the perp — read settlement first ✅
+NFA/DYOR #Hyperliquid #Anthropic</div><div class="cnt" id="d3en-n"></div></div></div></div><div class="draft" id="d4"><div class="dh"><span class="time">15:00</span><span class="tag acc">HL链上/巨鲸</span><span class="dt">UXLINK 黑客 TWAP 平多</span><span class="flag">⚠ 发前更新价格：ETH / SOL 现价</span></div><div class="meta">来源：<a href="https://x.com/EmberCN/status/2119697975832154130" target="_blank" rel="noopener">余烬</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d4zh">复制</button></div><div class="txt" id="d4zh">🐋 链上新一步：UXLINK 黑客开始用 TWAP（约 16 小时）平掉 #Hyperliquid 上约 $1.48 亿多仓（ETH / SOL / XRP）。
+
+从「黑客持仓在 HL」变成「黑客开始减仓」——这是路径变化，不是推荐跟单 👀
+via @EmberCN
+
+NFA/DYOR #Hyperliquid</div><div class="cnt" id="d4zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d4en">复制</button></div><div class="txt" id="d4en">🐋 Onchain next step: the UXLINK hacker started a ~16h TWAP to close ~$148M of longs on #Hyperliquid (ETH / SOL / XRP).
+
+That’s a shift from “hacker inventory on HL” to “hacker reducing” — a path note, not a copy-trade 👀
+h/t @EmberCN
+
+NFA/DYOR #Hyperliquid</div><div class="cnt" id="d4en-n"></div></div></div></div><div class="draft" id="d5"><div class="dh"><span class="time">16:30</span><span class="tag acc">大V引用+看法</span><span class="dt">引用 Ansem 看 HL 下一阶段</span></div><div class="meta">建议以引用转推方式发，引用 <a href="https://x.com/blknoiz06/status/2119694898006028365" target="_blank" rel="noopener">Ansem 原帖</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d5zh">复制</button></div><div class="txt" id="d5zh">💡 Ansem：长期仍看好 Hyperliquid，但下一阶段要看加密原生交易者能不能扩起来——眼下动能多在 tradexyz。
+
+我的看法：Elysium live 解决的是「吞吐」，不是自动解决「新交易者从哪来」。产品层开了，用户层还要验证。
+
+NFA/DYOR $HYPE #Hyperliquid</div><div class="cnt" id="d5zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d5en">复制</button></div><div class="txt" id="d5en">💡 Ansem still likes the long-term Hyperliquid thesis, but says the next phase needs crypto-native trader growth — a lot of momentum is in tradexyz today.
+
+My take: Elysium live fixes throughput, not “where do new traders come from.” Product layer opened; user layer still needs proof.
+
+NFA/DYOR $HYPE #Hyperliquid</div><div class="cnt" id="d5en-n"></div></div></div></div><div class="draft" id="d6"><div class="dh"><span class="time">18:00</span><span class="tag acc">短分析</span><span class="dt">两本账：KNTQ vs HYPE</span></div><div class="meta">来源：<a href="https://www.globenewswire.com/news-release/2026/11/09/3398435/0/en/kinetiq-launches-elysium-public-mainnet-a-high-performance-layer-2-built-for-hyperliquid.html" target="_blank" rel="noopener">GlobeNewswire</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d6zh">复制</button></div><div class="txt" id="d6zh">🧠 Elysium 上线后，我把账本拆成两本：
+1) $KNTQ：sequencer 收入 50% 回购
+2) $HYPE：Gas + 生态吞吐，间接受益，但不是这条新回购规则本身
+
+别把伙伴预热里的回流，误读成「HYPE 官方又加了一条销毁」⚠️
+NFA/DYOR #Hyperliquid #KNTQ</div><div class="cnt" id="d6zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d6en">复制</button></div><div class="txt" id="d6en">🧠 After Elysium launch, I keep two ledgers:
+1) $KNTQ: 50% of sequencer revenue to buybacks
+2) $HYPE: gas + ecosystem throughput — indirect beneficiary, not this new buyback rule itself
+
+Don’t misread partner fee-share teasers as “another official HYPE burn rule” ⚠️
+NFA/DYOR #Hyperliquid #KNTQ</div><div class="cnt" id="d6en-n"></div></div></div></div><div class="draft" id="d7"><div class="dh"><span class="time">19:30</span><span class="tag acc">长推开头</span><span class="dt">验证日复盘</span></div><div class="meta">适合傍晚沉淀；后续推文需自行展开<br>来源：<a href="https://x.com/Enter_Elysium/status/2119777337952841977" target="_blank" rel="noopener">Enter_Elysium</a> · <a href="https://blog.hypercall.xyz/anthropic-options-are-live" target="_blank" rel="noopener">Hypercall</a></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d7zh">复制</button></div><div class="txt" id="d7zh">🧵 昨天早报还在写「计划/待验证」。
+昨晚两件事都给了官方 live：
+
+1) Elysium 主网
+2) Hypercall Anthropic 期权
+
+接下来真正要盯的不是海报，而是：桥有没有量、期权有没有深度、HyperCore 直连何时到 👇
+
+#Hyperliquid #HyperEVM</div><div class="cnt" id="d7zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d7en">复制</button></div><div class="txt" id="d7en">🧵 Yesterday’s brief still said “planned / verify.”
+Last night both got official live stamps:
+
+1) Elysium mainnet
+2) Hypercall Anthropic options
+
+What matters next isn’t the poster — it’s bridge usage, options depth, and when HyperCore-native access lands 👇
+
+#Hyperliquid #HyperEVM</div><div class="cnt" id="d7en-n"></div></div></div></div><div class="draft" id="d8"><div class="dh"><span class="time">21:00</span><span class="tag acc">可截图数据</span><span class="dt">ETF 流出提醒</span><span class="flag">⚠ 发前更新价格：若 Farside 已出齐 11/09 或 11/10，更新数字；否则保持 Lookonchain 口径并注明</span></div><div class="meta">📷 截图：截 <a href="https://x.com/lookonchain/status/2119788505035575704" target="_blank" rel="noopener">Lookonchain 原帖</a> 配图；并列打开 <a href="https://farside.co.uk/btc/" target="_blank" rel="noopener">Farside</a> 核对是否已有完整行。</div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d8zh">复制</button></div><div class="txt" id="d8zh">📉 Lookonchain Nov 9 Update：
+• BTC ETF 1D 约 −6,270 BTC（−$4.678 亿）
+• 7D 约 −$13.2 亿
+• ETH ETF 1D 约 −$8,825 万
+
+注意：Farside 11/09 行晨间仍为空——先记 Lookonchain，等 Farside 对齐再改表 👇
+
+NFA/DYOR $BTC #ETF</div><div class="cnt" id="d8zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d8en">复制</button></div><div class="txt" id="d8en">📉 Lookonchain Nov 9 Update:
+• BTC ETF 1D ≈ −6,270 BTC (−$468M)
+• 7D ≈ −$1.32B
+• ETH ETF 1D ≈ −$88M
+
+Note: Farside’s Nov 9 row was still blank this morning — log Lookonchain first, update the table once Farside prints 👇
+
+NFA/DYOR $BTC #ETF</div><div class="cnt" id="d8en-n"></div></div></div></div><div class="draft" id="d9"><div class="dh"><span class="time">22:30</span><span class="tag acc">轻互动/提问</span><span class="dt">Elysium 后你先看什么</span></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="d9zh">复制</button></div><div class="txt" id="d9zh">🤔 Elysium live 之后，你会先看哪一条？
+A 桥/浏览器真实用量
+B 伙伴盘口（Uniswap / fomo 等）能不能真下单
+C Hypercall 期权深度与结算
+D 先看大盘 beta，生态旁观
+
+#Hyperliquid #crypto</div><div class="cnt" id="d9zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="d9en">复制</button></div><div class="txt" id="d9en">🤔 After Elysium went live, what will you check first?
+A) Real bridge / explorer usage
+B) Whether partner books (Uniswap / fomo, etc.) actually take orders
+C) Hypercall options depth + settlement
+D) Beta first, ecosystem as a side show
+
+#Hyperliquid #crypto</div><div class="cnt" id="d9en-n"></div></div></div></div></section><section id="replies"><h2>互动评论草稿</h2><p class="sub">打开原帖 → 复制 → 回复</p><div class="draft"><div class="dh"><span class="dt">① <a href="https://x.com/Enter_Elysium/status/2119777337952841977" target="_blank" rel="noopener">@Enter_Elysium：mainnet live</a></span></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="r0zh">复制</button></div><div class="txt" id="r0zh">恭喜上线 🚀 想确认下 Day-1 大家最该盯的三件公开物：官方桥、浏览器、以及 HyperCore 直连升级的大致时间窗？想避免点到仿盘。</div><div class="cnt" id="r0zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="r0en">复制</button></div><div class="txt" id="r0en">Congrats on launch 🚀 What’s the Day-1 public checklist you’d point people to first — canonical bridge, explorer, and the rough window for HyperCore-native access? Want to keep folks off lookalike pages.</div><div class="cnt" id="r0en-n"></div></div></div></div><div class="draft"><div class="dh"><span class="dt">② <a href="https://x.com/blknoiz06/status/2119694898006028365" target="_blank" rel="noopener">@blknoiz06：HL 下一阶段</a></span></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="r1zh">复制</button></div><div class="txt" id="r1zh">「tradexyz 动能强、加密原生交易者扩张不够」这句很硬。你觉得 Elysium 更可能先改善吞吐/做市，还是先带来新的加密原生流量？</div><div class="cnt" id="r1zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="r1en">复制</button></div><div class="txt" id="r1en">The “tradexyz strong / crypto-native trader base not expanding enough” line lands hard. Do you see Elysium fixing throughput/MM first — or actually sourcing new crypto-native flow?</div><div class="cnt" id="r1en-n"></div></div></div></div><div class="draft"><div class="dh"><span class="dt">③ <a href="https://x.com/EmberCN/status/2119697975832154130" target="_blank" rel="noopener">@EmberCN：UXLINK TWAP</a></span></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="r2zh">复制</button></div><div class="txt" id="r2zh">从持仓变成 TWAP 减仓，路径意义很大 👀 你会更关心平仓对盘口冲击，还是资金离开 HL 之后去哪？</div><div class="cnt" id="r2zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="r2en">复制</button></div><div class="txt" id="r2en">Shifting from inventory to a TWAP exit is a big path change 👀 Are you watching book impact more — or where the capital goes after it leaves HL?</div><div class="cnt" id="r2en-n"></div></div></div></div><div class="draft"><div class="dh"><span class="dt">④ <a href="https://x.com/lookonchain/status/2119788505035575704" target="_blank" rel="noopener">@lookonchain：ETF Nov 9 Update</a></span></div><div class="pair"><div class="pane"><div class="ph"><span class="lang">中文</span><button class="cp" data-for="r3zh">复制</button></div><div class="txt" id="r3zh">1D −$4.68 亿很沉。想确认下这条与 Farside 日历如何对齐——你们这份「Nov 9 Update」对应的是哪个交易日的最终打印？</div><div class="cnt" id="r3zh-n"></div></div><div class="pane"><div class="ph"><span class="lang">ENGLISH</span><button class="cp" data-for="r3en">复制</button></div><div class="txt" id="r3en">−$468M on the 1D print is heavy. Quick check on calendar alignment — which trading day’s final print does this “Nov 9 Update” map to versus Farside?</div><div class="cnt" id="r3en-n"></div></div></div></div></section><section id="follow"><h2>建议追踪的账号</h2><p class="sub">“近期活跃”按本次检索到的发帖时间判断</p><table class="tbl"><thead><tr><th>X 账号</th><th>类型</th><th>为什么值得追踪</th><th>活跃情况</th></tr></thead><tbody><tr><td><a href="https://x.com/HyperliquidX" target="_blank" rel="noopener">@HyperliquidX</a></td><td>官方</td><td>产品与公告</td><td class="act n">本窗口未见对 Elysium live 转发</td></tr><tr><td><a href="https://x.com/chameleon_jeff" target="_blank" rel="noopener">@chameleon_jeff</a></td><td>创始人 Jeff</td><td>机制与路线</td><td class="act n">本窗口未见新原创</td></tr><tr><td><a href="https://x.com/EmberCN" target="_blank" rel="noopener">@EmberCN</a></td><td>中文链上数据</td><td>UXLINK TWAP / 清算 / 巨鲸</td><td class="act y">✓ 高频</td></tr><tr><td><a href="https://x.com/ai_9684xtpa" target="_blank" rel="noopener">@ai_9684xtpa</a></td><td>中文链上数据</td><td>ETH 抛售大户买回等</td><td class="act y">✓ 有链上帖</td></tr><tr><td><a href="https://x.com/WuBlockchain" target="_blank" rel="noopener">@WuBlockchain</a></td><td>新闻</td><td>PNC×Coinbase / Schwab 等</td><td class="act y">✓ 高频</td></tr><tr><td><a href="https://x.com/tier10k" target="_blank" rel="noopener">@tier10k</a></td><td>新闻快讯</td><td>头条快讯源</td><td class="act n">本窗口未深挖</td></tr><tr><td><a href="https://x.com/lookonchain" target="_blank" rel="noopener">@lookonchain</a></td><td>链上数据</td><td>ETF / 清算 / 巨鲸提币</td><td class="act y">✓ 高频</td></tr><tr><td><a href="https://x.com/coinglass_com" target="_blank" rel="noopener">@coinglass_com</a></td><td>衍生品数据</td><td>BTC 关键位图</td><td class="act y">✓ 有发帖</td></tr><tr><td><a href="https://x.com/0xngmi" target="_blank" rel="noopener">@0xngmi</a></td><td>DefiLlama</td><td>数据口径</td><td class="act n">本窗口未见相关原创</td></tr><tr><td><a href="https://x.com/CryptoHayes" target="_blank" rel="noopener">@CryptoHayes</a></td><td>KOL</td><td>宏观与项目</td><td class="act n">本窗口未见相关原创</td></tr><tr><td><a href="https://x.com/cobie" target="_blank" rel="noopener">@cobie</a></td><td>KOL</td><td>行业观察</td><td class="act n">本窗口未见相关原创</td></tr><tr><td><a href="https://x.com/Pentosh1" target="_blank" rel="noopener">@Pentosh1</a></td><td>交易 KOL</td><td>中长线观点</td><td class="act n">本窗口未见相关原创</td></tr><tr><td><a href="https://x.com/blknoiz06" target="_blank" rel="noopener">@blknoiz06</a></td><td>交易 KOL</td><td>HL 下一阶段 / Elysium</td><td class="act y">✓ 重要</td></tr><tr><td><a href="https://x.com/CryptoCred" target="_blank" rel="noopener">@CryptoCred</a></td><td>交易教育</td><td>技术分析</td><td class="act n">本窗口未见相关原创</td></tr><tr><td><a href="https://x.com/KoroushAK" target="_blank" rel="noopener">@KoroushAK</a></td><td>交易教育</td><td>订单流等</td><td class="act n">本窗口未见相关原创</td></tr><tr><td><a href="https://x.com/DefiIgnas" target="_blank" rel="noopener">@DefiIgnas</a></td><td>DeFi 研究</td><td>BTC–纳指相关性</td><td class="act y">✓ 有发帖</td></tr><tr><td><a href="https://x.com/ASvanevik" target="_blank" rel="noopener">@ASvanevik</a></td><td>Nansen CEO</td><td>链上与 AI 工具</td><td class="act n">本窗口未见相关原创</td></tr><tr><td><a href="https://x.com/Enter_Elysium" target="_blank" rel="noopener">@Enter_Elysium</a></td><td>Elysium 官方（补充）</td><td>主网 live / OpenSea NFT</td><td class="act y">✓ 主线</td></tr><tr><td><a href="https://x.com/Kinetiq_xyz" target="_blank" rel="noopener">@Kinetiq_xyz</a></td><td>Kinetiq（补充）</td><td>Elysium / kHYPE</td><td class="act y">✓ 主网相关</td></tr><tr><td><a href="https://x.com/hypercall_xyz" target="_blank" rel="noopener">@hypercall_xyz</a></td><td>Hypercall（补充）</td><td>Anthropic 期权</td><td class="act y">✓ 博文确认 live</td></tr></tbody></table><h2 style="margin-top:48px">YouTube 频道</h2><p class="sub">均已确认频道页存在</p><div class="yt"><div><b><a href="https://www.youtube.com/@Bankless" target="_blank" rel="noopener">Bankless</a></b><br>周度 ROLLUP；可留意是否跟进 Elysium 主网</div><div><b><a href="https://www.youtube.com/@TheRollupCo" target="_blank" rel="noopener">The Rollup</a></b><br>机构/VC 访谈；Hyperliquid 长叙事入口</div><div><b><a href="https://www.youtube.com/@CoinBureau" target="_blank" rel="noopener">Coin Bureau</a></b><br>项目科普与监管选题</div><div><b><a href="https://www.youtube.com/@UnchainedCrypto" target="_blank" rel="noopener">Unchained</a></b><br>政策与行业访谈</div><div><b><a href="https://www.youtube.com/@RealVisionFinance" target="_blank" rel="noopener">Real Vision</a></b><br>宏观 × 加密交叉</div><div><b><a href="https://www.youtube.com/@TheBlock" target="_blank" rel="noopener">The Block</a></b><br>配合市场/产品文字报道</div></div><div class="note">本窗口未确认必须写入的 Hyperliquid 专属长视频首发；优先读 Enter_Elysium 主网帖、GlobeNewswire / Arbitrum 博文、Hypercall「Anthropic Options Are Live」、Ansem 两帖、余烬 UXLINK TWAP、Lookonchain ETF/清算。</div></section><footer>所有草稿均未发布，需本人确认后再发。数据为北京时间 11/10 约 07:36 快照，价格与链上标签类内容发前请更新。覆盖窗口接续 11/09 14:00 午间更新。Elysium / Hypercall 已按官方「live」口径处理，但仍需区分 Day-1 功能边界。内容仅为信息整理与分析，不构成投资建议。NFA / DYOR。</footer></main><script>
+function fallbackCopy(t){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.position='fixed';a.style.top='-1000px';document.body.appendChild(a);a.select();a.setSelectionRange(0,t.length);var ok=false;try{ok=document.execCommand('copy')}catch(e){}document.body.removeChild(a);return ok}
+function done(b,ok){var o=b.dataset.label||b.textContent;b.dataset.label=o;b.textContent=ok?'已复制 ✓':'复制失败';b.classList.toggle('ok',ok);clearTimeout(b._t);b._t=setTimeout(function(){b.textContent=o;b.classList.remove('ok')},1600)}
+document.addEventListener('click',function(e){var b=e.target.closest('.cp');if(!b)return;var t=document.getElementById(b.dataset.for).textContent;
+ if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(function(){done(b,true)},function(){done(b,fallbackCopy(t))})}else{done(b,fallbackCopy(t))}});
+// X 加权字数：CJK 计 2，其余计 1（近似）
+document.querySelectorAll('.txt').forEach(function(el){var s=el.textContent,n=0;for(var ch of s){n+=/[\u1100-\uFFFF]/.test(ch)&&!/[\u2000-\u206F\u2190-\u2BFF]/.test(ch)?2:1}var c=document.getElementById(el.id+'-n');if(c)c.textContent='约 '+n+' / 280 字符（X 加权估算，emoji 与链接以输入框为准）'});
+// 导航高亮
+var links=[].slice.call(document.querySelectorAll('.nav a'));var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+en.target.id)})}})},{rootMargin:'-20% 0px -70% 0px'});secs.forEach(function(s){s&&io.observe(s)});
+</script></body></html>
